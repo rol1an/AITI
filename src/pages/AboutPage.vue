@@ -2,9 +2,12 @@
   <div class="page-stack compact">
     <section class="hero-panel">
       <p class="eyebrow">关于 ACGTI</p>
-      <h1 class="display-title">先做一个单测试作品，再把角色宇宙慢慢扩开。</h1>
+      <h1 class="display-title">以 MBTI 为骨架，用二次元角色给你一个好玩的人格标签。</h1>
       <p class="lead">
-        当前版本是纯静态前端实现：Vue 3 + Vite + Vue Router，本地题库、本地原型库、本地角色库，本地保存最近一次测试结果。
+        ACGTI（ACG Type Indicator）是一个以 MBTI 为基础的二次元角色原型测试站点。通过回答情境式问题，获得你的四字母人格类型、维度倾向比例，以及对应的二次元角色原型解析与角色匹配。当前版本为纯静态前端，部署在 Cloudflare Pages 上。
+      </p>
+      <p class="lead">
+        项目开源，欢迎 Fork 与 PR！当前题目数量和角色库都还不够丰富，如果你有好的情境题目想法或想补充更多作品的角色，非常期待你的参与。
       </p>
     </section>
 

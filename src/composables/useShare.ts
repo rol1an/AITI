@@ -1,17 +1,18 @@
 import { ref } from 'vue'
-import { toPng } from 'html-to-image'
 
 import type { QuizResult } from '../types/quiz'
 
+let htmlToImageLoader: Promise<typeof import('html-to-image')> | null = null
+
 function createShareText(result: QuizResult) {
-  const matches = result.characterMatches.slice(0, 3).map((item) => `${item.name}（${item.series}）`)
+  const featured = result.characterMatches[0]
 
   return [
-    `我在 ACGTI 的人格类型是 ${result.mbtiCode}`,
+    `我在 ACGTI 命中的角色代码是 ${result.code}`,
+    `命中角色：${featured ? `${featured.name}（${featured.series}）` : '未知角色'}`,
     `对应原型：${result.archetype.name}`,
     result.archetype.subtitle,
     `剧情位置：${result.archetype.narrativeRole}`,
-    `像我的角色：${matches.join('、') || '暂无更多展示角色'}`,
   ].join('\n')
 }
 
@@ -28,6 +29,8 @@ export function useShare() {
     feedback.value = ''
 
     try {
+      htmlToImageLoader ??= import('html-to-image')
+      const { toPng } = await htmlToImageLoader
       const dataUrl = await toPng(target, {
         cacheBust: true,
         pixelRatio: 2,

@@ -1,0 +1,90 @@
+{
+	"hatsune-miku": {
+		"image": "/images/characters/初音未来.png",
+		"accent": "#39c5bb"
+	},
+	"ayanami-rei": {
+		"image": "/images/characters/绫波丽.png",
+		"accent": "#9ab0d3"
+	},
+	"asuka-langley": {
+		"image": "/images/characters/明日香.png",
+		"accent": "#e6513d"
+	},
+	"edogawa-conan": {
+		"image": "/images/characters/柯南.png",
+		"accent": "#3567b1"
+	},
+	"hakurei-reimu": {
+		"image": "/images/characters/博丽灵梦.png",
+		"accent": "#d54045"
+	},
+	"gotoh-hitori": {
+		"image": "/images/characters/后藤一里.png",
+		"accent": "#e7a7be"
+	},
+	"fujiwara-chika": {
+		"image": "/images/characters/藤原千花.png",
+		"accent": "#f3a6d6"
+	},
+	"cirno": {
+		"image": "/images/characters/琪露诺.png",
+		"accent": "#4da6ff"
+	},
+	"misaka-mikoto": {
+		"image": "/images/characters/御坂美琴.png",
+		"accent": "#cb8e2f"
+	},
+	"kaname-madoka": {
+		"image": "/images/characters/鹿目圆.png",
+		"accent": "#f4a7c6"
+	},
+	"furina": {
+		"image": "/images/characters/芙宁娜.png",
+		"accent": "#7ec7f9"
+	},
+	"takamatsu-tomori": {
+		"image": "/images/characters/高松灯.png",
+		"accent": "#89a9d8"
+	},
+	"chihaya-anon": {
+		"image": "/images/characters/千早爱音.png",
+		"accent": "#f2c84d"
+	},
+	"yo-rana": {
+		"image": "/images/characters/乐奈.png",
+		"accent": "#6e8d53"
+	},
+	"nagasaki-soyo": {
+		"image": "/images/characters/长崎素世.png",
+		"accent": "#8d7bd4"
+	},
+	"shiina-taki": {
+		"image": "/images/characters/椎名立希.png",
+		"accent": "#4b70c2"
+	},
+	"togawa-sakiko": {
+		"image": "/images/characters/丰川祥子.png",
+		"accent": "#5f4c8a"
+	},
+	"wakaba-mutsumi": {
+		"image": "/images/characters/若叶睦.png",
+		"accent": "#6f8f44"
+	},
+	"misumi-uika": {
+		"image": "/images/characters/三角初华.png",
+		"accent": "#cf79a4"
+	},
+	"yahata-umiri": {
+		"image": "/images/characters/八幡海铃.png",
+		"accent": "#60779a"
+	},
+	"uika-nyubara": {
+		"image": "/images/characters/祐天寺若麦.png",
+		"accent": "#f08aa9"
+	},
+	"jia-ran": {
+		"image": "/images/characters/嘉然.png",
+		"accent": "#f5ba82"
+	}
+}

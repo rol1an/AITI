@@ -15,10 +15,10 @@ defineExpose({
 </script>
 
 <template>
-  <section ref="rootEl" class="share-poster" :style="{ '--poster-accent': result.archetype.accent }">
+  <section ref="rootEl" class="share-poster" :style="{ '--poster-accent': result.characterMatches[0]?.accent || result.archetype.accent }">
     <div class="share-poster__header">
       <div>
-        <p class="share-poster__kicker">ACGTI 人格结果 · {{ result.mbtiCode }} · {{ result.archetype.name }}</p>
+        <p class="share-poster__kicker">ACGTI 角色结果 · {{ result.code }} · {{ result.archetype.name }}</p>
         <h2 class="share-poster__title">{{ result.characterMatches[0]?.name || result.archetype.name }}</h2>
         <p class="share-poster__subtitle">{{ result.characterMatches[0]?.title || result.archetype.subtitle }}</p>
       </div>
@@ -42,10 +42,8 @@ defineExpose({
         <p>{{ result.archetype.spotlight }}</p>
       </div>
       <div class="share-poster__block">
-        <span>相似同位体</span>
-        <p>
-          {{ result.characterMatches.slice(1, 4).map((item) => `${item.name} / ${item.series}`).join(' · ') }}
-        </p>
+        <span>命中角色</span>
+        <p>{{ result.characterMatches[0]?.name || '未知角色' }} / {{ result.characterMatches[0]?.series || '未知作品' }}</p>
       </div>
     </div>
 

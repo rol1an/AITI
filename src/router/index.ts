@@ -1,19 +1,13 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-import AboutPage from '../pages/AboutPage.vue'
-import HomePage from '../pages/HomePage.vue'
-import IntroPage from '../pages/IntroPage.vue'
-import QuizPage from '../pages/QuizPage.vue'
-import ResultPage from '../pages/ResultPage.vue'
-
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
-    { path: '/', name: 'home', component: HomePage },
-    { path: '/intro', name: 'intro', component: IntroPage },
-    { path: '/quiz', name: 'quiz', component: QuizPage },
-    { path: '/result', name: 'result', component: ResultPage },
-    { path: '/about', name: 'about', component: AboutPage },
+    { path: '/', name: 'home', component: () => import('../pages/HomePage.vue') },
+    { path: '/intro', name: 'intro', component: () => import('../pages/IntroPage.vue') },
+    { path: '/quiz', name: 'quiz', component: () => import('../pages/QuizPage.vue') },
+    { path: '/result', name: 'result', component: () => import('../pages/ResultPage.vue') },
+    { path: '/about', name: 'about', component: () => import('../pages/AboutPage.vue') },
     { path: '/:pathMatch(.*)*', redirect: '/' },
   ],
   scrollBehavior() {

@@ -2,6 +2,7 @@
 import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
+import AppIcon from '../components/AppIcon.vue'
 import SharePoster from '../components/SharePoster.vue'
 import { useShare } from '../composables/useShare'
 import { useQuiz } from '../composables/useQuiz'
@@ -74,10 +75,15 @@ function applyDebugResultFromRoute() {
   const preferredCharacter = requestedCharacterId
     ? quiz.characters.find((item) => item.id === requestedCharacterId)
     : null
-  const mbtiCode = normalizedType ?? preferredCharacter?.matchCode ?? ''
 
-  activeDebugResult.value = mbtiCode
-    ? quiz.createDebugResult(mbtiCode, preferredCharacter?.id ?? requestedCharacterId)
+  // Backward compatible with old debug links using ?type=XXXX.
+  const fallbackCharacter = !preferredCharacter && normalizedType
+    ? quiz.characters.find((item) => item.matchCode === normalizedType)
+    : null
+
+  const characterId = preferredCharacter?.id ?? fallbackCharacter?.id ?? ''
+  activeDebugResult.value = characterId
+    ? quiz.createDebugResult(characterId)
     : null
 }
 
@@ -86,6 +92,10 @@ const primaryCharacterImage = computed(() => {
   if (!primary) return ''
   return primary.image || `/images/characters/${primary.id}.png`
 })
+
+const primaryCharacter = computed(() => result.value?.characterMatches?.[0] ?? null)
+const displayCode = computed(() => result.value?.code ?? result.value?.mbtiCode ?? '')
+const resultThemeColor = computed(() => primaryCharacter.value?.accent ?? result.value?.archetype.accent ?? '#e2ad3b')
 
 watch(primaryCharacterImage, () => {
   isCharacterImageBroken.value = false
@@ -119,169 +129,832 @@ function getHandlePosition(traitId: TraitDimension, leftCode: string) {
 
   return 50 + (percent - 50)
 }
+
+function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLabel: string, rightLabel: string) {
+  if (!result.value) return ''
+  return result.value.scores[traitId].dominant === leftCode ? leftLabel : rightLabel
+}
 </script>
 
 <template>
-  <div v-if="result" class="min-h-screen bg-gray-50 flex justify-center py-6 px-4 md:py-12">
-    <div class="max-w-6xl w-full bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
-      <div
-        class="md:w-1/3 p-8 md:p-10 text-white flex flex-col items-center text-center relative"
-        :style="{ backgroundColor: result.archetype.accent || '#8CA260' }"
-      >
-        <h2 class="text-sm tracking-widest uppercase mb-2 font-bold opacity-90">{{ result.mbtiCode }} · {{ result.archetype.name }}</h2>
-        <h1 class="text-4xl font-black mb-3">{{ result.characterMatches[0]?.name || result.archetype.name }}</h1>
-        <p class="text-lg font-bold opacity-90 mb-6 bg-black/10 px-4 py-1.5 rounded-full backdrop-blur-sm">{{ result.characterMatches[0]?.title || result.archetype.subtitle }}</p>
+  <div v-if="result" class="result-page">
+    <section class="result-hero" :style="{ background: resultThemeColor }">
+      <div class="result-hero-inner">
+        <div class="hero-copy">
+          <p class="hero-caption">你的匹配角色是</p>
+          <h1 class="hero-title">{{ primaryCharacter?.name || result.archetype.name }}</h1>
+          <p class="hero-code">{{ displayCode }}</p>
+          <p class="hero-quote">{{ result.archetype.oneLiner }}</p>
 
-        <div class="w-48 h-48 md:w-56 md:h-56 mb-8 relative flex items-center justify-center">
+          <div class="hero-actions">
+            <button class="action-btn light" @click="copyText">
+              <AppIcon name="copy" />
+              复制文案
+            </button>
+            <button class="action-btn" :disabled="share.isExporting.value" @click="exportPoster">
+              <AppIcon :name="share.isExporting.value ? 'spinner' : 'download'" :class="share.isExporting.value ? 'spin' : ''" />
+              {{ share.isExporting.value ? '导出中...' : '导出海报' }}
+            </button>
+            <button class="action-btn ghost" @click="retry">
+              <AppIcon name="refresh" />
+              重新测试
+            </button>
+          </div>
+          <p v-if="share.feedback.value" class="hero-feedback">{{ share.feedback.value }}</p>
+        </div>
+
+        <div class="hero-visual">
           <img
-            v-if="result.characterMatches[0]?.id && !isCharacterImageBroken"
+            v-if="primaryCharacter?.id && !isCharacterImageBroken"
             :src="primaryCharacterImage"
-            alt="Character"
-            class="w-full h-full object-contain relative z-10 drop-shadow-xl"
+            :alt="primaryCharacter?.name || 'Character'"
+            class="hero-image"
             @error="hideBrokenImage"
           />
-          <i v-else class="fa-solid fa-user-astronaut text-8xl opacity-80 z-10"></i>
-        </div>
-
-        <p class="text-lg italic opacity-90 mb-10 leading-relaxed font-medium">"{{ result.archetype.oneLiner }}"</p>
-
-        <div class="flex flex-col w-full gap-4 mt-auto">
-          <button
-            class="w-full py-3.5 px-6 bg-white/20 hover:bg-white/30 text-white font-bold rounded-xl transition-colors backdrop-blur-sm flex items-center justify-center gap-2"
-            @click="copyText"
-          >
-            <i class="fa-solid fa-copy"></i>
-            复原文案
-          </button>
-
-          <button
-            :disabled="share.isExporting.value"
-            class="w-full py-3.5 px-6 bg-white text-gray-800 font-bold rounded-xl shadow-lg hover:shadow-xl transition-all disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-            @click="exportPoster"
-          >
-            <i v-if="!share.isExporting.value" class="fa-solid fa-download"></i>
-            <i v-else class="fa-solid fa-spinner fa-spin"></i>
-            {{ share.isExporting.value ? '导出中...' : '导出海报' }}
-          </button>
-
-          <button
-            class="w-full py-3.5 px-6 bg-transparent border-2 border-white/30 hover:bg-white/10 text-white font-bold rounded-xl transition-colors flex items-center justify-center gap-2"
-            @click="retry"
-          >
-            <i class="fa-solid fa-rotate-right"></i>
-            再测一次
-          </button>
-
-          <p v-if="share.feedback.value" class="text-sm font-bold text-white/90 mt-2">{{ share.feedback.value }}</p>
+          <div v-else class="hero-image-fallback">
+            <AppIcon name="fallback" />
+          </div>
         </div>
       </div>
 
-      <div class="md:w-2/3 p-8 lg:p-12">
-        <h3 class="text-2xl font-black text-gray-800 mb-8 flex items-center border-b-2 border-gray-100 pb-4">
-          <i class="fa-solid fa-chart-pie mr-3 text-gray-400"></i>你的特质倾向
-        </h3>
+      <div class="hero-wave" aria-hidden="true">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0 L0,120 L1200,120 L1200,60 C1000,80 800,20 600,60 C400,100 200,40 0,0 Z" />
+        </svg>
+      </div>
+    </section>
 
-        <div class="space-y-10 mb-12">
-          <div v-for="trait in traits" :key="trait.id" class="w-full">
-            <div class="flex justify-between items-end mb-3">
-              <div
-                class="flex flex-col items-start"
-                :class="{ 'opacity-100 font-bold': result.scores[trait.id].dominant === trait.leftCode, 'opacity-40': result.scores[trait.id].dominant !== trait.leftCode }"
-                :style="{ color: result.scores[trait.id].dominant === trait.leftCode ? trait.color : '#4b5563' }"
-              >
-                <span class="text-2xl">{{ result.scores[trait.id].dominant === trait.leftCode ? `${result.scores[trait.id].percentage}%` : '' }}</span>
-                <span class="text-base uppercase">{{ trait.leftLabel }} ({{ trait.leftCode }})</span>
-              </div>
+    <div class="result-body">
+      <main class="result-main">
+        <section class="intro-block">
+          <p>{{ result.archetype.description }}</p>
+          <p>{{ primaryCharacter?.note }}</p>
+        </section>
 
-              <div
-                class="flex flex-col items-end"
-                :class="{ 'opacity-100 font-bold': result.scores[trait.id].dominant === trait.rightCode, 'opacity-40': result.scores[trait.id].dominant !== trait.rightCode }"
-                :style="{ color: result.scores[trait.id].dominant === trait.rightCode ? trait.color : '#4b5563' }"
-              >
-                <span class="text-2xl">{{ result.scores[trait.id].dominant === trait.rightCode ? `${result.scores[trait.id].percentage}%` : '' }}</span>
-                <span class="text-base uppercase">{{ trait.rightLabel }} ({{ trait.rightCode }})</span>
-              </div>
-            </div>
-
-            <div class="relative h-4 bg-gray-200 rounded-full flex items-center">
-              <div
-                class="absolute h-full rounded-full transition-all duration-1000 ease-out"
-                :style="{
-                  width: result.scores[trait.id].dominant === trait.leftCode ? `${getHandlePosition(trait.id, trait.leftCode)}%` : `${100 - getHandlePosition(trait.id, trait.leftCode)}%`,
-                  left: result.scores[trait.id].dominant === trait.leftCode ? '0' : 'auto',
-                  right: result.scores[trait.id].dominant === trait.rightCode ? '0' : 'auto',
-                  backgroundColor: trait.color,
-                }"
-              ></div>
-
-              <div class="absolute left-1/2 top-0 bottom-0 w-1 -ml-[2px] bg-white z-10"></div>
-
-              <div
-                class="absolute w-8 h-8 bg-white border-4 rounded-full shadow-md z-20 flex items-center justify-center transition-all duration-1000 ease-out -ml-4"
-                :style="{
-                  left: `${getHandlePosition(trait.id, trait.leftCode)}%`,
-                  borderColor: trait.color,
-                }"
-              >
-                <div class="w-1.5 h-1.5 rounded-full" :style="{ backgroundColor: trait.color }"></div>
-              </div>
-            </div>
+        <section class="traits-section" id="traits-section">
+          <div class="section-title-wrap">
+            <div class="section-index">1</div>
+            <h2 class="section-title">人格特质倾向</h2>
           </div>
-        </div>
 
-        <div v-if="result.characterMatches[0]" class="mb-12">
-          <h3 class="text-2xl font-black text-gray-800 mb-6 flex items-center border-b-2 border-gray-100 pb-4">
-            <i class="fa-solid fa-user-ninja mr-3 text-gray-400"></i>二次元映射
+          <div class="traits-card">
+            <div class="traits-list">
+              <div v-for="trait in traits" :key="trait.id" class="trait-row">
+                <div
+                  class="trait-percent"
+                  :style="{
+                    left: `${getHandlePosition(trait.id, trait.leftCode)}%`,
+                    color: trait.color,
+                  }"
+                >
+                  {{ result.scores[trait.id].percentage }}% {{ getDominantTraitLabel(trait.id, trait.leftCode, trait.leftLabel, trait.rightLabel) }}
+                </div>
+
+                <div class="trait-track" :style="{ backgroundColor: trait.color }">
+                  <span class="trait-center-marker"></span>
+                  <span
+                    class="trait-handle"
+                    :style="{
+                      left: `calc(${getHandlePosition(trait.id, trait.leftCode)}% - 7px)`,
+                      borderColor: trait.color,
+                    }"
+                  ></span>
+                </div>
+
+                <div class="trait-labels">
+                  <span>{{ trait.leftLabel }} ({{ trait.leftCode }})</span>
+                  <span>{{ trait.rightLabel }} ({{ trait.rightCode }})</span>
+                </div>
+              </div>
+            </div>
+
+            <aside class="traits-highlight">
+              <p class="highlight-name">当前最显著维度</p>
+              <h3 :style="{ color: result.scores.S_N.dominant === 'S' ? '#E4AE3A' : '#4298B4' }">
+                {{ result.scores.S_N.percentage }}% {{ result.scores.S_N.dominant === 'S' ? '实感' : '直觉' }}
+              </h3>
+              <div class="highlight-icon-wrap">
+                <AppIcon name="chart" />
+              </div>
+              <p>你更偏向于依据可见事实和现实细节做判断，在执行层面更稳定。</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="analysis-grid">
+          <article class="analysis-card good">
+            <h3>
+              <AppIcon name="star" />
+              亮点表现
+            </h3>
+            <p>{{ result.archetype.spotlight }}</p>
+          </article>
+          <article class="analysis-card bad">
+            <h3>
+              <AppIcon name="warning" />
+              短板分析
+            </h3>
+            <p>{{ result.archetype.weakness }}</p>
+          </article>
+        </section>
+
+        <section v-if="primaryCharacter" class="tags-block">
+          <h3>
+            <AppIcon name="character" />
+            角色映射
           </h3>
-          <p class="mb-4 text-sm font-semibold tracking-wide text-gray-500 uppercase">
-            MBTI 类型：{{ result.mbtiCode }} · 最多展示 5 位相近角色
-          </p>
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span
-              v-for="tag in result.characterMatches[0].tags"
-              :key="tag"
-              class="px-4 py-1.5 bg-gray-100 text-gray-700 rounded-full text-sm font-bold border border-gray-200"
-            >
-              # {{ tag }}
-            </span>
+          <div class="tags-wrap">
+            <span v-for="tag in primaryCharacter.tags" :key="tag"># {{ tag }}</span>
           </div>
-          <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 relative">
-            <i class="fa-solid fa-quote-left absolute top-5 left-5 text-gray-200 text-3xl"></i>
-            <p class="text-gray-700 text-lg leading-relaxed relative z-10 pl-8 pt-2">
-              {{ result.characterMatches[0].note }}
-            </p>
-          </div>
+        </section>
+      </main>
+
+      <aside class="result-sidebar">
+        <div class="sidebar-card profile-card">
+          <p class="small-title">命中角色</p>
+          <h3>{{ primaryCharacter?.name || result.archetype.name }}</h3>
+          <p class="profile-code">{{ displayCode }}</p>
         </div>
 
-        <h3 class="text-2xl font-black text-gray-800 mb-6 flex items-center border-b-2 border-gray-100 pb-4">
-          <i class="fa-solid fa-book-open mr-3 text-gray-400"></i>原型解析 · {{ result.archetype.name }}
-        </h3>
-        <p class="text-gray-600 text-lg leading-relaxed mb-8">
-          {{ result.archetype.description }}
-        </p>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 transition-colors hover:border-[#8ca260]">
-            <h4 class="font-bold text-gray-800 mb-3 flex items-center text-lg">
-              <i class="fa-solid fa-star text-[#8ca260] mr-2"></i>亮点表现
-            </h4>
-            <p class="text-gray-600 leading-relaxed">{{ result.archetype.spotlight }}</p>
-          </div>
-          <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 transition-colors hover:border-red-400">
-            <h4 class="font-bold text-gray-800 mb-3 flex items-center text-lg">
-              <i class="fa-solid fa-triangle-exclamation text-red-400 mr-2"></i>短板分析
-            </h4>
-            <p class="text-gray-600 leading-relaxed">{{ result.archetype.weakness }}</p>
-          </div>
+        <div class="sidebar-card nav-card">
+          <p class="small-title">本页内容</p>
+          <a href="#traits-section">1. 人格特质倾向</a>
+          <a href="#">2. 亮点与短板</a>
+          <a href="#">3. 角色映射标签</a>
         </div>
 
-        <div class="hidden">
-          <SharePoster ref="posterRef" :result="result" />
+        <div class="sidebar-actions">
+          <button @click="copyText">
+            <AppIcon name="copy" />
+            分享结果
+          </button>
+          <button @click="exportPoster">
+            <AppIcon name="download" />
+            导出图片
+          </button>
         </div>
-      </div>
+      </aside>
+    </div>
+
+    <div class="poster-hidden">
+      <SharePoster ref="posterRef" :result="result" />
     </div>
   </div>
 </template>
 
 <style scoped>
+.result-page {
+  background: #f9f9f9;
+  color: #333e49;
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: -32px;
+}
+
+.result-hero {
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  padding-top: 56px;
+}
+
+.result-hero-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 30px 24px 96px;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+}
+
+.hero-caption {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+  opacity: 0.92;
+}
+
+.hero-title {
+  margin: 8px 0 0;
+  font-size: clamp(44px, 8vw, 82px);
+  line-height: 1;
+  font-weight: 800;
+}
+
+.hero-code {
+  margin: 6px 0 0;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+.hero-quote {
+  margin: 18px 0 0;
+  max-width: 640px;
+  font-size: 18px;
+  line-height: 1.65;
+  opacity: 0.95;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+
+.action-btn {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 700;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.action-btn.light {
+  background: #fff;
+  border-color: #fff;
+  color: #2f3a45;
+}
+
+.action-btn.ghost {
+  background: transparent;
+}
+
+.action-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.spin {
+  animation: spin 900ms linear infinite;
+}
+
+.hero-feedback {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero-image {
+  width: min(430px, 100%);
+  object-fit: contain;
+  filter: drop-shadow(0 26px 38px rgba(0, 0, 0, 0.2));
+}
+
+.hero-image-fallback {
+  width: 220px;
+  height: 220px;
+  border-radius: 20px;
+  border: 2px dashed rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+}
+
+.hero-wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 64px;
+}
+
+.hero-wave svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hero-wave path {
+  fill: #f9f9f9;
+}
+
+.result-body {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 26px 24px 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.intro-block {
+  font-size: 19px;
+  line-height: 1.75;
+  color: #5f6b75;
+}
+
+.intro-block p {
+  margin: 0 0 18px;
+}
+
+.section-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.section-index {
+  width: 50px;
+  height: 50px;
+  border-radius: 999px;
+  border: 2px solid #e4ae3a;
+  color: #e4ae3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 800;
+  background: #fff;
+}
+
+.section-title {
+  font-size: clamp(30px, 4vw, 44px);
+  margin: 0;
+  font-weight: 800;
+}
+
+.traits-card {
+  background: #fff;
+  border: 1px solid #eceff1;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.traits-list {
+  padding: 24px;
+}
+
+.trait-row {
+  margin-bottom: 30px;
+}
+
+.trait-row:last-child {
+  margin-bottom: 0;
+}
+
+.trait-percent {
+  position: relative;
+  width: max-content;
+  transform: translateX(-50%);
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 7px;
+}
+
+.trait-track {
+  position: relative;
+  width: 100%;
+  border-radius: 999px;
+  height: 6px;
+}
+
+.trait-center-marker {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.trait-handle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  border: 3px solid;
+  background: #fff;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.16);
+}
+
+.trait-labels {
+  margin-top: 9px;
+  display: flex;
+  justify-content: space-between;
+  color: #6c7780;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.traits-highlight {
+  border-top: 1px solid #edf0f2;
+  background: #f8f9fa;
+  padding: 24px;
+  text-align: center;
+  color: #5f6b75;
+}
+
+.traits-highlight h3 {
+  margin: 5px 0 14px;
+  font-size: 28px;
+}
+
+.highlight-name {
+  margin: 0;
+  color: #7c8791;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.highlight-icon-wrap {
+  width: 122px;
+  height: 122px;
+  margin: 0 auto 14px;
+  border-radius: 999px;
+  border: 1px solid #e6eaed;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 52px;
+  color: #a3adb6;
+}
+
+.analysis-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.analysis-card {
+  background: #fff;
+  border: 1px solid #e8ecef;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.analysis-card h3 {
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+}
+
+.analysis-card.good h3 {
+  color: #33a474;
+}
+
+.analysis-card.bad h3 {
+  color: #e26666;
+}
+
+.analysis-card p {
+  margin: 0;
+  line-height: 1.7;
+  color: #596671;
+}
+
+.tags-block {
+  margin-top: 16px;
+  background: #fff;
+  border: 1px solid #e8ecef;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.tags-block h3 {
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+}
+
+.tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags-wrap span {
+  border: 1px solid #e4e8eb;
+  background: #f7f8f9;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #596671;
+}
+
+.result-sidebar {
+  position: relative;
+}
+
+.sidebar-card {
+  background: #fff;
+  border: 1px solid #e7eaed;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.small-title {
+  margin: 0;
+  color: #7b8690;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.profile-card h3 {
+  margin: 8px 0 2px;
+  font-size: 28px;
+}
+
+.profile-code {
+  margin: 0;
+  color: #e4ae3a;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.nav-card {
+  display: grid;
+  gap: 2px;
+}
+
+.nav-card a {
+  color: #4c5863;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 8px 4px;
+  border-radius: 8px;
+}
+
+.nav-card a:hover {
+  background: #f4f7f9;
+  color: #2f3a45;
+}
+
+.sidebar-actions {
+  display: grid;
+  gap: 8px;
+}
+
+.sidebar-actions button {
+  width: 100%;
+  border: 1px solid #dbe1e5;
+  background: #fff;
+  color: #4c5863;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 14px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.sidebar-actions button:hover {
+  border-color: #c8d0d7;
+}
+
+.poster-hidden {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .result-hero-inner {
+    grid-template-columns: 58% 42%;
+    align-items: center;
+    padding-bottom: 120px;
+  }
+
+  .result-body {
+    grid-template-columns: minmax(0, 68%) minmax(280px, 32%);
+    align-items: start;
+    gap: 28px;
+    margin-top: -30px;
+  }
+
+  .result-sidebar {
+    position: sticky;
+    top: 94px;
+  }
+
+  .traits-card {
+    grid-template-columns: 65% 35%;
+  }
+
+  .traits-highlight {
+    border-top: 0;
+    border-left: 1px solid #edf0f2;
+  }
+
+  .analysis-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .result-hero {
+    padding-top: 34px;
+  }
+
+  .result-hero-inner,
+  .result-body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .result-hero-inner {
+    padding-top: 22px;
+    padding-bottom: 72px;
+    gap: 16px;
+  }
+
+  .hero-caption {
+    font-size: 20px;
+  }
+
+  .hero-title {
+    font-size: clamp(34px, 10vw, 48px);
+  }
+
+  .hero-code {
+    font-size: clamp(22px, 6vw, 30px);
+  }
+
+  .hero-quote {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 14px;
+  }
+
+  .hero-image {
+    width: min(320px, 100%);
+  }
+
+  .hero-wave {
+    height: 50px;
+  }
+
+  .result-body {
+    padding-top: 16px;
+    padding-bottom: 24px;
+    gap: 16px;
+  }
+
+  .traits-section,
+  .analysis-grid,
+  .tags-block,
+  .result-sidebar {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  .intro-block {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .section-title-wrap {
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .section-index {
+    width: 40px;
+    height: 40px;
+    font-size: 19px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .traits-list,
+  .traits-highlight,
+  .analysis-card,
+  .tags-block,
+  .sidebar-card {
+    padding: 14px;
+  }
+
+  .trait-row {
+    margin-bottom: 22px;
+  }
+
+  .trait-percent {
+    font-size: 12px;
+  }
+
+  .trait-labels {
+    font-size: 12px;
+    gap: 10px;
+  }
+
+  .analysis-card h3,
+  .tags-block h3 {
+    font-size: 18px;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .action-btn {
+    justify-content: center;
+    width: 100%;
+    min-height: 42px;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .result-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 520px) {
+  .result-hero-inner,
+  .result-body {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .hero-title {
+    font-size: clamp(30px, 10vw, 40px);
+  }
+
+  .hero-caption {
+    font-size: 18px;
+  }
+
+  .hero-code {
+    font-size: 22px;
+  }
+
+  .hero-image {
+    width: min(270px, 100%);
+  }
+
+  .result-body {
+    gap: 14px;
+  }
+
+  .trait-labels {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .profile-card h3 {
+    font-size: 24px;
+  }
+
+  .profile-code {
+    font-size: 21px;
+  }
+
+  .sidebar-card,
+  .analysis-card,
+  .traits-list,
+  .traits-highlight,
+  .tags-block {
+    border-radius: 14px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
 </style>

@@ -158,9 +158,14 @@ export function calculateQuizResult({
     finalCode += dominant
   }
 
-  const matchedArchetypeId = TYPE_TO_ARCHETYPE[finalCode]
+  const featuredCharacter = pickFeaturedCharacter({
+    scores,
+    characters,
+    answers,
+  })
 
-  const matchedArchetype: Archetype = archetypes.find((a: Archetype) => a.id === matchedArchetypeId) || {
+  const matchedArchetype: Archetype =
+    archetypes.find((a: Archetype) => a.id === featuredCharacter?.archetypeId) || {
     id: 'luminous-lead' as ArchetypeId,
     name: '异格旅行者',
     subtitle: '无法被定义的观测者',
@@ -175,24 +180,15 @@ export function calculateQuizResult({
     vector: { expression: 0, temperature: 0, judgement: 0, order: 0, agency: 0, aura: 0 }
   }
 
-  const charMatches = rankCharacters({
-    characters,
-    finalCode,
-    matchedArchetypeId,
-  }).slice(0, 5)
-  const featuredCharacter = charMatches[0] ?? null
+  const charMatches = featuredCharacter ? [featuredCharacter] : []
 
   // 用题目结果强度和角色匹配层级计算稳定的命中感，避免同一份答案重复提交时数值跳变。
-  const matchScore = calculateMatchScore({
-    scores,
-    finalCode,
-    featuredCharacter,
-    matchedArchetypeId,
-  })
+  const matchScore = calculateCharacterMatchScore(scores, featuredCharacter)
+  const roleCode = featuredCharacter?.code ?? 'UNKN'
 
   return {
-    code: featuredCharacter?.code ?? finalCode,
-    mbtiCode: finalCode,
+    code: roleCode,
+    mbtiCode: roleCode,
     scores,
     archetype: matchedArchetype,
     tags: [matchedArchetype.narrativeRole, ...matchedArchetype.tags].slice(0, 6),
@@ -291,57 +287,121 @@ export function rankCharactersForMbti({
 }
 
 export function createDebugQuizResult({
-  mbtiCode,
+  characterId,
   archetypes,
   characters,
-  preferredCharacterId,
 }: {
-  mbtiCode: string
+  characterId: string
   archetypes: Archetype[]
   characters: CharacterMatch[]
-  preferredCharacterId?: string | null
 }): QuizResult | null {
-  const normalized = normalizeMbtiCode(mbtiCode)
+  const requestedCharacterId = characterId.trim().toLowerCase()
+  const character = characters.find((item) => item.id === requestedCharacterId)
 
-  if (!normalized) {
+  if (!character) {
     return null
   }
 
-  const matchedArchetype = resolveArchetypeForMbti(normalized, archetypes)
+  const matchedArchetype =
+    archetypes.find((item) => item.id === character.archetypeId) ??
+    archetypes.find((item) => item.id === 'luminous-lead') ??
+    null
 
   if (!matchedArchetype) {
     return null
   }
 
-  const rankedCharacters = rankCharactersForMbti({
-    characters,
-    mbtiCode: normalized,
-    preferredCharacterId,
-  }).slice(0, 5)
-  const featuredCharacter = rankedCharacters[0] ?? null
-  const scores = buildScoresFromMbtiCode(normalized)
+  const scores = buildScoresFromMbtiCode(character.matchCode)
 
   if (!scores) {
     return null
   }
 
-  const matchScore = calculateMatchScore({
-    scores,
-    finalCode: normalized,
-    featuredCharacter,
-    matchedArchetypeId: matchedArchetype.id,
-  })
+  const matchScore = calculateCharacterMatchScore(scores, character)
 
   return {
-    code: featuredCharacter?.code ?? normalized,
-    mbtiCode: normalized,
+    code: character.code,
+    mbtiCode: character.code,
     scores,
     archetype: matchedArchetype,
     tags: [matchedArchetype.narrativeRole, ...matchedArchetype.tags].slice(0, 6),
     matchScore,
-    characterMatches: rankedCharacters,
-    featuredCharacter,
+    characterMatches: [character],
+    featuredCharacter: character,
   }
+}
+
+function pickFeaturedCharacter({
+  scores,
+  characters,
+  answers,
+}: {
+  scores: Record<DimensionPair, DimensionScore>
+  characters: CharacterMatch[]
+  answers: number[]
+}) {
+  if (!characters.length) {
+    return null
+  }
+
+  const scored = characters.map((character) => ({
+    character,
+    score: getCharacterDimensionScore(scores, character),
+  }))
+  const bestScore = Math.max(...scored.map((item) => item.score))
+  const topCandidates = scored
+    .filter((item) => item.score === bestScore)
+    .map((item) => item.character)
+    .sort((left, right) => left.id.localeCompare(right.id, 'en'))
+
+  if (topCandidates.length === 1) {
+    return topCandidates[0]
+  }
+
+  // 同分角色用答案指纹分流，避免同一 matchCode 的角色永远被固定压制。
+  const fingerprint = buildAnswerFingerprint(answers)
+  return topCandidates[fingerprint % topCandidates.length]
+}
+
+function buildAnswerFingerprint(answers: number[]) {
+  return answers.reduce((seed, answer, index) => {
+    const normalized = answer + 4
+    return (seed * 131 + normalized * (index + 7)) % 2147483647
+  }, 17)
+}
+
+function getCharacterDimensionScore(
+  scores: Record<DimensionPair, DimensionScore>,
+  character: CharacterMatch,
+) {
+  const pairs: DimensionPair[] = ['E_I', 'S_N', 'T_F', 'J_P']
+  let total = 0
+
+  for (let index = 0; index < pairs.length; index += 1) {
+    const pair = pairs[index]
+    const expectedLetter = character.matchCode[index] as MBTILetter
+    const actual = scores[pair]
+    const sameDominant = actual.dominant === expectedLetter
+
+    total += sameDominant ? actual.percentage : 100 - actual.percentage
+  }
+
+  return total
+}
+
+function calculateCharacterMatchScore(
+  scores: Record<DimensionPair, DimensionScore>,
+  featuredCharacter: CharacterMatch | null,
+) {
+  const averageCertainty =
+    Object.values(scores).reduce((sum, item) => sum + item.percentage, 0) / Object.values(scores).length
+
+  if (!featuredCharacter) {
+    return Math.round(Math.min(89, averageCertainty + 12))
+  }
+
+  const raw = getCharacterDimensionScore(scores, featuredCharacter)
+  return Math.max(60, Math.min(99, Math.round((raw / 400) * 100)))
 }
 
 // 获取角色分类（用于结果页面）
@@ -402,28 +462,4 @@ function sharedLetterCount(left: string, right: string) {
   return count
 }
 
-function calculateMatchScore({
-  scores,
-  finalCode,
-  featuredCharacter,
-  matchedArchetypeId,
-}: {
-  scores: Record<DimensionPair, DimensionScore>
-  finalCode: string
-  featuredCharacter: CharacterMatch | null
-  matchedArchetypeId: ArchetypeId | undefined
-}) {
-  const averageCertainty =
-    Object.values(scores).reduce((sum, item) => sum + item.percentage, 0) / Object.values(scores).length
-
-  if (!featuredCharacter) {
-    return Math.round(Math.min(89, averageCertainty + 12))
-  }
-
-  const featuredCode = featuredCharacter.matchCode.toUpperCase()
-  const exactBonus = featuredCode === finalCode ? 10 : 0
-  const archetypeBonus = featuredCharacter.archetypeId === matchedArchetypeId ? 4 : 0
-  const overlapBonus = sharedLetterCount(featuredCode, finalCode) * 2
-
-  return Math.max(60, Math.min(99, Math.round(averageCertainty + exactBonus + archetypeBonus + overlapBonus)))
-}
+// 保留旧函数区域占位，匹配分数已迁移到 calculateCharacterMatchScore。

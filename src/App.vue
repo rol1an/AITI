@@ -43,7 +43,7 @@
         </div>
         <div class="footer-section">
           <h3 class="footer-title">使用提醒</h3>
-          <p class="footer-note">结果会优先展示四字母 MBTI 类型，再映射二次元原型与角色。</p>
+          <p class="footer-note">结果会直接命中唯一角色，并展示该角色对应的英文四字母 code。</p>
           <p class="footer-note">测试结果仅保存在当前浏览器，不会上传到后端。</p>
           <p class="footer-note">本项目用于娱乐表达，不替代专业评估。</p>
         </div>

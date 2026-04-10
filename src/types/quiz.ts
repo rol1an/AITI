@@ -68,6 +68,7 @@ export interface CharacterMatch {
   name: string
   series: string
   image?: string
+  accent?: string
   matchCode: string
   code: string
   title?: string

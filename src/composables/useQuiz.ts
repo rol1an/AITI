@@ -4,12 +4,13 @@ import archetypesData from '../data/archetypes.json'
 import charactersData from '../data/characters.json'
 import questionsData from '../data/questions.json'
 import type { Archetype, CharacterMatch, Question, QuizRecord, QuizResult } from '../types/quiz'
+import { hydrateCharacterVisual, hydrateQuizRecord } from '../utils/characterVisuals'
 import { calculateQuizResult, createDebugQuizResult } from '../utils/quizEngine'
 import { clearLastRecord, loadLastRecord, saveLastRecord } from '../utils/storage'
 
 const questions = questionsData as Question[]
 const archetypes = archetypesData as Archetype[]
-const characters = charactersData as CharacterMatch[]
+const characters = (charactersData as CharacterMatch[]).map((character) => hydrateCharacterVisual(character))
 
 const UNANSWERED = -10
 
@@ -22,7 +23,7 @@ const emptyAnswers = () => Array.from({ length: questions.length }, () => UNANSW
 const state = reactive({
   currentIndex: 0,
   answers: emptyAnswers(),
-  latestRecord: loadLastRecord() as QuizRecord | null,
+  latestRecord: hydrateQuizRecord(loadLastRecord() as QuizRecord | null),
 })
 
 const currentQuestion = computed(() => questions[state.currentIndex] ?? null)
@@ -91,14 +92,14 @@ function finalizeQuiz(): QuizResult | null {
     result,
   }
 
-  state.latestRecord = record
+  state.latestRecord = hydrateQuizRecord(record)
   saveLastRecord(record)
 
   return result
 }
 
 function resumeLastResult() {
-  state.latestRecord = loadLastRecord()
+  state.latestRecord = hydrateQuizRecord(loadLastRecord())
 }
 
 export function useQuiz() {
@@ -123,12 +124,11 @@ export function useQuiz() {
     resetQuiz,
     finalizeQuiz,
     resumeLastResult,
-    createDebugResult: (mbtiCode: string, preferredCharacterId?: string | null): QuizResult | null =>
+    createDebugResult: (characterId: string): QuizResult | null =>
       createDebugQuizResult({
-        mbtiCode,
+        characterId,
         archetypes,
         characters,
-        preferredCharacterId,
       }),
   }
 }

@@ -16,6 +16,10 @@ export type ArchetypeId =
   | 'chaos-spark'
   | 'moonlit-guardian'
 
+export type DimensionPair = 'E_I' | 'S_N' | 'T_F' | 'J_P'
+
+export type MBTILetter = 'E' | 'I' | 'S' | 'N' | 'T' | 'F' | 'J' | 'P'
+
 export interface QuestionOption {
   id: string
   label: string
@@ -28,6 +32,8 @@ export interface Question {
   prompt: string
   scene: string
   options: QuestionOption[]
+  dimension: DimensionPair
+  sign: 1 | -1
 }
 
 export interface Archetype {
@@ -55,6 +61,13 @@ export interface CharacterMatch {
   vector: Record<DimensionId, number>
 }
 
+export interface DimensionScore {
+  pair: DimensionPair
+  score: number
+  dominant: MBTILetter
+  percentage: number
+}
+
 export interface QuizRecord {
   answers: number[]
   createdAt: string
@@ -62,9 +75,28 @@ export interface QuizRecord {
 }
 
 export interface QuizResult {
+  code: string
   archetype: Archetype
-  scores: Record<DimensionId, number>
+  scores: Record<DimensionPair, DimensionScore>
   tags: string[]
   matchScore: number
   characterMatches: CharacterMatch[]
+}
+
+// 16personalities 风格的额外类型
+export interface TraitBar {
+  label: string
+  leftLabel: string
+  rightLabel: string
+  percentage: number
+  dominant: 'left' | 'right'
+  color: string
+}
+
+export interface RoleCard {
+  title: string
+  subtitle: string
+  description: string
+  imageUrl?: string
+  learnMoreUrl?: string
 }

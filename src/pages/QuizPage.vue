@@ -506,7 +506,7 @@ function submitQuiz() {
   .scale-buttons {
     gap: 8px;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     overflow-x: auto;
     padding: 2px 2px 6px;
     scrollbar-width: none;

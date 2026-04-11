@@ -42,8 +42,9 @@ const { characters } = useQuiz()
 <style scoped>
 .characters-grid {
   display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 280px));
-    justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -150,16 +151,22 @@ const { characters } = useQuiz()
 
 @media (max-width: 600px) {
   .characters-grid {
-      grid-template-columns: repeat(auto-fit, minmax(160px, 200px));
-      justify-content: center;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      padding: 1rem;
   }
   
   .card-content {
-    padding: 1rem;
+    padding: 0.75rem;
   }
   
   .card-name {
     font-size: 1.1rem;
+  }
+
+  .card-tags {
+    flex-wrap: wrap;
+    gap: 0.25rem;
   }
   
   .card-title {

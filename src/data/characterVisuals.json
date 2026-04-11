@@ -71,6 +71,10 @@
 		"image": "/images/characters/若叶睦.png",
 		"accent": "#6f8f44"
 	},
+	"mortis": {
+		"image": "/images/characters/若叶睦.png",
+		"accent": "#4a4f67"
+	},
 	"misumi-uika": {
 		"image": "/images/characters/三角初华.png",
 		"accent": "#cf79a4"

@@ -71,9 +71,9 @@ export function getLocale() {
   return currentLocale.value
 }
 
-export function t(key: string, params?: Record<string, string | number>) {
+export function t(key: string, params?: Record<string, string | number>, defaultVal?: string) {
   const value = deepGet(messages[currentLocale.value], key) ?? deepGet(messages[DEFAULT_LOCALE], key)
-  return interpolate(typeof value === 'string' ? value : key, params)
+  return interpolate(typeof value === 'string' ? value : (defaultVal ?? key), params)
 }
 
 export function tm<T>(key: string): T {

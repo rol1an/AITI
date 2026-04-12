@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import { useI18n } from '../i18n'
 import type { QuizResult } from '../types/quiz'
 import { getRoleForType, TRAIT_CONFIG } from '../utils/quizEngine'
+
+const { t } = useI18n()
 
 const props = defineProps<{
   result: QuizResult
@@ -203,14 +206,14 @@ const traits = computed(() => {
         >
           <div class="character-header">
             <div>
-              <h3>{{ character.name }}</h3>
-              <p class="character-series">{{ character.series }}</p>
+              <h3>{{ t('characters.' + character.id + '.name', undefined, character.name) }}</h3>
+              <p class="character-series">{{ t('characters.' + character.id + '.series', undefined, character.series) }}</p>
             </div>
             <div class="character-tags">
-              <span v-for="tag in character.tags" :key="tag" class="character-tag">{{ tag }}</span>
+              <span v-for="(tag, idx) in character.tags" :key="tag" class="character-tag">{{ t('characters.' + character.id + '.tags.' + idx, undefined, tag) }}</span>
             </div>
           </div>
-          <p class="character-note">{{ character.note }}</p>
+          <p class="character-note">{{ t('characters.' + character.id + '.note', undefined, character.note) }}</p>
         </article>
       </div>
 

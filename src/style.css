@@ -309,8 +309,12 @@ select {
     color 180ms ease;
 }
 
-.site-nav a:hover,
-.site-nav a.router-link-active {
+.site-nav a:hover {
+  color: var(--text);
+  background: #f4f6f8;
+}
+
+.site-nav a.router-link-active:not(.nav-cta) {
   color: var(--text);
   background: #f4f6f8;
 }
@@ -320,6 +324,17 @@ select {
   min-height: 42px;
   padding: 0 20px;
   background: #9474a4;
+  color: #fff;
+  border-radius: 999px;
+}
+
+.site-nav .nav-cta:hover {
+  background: #7d5f91;
+  color: #fff;
+}
+
+.site-nav .nav-cta.router-link-active {
+  background: #7d5f91;
   color: #fff;
 }
 

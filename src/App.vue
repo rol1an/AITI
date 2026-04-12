@@ -79,7 +79,6 @@ const showFooter = computed(() => route.path !== '/quiz')
             </ul>
           </transition>
         </div>
-        <RouterLink to="/quiz">{{ t('app.nav.quiz') }}</RouterLink>
         <RouterLink to="/intro">{{ t('app.nav.intro') }}</RouterLink>
         <RouterLink to="/characters">{{ t('app.nav.characters') }}</RouterLink>
         <RouterLink to="/about">{{ t('app.nav.about') }}</RouterLink>

@@ -27,7 +27,7 @@
           :class="{ 'needs-answer': pendingUnansweredIndex === idx }"
           :ref="(el) => setQuestionRef(el, idx)"
         >
-          <h2>{{ t('quiz.questions.' + idx) || question.text || question.prompt || t('quiz.missingQuestion') }}</h2>
+          <h2>{{ t('quiz.questions.' + idx, undefined, (question.text || question.prompt || t('quiz.missingQuestion'))) }}</h2>
 
           <div class="question-scale">
             <span class="agree-label">{{ t('quiz.agree') }}</span>

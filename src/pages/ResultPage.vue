@@ -151,7 +151,7 @@ function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLa
       <div class="result-hero-inner">
         <div class="hero-copy type-box">
           <p class="hero-caption">{{ t('result.heroCaption') }}</p>
-          <h1 class="hero-title">{{ primaryCharacter?.name || result.archetype.name }}</h1>
+          <h1 class="hero-title">{{ primaryCharacter ? t('characters.' + primaryCharacter.id + '.name', undefined, primaryCharacter.name) : t('archetypes.' + result.archetype.id + '.name', undefined, result.archetype.name) }}</h1>
           <div class="hero-badge-wrap">
             <span class="hero-code">{{ displayCode }}</span>
           </div>
@@ -165,7 +165,7 @@ function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLa
               <strong>{{ result.matchScore }}%</strong>
             </div>
           </div>
-          <p class="hero-quote">“{{ result.archetype.oneLiner }}”</p>
+          <p class="hero-quote">“{{ t('archetypes.' + result.archetype.id + '.oneLiner', undefined, result.archetype.oneLiner) }}”</p>
 
           <div class="hero-actions">
             <button class="action-btn light" @click="copyText">
@@ -210,8 +210,8 @@ function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLa
     <div class="result-body">
       <main class="result-main">
         <section class="intro-block">
-          <p>{{ result.archetype.description }}</p>
-          <p>{{ primaryCharacter?.note }}</p>
+          <p>{{ t('archetypes.' + result.archetype.id + '.description', undefined, result.archetype.description) }}</p>
+          <p>{{ primaryCharacter ? t('characters.' + primaryCharacter.id + '.note', undefined, primaryCharacter.note) : '' }}</p>
         </section>
 
         <section class="traits-section" id="traits-section">
@@ -269,17 +269,17 @@ function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLa
         <section class="analysis-grid">
           <article class="analysis-card good">
             <h3>
-              <AppIcon name="star" />
-              亮点表现
-            </h3>
-            <p>{{ result.archetype.spotlight }}</p>
+                <AppIcon name="star" />
+                {{ t('result.spotlight', undefined, '亮点表现') }}
+              </h3>
+            <p>{{ t('archetypes.' + result.archetype.id + '.spotlight', undefined, result.archetype.spotlight) }}</p>
           </article>
           <article class="analysis-card bad">
             <h3>
-              <AppIcon name="warning" />
-              短板分析
-            </h3>
-            <p>{{ result.archetype.weakness }}</p>
+                <AppIcon name="warning" />
+                {{ t('result.weakness', undefined, '短板分析') }}
+              </h3>
+            <p>{{ t('archetypes.' + result.archetype.id + '.weakness', undefined, result.archetype.weakness) }}</p>
           </article>
         </section>
 
@@ -289,7 +289,7 @@ function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLa
             角色映射
           </h3>
           <div class="tags-wrap">
-            <span v-for="tag in primaryCharacter.tags" :key="tag"># {{ tag }}</span>
+            <span v-for="(tag, idx) in primaryCharacter.tags" :key="tag"># {{ t('characters.' + primaryCharacter.id + '.tags.' + idx, undefined, tag) }}</span>
           </div>
         </section>
 
@@ -301,7 +301,7 @@ function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLa
       <aside class="result-sidebar">
         <div class="sidebar-card profile-card">
           <p class="small-title">{{ t('result.hitCharacter') }}</p>
-          <h3>{{ primaryCharacter?.name || result.archetype.name }}</h3>
+          <h3>{{ primaryCharacter ? t('characters.' + primaryCharacter.id + '.name', undefined, primaryCharacter.name) : t('archetypes.' + result.archetype.id + '.name', undefined, result.archetype.name) }}</h3>
           <p class="profile-code">{{ displayCode }}</p>
           <p class="profile-probability">{{ t('result.matchProbability', { value: result.matchProbability }) }}</p>
         </div>

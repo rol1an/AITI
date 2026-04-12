@@ -30,9 +30,9 @@ const { t } = useI18n()
             <span class="card-code">{{ character.code }}</span>
             <span class="card-mbti">{{ character.matchCode }}</span>
           </div>
-          <h2 class="card-name">{{ character.name }}</h2>
-          <p class="card-source">{{ character.series }}</p>
-          <p class="card-title">{{ character.title }}</p>
+          <h2 class="card-name">{{ t('characters.' + character.id + '.name', undefined, character.name) }}</h2>
+          <p class="card-source">{{ t('characters.' + character.id + '.series', undefined, character.series) }}</p>
+          <p class="card-title">{{ t('characters.' + character.id + '.title', undefined, character.title) }}</p>
         </div>
       </RouterLink>
     </section>

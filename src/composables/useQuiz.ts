@@ -30,6 +30,7 @@ const currentQuestion = computed(() => questions[state.currentIndex] ?? null)
 const selectedOptionIndex = computed(() => state.answers[state.currentIndex] ?? UNANSWERED)
 const progress = computed(() => (state.currentIndex + 1) / questions.length)
 const answeredCount = computed(() => state.answers.filter((answer) => isAnsweredValue(answer)).length)
+const firstUnansweredIndex = computed(() => state.answers.findIndex((answer) => !isAnsweredValue(answer)))
 const canGoNext = computed(() => isAnsweredValue(selectedOptionIndex.value))
 const canGoPrev = computed(() => state.currentIndex > 0)
 const isComplete = computed(() => state.answers.every((answer) => isAnsweredValue(answer)))
@@ -112,6 +113,7 @@ export function useQuiz() {
     selectedOptionIndex,
     progress,
     answeredCount,
+    firstUnansweredIndex,
     canGoNext,
     canGoPrev,
     isComplete,

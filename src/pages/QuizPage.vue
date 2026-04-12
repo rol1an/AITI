@@ -36,6 +36,8 @@
           v-for="(question, idx) in questions"
           :key="question.id"
           class="question-block"
+          :class="{ 'needs-answer': pendingUnansweredIndex === idx }"
+          :ref="(el) => setQuestionRef(el, idx)"
         >
           <h2>{{ question.text ?? question.prompt ?? '（题干缺失）' }}</h2>
 
@@ -77,7 +79,6 @@
           <button
             class="submit-btn"
             type="button"
-            :disabled="!isComplete"
             @click="submitQuiz"
           >
             查看结果
@@ -103,6 +104,8 @@
 </template>
 
 <script setup lang="ts">
+import { nextTick, ref } from 'vue'
+import type { ComponentPublicInstance } from 'vue'
 import { useRouter } from 'vue-router'
 
 import { useQuiz } from '../composables/useQuiz'
@@ -117,7 +120,19 @@ interface ScaleOption {
 }
 
 const router = useRouter()
-const { questions, state, answeredCount, isComplete, selectOptionAt, finalizeQuiz } = useQuiz()
+const {
+  questions,
+  state,
+  answeredCount,
+  isComplete,
+  firstUnansweredIndex,
+  jumpToQuestion,
+  selectOptionAt,
+  finalizeQuiz,
+} = useQuiz()
+const questionRefs = ref<HTMLElement[]>([])
+const pendingUnansweredIndex = ref<number | null>(null)
+let unansweredHighlightTimer: ReturnType<typeof setTimeout> | null = null
 
 const scaleOptions: ScaleOption[] = [
   { value: 3, label: '强烈同意', side: 'agree', sizeClass: 'size-xl' },
@@ -133,7 +148,43 @@ function onSelect(questionIndex: number, value: number) {
   selectOptionAt(questionIndex, value)
 }
 
-function submitQuiz() {
+function setQuestionRef(element: Element | ComponentPublicInstance | null, index: number) {
+  const target = element instanceof HTMLElement
+    ? element
+    : element && '$el' in element && element.$el instanceof HTMLElement
+      ? element.$el
+      : null
+
+  if (!target) return
+  questionRefs.value[index] = target
+}
+
+async function jumpToUnansweredQuestion(index: number) {
+  jumpToQuestion(index)
+  pendingUnansweredIndex.value = index
+
+  if (unansweredHighlightTimer) {
+    clearTimeout(unansweredHighlightTimer)
+  }
+
+  unansweredHighlightTimer = setTimeout(() => {
+    pendingUnansweredIndex.value = null
+  }, 1800)
+
+  await nextTick()
+  const target = questionRefs.value[index]
+  target?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center',
+  })
+}
+
+async function submitQuiz() {
+  if (!isComplete.value && firstUnansweredIndex.value >= 0) {
+    await jumpToUnansweredQuestion(firstUnansweredIndex.value)
+    return
+  }
+
   const result = finalizeQuiz()
   if (!result) return
   router.push({ name: 'result' })
@@ -246,10 +297,17 @@ function submitQuiz() {
 .question-block {
   padding: 36px 18px;
   border-bottom: 1px solid #f1f4f8;
+  scroll-margin-top: 24px;
+  transition: background-color 0.22s ease, box-shadow 0.22s ease;
 }
 
 .question-block:last-child {
   border-bottom: none;
+}
+
+.question-block.needs-answer {
+  background: #f6fbf8;
+  box-shadow: inset 4px 0 0 #33a474;
 }
 
 .question-block h2 {
@@ -401,11 +459,6 @@ function submitQuiz() {
   background: #88619a;
   font-weight: 700;
   cursor: pointer;
-}
-
-.submit-btn:disabled {
-  cursor: not-allowed;
-  opacity: 0.45;
 }
 
 .quiz-footer {

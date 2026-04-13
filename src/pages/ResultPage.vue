@@ -1011,8 +1011,18 @@ function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLa
     font-size: 21px;
   }
 
+  .hero-visual {
+    margin-top: 24px;
+  }
+
   .hero-image {
     width: min(320px, 100%);
+    display: block;
+    margin: 0 auto;
+  }
+
+  .hero-image-fallback {
+    margin: 0 auto;
   }
 
   .hero-wave {

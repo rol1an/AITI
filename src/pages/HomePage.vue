@@ -17,6 +17,9 @@
           <button class="hero-relay-button" type="button" @click="copyQuizLink">{{ t('home.relayButton') }}</button>
           <p v-if="relayFeedback" class="hero-relay-feedback">{{ relayFeedback }}</p>
         </div>
+        <div class="hero-privacy" role="note">
+          <p class="hero-privacy-copy">{{ t('home.privacyCopy') }}</p>
+        </div>
       </div>
 
       <div class="hero-wave"></div>
@@ -337,6 +340,20 @@ async function copyQuizLink() {
   font-size: 0.88rem;
   font-weight: 700;
   opacity: 0.95;
+}
+
+.hero-privacy {
+  width: min(720px, 100%);
+  margin: 0.75rem auto 0;
+  padding: 0.25rem 0;
+  text-align: center;
+}
+
+.hero-privacy-copy {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.6;
+  opacity: 0.78;
 }
 
 .hero-wave {

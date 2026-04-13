@@ -38,6 +38,10 @@ async function copyQuizLink() {
       <p v-if="relayFeedback" class="relay-feedback">{{ relayFeedback }}</p>
     </section>
 
+    <section class="panel privacy-panel" v-reveal>
+      <p class="privacy-copy">{{ t('intro.privacyCopy') }}</p>
+    </section>
+
     <section class="split-grid" v-reveal>
       <article class="panel">
         <h2 class="section-title">{{ t('intro.resultTitle') }}</h2>
@@ -76,5 +80,19 @@ async function copyQuizLink() {
   color: #33a474;
   font-size: 0.92rem;
   font-weight: 700;
+}
+
+.privacy-panel {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background: #fafcfd;
+  border-color: #e6edf0;
+}
+
+.privacy-copy {
+  margin: 0;
+  color: #6b7884;
+  font-size: 0.92rem;
+  line-height: 1.7;
 }
 </style>

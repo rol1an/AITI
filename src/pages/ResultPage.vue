@@ -368,7 +368,7 @@ function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLa
   display: grid;
   gap: 40px;
   grid-template-columns: 1fr;
-  align-items: center;
+  align-items: start;
 }
 
 @media (min-width: 768px) {
@@ -377,6 +377,10 @@ function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLa
     padding-top: 60px;
     padding-bottom: 120px;
     gap: 60px;
+  }
+
+  .hero-copy {
+    margin-top: 30px;
   }
 }
 
@@ -928,7 +932,7 @@ function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLa
 @media (min-width: 960px) {
   .result-hero-inner {
     grid-template-columns: 58% 42%;
-    align-items: center;
+    align-items: start;
     padding-bottom: 120px;
   }
 

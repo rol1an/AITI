@@ -17,6 +17,7 @@
       <section class="quiz-notice" aria-label="测试说明">
         <p>{{ t('quiz.noticeA', { count: questions.length }) }}</p>
         <p>{{ t('quiz.noticeB') }}</p>
+        <p>{{ t('quiz.noticeC') }}</p>
       </section>
 
       <section class="question-list" aria-label="测试题目">

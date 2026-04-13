@@ -74,6 +74,8 @@ export const messages = {
       relayCopy: '欢迎把测试链接顺手转发给朋友、群聊或同好圈。',
       relayButton: '复制测试链接',
       relayFeedback: '测试链接已复制，去发给朋友看看。',
+      privacyTitle: '说明',
+      privacyCopy: '测试记录仅保存在当前浏览器，本网站不会上传你的答题数据。',
       stats: [
         { value: '950K+', label: '累计访问人次', color: '#4899a3' },
         { value: '16', label: 'MBTI 类型', color: '#e5b540' },
@@ -121,6 +123,8 @@ export const messages = {
       relayTitle: '测之前，也可以先帮我们扩散一下',
       relayCopy: '如果你身边也有喜欢 MBTI、角色分析或二次元人格测试的人，可以先把链接转发出去。你的每一次转发，都会帮 ACGTI 找到更合适的受众。',
       relayButton: '复制测试链接',
+      privacyTitle: '说明',
+      privacyCopy: '测试答案和最近结果仅缓存在当前浏览器本地，不会上传到服务器。',
       resultTitle: '结果会告诉你什么',
       resultItems: [
         ['主原型', '你在二次元叙事里更接近哪一种角色气质。'],
@@ -140,6 +144,7 @@ export const messages = {
       ],
       noticeA: '一共 {count} 道题，做完就能解锁你的隐藏面板：除了经典的 MBTI 四维属性，还会为你直接生成最贴脸的专属二次元角色代码和原型报告。',
       noticeB: '结果仅保存在当前浏览器，不收集邮箱、性别等个人信息。',
+      noticeC: 'ACGTI 为纯静态网站，答题数据只会缓存在本地浏览器，不会上传到服务器。',
       missingQuestion: '（题干缺失）',
       agree: '同意',
       disagree: '不同意',
@@ -332,6 +337,8 @@ export const messages = {
       relayCopy: '歡迎順手把測試連結轉發給朋友、群聊或同好圈。好的結果頁，本來就值得被擴散。',
       relayButton: '複製測試連結',
       relayFeedback: '測試連結已複製，現在就可以轉發出去。',
+      privacyTitle: '說明',
+      privacyCopy: '測試紀錄僅保存在目前瀏覽器，本網站不會上傳你的作答資料。',
       stats: [
         { value: '950K+', label: '累計訪問人次', color: '#4899a3' },
         { value: '16', label: 'MBTI 類型', color: '#e5b540' },
@@ -379,6 +386,8 @@ export const messages = {
       relayTitle: '測之前，也可以先幫我們擴散一下',
       relayCopy: '如果你身邊也有人喜歡 MBTI、角色分析或二次元人格測試，可以先把連結轉發出去。你的每一次轉發，都會幫 ACGTI 找到更合適的受眾。',
       relayButton: '複製測試連結',
+      privacyTitle: '說明',
+      privacyCopy: '測試答案和最近結果僅快取在目前瀏覽器本地，不會上傳到伺服器。',
       resultTitle: '結果會告訴你什麼',
       resultItems: [
         ['主原型', '你在二次元敘事裡更接近哪一種角色氣質。'],
@@ -398,6 +407,7 @@ export const messages = {
       ],
       noticeA: '一共 {count} 道題，做完就能解鎖你的隱藏面板：除了經典的 MBTI 四維屬性，還會為你直接生成最貼臉的專屬二次元角色代碼和原型報告。',
       noticeB: '結果僅保存在目前瀏覽器，不收集信箱、性別等個人資訊。',
+      noticeC: 'ACGTI 為純靜態網站，作答資料只會快取在本地瀏覽器，不會上傳到伺服器。',
       missingQuestion: '（題幹缺失）',
       agree: '同意',
       disagree: '不同意',
@@ -590,6 +600,8 @@ export const messages = {
       relayCopy: 'Pass the quiz link to a friend, group chat, or fandom circle. A result page like this works best when people compare notes.',
       relayButton: 'Copy quiz link',
       relayFeedback: 'Quiz link copied. Send it to someone.',
+      privacyTitle: 'Note',
+      privacyCopy: 'Your quiz record stays in this browser only and is not uploaded.',
       stats: [
         { value: '950K+', label: 'Visits', color: '#4899a3' },
         { value: '16', label: 'MBTI types', color: '#e5b540' },
@@ -637,6 +649,8 @@ export const messages = {
       relayTitle: 'You can help spread it before you even start',
       relayCopy: 'If you know people who enjoy MBTI, character analysis, or anime-flavored personality tests, send them the link first. Every repost helps ACGTI reach the right audience.',
       relayButton: 'Copy quiz link',
+      privacyTitle: 'Note',
+      privacyCopy: 'Your answers and recent result stay in your current browser only and are not uploaded.',
       resultTitle: 'What the result includes',
       resultItems: [
         ['Main archetype', 'The kind of character energy you resemble in an anime-style narrative.'],
@@ -656,6 +670,7 @@ export const messages = {
       ],
       noticeA: 'This test has {count} questions. It scores the four MBTI dimensions, then maps the result to one character code, one archetype, and four trait ratios.',
       noticeB: 'Your result is stored in this browser only. No email, gender, or other personal data is collected.',
+      noticeC: 'ACGTI is a static site. Quiz data is cached locally in your browser and is not uploaded to any server.',
       missingQuestion: '(Missing prompt)',
       agree: 'Agree',
       disagree: 'Disagree',
@@ -848,6 +863,8 @@ export const messages = {
       relayCopy: '診断リンクを友だちやグループチャット、同じ界隈にそのまま回してください。こういう結果ページは比べて広がる方が強いです。',
       relayButton: '診断リンクをコピー',
       relayFeedback: '診断リンクをコピーしました。すぐ共有できます。',
+      privacyTitle: '補足',
+      privacyCopy: '回答記録はこのブラウザ内にのみ保存され、アップロードされません。',
       stats: [
         { value: '950K+', label: '累計アクセス', color: '#4899a3' },
         { value: '16', label: 'MBTI タイプ', color: '#e5b540' },
@@ -895,6 +912,8 @@ export const messages = {
       relayTitle: '始める前に、先に広めても大丈夫です',
       relayCopy: 'MBTI やキャラ分析、二次元っぽい性格テストが好きそうな人がいるなら、先にリンクを送ってください。共有が増えるほど ACGTI は合う人に届きます。',
       relayButton: '診断リンクをコピー',
+      privacyTitle: '補足',
+      privacyCopy: '回答内容と最近の結果はこのブラウザ内にのみ保存され、サーバーへ送信されません。',
       resultTitle: '結果でわかること',
       resultItems: [
         ['主原型', '二次元的な物語の中で、どのタイプの気質に近いか。'],
@@ -914,6 +933,7 @@ export const messages = {
       ],
       noticeA: 'このテストは {count} 問です。MBTI の 4 軸を計算し、その後 1 つのキャラコード、原型、各軸の比率に変換します。',
       noticeB: '結果はこのブラウザにのみ保存されます。メールや性別などの個人情報は収集しません。',
+      noticeC: 'ACGTI は静的サイトであり、回答データはブラウザ内にのみ保存され、サーバーへは送信されません。',
       missingQuestion: '（設問なし）',
         agree: '同意する',
         disagree: '反対する',

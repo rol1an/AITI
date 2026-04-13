@@ -71,6 +71,7 @@ const localizedStatsText = computed(() => {
           <div class="card-tags">
             <span class="card-code">{{ character.code }}</span>
             <span class="card-mbti">{{ character.matchCode }}</span>
+            <span v-if="character.personaBasis?.type === 'fandom-impression'" class="card-fandom-tag">{{ t('result.personaBasisBadge') }}</span>
           </div>
           <h2 class="card-name">{{ getLocalizedCharacterName(character, locale) }}</h2>
           <p class="card-source">{{ getLocalizedCharacterSeries(character, locale) }}</p>
@@ -239,6 +240,16 @@ const localizedStatsText = computed(() => {
   color: #6c757d;
   background: #e9ecef;
   padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+}
+
+.card-fandom-tag {
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: #8a6d1f;
+  background: #fef3cd;
+  border: 1px solid #f0e2b0;
+  padding: 0.15rem 0.5rem;
   border-radius: 100px;
 }
 

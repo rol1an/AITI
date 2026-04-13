@@ -75,6 +75,9 @@ const resultThemeColor = computed(() => primaryCharacter.value?.accent ?? props.
               {{ primaryCharacter ? getLocalizedCharacterName(primaryCharacter, locale) : t('app.common.unknownCharacter') }}
               <span style="font-weight: normal; color: #8c9ba5; font-size: 0.9em; margin-left: 4px;">{{ primaryCharacter ? getLocalizedCharacterSeries(primaryCharacter, locale) : t('app.common.unknownSeries') }}</span>
             </p>
+            <p v-if="primaryCharacter?.personaBasis?.type === 'fandom-impression'" style="margin: 6px 0 0; font-size: 11px; color: #a08a3a; font-weight: 600; line-height: 1.5;">
+              {{ t('result.personaBasisBadge') }}：{{ primaryCharacter.personaBasis.summary }}
+            </p>
           </div>
         </div>
 
@@ -91,7 +94,7 @@ const resultThemeColor = computed(() => primaryCharacter.value?.accent ?? props.
 .poster-container {
   display: flex;
   justify-content: center;
-  width: 100%;
+  
 }
 
 .share-poster {
@@ -105,16 +108,9 @@ const resultThemeColor = computed(() => primaryCharacter.value?.accent ?? props.
   border: 1px solid #eaeaea;
 }
 
-@media (max-width: 480px) {
-  .share-poster {
-    width: 100%;
-    transform-origin: top center;
-  }
-}
-
 .share-poster__accent-bar {
   height: 12px;
-  width: 100%;
+  
   background: var(--poster-accent);
 }
 

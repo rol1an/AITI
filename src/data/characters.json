@@ -14,6 +14,12 @@
     "vector": { "expression": 3, "temperature": 2, "judgement": 0, "order": 0, "agency": 3, "aura": 2 },
     "signature": {
       "uniqueAxes": { "expression": 3, "temperature": 2, "agency": 3, "aura": 2 }
+    },
+    "personaBasis": {
+      "type": "fandom-impression",
+      "label": "圈层印象映射",
+      "confidence": "low",
+      "summary": "主要依据社区常见形象、二创传播与企划衍生印象，非官方唯一人格结论。"
     }
   },
   {
@@ -85,6 +91,12 @@
         { "questionId": "q31", "expected": "agree", "weight": 1.4 },
         { "questionId": "q38", "expected": "disagree", "weight": 1.8 }
       ]
+    },
+    "personaBasis": {
+      "type": "fandom-impression",
+      "label": "圈层印象映射",
+      "confidence": "low",
+      "summary": "主要依据社区常见形象、二创传播与企划衍生印象，非官方唯一人格结论。"
     }
   },
   {
@@ -117,6 +129,12 @@
     "vector": { "expression": 3, "temperature": 2, "judgement": 0, "order": -2, "agency": 2, "aura": 2 },
     "signature": {
       "uniqueAxes": { "expression": 3, "order": -2, "temperature": 2 }
+    },
+    "personaBasis": {
+      "type": "fandom-impression",
+      "label": "圈层印象映射",
+      "confidence": "low",
+      "summary": "主要依据社区常见形象、二创传播与企划衍生印象，非官方唯一人格结论。"
     }
   },
   {
@@ -129,7 +147,13 @@
     "archetypeId": "chaos-spark",
     "tags": ["冰之妖精（自称最强）", "智商换战力", "数学鬼才", "笨蛋界天花板"],
     "note": "算术题没对过，但打架没怂过。她最大的魅力是：明明每次都被秒，但永远保持「本小姐最强」的自信笑容——属于笨蛋界的天花板，萌就完事了。东方圈唯一指定「⑨」表情包供应商。",
-    "vector": { "expression": 3, "temperature": 2, "judgement": -2, "order": -2, "agency": 2, "aura": 2 }
+    "vector": { "expression": 3, "temperature": 2, "judgement": -2, "order": -2, "agency": 2, "aura": 2 },
+    "personaBasis": {
+      "type": "fandom-impression",
+      "label": "圈层印象映射",
+      "confidence": "low",
+      "summary": "主要依据社区常见形象、二创传播与企划衍生印象，非官方唯一人格结论。"
+    }
   },
   {
     "id": "misaka-mikoto",
@@ -380,6 +404,12 @@
     "vector": { "expression": 3, "temperature": 3, "judgement": -1, "order": -1, "agency": 2, "aura": 2 },
     "signature": {
       "uniqueAxes": { "expression": 3, "temperature": 3, "order": -1 }
+    },
+    "personaBasis": {
+      "type": "fandom-impression",
+      "label": "圈层印象映射",
+      "confidence": "low",
+      "summary": "主要依据社区常见形象、二创传播与企划衍生印象，非官方唯一人格结论。"
     }
   },
   {
@@ -397,6 +427,12 @@
     "vector": { "expression": 3, "temperature": 2, "judgement": 0, "order": -1, "agency": 3, "aura": 2 },
     "signature": {
       "uniqueAxes": { "expression": 3, "agency": 3, "temperature": 2 }
+    },
+    "personaBasis": {
+      "type": "fandom-impression",
+      "label": "圈层印象映射",
+      "confidence": "low",
+      "summary": "主要依据社区常见形象、二创传播与企划衍生印象，非官方唯一人格结论。"
     }
   },
   {
@@ -420,6 +456,12 @@
         { "questionId": "q26", "expected": "agree", "weight": 1.7 },
         { "questionId": "q39", "expected": "agree", "weight": 1.4 }
       ]
+    },
+    "personaBasis": {
+      "type": "fandom-impression",
+      "label": "圈层印象映射",
+      "confidence": "low",
+      "summary": "主要依据社区常见形象、二创传播与企划衍生印象，非官方唯一人格结论。"
     }
   },
   {
@@ -443,6 +485,12 @@
         { "questionId": "q29", "expected": "agree", "weight": 1.6 },
         { "questionId": "q34", "expected": "agree", "weight": 1.5 }
       ]
+    },
+    "personaBasis": {
+      "type": "fandom-impression",
+      "label": "圈层印象映射",
+      "confidence": "low",
+      "summary": "主要依据社区常见形象、二创传播与企划衍生印象，非官方唯一人格结论。"
     }
   },
   {
@@ -460,6 +508,12 @@
     "vector": { "expression": 3, "temperature": 1, "judgement": -1, "order": -2, "agency": 3, "aura": 2 },
     "signature": {
       "uniqueAxes": { "expression": 3, "order": -2, "agency": 3 }
+    },
+    "personaBasis": {
+      "type": "fandom-impression",
+      "label": "圈层印象映射",
+      "confidence": "low",
+      "summary": "主要依据社区常见形象、二创传播与企划衍生印象，非官方唯一人格结论。"
     }
   },
   {
@@ -477,6 +531,12 @@
     "vector": { "expression": 1, "temperature": 3, "judgement": -1, "order": 0, "agency": 1, "aura": 2 },
     "signature": {
       "uniqueAxes": { "temperature": 3, "judgement": -1, "aura": 2 }
+    },
+    "personaBasis": {
+      "type": "fandom-impression",
+      "label": "圈层印象映射",
+      "confidence": "low",
+      "summary": "主要依据社区常见形象、二创传播与企划衍生印象，非官方唯一人格结论。"
     }
   },
   {

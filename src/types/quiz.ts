@@ -63,6 +63,15 @@ export interface Archetype {
   vector: Record<DimensionId, number>
 }
 
+export type PersonaBasisType = 'canon' | 'fandom-impression'
+
+export interface PersonaBasis {
+  type: PersonaBasisType
+  label: string
+  confidence: 'high' | 'medium' | 'low'
+  summary: string
+}
+
 export interface CharacterMatch {
   id: string
   name: string
@@ -78,6 +87,7 @@ export interface CharacterMatch {
   tags: string[]
   note: string
   vector: Record<DimensionId, number>
+  personaBasis?: PersonaBasis
   signature?: {
     uniqueAxes?: Partial<Record<DimensionId, number>>
     questionAffinity?: Array<{

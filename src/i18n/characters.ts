@@ -249,6 +249,36 @@ const characterNameI18n: Record<string, LocalizedText> = {
     en: 'Kaju Nukumizu',
     ja: '温水佳樹',
   },
+  elysia: {
+    'zh-CN': '爱莉希雅',
+    'zh-TW': '愛莉希雅',
+    en: 'Elysia',
+    ja: 'エリシア',
+  },
+  'haibara-ai': {
+    'zh-CN': '灰原哀',
+    'zh-TW': '灰原哀',
+    en: 'Ai Haibara',
+    ja: '灰原哀',
+  },
+  'arima-kana': {
+    'zh-CN': '有马加奈',
+    'zh-TW': '有馬加奈',
+    en: 'Kana Arima',
+    ja: '有馬かな',
+  },
+  'nishikigi-chisato': {
+    'zh-CN': '锦木千束',
+    'zh-TW': '錦木千束',
+    en: 'Chisato Nishikigi',
+    ja: '錦木千束',
+  },
+  'tanikaze-amane': {
+    'zh-CN': '谷风天音',
+    'zh-TW': '谷風天音',
+    en: 'Amane Tanikaze',
+    ja: '谷風天音',
+  },
 }
 
 const seriesI18n: Record<string, LocalizedText> = {
@@ -366,6 +396,30 @@ const seriesI18n: Record<string, LocalizedText> = {
     en: 'Too Many Losing Heroines!',
     ja: '負けヒロインが多すぎる！',
   },
+  '崩坏3': {
+    'zh-CN': '崩坏3',
+    'zh-TW': '崩壞3rd',
+    en: 'Honkai Impact 3rd',
+    ja: '崩壊3rd',
+  },
+  '我推的孩子': {
+    'zh-CN': '我推的孩子',
+    'zh-TW': '我推的孩子',
+    en: 'Oshi no Ko',
+    ja: '【推しの子】',
+  },
+  '莉可丽丝': {
+    'zh-CN': '莉可丽丝',
+    'zh-TW': '莉可麗絲',
+    en: 'Lycoris Recoil',
+    ja: 'リコリス・リコイル',
+  },
+  '天使☆骚动 RE-BOOT!': {
+    'zh-CN': '天使☆骚动 RE-BOOT!',
+    'zh-TW': '天使☆囂囂 RE-BOOT!',
+    en: 'Tenshi Souzou RE-BOOT!',
+    ja: '天使☆騒々 RE-BOOT!',
+  },
 }
 
 function resolveLocalizedText(
@@ -393,8 +447,12 @@ export function getHiddenCharacterTags(locale: AppLocale) {
   return hiddenCharacterTagsI18n[locale]
 }
 
-export function getLocalizedCharacterName(character: Pick<CharacterMatch, 'id' | 'name'>, locale: AppLocale) {
-  if (isHiddenCharacter(character as CharacterMatch)) {
+export function getLocalizedCharacterName(
+  character: Pick<CharacterMatch, 'id' | 'name' | 'hidden'>,
+  locale: AppLocale,
+  options?: { revealHidden?: boolean },
+) {
+  if (isHiddenCharacter(character as CharacterMatch) && !options?.revealHidden) {
     return hiddenCharacterNameI18n[locale]
   }
   return resolveLocalizedText(characterNameI18n, character.id, locale, character.name)

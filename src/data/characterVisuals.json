@@ -142,5 +142,25 @@
 	"nukumizu-kaju": {
 		"image": "/images/characters/温水佳树.png",
 		"accent": "#d8b65a"
+	},
+	"elysia": {
+		"image": "/images/characters/爱莉希雅.png",
+		"accent": "#F4A7B9"
+	},
+	"haibara-ai": {
+		"image": "/images/characters/灰原哀.png",
+		"accent": "#705877"
+	},
+	"arima-kana": {
+		"image": "/images/characters/有马加奈.png",
+		"accent": "#D14A4D"
+	},
+	"nishikigi-chisato": {
+		"image": "/images/characters/锦木千束.png",
+		"accent": "#E5312C"
+	},
+	"tanikaze-amane": {
+		"image": "/images/characters/天音.png",
+		"accent": "#5E83D0"
 	}
 }

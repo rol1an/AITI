@@ -724,5 +724,90 @@
         "temperature": 2
       }
     }
+  },
+  {
+    "id": "elysia",
+    "name": "爱莉希雅",
+    "series": "崩坏3",
+    "image": "/images/characters/爱莉希雅.png",
+    "matchCode": "ENFJ",
+    "matchCodeFlex": ["ESFJ", "ENFP"],
+    "code": "ELYS",
+    "title": "无瑕的粉色妖精小姐♪",
+    "archetypeId": "luminous-lead",
+    "tags": ["社交悍匪天花板", "粉色滤镜本体", "如飞花般绚丽", "爱门"],
+    "note": "表面上是个喜欢贴贴、满嘴甜言蜜语的粉色社牛，实际上把「爱所有人」当成了一生贯彻的信仰。她不是没有悲伤，只是选择把最绚丽无瑕的笑容留给世界——属于那种「一出场就自带粉色聚光灯」的神。建议备好纸巾，笑着笑着就让人破防了。",
+    "vector": { "expression": 3, "temperature": 3, "judgement": 1, "order": 0, "agency": 2, "aura": 3 },
+    "signature": {
+      "uniqueAxes": { "expression": 3, "temperature": 3, "aura": 3 }
+    }
+  },
+  {
+    "id": "haibara-ai",
+    "name": "灰原哀",
+    "series": "名侦探柯南",
+    "image": "/images/characters/灰原哀.png",
+    "matchCode": "INTJ",
+    "matchCodeFlex": ["INTP", "ISTJ"],
+    "code": "HAIB",
+    "title": "A药之母·科学界冷面吐槽役",
+    "archetypeId": "icebound-observer",
+    "tags": ["死神小学生的刹车片", "毒舌女王", "APTX4869发明家", "外冷内热体质"],
+    "note": "你以为她是冷血无情的科学家，其实她是全剧最清醒的吐槽担当。日常工作除了研究解药，就是用冰冷的语言给某位死神小学生踩刹车。她的冷幽默就像她发明的药一样致命——属于「不开口则已，一开口刀刀暴击」的典范。",
+    "vector": { "expression": -2, "temperature": -1, "judgement": 3, "order": 2, "agency": 1, "aura": 2 },
+    "signature": {
+      "uniqueAxes": { "expression": -2, "judgement": 3, "temperature": -1 }
+    }
+  },
+  {
+    "id": "arima-kana",
+    "name": "有马加奈",
+    "series": "我推的孩子",
+    "image": "/images/characters/有马加奈.png",
+    "matchCode": "ENTJ",
+    "matchCodeFlex": ["ESTJ", "ENFP"],
+    "code": "KANA",
+    "title": "舔小苏打的天才童星·究极帽子架",
+    "archetypeId": "oathbound-captain",
+    "tags": ["傲娇退环境受害者", "十秒落泪", "帽子架本体", "重女潜质"],
+    "note": "嘴上总是说着最刻薄的话，心里却比谁都渴望被注视。作为「十秒就能哭出来」的前天才童星，她把所有的自卑和不甘都化作了舞台上的胜负欲。其实只要你稍微多夸她两句，她的好感度就会像火箭一样窜上天——属于典型的「只要你推我，我就能为你闪闪发光」的究极傲娇。",
+    "vector": { "expression": 2, "temperature": 1, "judgement": 2, "order": 1, "agency": 2, "aura": 2 },
+    "signature": {
+      "uniqueAxes": { "expression": 2, "judgement": 2, "agency": 2 }
+    }
+  },
+  {
+    "id": "nishikigi-chisato",
+    "name": "锦木千束",
+    "series": "莉可丽丝",
+    "image": "/images/characters/锦木千束.png",
+    "matchCode": "ENFP",
+    "matchCodeFlex": ["ESFP", "ENTP"],
+    "code": "CHIS",
+    "title": "人形自走外挂·不杀的Lycoris",
+    "archetypeId": "luminous-lead",
+    "tags": ["肉身躲子弹", "非致命性贴贴", "阳光开朗大女孩", "生命倒计时中的狂欢"],
+    "note": "你以为她只是个成天乐呵呵、喜欢到处贴贴的咖啡店看板娘，实际上她是能在枪林弹雨里跳舞的顶级特工。她最大的魅力在于，哪怕背负着沉重的宿命，依然选择用最明媚的笑容和橡胶弹去拥抱世界。和她在一起，你的生活绝对不会有无聊两个字，只有脱轨和狂飙。",
+    "vector": { "expression": 3, "temperature": 3, "judgement": 0, "order": -2, "agency": 3, "aura": 3 },
+    "signature": {
+      "uniqueAxes": { "expression": 3, "temperature": 3, "aura": 3 }
+    }
+  },
+  {
+    "id": "tanikaze-amane",
+    "name": "谷风天音",
+    "series": "天使☆骚动 RE-BOOT!",
+    "image": "/images/characters/天音.png",
+    "matchCode": "INTP",
+    "matchCodeFlex": ["INFP", "ISTP"],
+    "code": "AMNE",
+    "title": "重度网瘾·赛博冲浪达人",
+    "archetypeId": "moonlit-guardian",
+    "tags": ["VTuber单推人", "线上话痨线下哑巴", "互联网冲浪圣体", "见光死废柴"],
+    "note": "在网络世界里，她是无所不知、满嘴抽象热词的冲浪巨佬；在现实中，她是个离开电脑就会迅速枯萎的社恐废柴。她的社交能量全靠看直播发弹幕来维持，如果你试图把她从房间里拖出去，她可能会当场融化。属于「电子海胆」的究极进化形态。",
+    "vector": { "expression": -2, "temperature": 0, "judgement": 1, "order": -2, "agency": -1, "aura": 1 },
+    "signature": {
+      "uniqueAxes": { "expression": -2, "order": -2, "agency": -1 }
+    }
   }
 ]

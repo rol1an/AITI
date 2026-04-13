@@ -1,10 +1,17 @@
 <script setup lang="ts">
+import { computed } from 'vue'
+
 import { useQuiz } from '../composables/useQuiz'
 import { useI18n } from '../i18n'
 import { getHiddenCharacterTitle, getLocalizedCharacterName, getLocalizedCharacterSeries, isHiddenCharacter } from '../i18n/characters'
 
 const { characters } = useQuiz()
 const { locale, t } = useI18n()
+const orderedCharacters = computed(() => {
+  const visible = characters.filter((character) => !isHiddenCharacter(character))
+  const hidden = characters.filter((character) => isHiddenCharacter(character))
+  return [...visible, ...hidden]
+})
 </script>
 
 <template>
@@ -16,11 +23,13 @@ const { locale, t } = useI18n()
     </section>
 
     <section class="characters-grid">
-      <RouterLink
-        v-for="character in characters"
+      <component
+        v-for="character in orderedCharacters"
         :key="character.id"
-        :to="{ path: '/result', query: { character: character.id } }"
+        :is="isHiddenCharacter(character) ? 'article' : 'RouterLink'"
+        :to="isHiddenCharacter(character) ? undefined : { path: '/result', query: { character: character.id } }"
         class="character-card"
+        :class="{ 'character-card--hidden': isHiddenCharacter(character) }"
         :style="{ '--accent-color': character.accent }"
         v-reveal
       >
@@ -45,7 +54,7 @@ const { locale, t } = useI18n()
             {{ isHiddenCharacter(character) ? getHiddenCharacterTitle(locale) : t('characters.' + character.id + '.title', undefined, character.title) }}
           </p>
         </div>
-      </RouterLink>
+      </component>
     </section>
   </div>
 </template>
@@ -77,6 +86,16 @@ const { locale, t } = useI18n()
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
   border-color: var(--accent-color, #42b883);
+}
+
+.character-card--hidden {
+  cursor: default;
+}
+
+.character-card--hidden:hover {
+  transform: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-color: transparent;
 }
 
 .card-image-wrap {
@@ -120,6 +139,10 @@ const { locale, t } = useI18n()
 
 .character-card:hover .card-image {
   transform: scale(1.05);
+}
+
+.character-card--hidden:hover .card-image {
+  transform: none;
 }
 
 .card-content {

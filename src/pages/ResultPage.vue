@@ -7,7 +7,7 @@ import AppIcon from '../components/AppIcon.vue'
 import { useShare } from '../composables/useShare'
 import { useQuiz } from '../composables/useQuiz'
 import { useI18n } from '../i18n'
-import { getHiddenCharacterNote, getHiddenCharacterTags, getLocalizedCharacterName, isHiddenCharacter } from '../i18n/characters'
+import { getHiddenCharacterNote, getHiddenCharacterTags, getHiddenCharacterTitle, getLocalizedCharacterName, isHiddenCharacter } from '../i18n/characters'
 import { normalizeMbtiCode } from '../utils/quizEngine'
 
 const route = useRoute()
@@ -163,7 +163,10 @@ function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLa
       <div class="result-hero-inner">
         <div class="hero-copy type-box">
           <p class="hero-caption">{{ t('result.heroCaption') }}</p>
-          <h1 class="hero-title">{{ primaryCharacter ? getLocalizedCharacterName(primaryCharacter, locale) : t('archetypes.' + result.archetype.id + '.name', undefined, result.archetype.name) }}</h1>
+          <div class="hero-title-wrap">
+            <h1 class="hero-title">{{ primaryCharacter ? getLocalizedCharacterName(primaryCharacter, locale, { revealHidden: true }) : t('archetypes.' + result.archetype.id + '.name', undefined, result.archetype.name) }}</h1>
+            <span v-if="primaryCharacter && isHiddenCharacter(primaryCharacter)" class="hero-hidden-badge">{{ getHiddenCharacterTitle(locale) }}</span>
+          </div>
           <div class="hero-badge-wrap">
             <span class="hero-code">{{ displayCode }}</span>
           </div>
@@ -313,7 +316,8 @@ function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLa
       <aside class="result-sidebar">
         <div class="sidebar-card profile-card">
           <p class="small-title">{{ t('result.hitCharacter') }}</p>
-          <h3>{{ primaryCharacter ? getLocalizedCharacterName(primaryCharacter, locale) : t('archetypes.' + result.archetype.id + '.name', undefined, result.archetype.name) }}</h3>
+          <h3>{{ primaryCharacter ? getLocalizedCharacterName(primaryCharacter, locale, { revealHidden: true }) : t('archetypes.' + result.archetype.id + '.name', undefined, result.archetype.name) }}</h3>
+          <p v-if="primaryCharacter && isHiddenCharacter(primaryCharacter)" class="profile-hidden-flag">{{ getHiddenCharacterTitle(locale) }}</p>
           <p class="profile-code">{{ displayCode }}</p>
           <p class="profile-probability">{{ t('result.matchProbability', { value: result.matchProbability }) }}</p>
         </div>
@@ -409,6 +413,27 @@ function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLa
   line-height: 1.1;
   font-weight: 900;
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hero-title-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-hidden-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
 }
 
 .hero-badge-wrap {
@@ -835,6 +860,15 @@ function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLa
   color: #e4ae3a;
   font-size: 24px;
   font-weight: 800;
+}
+
+.profile-hidden-flag {
+  margin: 8px 0 0;
+  color: #8f5a0a;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .profile-probability {

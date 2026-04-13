@@ -315,31 +315,19 @@ function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLa
           </div>
         </section>
 
-        <section class="share-card-block" v-reveal>
-          <div class="section-title-wrap">
-            <div class="section-index">2</div>
-            <h2 class="section-title">{{ tm<string[]>('result.tocItems')[2] || t('result.shareCard', undefined, '分享卡片') }}</h2>
-          </div>
-          <p style="margin: 0 0 20px; font-size: 15px; color: #5f6b75; line-height: 1.6;">
-            {{ t('result.shareCardHint', undefined, '长按下方卡片保存，或点击下方按钮直接导出高清图片，分享至社交媒体吧。') }}
-          </p>
-          
-          <div style="display: flex; flex-direction: column; align-items: center; gap: 24px; margin-bottom: 8px;">
-            <SharePoster ref="posterRef" :result="result" style="margin: 0 auto; width: 100%; max-width: 440px;" />
-            
-            <button 
-              @click="exportPosterImage" 
-              :disabled="share.isExporting.value"
-              class="export-image-btn"
-              :style="{ backgroundColor: resultThemeColor }"
-            >
-              <AppIcon name="spinner" v-if="share.isExporting.value" style="animation: spin 1s linear infinite" />
-              <AppIcon name="download" v-else />
-              <span style="letter-spacing: 0.05em">{{ share.isExporting.value ? t('common.generating', undefined, '生成中...') : t('common.saveImage', undefined, '一键保存长图') }}</span>
-            </button>
-            <p v-if="share.feedback.value" class="export-feedback">{{ share.feedback.value }}</p>
-          </div>
-        </section>
+        <div style="margin-top: 40px; display: flex; flex-direction: column; align-items: center; gap: 16px;">
+  <button @click="exportPosterImage" :disabled="share.isExporting.value" class="export-image-btn" :style="{ backgroundColor: resultThemeColor }">
+    <AppIcon name="spinner" v-if="share.isExporting.value" style="animation: spin 1s linear infinite" />
+    <AppIcon name="download" v-else />
+    <span style="letter-spacing: 0.05em">{{ share.isExporting.value ? t('common.generating', undefined, '生成中...') : t('common.saveImage', undefined, '生成并分享次元身份卡') }}</span>
+  </button>
+  <p v-if="share.feedback.value" class="export-feedback">{{ share.feedback.value }}</p>
+</div>
+
+<div class="poster-capture-wrapper">
+  <SharePoster ref="posterRef" :result="result" />
+</div>
+
 
         <section v-if="resultAdSlot" class="result-ad-section">
           <AdsenseSlot :slot="resultAdSlot" :label="t('app.common.sponsored')" />
@@ -1278,4 +1266,12 @@ function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLa
   100% { transform: rotate(360deg); }
 }
 
+.poster-capture-wrapper {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 440px;
+  pointer-events: none;
+  z-index: -9999;
+}
 </style>

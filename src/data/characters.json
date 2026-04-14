@@ -1604,6 +1604,739 @@
     }
   },
   {
+    "id": "violet-evergarden",
+    "name": "薇尔莉特",
+    "series": "紫罗兰永恒花园",
+    "addedAt": "2026-04-14",
+    "image": "/images/characters/薇尔莉特.png",
+    "matchCode": "ISTJ",
+    "matchCodeFlex": [
+      "INTJ",
+      "ISFJ"
+    ],
+    "code": "VLTT",
+    "title": "自动手记人偶·把“我爱你”学成终身课题",
+    "archetypeId": "moonlit-guardian",
+    "tags": [
+      "军用说明书式认真",
+      "情感识别补完中",
+      "信件是她的第二战场",
+      "克制到近乎发光"
+    ],
+    "note": "你给人的第一感觉像一份被装订得过分整齐的说明书：安静、精确、几乎没有多余情绪。但真正稀有的地方在于，你不是没有感情，而是会把最重要的情感一点一点学会、背熟，再认真地交还给别人。属于“表面像冷金属，内里却在缓慢长出体温”的类型。",
+    "vector": {
+      "expression": -2,
+      "temperature": 1,
+      "judgement": 3,
+      "order": 3,
+      "agency": 2,
+      "aura": 3
+    },
+    "signature": {
+      "uniqueAxes": {
+        "judgement": 3,
+        "order": 3,
+        "aura": 3
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q20",
+          "expected": "agree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q34",
+          "expected": "agree",
+          "weight": 1.25
+        },
+        {
+          "questionId": "q37",
+          "expected": "agree",
+          "weight": 1.2
+        }
+      ]
+    }
+  },
+  {
+    "id": "elaina",
+    "name": "伊蕾娜",
+    "series": "魔女之旅",
+    "addedAt": "2026-04-14",
+    "image": "/images/characters/伊蕾娜.png",
+    "matchCode": "INTP",
+    "matchCodeFlex": [
+      "ENTP",
+      "ISTP"
+    ],
+    "code": "ELNA",
+    "title": "灰之魔女·冷静旁观型旅行博主",
+    "archetypeId": "trickster-orbit",
+    "tags": [
+      "高机动旅人",
+      "礼貌但不圣母",
+      "天才魔女",
+      "嘴上平静心里吐槽"
+    ],
+    "note": "你不是那种会强行把自己塞进所有剧情里的人，更像一路路过、一路观察、一路记录的高配旅人。外表礼貌克制，判断也很清醒，遇事不会轻易道德过载；但只要世界足够有趣，你的好奇心又会立刻上线。属于“看起来淡淡的，实际上对新鲜故事最没抵抗力”的类型。",
+    "vector": {
+      "expression": 1,
+      "temperature": 0,
+      "judgement": 2,
+      "order": -1,
+      "agency": 2,
+      "aura": 2
+    },
+    "signature": {
+      "uniqueAxes": {
+        "judgement": 2,
+        "agency": 2,
+        "order": -1
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q3",
+          "expected": "agree",
+          "weight": 1.15
+        },
+        {
+          "questionId": "q6",
+          "expected": "agree",
+          "weight": 1.25
+        },
+        {
+          "questionId": "q39",
+          "expected": "disagree",
+          "weight": 1.1
+        }
+      ]
+    }
+  },
+  {
+    "id": "chitanda-eru",
+    "name": "千反田爱瑠",
+    "series": "冰菓",
+    "addedAt": "2026-04-14",
+    "image": "/images/characters/千反田爱瑠.png",
+    "matchCode": "ENFJ",
+    "matchCodeFlex": [
+      "ESFJ",
+      "ENFP"
+    ],
+    "code": "ERUC",
+    "title": "我很好奇·豪农家大小姐雷达",
+    "archetypeId": "luminous-lead",
+    "tags": [
+      "眼睛一亮就开主线",
+      "豪农大小姐",
+      "优雅追问机",
+      "好奇心永动机"
+    ],
+    "note": "你平时气质很稳，像那种教养、礼貌、分寸感都在线的高配大小姐模板；但只要某件事触发了你的兴趣，整个人就会瞬间从“端庄模式”切进“追问到底模式”。你不是吵闹型主角推进器，而是那种用一句“我很好奇”就能把所有人拖进主线任务的人。",
+    "vector": {
+      "expression": 2,
+      "temperature": 3,
+      "judgement": 0,
+      "order": 0,
+      "agency": 1,
+      "aura": 2
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": 2,
+        "temperature": 3,
+        "aura": 2
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q3",
+          "expected": "agree",
+          "weight": 1.1
+        },
+        {
+          "questionId": "q37",
+          "expected": "agree",
+          "weight": 1.35
+        },
+        {
+          "questionId": "q39",
+          "expected": "agree",
+          "weight": 1.1
+        }
+      ]
+    }
+  },
+  {
+    "id": "tomori-nao",
+    "name": "友利奈绪",
+    "series": "Charlotte",
+    "addedAt": "2026-04-14",
+    "image": "/images/characters/友利奈绪.png",
+    "matchCode": "INTJ",
+    "matchCodeFlex": [
+      "ENTJ",
+      "ISTJ"
+    ],
+    "code": "TNAO",
+    "title": "冷脸会长·单体隐身执法记录仪",
+    "archetypeId": "shadow-strategist",
+    "tags": [
+      "录像机不离手",
+      "学生会铁面执法",
+      "单体隐身",
+      "能力者保护程序运行中"
+    ],
+    "note": "你平时像那种情绪显示面板默认关闭的学生会执法程序，说话淡、下手准、看起来很不好惹。但真正的核心不是冷，而是你已经习惯把判断、风险和责任先一步扛起来。属于“不是特别爱解释自己，但局势交给她确实会稳很多”的类型。",
+    "vector": {
+      "expression": -1,
+      "temperature": -1,
+      "judgement": 3,
+      "order": 2,
+      "agency": 3,
+      "aura": 2
+    },
+    "signature": {
+      "uniqueAxes": {
+        "judgement": 3,
+        "agency": 3,
+        "temperature": -1
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q20",
+          "expected": "agree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q34",
+          "expected": "agree",
+          "weight": 1.3
+        },
+        {
+          "questionId": "q39",
+          "expected": "disagree",
+          "weight": 1.15
+        }
+      ]
+    }
+  },
+  {
+    "id": "nakano-azusa",
+    "name": "中野梓",
+    "series": "轻音少女",
+    "image": "/images/characters/中野梓.png",
+    "matchCode": "ISTJ",
+    "matchCodeFlex": [
+      "ISFJ"
+    ],
+    "code": "AZUS",
+    "title": "傲娇学妹·被玩弄的吉他手",
+    "archetypeId": "moonlit-guardian",
+    "tags": [
+      "梓喵",
+      "容易被忽悠",
+      "轻音部唯一的常识人",
+      "口嫌体正直"
+    ],
+    "note": "轻音部里唯一的常识人和秩序守护者，平时总把“要好好练习”挂在嘴边，但只要学姐们递上一块蛋糕、套上猫耳，马上就会满脸通红地沦陷。属于典型的“嘴上说着不要，身体却很诚实”的认真型学妹，好欺负程度满分。",
+    "vector": {
+      "expression": -1,
+      "temperature": 1,
+      "judgement": 2,
+      "order": 3,
+      "agency": 1,
+      "aura": 1
+    },
+    "signature": {
+      "uniqueAxes": {
+        "order": 3,
+        "judgement": 2,
+        "expression": -1
+      }
+    }
+  },
+  {
+    "id": "furukawa-nagisa",
+    "name": "古河渚",
+    "series": "Clannad",
+    "image": "/images/characters/古河渚.png",
+    "matchCode": "ISFJ",
+    "matchCodeFlex": [
+      "INFP"
+    ],
+    "code": "NAGI",
+    "title": "团子大家族·坚韧的白雪",
+    "archetypeId": "gentle-healer",
+    "tags": [
+      "极其爱哭",
+      "团子狂魔",
+      "外柔内刚",
+      "催泪瓦斯"
+    ],
+    "note": "看起来像个风一吹就会倒的软弱少女，缺乏自信到常常停滞不前。但实际上，她拥有一颗比谁都坚韧的心，一旦为了爱的人，哪怕面临绝望也能咬牙走下去。她那如春风般的温柔，拥有让人不知不觉落泪的魔力。",
+    "vector": {
+      "expression": 1,
+      "temperature": 3,
+      "judgement": 1,
+      "order": 1,
+      "agency": -1,
+      "aura": 2
+    },
+    "signature": {
+      "uniqueAxes": {
+        "temperature": 3,
+        "expression": 1,
+        "agency": -1
+      }
+    }
+  },
+  {
+    "id": "nishimiya-shoko",
+    "name": "西宫硝子",
+    "series": "声之形",
+    "image": "/images/characters/西宫硝子.png",
+    "matchCode": "INFP",
+    "matchCodeFlex": [
+      "ISFJ"
+    ],
+    "code": "SHOK",
+    "title": "无声的温柔·悲悯的赎罪者",
+    "archetypeId": "gentle-healer",
+    "tags": [
+      "讨好型人格",
+      "极致温柔",
+      "让人心疼",
+      "哪怕受伤也要微笑"
+    ],
+    "note": "世界对她充满了不公与恶意，但她却依然选择用最温柔的微笑去拥抱一切。她总是习惯性把所有的错揽在自己身上，在无声的世界里一次次试图与他人和解。这种近乎卑微的善良，让人只想穿越屏幕去给她一个大大的拥抱。",
+    "vector": {
+      "expression": -2,
+      "temperature": 3,
+      "judgement": 0,
+      "order": 1,
+      "agency": -2,
+      "aura": 1
+    },
+    "signature": {
+      "uniqueAxes": {
+        "temperature": 3,
+        "expression": -2,
+        "agency": -2
+      }
+    }
+  },
+  {
+    "id": "kusanagi-nene",
+    "name": "草薙宁宁",
+    "series": "世界计划",
+    "image": "/images/characters/草薙宁宁.png",
+    "matchCode": "INTP",
+    "matchCodeFlex": [
+      "ISTP"
+    ],
+    "code": "NENE-K",
+    "title": "社恐毒舌·天才游戏少女",
+    "archetypeId": "icebound-observer",
+    "tags": [
+      "阴暗角落地缚灵",
+      "线上重拳出击",
+      "线下唯唯诺诺",
+      "歌姬"
+    ],
+    "note": "现实中是个严重社恐、看到生人就想找地缝钻进去的自闭少女；但只要给她一个手柄或键盘，马上化身为毒舌输出机，喷得对手找不着北。然而只要站上她真正热爱的舞台，那份极具穿透力的歌声又会耀眼得让人移不开视线。",
+    "vector": {
+      "expression": -3,
+      "temperature": -1,
+      "judgement": 2,
+      "order": -1,
+      "agency": 1,
+      "aura": 1
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": -3,
+        "judgement": 2,
+        "temperature": -1
+      }
+    }
+  },
+  {
+    "id": "akemi-homura",
+    "name": "晓美焰",
+    "series": "魔法少女小圆",
+    "image": "/images/characters/晓美焰.png",
+    "matchCode": "INTJ",
+    "matchCodeFlex": [
+      "INFJ"
+    ],
+    "code": "HOMU",
+    "title": "轮回的观测者·爱的偏执狂",
+    "archetypeId": "icebound-observer",
+    "tags": [
+      "军火女王",
+      "护妻狂魔",
+      "悲剧轮回",
+      "为了你与世界为敌"
+    ],
+    "note": "最初是个怯懦的麻花辫眼镜娘，为了拯救唯一的救赎，硬生生把自己逼成了一个冷酷无情的军火大佬。跨越无数次绝望的轮回，甚至不惜篡夺神明的力量，只为换取那个人平凡的幸福。她的爱沉重到令人窒息，却又伟大到令人震悚。",
+    "vector": {
+      "expression": -2,
+      "temperature": -2,
+      "judgement": 3,
+      "order": 3,
+      "agency": 3,
+      "aura": 3
+    },
+    "signature": {
+      "uniqueAxes": {
+        "agency": 3,
+        "order": 3,
+        "temperature": -2
+      }
+    }
+  },
+  {
+    "id": "yuigahama-yui",
+    "name": "由比滨结衣",
+    "series": "我的青春恋爱物语果然有问题",
+    "image": "/images/characters/由比滨结衣.png",
+    "matchCode": "ESFJ",
+    "matchCodeFlex": [
+      "ENFJ",
+      "ISFJ"
+    ],
+    "code": "YUIY",
+    "title": "温柔缓冲垫·读空气达人",
+    "archetypeId": "gentle-healer",
+    "tags": [
+      "团子头",
+      "气氛守护者",
+      "迎合型生存法",
+      "经典败犬"
+    ],
+    "note": "你总是习惯性地迎合周围，生怕破坏哪怕一丝群体的平衡。别人以为你是天生的无脑乐天派，其实你只是把「读空气」练成了被动技能。在这群充满别扭怪的人际关系里，你那份有些笨拙的温柔是唯一的润滑剂——虽然代价往往是把委屈留给自己。",
+    "vector": {
+      "expression": 2,
+      "temperature": 3,
+      "judgement": 0,
+      "order": 1,
+      "agency": 1,
+      "aura": 1
+    },
+    "signature": {
+      "uniqueAxes": {
+        "temperature": 3,
+        "expression": 2,
+        "judgement": 0
+      }
+    }
+  },
+  {
+    "id": "suzumiya-haruhi",
+    "name": "凉宫春日",
+    "series": "凉宫春日的忧郁",
+    "image": "/images/characters/凉宫春日.png",
+    "matchCode": "ENTP",
+    "matchCodeFlex": [
+      "ESTP",
+      "ENTJ"
+    ],
+    "code": "HARU",
+    "title": "SOS团团长·世界系神明",
+    "archetypeId": "chaos-spark",
+    "tags": [
+      "我对普通人类没有兴趣",
+      "人形自走怪谈",
+      "只要我开心就好",
+      "宇宙法则修改器"
+    ],
+    "note": "普通人在你眼里一无是处，你的雷达只接收外星人、未来人和超能力者的信号。你不是在寻找乐子，你是在强迫这个无聊的世界为你全速运转。这种「只要自己爽，世界毁灭也无所谓」的恐怖执行力，让你成为了最高级别的麻烦制造机。",
+    "vector": {
+      "expression": 3,
+      "temperature": 1,
+      "judgement": -1,
+      "order": -3,
+      "agency": 3,
+      "aura": 3
+    },
+    "signature": {
+      "uniqueAxes": {
+        "agency": 3,
+        "order": -3,
+        "aura": 3
+      }
+    }
+  },
+  {
+    "id": "hoshino-ruby",
+    "name": "星野露比",
+    "series": "我推的孩子",
+    "image": "/images/characters/星野露比.png",
+    "matchCode": "ENFP",
+    "matchCodeFlex": [
+      "ESFP"
+    ],
+    "code": "RUBY",
+    "title": "天生发光体·执念狂魔",
+    "archetypeId": "luminous-lead",
+    "tags": [
+      "转生系爱豆",
+      "究极兄控",
+      "舞台永动机",
+      "谎言与爱的结晶"
+    ],
+    "note": "带着前世的沉重执念和满级天赋，你天生就是要吃这碗聚光灯饭的人。表面上是个无脑元气笨蛋，内心却燃烧着让人畏惧的胜负欲。为了那个闪闪发光的梦想，你甚至愿意把整个人生包装成最华丽的谎言，在舞台上连命都可以不要。",
+    "vector": {
+      "expression": 3,
+      "temperature": 2,
+      "judgement": 1,
+      "order": -1,
+      "agency": 3,
+      "aura": 3
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": 3,
+        "agency": 3,
+        "aura": 3
+      }
+    }
+  },
+  {
+    "id": "miyazono-kaori",
+    "name": "宫园薰",
+    "series": "四月是你的谎言",
+    "image": "/images/characters/宫园薰.png",
+    "matchCode": "ENFP",
+    "matchCodeFlex": [
+      "INFP",
+      "ESFP"
+    ],
+    "code": "KAOR",
+    "title": "自由的灵魂·不羁的演奏者",
+    "archetypeId": "luminous-lead",
+    "tags": [
+      "友人A的劫难",
+      "撕毁乐谱的狂徒",
+      "泪目制造机",
+      "只此一次的春天"
+    ],
+    "note": "你就像一阵无法捕捉的春风，蛮横地闯入别人的黑白世界并强行涂上色彩。你不按规矩出牌，把每一次登台都当成生命的最后一次狂欢。你给所有人留下了最刻骨铭心的春天，自己却只愿意当一个任性的「骗子」。",
+    "vector": {
+      "expression": 2,
+      "temperature": 3,
+      "judgement": -1,
+      "order": -2,
+      "agency": 2,
+      "aura": 2
+    },
+    "signature": {
+      "uniqueAxes": {
+        "temperature": 3,
+        "order": -2,
+        "judgement": -1
+      }
+    }
+  },
+  {
+    "id": "awa-subaru",
+    "name": "安和昴",
+    "series": "少女乐队的呐喊 (GBC)",
+    "image": "/images/characters/安和昴.png",
+    "matchCode": "ENFJ",
+    "matchCodeFlex": [
+      "ESFJ",
+      "ENTP"
+    ],
+    "code": "SUBA",
+    "title": "演技派鼓手·团队粘合剂",
+    "archetypeId": "trickster-orbit",
+    "tags": [
+      "刺猬群里的正常人",
+      "狡猾的妥协者",
+      "表面乖巧内里叛逆",
+      "情绪价值ATM"
+    ],
+    "note": "在一个全员带刺、动不动就爆炸的乐队里，你是唯一一个懂得用「演技」来维持局面的狡猾大人预备役。你太清楚怎么敷衍大人的期待，所以把所有的叛逆和不甘都砸碎在鼓点里。你不是没脾气，你只是知道什么时候该发疯，什么时候该装乖。",
+    "vector": {
+      "expression": 1,
+      "temperature": 2,
+      "judgement": 1,
+      "order": 1,
+      "agency": 2,
+      "aura": 1
+    },
+    "signature": {
+      "uniqueAxes": {
+        "temperature": 2,
+        "agency": 2,
+        "order": 1
+      }
+    }
+  },
+  {
+    "id": "frieren",
+    "name": "芙丽莲",
+    "series": "葬送的芙丽莲",
+    "addedAt": "2026-04-15",
+    "image": "/images/characters/芙丽莲.png",
+    "matchCode": "INTP",
+    "matchCodeFlex": [
+      "ISTP",
+      "INTJ"
+    ],
+    "code": "FREN",
+    "title": "千年的长寿精灵·民间戏法收集者",
+    "archetypeId": "icebound-observer",
+    "tags": [
+      "宝箱怪诱捕器",
+      "奶奶级赖床选手",
+      "战力天花板",
+      "不到最后不出手"
+    ],
+    "note": "你像那种对外总是显得情绪很淡、反应很慢的人，不是因为你真的漠不关心，而是你习惯先站得更远一点再看清一切。你擅长把判断和力量都留到最关键的时刻，却也会把那些别人看来毫无意义的小事默默珍藏起来。属于“日常像在发呆，关键时刻却重得惊人”的类型。",
+    "vector": {
+      "expression": -2,
+      "temperature": 0,
+      "judgement": 2,
+      "order": -1,
+      "agency": 1,
+      "aura": 3
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": -2,
+        "aura": 3,
+        "order": -1
+      }
+    }
+  },
+  {
+    "id": "ijichi-nijika",
+    "name": "伊地知虹夏",
+    "series": "孤独摇滚！",
+    "addedAt": "2026-04-15",
+    "image": "/images/characters/伊地知虹夏.png",
+    "matchCode": "ESFJ",
+    "matchCodeFlex": [
+      "ENFJ",
+      "ESFP"
+    ],
+    "code": "NIKA",
+    "title": "下北泽大天使·纽带缔结者",
+    "archetypeId": "luminous-lead",
+    "tags": [
+      "下北泽大天使",
+      "结束乐队老妈",
+      "呆毛本体",
+      "顶级吐槽役"
+    ],
+    "note": "你是那种能把散掉的人重新拢回来的人。你给人的安全感不只来自热情，更来自你会主动照顾气氛、分担压力，并在所有人都快乱成一团时先一步把局面稳住。属于“看起来像阳角气氛组，实际上是团队续命核心”的类型。",
+    "vector": {
+      "expression": 3,
+      "temperature": 3,
+      "judgement": 1,
+      "order": 1,
+      "agency": 3,
+      "aura": 2
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": 3,
+        "temperature": 3,
+        "agency": 3
+      }
+    }
+  },
+  {
+    "id": "tachibana-kanade",
+    "name": "立华奏",
+    "series": "Angel Beats!",
+    "addedAt": "2026-04-15",
+    "image": "/images/characters/立华奏.png",
+    "matchCode": "ISTJ",
+    "matchCodeFlex": [
+      "INTJ"
+    ],
+    "code": "KNDE",
+    "title": "死后世界的天使·麻婆豆腐狂热粉",
+    "archetypeId": "moonlit-guardian",
+    "tags": [
+      "三无天使",
+      "超辣麻婆豆腐党",
+      "Hand Sonic",
+      "笨拙的温柔"
+    ],
+    "note": "你给人的第一印象往往是安静、冷硬、难以靠近，像那种会把规则执行到底的人。但真正的核心并不是冷漠，而是你早就习惯在不被理解的情况下继续守住自己该守的东西。属于“高冷只是外壳，温柔却一直在做事”的类型。",
+    "vector": {
+      "expression": -3,
+      "temperature": -1,
+      "judgement": 3,
+      "order": 3,
+      "agency": 2,
+      "aura": 3
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": -3,
+        "judgement": 3,
+        "order": 3
+      }
+    }
+  },
+  {
+    "id": "kaltsit",
+    "name": "凯尔希",
+    "series": "明日方舟",
+    "image": "/images/characters/凯尔希.png",
+    "matchCode": "INTJ",
+    "matchCodeFlex": [
+      "INFJ",
+      "ENTJ"
+    ],
+    "code": "KALS",
+    "title": "罗德岛基石·Mon3tr牌外置执行力",
+    "archetypeId": "shadow-strategist",
+    "tags": [
+      "冷面医生",
+      "高压医嘱系领导",
+      "Mon3tr发射器",
+      "全局推演型保护欲"
+    ],
+    "note": "你不是单纯高冷，你只是已经把局势、风险、伤亡和后手全算过一遍了。表面像医务室里最不好惹的那位主任，开口不是命令就是医嘱，情绪稳定得像根本不会波动；但真到残局，她又会把责任、承诺和所有人的命一起扛起来。属于「嘴上像在给你下最后通牒，实际上已经把你从灭团线拽回来了」的类型。",
+    "vector": {
+      "expression": -2,
+      "temperature": -1,
+      "judgement": 3,
+      "order": 3,
+      "agency": 3,
+      "aura": 3
+    },
+    "signature": {
+      "uniqueAxes": {
+        "judgement": 3,
+        "order": 3,
+        "aura": 3
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q34",
+          "expected": "agree",
+          "weight": 1.3
+        },
+        {
+          "questionId": "q37",
+          "expected": "agree",
+          "weight": 1.25
+        },
+        {
+          "questionId": "q38",
+          "expected": "agree",
+          "weight": 1.2
+        }
+      ]
+    }
+  },
+  {
     "id": "arima-kana",
     "name": "有马加奈",
     "series": "我推的孩子",

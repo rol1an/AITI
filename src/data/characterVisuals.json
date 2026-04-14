@@ -189,6 +189,96 @@
 			"thumb": "/images/characters/thumbs/灰原哀.webp",
 			"accent": "#705877"
 		},
+		"violet-evergarden": {
+			"image": "/images/characters/薇尔莉特.webp",
+			"thumb": "/images/characters/thumbs/薇尔莉特.webp",
+			"accent": "#4B84C8"
+		},
+		"elaina": {
+			"image": "/images/characters/伊蕾娜.webp",
+			"thumb": "/images/characters/thumbs/伊蕾娜.webp",
+			"accent": "#8A8FBF"
+		},
+		"chitanda-eru": {
+			"image": "/images/characters/千反田爱瑠.webp",
+			"thumb": "/images/characters/thumbs/千反田爱瑠.webp",
+			"accent": "#7E5DAA"
+		},
+		"tomori-nao": {
+			"image": "/images/characters/友利奈绪.webp",
+			"thumb": "/images/characters/thumbs/友利奈绪.webp",
+			"accent": "#D9587C"
+		},
+		"nakano-azusa": {
+			"image": "/images/characters/中野梓.webp",
+			"thumb": "/images/characters/thumbs/中野梓.webp",
+			"accent": "#D84E59"
+		},
+		"furukawa-nagisa": {
+			"image": "/images/characters/古河渚.webp",
+			"thumb": "/images/characters/thumbs/古河渚.webp",
+			"accent": "#E1A7B1"
+		},
+		"nishimiya-shoko": {
+			"image": "/images/characters/西宫硝子.webp",
+			"thumb": "/images/characters/thumbs/西宫硝子.webp",
+			"accent": "#E7B0C5"
+		},
+		"kusanagi-nene": {
+			"image": "/images/characters/草薙宁宁.webp",
+			"thumb": "/images/characters/thumbs/草薙宁宁.webp",
+			"accent": "#19C08D"
+		},
+		"akemi-homura": {
+			"image": "/images/characters/晓美焰.webp",
+			"thumb": "/images/characters/thumbs/晓美焰.webp",
+			"accent": "#71558A"
+		},
+		"yuigahama-yui": {
+			"image": "/images/characters/由比滨结衣.webp",
+			"thumb": "/images/characters/thumbs/由比滨结衣.webp",
+			"accent": "#F5A1A8"
+		},
+		"suzumiya-haruhi": {
+			"image": "/images/characters/凉宫春日.webp",
+			"thumb": "/images/characters/thumbs/凉宫春日.webp",
+			"accent": "#F2C047"
+		},
+		"hoshino-ruby": {
+			"image": "/images/characters/星野露比.webp",
+			"thumb": "/images/characters/thumbs/星野露比.webp",
+			"accent": "#F3728B"
+		},
+		"miyazono-kaori": {
+			"image": "/images/characters/宫园薰.webp",
+			"thumb": "/images/characters/thumbs/宫园薰.webp",
+			"accent": "#E4D1A0"
+		},
+		"awa-subaru": {
+			"image": "/images/characters/安和昴.webp",
+			"thumb": "/images/characters/thumbs/安和昴.webp",
+			"accent": "#C3D825"
+		},
+		"frieren": {
+			"image": "/images/characters/芙丽莲.webp",
+			"thumb": "/images/characters/thumbs/芙丽莲.webp",
+			"accent": "#C8B6D8"
+		},
+		"ijichi-nijika": {
+			"image": "/images/characters/伊地知虹夏.webp",
+			"thumb": "/images/characters/thumbs/伊地知虹夏.webp",
+			"accent": "#F3C043"
+		},
+		"tachibana-kanade": {
+			"image": "/images/characters/立华奏.webp",
+			"thumb": "/images/characters/thumbs/立华奏.webp",
+			"accent": "#A6C1D6"
+		},
+		"kaltsit": {
+			"image": "/images/characters/凯尔希.webp",
+			"thumb": "/images/characters/thumbs/凯尔希.webp",
+			"accent": "#00B578"
+		},
 		"arima-kana": {
 			"image": "/images/characters/有马加奈.webp",
 			"thumb": "/images/characters/thumbs/有马加奈.webp",

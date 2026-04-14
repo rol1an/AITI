@@ -19,6 +19,7 @@ const quiz = useQuiz()
 const activeDebugResult = ref<ReturnType<typeof quiz.createDebugResult>>(null)
 const result = computed(() => activeDebugResult.value ?? quiz.latestResult.value)
 const isCharacterImageBroken = ref(false)
+const characterImageAttemptIndex = ref(0)
 const share = useShare()
 const posterRef = ref<{ rootEl: HTMLElement | null } | null>(null)
 const shouldMountPoster = ref(false)
@@ -70,11 +71,33 @@ function copyText() {
   void share.copyShareText(result.value)
 }
 
-function hideBrokenImage(event: Event) {
+function getCharacterImageCandidates(image: string | undefined) {
+  if (!image) {
+    return []
+  }
+
+  const variants = [image]
+
+  if (image.endsWith('.webp')) {
+    variants.push(image.replace(/\.webp$/i, '.png'))
+  }
+
+  if (image.endsWith('.png')) {
+    variants.push(image.replace(/\.png$/i, '.webp'))
+  }
+
+  return Array.from(new Set(variants))
+}
+
+function handleCharacterImageError() {
+  const nextAttempt = characterImageAttemptIndex.value + 1
+
+  if (nextAttempt < primaryCharacterImageCandidates.value.length) {
+    characterImageAttemptIndex.value = nextAttempt
+    return
+  }
+
   isCharacterImageBroken.value = true
-  const img = event.currentTarget as HTMLImageElement | null
-  if (!img) return
-  img.style.display = 'none'
 }
 
 function applyDebugResultFromRoute() {
@@ -106,6 +129,8 @@ const primaryCharacterImage = computed(() => {
   if (!primary) return ''
   return primary.image || `/images/characters/${primary.id}.webp`
 })
+const primaryCharacterImageCandidates = computed(() => getCharacterImageCandidates(primaryCharacterImage.value))
+const activePrimaryCharacterImage = computed(() => primaryCharacterImageCandidates.value[characterImageAttemptIndex.value] ?? '')
 
 const primaryCharacter = computed(() => result.value?.characterMatches?.[0] ?? null)
 const displayTags = computed(() => {
@@ -140,7 +165,8 @@ const strongestTrait = computed(() => {
   }, null as { trait: (typeof traits.value)[number]; score: (typeof result.value.scores)[TraitDimension] } | null)
 })
 
-watch(primaryCharacterImage, () => {
+watch(primaryCharacterImageCandidates, () => {
+  characterImageAttemptIndex.value = 0
   isCharacterImageBroken.value = false
 })
 
@@ -230,13 +256,13 @@ function scrollToSection(sectionId: string) {
         <div class="hero-visual poster-box">
           <div class="poster-frame">
             <img
-              v-if="primaryCharacter?.id && !isCharacterImageBroken"
-              :src="primaryCharacterImage"
+              v-if="primaryCharacter?.id && activePrimaryCharacterImage && !isCharacterImageBroken"
+              :src="activePrimaryCharacterImage"
               :alt="primaryCharacter ? getLocalizedCharacterName(primaryCharacter, locale) : 'Character'"
               class="hero-image"
               decoding="async"
               fetchpriority="high"
-              @error="hideBrokenImage"
+              @error="handleCharacterImageError"
             />
             <div v-else class="hero-image-fallback">
               <AppIcon name="fallback" />

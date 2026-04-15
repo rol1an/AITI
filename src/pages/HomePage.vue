@@ -44,7 +44,16 @@
           <p v-if="relayFeedback" class="hero-relay-feedback">{{ relayFeedback }}</p>
         </div>
         <div class="hero-privacy" role="note">
-          <p class="hero-privacy-copy">{{ t('home.privacyCopy') }}</p>
+          <p class="hero-privacy-copy">
+            {{ t('home.privacyCopy') }}
+            <a
+              href="https://arkti.ybwlawa0.com/quiz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ t('home.privacyLinkLabel') }}
+            </a>
+          </p>
         </div>
       </div>
 

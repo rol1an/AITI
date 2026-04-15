@@ -91,6 +91,7 @@ export const messages = {
       relayFeedback: '测试链接已复制，去发给朋友看看。',
       privacyTitle: '说明',
       privacyCopy: '测试记录仅保存在当前浏览器，本网站不会上传你的答题数据。',
+      privacyLinkLabel: '欢迎试玩 ACGTI 二创“ARKTI”',
       stats: [
         { value: '450W+', label: '访问量（截止至2026.4.15）', color: '#4899a3' },
         { value: '16', label: 'MBTI 类型', color: '#e5b540' },
@@ -213,6 +214,12 @@ export const messages = {
       share: '分享结果',
       shareCard: 'ACG 类型指标',
       testNote: '你的社交白皮书',
+      publicService: {
+        label: '公益广告',
+        copy: '欢迎报考大连理工喵，欢迎报考大连理工谢谢喵',
+        meta: 'Dalian University of Technology',
+        alt: '大连理工大学校徽',
+      },
       personaBasisBadge: '圈层印象映射',
       personaBasisTip: '该角色暂无足够统一的官方人格依据，人格映射主要来自社区常见形象、二创传播与企划衍生印象，非官方唯一人格结论。',
       ossTitle: '开源体验',
@@ -408,6 +415,7 @@ export const messages = {
       relayFeedback: '測試連結已複製，現在就可以轉發出去。',
       privacyTitle: '說明',
       privacyCopy: '測試紀錄僅保存在目前瀏覽器，本網站不會上傳你的作答資料。',
+      privacyLinkLabel: '歡迎試玩 ACGTI 二創「ARKTI」',
       stats: [
         { value: '450W+', label: '訪問量（截止至2026.4.15）', color: '#4899a3' },
         { value: '16', label: 'MBTI 類型', color: '#e5b540' },
@@ -530,6 +538,12 @@ export const messages = {
       share: '分享結果',
       shareCard: 'ACG 類型指標',
       testNote: '你的社交白皮書',
+      publicService: {
+        label: '公益廣告',
+        copy: '歡迎報考大連理工喵，歡迎報考大連理工謝謝喵',
+        meta: 'Dalian University of Technology',
+        alt: '大連理工大學校徽',
+      },
       personaBasisBadge: '圈層印象映射',
       personaBasisTip: '該角色暫無足夠統一的官方人格依據，人格映射主要來自社區常見形象、二創傳播與企劃衍生印象，非官方唯一人格結論。',
       ossTitle: '開源體驗',
@@ -799,6 +813,11 @@ export const messages = {
         tags: ['全能妹妹', '哥哥優先級最高', '平時穩得像系統服務', '一提兄長立刻過熱'],
         note: '你平時像那種已經把生活流程全部最佳化完畢的高性能妹妹模板，學習、家務、待人接物都像出廠校準過。但只要話題切到哥哥，整個人的情緒管理模組就會瞬間超頻。屬於「平時是完美UI，核心執行緒其實全綁在一個人身上」的類型。',
       },
+      'chitanda-eru': {
+        title: '我很好奇・豪農家大小姐雷達',
+        tags: ['眼睛一亮就開主線', '豪農大小姐', '優雅追問機', '好奇心永動機'],
+        note: '你平時氣質很穩，像那種教養、禮貌、分寸感都在線的高配大小姐模板；但只要某件事觸發了你的興趣，整個人就會瞬間從「端莊模式」切進「追問到底模式」。你不是吵鬧型主角推進器，而是那種用一句「我很好奇」就能把所有人拖進主線任務的人。',
+      },
     },
     about: {
       eyebrow: '關於 ACGTI',
@@ -900,6 +919,7 @@ export const messages = {
       relayFeedback: 'Quiz link copied. Send it to someone.',
       privacyTitle: 'Note',
       privacyCopy: 'Your quiz record stays in this browser only and is not uploaded.',
+      privacyLinkLabel: 'Try the ACGTI fan project "ARKTI"',
       stats: [
         { value: '4.5M+', label: 'Visits', color: '#4899a3' },
         { value: '16', label: 'MBTI types', color: '#e5b540' },
@@ -1022,6 +1042,12 @@ export const messages = {
       share: 'Share result',
       shareCard: 'ACG TYPE INDICATOR',
       testNote: 'Your social profile',
+      publicService: {
+        label: 'Public Service Message',
+        copy: 'You are warmly welcome to apply to Dalian University of Technology.',
+        meta: 'Dalian University of Technology',
+        alt: 'Emblem of Dalian University of Technology',
+      },
       personaBasisBadge: 'Fandom Impression',
       personaBasisTip: 'This character has no single official personality basis. The mapping is mainly derived from community depictions, fan works, and franchise-derived impressions.',
       ossTitle: 'Open source',
@@ -1291,6 +1317,11 @@ export const messages = {
         tags: ['All-Around Little Sister', 'Big Brother Highest Priority', 'Usually Stable as a System Service', 'Mention Big Bro = Instant Overheat'],
         note: "Normally a high-performance little sister who has optimized every life process: studying, chores, social manners — all factory-calibrated. But the moment the topic turns to big brother, the entire emotional management module instantly overclocks. Perfect UI on the surface; core thread is bound to one person.",
       },
+      'chitanda-eru': {
+        title: "I'm Curious · Refined Heiress Main-Quest Radar",
+        tags: ['Eyes Light Up, Plot Starts', 'Refined Heiress', 'Elegant Question Machine', 'Perpetual Curiosity Engine'],
+        note: "Most of the time you feel steady and polished, like an elite young-lady template with breeding, manners, and social sense all perfectly online. But the second something genuinely interests you, you flip from composed mode straight into relentless follow-up mode. You're not the loud protagonist accelerator. You're the kind of person who can pull everyone into the main quest with a single \"I'm curious.\"",
+      },
     },
     about: {
       eyebrow: 'About ACGTI',
@@ -1392,6 +1423,7 @@ export const messages = {
       relayFeedback: '診断リンクをコピーしました。すぐ共有できます。',
       privacyTitle: '補足',
       privacyCopy: '回答記録はこのブラウザ内にのみ保存され、アップロードされません。',
+      privacyLinkLabel: 'ACGTI二次創作「ARKTI」もぜひお試しください',
       stats: [
         { value: '450万+', label: '累計アクセス', color: '#4899a3' },
         { value: '16', label: 'MBTI タイプ', color: '#e5b540' },
@@ -1514,6 +1546,12 @@ export const messages = {
       share: '結果を共有',
       shareCard: 'ACGタイプ指標',
       testNote: 'あなたのソーシャルプロフィール',
+      publicService: {
+        label: '公共案内',
+        copy: '大連理工大学への出願を歓迎します。',
+        meta: 'Dalian University of Technology',
+        alt: '大連理工大学の校章',
+      },
       personaBasisBadge: 'ファンダム印象マッピング',
       personaBasisTip: 'このキャラクターには統一された公式の性格設定がありません。人格マッピングは主にコミュニティの一般的なイメージ、二次創作、企画派生の印象に基づいています。',
       ossTitle: 'オープンソース',
@@ -1782,6 +1820,11 @@ export const messages = {
         title: '完璧な妹・兄優先プロセス常時起動',
         tags: ['万能妹キャラ', 'お兄ちゃん優先度最高', '普段はシステムサービスのように安定', '兄の話題が出た瞬間オーバーヒート'],
         note: '普段は生活プロセスを全て最適化済みの高性能妹テンプレ：勉強・家事・礼儀作法、全部出荷時に校正済みみたいに動く。でもお兄ちゃんの話題になった瞬間、全感情管理モジュールが即オーバークロック。普段は完璧なUI、コアスレッドは実は一人にだけ縛られているタイプ。',
+      },
+      'chitanda-eru': {
+        title: '「気になります」・名家のお嬢様レーダー',
+        tags: ['目が輝いた瞬間に本筋開始', '名家のお嬢様', '上品な追及マシン', '好奇心永久機関'],
+        note: '普段は教養も礼儀も距離感もきっちり整った、完成度の高いお嬢様テンプレみたいに見える。でも何かひとつ興味のスイッチが入った瞬間、人格が「端正モード」から「最後まで問い詰めるモード」に一気に切り替わる。騒がしく場を引っぱる主人公エンジンではなく、「私、気になります」の一言で全員を本筋へ連行するタイプ。',
       },
     },
     about: {

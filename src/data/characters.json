@@ -2524,6 +2524,7 @@
     "id": "vertin",
     "name": "维尔汀",
     "series": "重返未来:1999",
+    "addedAt": "2026-04-15",
     "image": "/images/characters/维尔汀.webp",
     "matchCode": "INTP",
     "matchCodeFlex": ["INTJ", "ISTP"],

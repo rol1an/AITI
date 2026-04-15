@@ -11,7 +11,7 @@ ACG Type Indicator
 <p align="center">
   <a href="https://acgti.tianxingleo.top/"><img src="https://img.shields.io/badge/Deploy-Cloudflare_Pages-F38020?style=flat-square&logo=cloudflare" alt="Deploy to Cloudflare Pages" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License" /></a>
-  <img src="https://img.shields.io/badge/Hits-4M+-green.svg?style=flat-square" alt="Hits" />
+  <img src="https://img.shields.io/badge/Hits-4.5M+-green.svg?style=flat-square" alt="Hits" />
 </p>
 
 [**✨ 立即体验**](https://acgti.tianxingleo.top/) | [**📖 阅读文档**](#️-架构与原理) | [**🤝 参与贡献**](#-贡献)
@@ -135,7 +135,8 @@ src/
 
 ## 📰 时间线
 
-- **2026.4.14 15:00** [网站](https://acgti.tianxingleo.top/)访问量超过 400 万
+- **2026.4.15 15:00:** GitHub 仓库 ⭐ 数量达到 400
+- **2026.4.14 15:00** [网站](https://acgti.tianxingleo.top/)访问量超过 400 万，发布 blog：[【复盘】从一晚上一米工位到3天400w+浏览量的网站，我做了什么](https://tianxingleo.top/2026/04/12/%E4%BB%8E%E4%B8%80%E6%99%9A%E4%B8%8A%E4%B8%80%E7%B1%B3%E5%B7%A5%E4%BD%8D%E5%88%B02%E5%A4%A968w%E4%BA%BA%E8%AE%BF%E9%97%AE%E7%9A%84%E7%BD%91%E7%AB%99%EF%BC%8C%E6%88%91%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88/)
 - **2026.4.13 21:00:** [网站](https://acgti.tianxingleo.top/)访问人数达到 100 万，仓库Star 数达到 300
 - **2026.4.12 8:00:** 访问人数达到 50 万
 - **2026.4.11 23:00:** 进入 [**永雏塔菲**](https://www.bilibili.com/video/BV11FDyBZEN1/?spm_id_from=333.337.search-card.all.click) 直播间
@@ -159,12 +160,14 @@ npm run build
 
 ## 🤝 贡献
 
-欢迎 **Star** · 欢迎 **Fork** · 欢迎 **PR**！
+欢迎 **Star** · 欢迎 **Fork** · 欢迎 **Issue** · 欢迎 **PR**！
 
 当前项目仍处于早期阶段，题目数量和角色库都还不够丰富。如果你有好的情境题目想法或想补充更多作品的角色，非常期待你的参与：
 
 - 补充新角色 → 编辑 `src/data/characters.json`（详见 [新增角色流程](docs/新增角色流程.md)）
 - 添加新题目 → 编辑 `src/data/questions.json`
+- 希望新增某个角色 / 某部作品 → 欢迎先提 Issue，附上角色名、作品名和推荐理由
+- 对题目表述、题目维度、现有角色设定或结果解析有改进意见 → 欢迎提 Issue 讨论
 - 修复 Bug / 改进 UI → 直接提 PR
 
 > 新增角色的完整流程（含 WebP 图片转换、缩略图生成、概率重算等）请参考 [**新增角色流程文档**](docs/新增角色流程.md)。
@@ -244,6 +247,12 @@ git push origin v0.2.0
 ## 作者
 
 **tianxingleo** · [GitHub 主页](https://github.com/tianxingleo/) · [作者主页](https://tianxingleo.top)
+
+## Contributors
+
+<a href="https://github.com/tianxingleo/ACGTI/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=tianxingleo/ACGTI" />
+</a>
 
 <div align="center">
 

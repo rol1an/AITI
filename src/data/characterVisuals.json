@@ -340,43 +340,53 @@
     "accent": "#4868A8"
   },
   "hirasawa-yui": {
-    "image": "/images/characters/平泽唯.png",
+    "image": "/images/characters/平泽唯.webp",
+    "thumb": "/images/characters/thumbs/平泽唯.webp",
     "accent": "#EF82A0"
   },
   "emilia": {
-    "image": "/images/characters/爱蜜莉雅.png",
+    "image": "/images/characters/爱蜜莉雅.webp",
+    "thumb": "/images/characters/thumbs/爱蜜莉雅.webp",
     "accent": "#B2C8DF"
   },
   "yukinoshita-yukino": {
-    "image": "/images/characters/雪之下雪乃.png",
+    "image": "/images/characters/雪之下雪乃.webp",
+    "thumb": "/images/characters/thumbs/雪之下雪乃.webp",
     "accent": "#1C305C"
   },
   "sakurajima-mai": {
-    "image": "/images/characters/樱岛麻衣.png",
+    "image": "/images/characters/樱岛麻衣.webp",
+    "thumb": "/images/characters/thumbs/樱岛麻衣.webp",
     "accent": "#6A3A4C"
   },
   "akiyama-mio": {
-    "image": "/images/characters/秋山澪.png",
+    "image": "/images/characters/秋山澪.webp",
+    "thumb": "/images/characters/thumbs/秋山澪.webp",
     "accent": "#2B2E4A"
   },
   "takanashi-rikka": {
-    "image": "/images/characters/小鸟游六花.png",
+    "image": "/images/characters/小鸟游六花.webp",
+    "thumb": "/images/characters/thumbs/小鸟游六花.webp",
     "accent": "#6D327B"
   },
   "kousaka-kirino": {
-    "image": "/images/characters/高坂桐乃.png",
+    "image": "/images/characters/高坂桐乃.webp",
+    "thumb": "/images/characters/thumbs/高坂桐乃.webp",
     "accent": "#F5A159"
   },
   "amiya": {
-    "image": "/images/characters/阿米娅.png",
+    "image": "/images/characters/阿米娅.webp",
+    "thumb": "/images/characters/thumbs/阿米娅.webp",
     "accent": "#E6A23C"
   },
   "phoebe": {
-    "image": "/images/characters/菲比.png",
+    "image": "/images/characters/菲比.webp",
+    "thumb": "/images/characters/thumbs/菲比.webp",
     "accent": "#4A6E91"
   },
   "kitashirakawa-tamako": {
-    "image": "/images/characters/北白川玉子.png",
+    "image": "/images/characters/北白川玉子.webp",
+    "thumb": "/images/characters/thumbs/北白川玉子.webp",
     "accent": "#EF838D"
   },
   "nakano-nino": {
@@ -405,19 +415,23 @@
     "accent": "#D38E55"
   },
   "oyama-mahiro": {
-    "image": "/images/characters/绪山真寻.png",
+    "image": "/images/characters/绪山真寻.webp",
+    "thumb": "/images/characters/thumbs/绪山真寻.webp",
     "accent": "#F596AA"
   },
   "tokai-teio": {
-    "image": "/images/characters/东海帝皇.png",
+    "image": "/images/characters/东海帝皇.webp",
+    "thumb": "/images/characters/thumbs/东海帝皇.webp",
     "accent": "#3B81C8"
   },
   "eyjafjalla": {
-    "image": "/images/characters/艾雅法拉.png",
+    "image": "/images/characters/艾雅法拉.webp",
+    "thumb": "/images/characters/thumbs/艾雅法拉.webp",
     "accent": "#E25B45"
   },
   "shorekeeper": {
-    "image": "/images/characters/守岸人.png",
+    "image": "/images/characters/守岸人.webp",
+    "thumb": "/images/characters/thumbs/守岸人.webp",
     "accent": "#4B629A"
   },
   "doro": {

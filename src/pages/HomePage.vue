@@ -2,6 +2,16 @@
   <div class="home">
     <section class="hero">
       <div class="container hero-inner">
+        <div class="hero-update-badge animate-float-up">
+          <span class="badge-tag">{{ t('home.updateBadge.tag') }}</span>
+          <span class="badge-text">{{ t('home.updateBadge.text') }}</span>
+          <RouterLink to="/quiz" class="badge-link">
+            {{ t('home.updateBadge.link') }}
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </RouterLink>
+        </div>
         <h1 class="hero-title">{{ t('home.heroTitle') }}</h1>
         <p class="hero-subtitle">{{ t('home.heroSubtitle') }}</p>
         <div class="hero-actions">
@@ -276,6 +286,71 @@ async function copyQuizLink() {
   font-size: clamp(2.2rem, 5.5vw, 3.5rem);
   line-height: 1.15;
   font-weight: 800;
+}
+
+.hero-update-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  max-width: min(960px, 100%);
+  margin: 0 auto 1.5rem;
+  padding: 0.45rem 0.5rem 0.45rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 28px rgba(29, 53, 58, 0.14);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  text-align: left;
+}
+
+.badge-tag {
+  flex-shrink: 0;
+  padding: 0.28rem 0.8rem;
+  border-radius: 999px;
+  background: #e5b540;
+  color: #fff;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.badge-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.5;
+  opacity: 0.96;
+}
+
+.badge-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  min-height: 40px;
+  padding: 0 1rem;
+  border-radius: 999px;
+  background: #fff;
+  color: #4899a3;
+  font-size: 0.9rem;
+  font-weight: 800;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.badge-link svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.badge-link:hover {
+  background: #f4f8f8;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(33, 54, 59, 0.12);
+}
+
+.badge-link:hover svg {
+  transform: translateX(3px);
 }
 
 .hero-subtitle {
@@ -1011,6 +1086,17 @@ async function copyQuizLink() {
   .hero {
     padding-top: 4.2rem;
     padding-bottom: 11.5rem;
+  }
+
+  .hero-update-badge {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem;
+    border-radius: 22px;
+  }
+
+  .badge-text {
+    text-align: center;
   }
 
   .hero-scene {

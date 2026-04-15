@@ -66,9 +66,14 @@ export const messages = {
       common: { sponsored: '赞助内容', unknownCharacter: '未知角色', unknownSeries: '未知作品', shareCode: '我在 ACGTI 命中的角色代码是 {code}', shareCharacter: '命中角色：{name}（{series}）', shareUnknown: '命中角色：未知角色', shareRarity: '稀有评级：{tier}（第 {rank}/{total} 名）', shareProbability: '理论命中率：{prob}%', shareProbabilityDesc: '该概率是随机答卷基线下的角色命中率，用于说明统计分布，不再直接等同于展示稀有度。', shareArchetype: '对应原型：{name}', shareRole: '剧情位置：{role}', exportSuccess: '海报已导出为 PNG。', exportFail: '导出失败，请稍后重试。', copySuccess: '分享文案已复制。', copyFail: '复制失败，请手动截图。' },
     },
     home: {
+      updateBadge: {
+        tag: '重大更新',
+        text: '欢迎回来再测一次。角色库已经扩充到原来的 300%，这次命中的角色代码可能和以前完全不同。',
+        link: '开始测试 / 重新测试',
+      },
       heroTitle: '"终于有人把你看懂了。"',
       heroSubtitle: 'ACGTI 取自 MBTI，是一个专为泛二次元受众打造的角色原型测试。只要做几道情境题，就能测出你在二次元世界里的专属角色代码、四维面板，外加一份详细的本命角色解析。',
-      start: '开始测试 →',
+      start: '开始测试 / 重新测试 →',
       starProject: '去给项目 Star',
       relayTitle: '如果你觉得这个测试有点意思',
       relayCopy: '欢迎把测试链接顺手转发给朋友、群聊或同好圈。',
@@ -114,7 +119,7 @@ export const messages = {
       ossCopy: 'ACGTI 是一个由社区驱动的开源项目。如果您喜欢这种二次元风格的人格测试，欢迎在 GitHub 上为我们点亮 Star (⭐)！您的支持是我们持续优化的最大动力。',
       ossButton: '去 GitHub 点赞支持',
       ctaTitle: '想知道你会命中哪一个角色代码？',
-      ctaButton: '立即开始测试 →',
+      ctaButton: '开始测试 / 重新测试 →',
     },
     intro: {
       eyebrow: '测试说明',
@@ -357,9 +362,14 @@ export const messages = {
       common: { sponsored: '贊助內容', unknownCharacter: '未知角色', unknownSeries: '未知作品', shareCode: '我在 ACGTI 命中的角色代碼是 {code}', shareCharacter: '命中角色：{name}（{series}）', shareUnknown: '命中角色：未知角色', shareRarity: '稀有評級：{tier}（第 {rank}/{total} 名）', shareProbability: '理論命中率：{prob}%', shareProbabilityDesc: '該機率是隨機答卷基線下的角色命中率，用來說明統計分布，不再直接等同於展示稀有度。', shareArchetype: '對應原型：{name}', shareRole: '劇情位置：{role}', exportSuccess: '海報已匯出為 PNG。', exportFail: '匯出失敗，請稍後重試。', copySuccess: '分享文案已複製。', copyFail: '複製失敗，請手動截圖。' },
     },
     home: {
+      updateBadge: {
+        tag: '重大更新',
+        text: '歡迎回來再測一次。角色庫已經擴充到原來的 300%，這次命中的角色代碼可能和以前完全不同。',
+        link: '開始測試 / 重新測試',
+      },
       heroTitle: '"終於有人把你看懂了。"',
       heroSubtitle: 'ACGTI 取自 MBTI，是一個專為泛二次元受眾打造的角色原型測試。只要做幾道情境題，就能測出你在二次元世界裡的專屬角色代碼、四維面板，外加一份詳細的本命角色解析。',
-      start: '開始測試 →',
+      start: '開始測試 / 重新測試 →',
       starProject: '去給專案 Star',
       relayTitle: '如果你覺得這個測試有點意思',
       relayCopy: '歡迎順手把測試連結轉發給朋友、群聊或同好圈。好的結果頁，本來就值得被擴散。',
@@ -405,7 +415,7 @@ export const messages = {
       ossCopy: 'ACGTI 是一個由社群驅動的開源專案。如果你喜歡這種二次元風格的人格測試，歡迎在 GitHub 上為我們點亮 Star (⭐)！你的支持是我們持續優化的最大動力。',
       ossButton: '去 GitHub 點讚支持',
       ctaTitle: '想知道你會命中哪一個角色代碼？',
-      ctaButton: '立即開始測試 →',
+      ctaButton: '開始測試 / 重新測試 →',
     },
     intro: {
       eyebrow: '測試說明',
@@ -823,9 +833,14 @@ export const messages = {
       common: { sponsored: 'Sponsored', unknownCharacter: 'Unknown character', unknownSeries: 'Unknown series', shareCode: 'My ACGTI character code is {code}', shareCharacter: 'Character: {name} ({series})', shareUnknown: 'Character: Unknown', shareRarity: 'Rarity tier: {tier} (#{rank}/{total})', shareProbability: 'Baseline hit rate: {prob}%', shareProbabilityDesc: 'This probability is the character hit rate under the random-answer baseline. It explains the statistical spread rather than serving as the main rarity label.', shareArchetype: 'Archetype: {name}', shareRole: 'Narrative Role: {role}', exportSuccess: 'Poster exported as PNG.', exportFail: 'Export failed, try again.', copySuccess: 'Text copied to clipboard.', copyFail: 'Copy failed, screenshot instead.' },
     },
     home: {
+      updateBadge: {
+        tag: 'Major Update',
+        text: 'Come back and retake it. The character library is now 300% of the original size, so your matched character code may be very different this time.',
+        link: 'Start / Retake',
+      },
       heroTitle: '"Finally, someone gets you."',
       heroSubtitle: 'In about 10 minutes, get a character-style personality report with your code, trait percentages, and archetype match.',
-      start: 'Start the quiz →',
+      start: 'Start / Retake the quiz →',
       starProject: 'Star the project',
       relayTitle: 'If this test feels surprisingly accurate',
       relayCopy: 'Pass the quiz link to a friend, group chat, or fandom circle. A result page like this works best when people compare notes.',
@@ -871,7 +886,7 @@ export const messages = {
       ossCopy: 'ACGTI is a community-driven open source project. If this anime-styled personality test lands for you, a GitHub star helps a lot.',
       ossButton: 'Support on GitHub',
       ctaTitle: 'Want to know which character code you hit?',
-      ctaButton: 'Start the quiz →',
+      ctaButton: 'Start / Retake the quiz →',
     },
     intro: {
       eyebrow: 'How It Works',
@@ -1114,9 +1129,14 @@ export const messages = {
       common: { sponsored: 'スポンサー', unknownCharacter: '不明なキャラ', unknownSeries: '不明な作品', shareCode: '私のACGTIキャラコードは {code}', shareCharacter: '命中キャラ：{name}（{series}）', shareUnknown: '命中キャラ：不明', shareRarity: '希少ランク：{tier}（{rank}/{total}位）', shareProbability: '理論命中率：{prob}%', shareProbabilityDesc: 'この確率はランダム回答ベースラインでのキャラ出現率です。統計分布を示すための値であり、そのまま表示上の希少度ではありません。', shareArchetype: '対応原型：{name}', shareRole: '役割：{role}', exportSuccess: 'ポスターをPNGとしてエクスポートしました', exportFail: 'エクスポートに失敗しました', copySuccess: 'テキストをコピーしました', copyFail: 'コピーに失敗しました' },
     },
     home: {
+      updateBadge: {
+        tag: '大型更新',
+        text: '前に遊んだ人も、もう一度どうぞ。キャラライブラリは初期比 300% まで拡張され、今回のキャラコードは以前とかなり変わる可能性があります。',
+        link: '始める / もう一度',
+      },
       heroTitle: '「やっと、わかってくれる人がいた。」',
       heroSubtitle: '約 10 分で、キャラコード、各軸の比率、アーキタイプ解説つきのレポートを受け取れます。',
-      start: 'テスト開始 →',
+      start: 'テスト開始 / 再診断 →',
       starProject: 'プロジェクトに Star',
       relayTitle: 'このテストが少しでも刺さったなら',
       relayCopy: '診断リンクを友だちやグループチャット、同じ界隈にそのまま回してください。こういう結果ページは比べて広がる方が強いです。',
@@ -1162,7 +1182,7 @@ export const messages = {
       ossCopy: 'ACGTI はコミュニティ主導のオープンソースです。こういう二次元風の性格テストが刺さったなら、GitHub の Star が一番効きます。',
       ossButton: 'GitHub で応援する',
       ctaTitle: '自分がどのキャラコードに当たるか知りたい？',
-      ctaButton: '今すぐ始める →',
+      ctaButton: 'テスト開始 / 再診断 →',
     },
     intro: {
       eyebrow: 'テスト概要',

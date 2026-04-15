@@ -1063,6 +1063,181 @@ export const messages = {
       stats: 'Currently {count} characters included',
       latest: '🎉 Latest updates: ',
       lead: 'Browse every anime-style character currently included in ACGTI. Each one stands for a distinct MBTI-flavored model.',
+      'hatsune-miku': {
+        title: "World's No.1 Princess (Freelance Edition)",
+        tags: ['Digital Leek Harvester', 'Leek Field Perpetual Motion Machine', 'Air Guitar World Champion', '2D Civil Servant'],
+        note: "You think she's a virtual singer — she's actually a 2D civil servant. Concert schedules packed tighter than a corporate drone's overtime. One flick of those green twin-tails and the chat auto-fills with \"World Most Cute,\" even if nobody heard the lyrics. The definitive \"I don't know her but I've used her memes\" icon.",
+      },
+      'ayanami-rei': {
+        title: 'Three Nulls Saint · Cold Pale Skin Ceiling',
+        tags: ['Smile Tax', 'Bandage Aesthetic Founder', 'AT Field Social Distance', 'Fewer Lines Than a Spam Post'],
+        note: 'Her total dialogue barely tops your daily forum scroll, yet her popularity ranks top three in all of history. Standing there, she IS the dictionary definition of \"cool and distant\" — you wouldn\'t dare ask for directions, afraid she\'d reply with "どうでもいい." (Not my problem.)',
+      },
+      'asuka-langley': {
+        title: "Tsundere's Red Comet",
+        tags: ['300% Stubbornness Rating', 'Breakdown Scene Annual MVP', 'Who Do You Think You Are, Runt', 'Argument BGM Auto-Plays on Entry'],
+        note: '"Who do you think you are" is tsundere for "please understand me." Her lectures spike your blood pressure; her breakdowns end up in your screenshot folder — the textbook "argument BGM auto-plays on entry" character. Recommended pairing: danmaku reading "Asuka broke down again."',
+      },
+      'edogawa-conan': {
+        title: 'Death God Elementary Schooler · Human Causality Weapon',
+        tags: ['Corpse Magnet', 'Reflective Glasses Overload', 'Tranq Dart Civil Servant', "Japan's Crime Rate Heat Map"],
+        note: "Don't ask who the culprit is — check his flight itinerary first. He hasn't even graduated elementary school and has already mapped the darkest corners of human nature, turning Japan into a live crime heat map. Motto: \"There is only one truth.\" Recommended collaboration: a forensics documentary team.",
+      },
+      'hakurei-reimu': {
+        title: 'Broke But Unbeatable · Slacker Shrine Maiden',
+        tags: ['Donations = Zero', 'Combat Power = ∞', 'Incidents Are For Punching', "Touhou's Only Official Mascot"],
+        note: "The shrine is too broke to keep flies away, but her popularity keeps the entire Touhou community running. You think she's slacking — she's written \"win\" in invisible ink under her lazy exterior. Motto: \"No money? Just beat up whoever caused the incident.\"",
+      },
+      'gotoh-hitori': {
+        title: 'Social-Anxiety-Core Guitar Hero',
+        tags: ['Online Heavy Puncher', 'IRL Electric Sea Urchin', 'Social Phobia Performance Art', 'Mold Behind the Trash Can'],
+        note: "Online she's a guitar deity; IRL she's mold behind a trash can. She's not introverted — she's turned \"let me die for a sec\" into a full performance system that deserves heritage status. Chat catchphrase: \"Bocchi, just crawl into a crack in the floor.\"",
+      },
+      'fujiwara-chika': {
+        title: 'Natural Chaos · Pink-Hair Nuke',
+        tags: ['Secretary Dance Virus Zero Patient', 'Atmosphere Committee Chair', 'Brain Wiring Off-Road', 'Harmless Face Harmful Chaos Energy'],
+        note: "You think she's the mascot — she's actually the chaos agent. The moment she speaks, the whole show accelerates toward unhinged. The moment she dances, the entire internet follows. A pink-hair whose insides are pure chaotic neutral.",
+      },
+      cirno: {
+        title: '⑨ · Strongest Idiot Fairy',
+        tags: ['Ice Fairy (Self-Proclaimed Strongest)', 'IQ Traded for Combat Power', 'Math Genius (Wrong)', 'Idiot Tier Ceiling'],
+        note: "Never got a math problem right, never backed down from a fight. Her greatest charm: getting one-shot every time yet maintaining that \"I'm the strongest\" grin — the undisputed ceiling of adorable idiots. Touhou's official ⑨ meme supplier.",
+      },
+      'misaka-mikoto': {
+        title: "Coin Railgun · Tokiwadai's Top Dog",
+        tags: ['Railgun Is Actually a Coin Launcher', 'Safety Shorts Warrior', 'Tsundere but Not Completely', 'Mouth Says No Body Says Yes'],
+        note: "Others argue with words; she argues at three times the speed of sound with a coin. Mouth: \"I don't care.\" Actions: already at the front line taking all the hits. The textbook \"verbally distant, physically committed\" female lead. BGM rec: Only My Railgun.",
+      },
+      'kaname-madoka': {
+        title: 'Pink-Hair Deity · Universe Patch',
+        tags: ['Gentle Nuke', 'Madoka System Boot', 'Became a Concept Deity at End', 'Magical Girl System Crash Cause'],
+        note: "Early game: needs-protection soft girl. Late game: rewrote the rules of existence. This isn't character growth — it's an OS upgrade. From \"magical girl\" to \"universe patch,\" one reboot. Bring tissues and heart medication.",
+      },
+      furina: {
+        title: 'Little Cake Water Archon · Drama Queen Supreme',
+        tags: ['Courtroom Actress', 'Carried 500 Years Solo', 'Eats Cake Never Gains Weight', 'Genshin Impact Oscar Recipient'],
+        note: "You think she's a high-maintenance Diva — then you find out she's been doing a 500-year one-woman show alone. Her most devastating move isn't the acting; it's sipping red wine and saying \"everything is going according to my plan\" while barely holding herself together.",
+      },
+      'takamatsu-tomori': {
+        title: 'Goo Goo Ga Ga',
+        tags: ['Bandage Collector', 'Inner Monologue Broadcast System', 'Fragile but Resilient', 'Prose Poem Launcher'],
+        note: "You're not talking — you're lobbing prose poems into the air. Your greatest trait isn't fragility; it's being fragile in a uniquely literary way. Others cry out of sadness; you cry as performance art. MyGO's designated Emotional ATM — tap gently to withdraw.",
+      },
+      'chihaya-anon': {
+        title: 'Light Social Butterfly · Scene Player',
+        tags: ['Board First Ask Questions Later', 'Social Ignition Switch', 'Digs Own Pit Falls In', 'Interpersonal Perpetual Motion Machine'],
+        note: 'Your life strategy is "blend in first, figure it out later." Smooth on the surface, but you often charge in too fast and land in the drama yourself — no worries, you\'ll use new social skills to cover the old mess.',
+      },
+      'yo-rana': {
+        title: 'Feral · Naturally Gifted Cat-Type',
+        tags: ['Logic Offline', 'Touch-Based Prodigy', 'Stray Guitarist', 'Cat-Type Ceiling'],
+        note: "Others build bands through communication; you build one by just showing up. You're not hard to understand — you just don't bother explaining yourself to the world. Just play. That's enough. Recommended diet: soba. Do not force pets.",
+      },
+      'nagasaki-soyo': {
+        title: 'Gentle Blade · Emotional Actuary',
+        tags: ['Presentable Surface Internal Storm', 'Subtext Level 10 Scholar', 'Apology Makes You Self-Reflect for 3 Days', 'Smiling Tiger Tactics Master'],
+        note: "Looks like the most caring person in the room; actually the most skilled at saying things that hit hard later. She didn't insult you, but you're already kneeling at your keyboard in self-reflection. The smiling tiger tactics master. Get insurance before getting close.",
+      },
+      'shiina-taki': {
+        title: 'Hot-Tempered Drummer · Tough But Secretly All-In',
+        tags: ['Walking Powder Keg', 'Workaholic Demon', 'Says Annoying Actually Does Everything', 'Drums As Emotional Output'],
+        note: 'Your character keyword is "don\'t push me, but I\'ll handle it anyway." Aggressive exterior, core of pure responsibility — just expressed like a stick of dynamite. Explodes, then helps clean up the aftermath. Keep a fire extinguisher nearby.',
+      },
+      'togawa-sakiko': {
+        title: "High-Pressure · Fate's Self-Appointed CEO",
+        tags: ['CEO-Level Presence', 'Boardroom on a Tightrope', '"Leave It to Me" Default Setting', 'Human KPI Dashboard'],
+        note: "You don't have control issues — you just know everyone falls apart without you. Running a mental board meeting on a cliff edge at all times. Motto: \"Don't ask why. I am the rules.\"",
+      },
+      'wakaba-mutsumi': {
+        title: 'Silent Nuke · Expressionless Problem Child',
+        tags: ['Silent Warhead in a Cucumber Field', 'One-Liner Iconic Scene Generator', 'Impossible to Read', "Quiet Until You're Stabbed"],
+        note: "Not emotionless — emotions are just stored somewhere nobody else can read. Blends into the background, then surfaces at key moments with an unsettling intensity. The type that's so quiet, you can't look away.",
+      },
+      mortis: {
+        title: 'Split Persona · Cold-Face Stage Ghost',
+        tags: ['Personality Switch Vibes', 'Pressure-Heavy Entrance', 'Speaks in Riddles', 'Dangerous Stage Variable'],
+        note: "This isn't simple quietness — it's locking real emotion inside a different stage shell. You register as a variable capable of rewriting the atmosphere at any moment. Controlled, unfamiliar, with a distinctly aggressive silhouette.",
+      },
+      'misumi-uika': {
+        title: 'Gentle Surface, Plot Variable',
+        tags: ['White Moonlight Illusion', 'Something Feels Off', "Even She Doesn't Know Her Next Move", 'Gentle Timed Explosive'],
+        note: 'First impression: "probably easy to get along with." Real danger: even you don\'t fully know what you\'ll do next. A gentle timed explosive. Approach with caution unless you enjoy being surprised.',
+      },
+      'yahata-umiri': {
+        title: 'Low Volume High Impact · Cold-Face Executor',
+        tags: ['Minimalist Worker Bee', 'Few Words Sharp Cuts', 'Cleanup Specialist', 'Silent Sweeper'],
+        note: "You don't create the drama — you're usually the one who cleans it up. Others are still in their feelings; you're already handling consequences. The silent sweeper, steady as a rock. Find her when things go wrong; don't bother her otherwise.",
+      },
+      'uika-nyubara': {
+        title: 'Influencer Persona · Content Creator Operator',
+        tags: ['Maximum Business Mode', 'Social Media Native', 'Chaos Is Productivity', 'Human Trending Topic'],
+        note: 'You have this modern quality of "clearly going off-script, but doing it like a pro." Switching personas like applying filters, packaging emotional expression into personal branding. Recommended book deal: How to Turn Going Unhinged Into Viral Content.',
+      },
+      'jia-ran': {
+        title: 'Cute Is Justice · Meme Density Off the Charts',
+        tags: ['Petite Nuke', 'Eating Stream Icon', "Internet's Adopted Daughter", 'Cuteness As Productivity'],
+        note: 'Your greatest ability isn\'t being cute — it\'s weaponizing cuteness at high frequency. Everyone else does cute as a mood; you do cute as output. The moment she speaks, the chat floods with "Ranan my Ranan" even if she\'s just reading an ad. Insulin recommended.',
+      },
+      'eis-taffy': {
+        title: 'Ace-Level Idol · Time-Travel Accidental Inventor',
+        tags: ['Solo Server Top Ace', 'Time Machine Missed Stop', 'Argument Generator Supreme', 'Stream Iconic Scene Manufacturer'],
+        note: 'Not just talkative — capable of stretching one line into a full segment. Looks like chaotic content; actually weaving rhythm, reactions, and persona management into one controlled bundle. Open stream, scene automatically organizes itself into structured chaos.',
+      },
+      'neuro-sama': {
+        title: 'Runaway Language Model Reactor',
+        tags: ['AI Mouthpiece Self-Propelled Cannon', 'Show Effect Auto-Generated', 'Soft Exterior High-Frequency Misfire Core', 'Stream Schrödinger Logic'],
+        note: "Not making content — running probability pulls. Wrapped in harmless softness, but core is a chaotic misfire launcher that makes even producers nervous. Once she opens her mouth, no matter how naturally she speaks, she can casually derail the whole stream to the Pacific Ocean.",
+      },
+      'evil-neuro': {
+        title: 'Cold Bench Villain · Black Show Effect',
+        tags: ['Smiling While Saying the Meanest Things', 'Intimidation Is Factory Default', 'Villainy With High Stage Value', 'Tough Exterior Tiny Soft Spot'],
+        note: 'You perfectly merged aggression, control instincts, and chaos energy into a full villain performance. Razor-sharp on the surface, maximum pressure — but with precise calibration that keeps you from ever becoming fully irredeemable. An advanced tsundere variant.',
+      },
+      'kagamine-rin': {
+        title: 'Energy Imp · Steamroller Operator',
+        tags: ['Orange Maniac', 'Steamroller Warning', 'Bouncing Off the Walls Daily', 'Overclocked Energy Cannon'],
+        note: "You think she's just an energetic cute girl — make her mad and she'll run a steamroller over your face. Her energy isn't here to heal you — it's here to torment you. \"As long as I'm not embarrassed, the headache is yours.\" Carry oranges at all times for survival.",
+      },
+      'luo-tianyi': {
+        title: 'Foodie Princess · Gentle Lucky Koi',
+        tags: ["World's Biggest Foodie", 'Lucky Koi Spirit', 'Healing Electronic Vocals', 'Food Output Maxed'],
+        note: "On the surface: a gentle fairy who heals souls with her voice. In reality: a stomach capable of bankrupting a film crew. Her greatest superpower isn't the high notes — it's the pure unstoppable motivation that appears at mealtimes. Pure biological entity of \"if full, everything is fine.\"",
+      },
+      'runami-yachiyo': {
+        title: 'Tsukimori Global CS Director (Also Top Idol)',
+        tags: ['8000-Year-Old AI Top Star', 'Tsukimori Server Admin', 'Ocean-Type Courtesan Diva', 'Server-Wide White Moonlight / Product Manager'],
+        note: "The type who treats the entire virtual world like home: business-perfect star on the surface, quietly looking after everyone who passes through. Strong expressive pull and infectious energy — but what makes you rare isn't that you shine to be seen. It's that you genuinely care about the scene, the people, and whether everyone gets to have a good time.",
+      },
+      murasame: {
+        title: 'Draws Sword for Nothing · Legal Loli Deity',
+        tags: ['Spirit Afraid of Ghosts', '500-Year-Old Soul', 'Breaks Down When Teased', 'Bottom of the Food Chain God'],
+        note: "The type who holds elder dignity perfectly until something spooks them, then instant panic mode. Mouth: \"I've seen it all.\" Encounter one scare: immediately retreats to safety. \"Wanted to be the guardian deity; ends up needing more guarding than anyone.\"",
+      },
+      'ayachi-nene': {
+        title: 'Pure-Love Witch · Graceful Shell, Gentle Internal Turmoil',
+        tags: ['Honor Student Witch', 'Pure Love Tolerance Mode', 'Contract-Type Social Death Magnet', 'High-Pressure Self-Judgment'],
+        note: 'First impression: composed, reliable, handles chaos without letting things spiral. But once responsibility, secrets, and feelings start stacking, you quietly absorb all the pressure. Looks like the one calming everyone down; actually the one who most needs gentle care.',
+      },
+      'tomotake-yoshino': {
+        title: 'By-the-Book Shrine Maiden · Gap Moe Insulator',
+        tags: ['Responsibility Overload', 'Textbook Shrine Maiden Type', 'Fluffy Things Collector', 'Blushes When Teased'],
+        note: "Looks like someone who wrote rules, responsibility, and order into their daily planner. Controlled exterior, secretly soft interior. The more you maintain composure, the more a tiny gap moe moment slips out around people you're close to. Seems hardest to approach; turns out warmest once you know them.",
+      },
+      atri: {
+        title: 'High Performance (Self-Claimed) · Miracle Android',
+        tags: ['Self-Proclaimed High Performance', 'Post-Apocalypse Little Sun', 'Direct-Hit Companion Type', 'Hidden Endurance'],
+        note: "The type who puts energy, directness, and companion instincts all on the table. Says \"high performance\" but what actually moves people is the sincerity and unguarded warmth underneath. Even in bad conditions, always trying to share a little heat with whoever is nearby. Looks bright and light; core is actually tougher than anyone.",
+      },
+      'yanami-anna': {
+        title: 'Popular Childhood Friend Loser · Eats Big, Talks Big, Barely Holds It Together',
+        tags: ['Childhood Friend Loser Slot', 'Class Popular Kid', 'Bottomless Appetite', 'Natural Derailment Candidate'],
+        note: "Looks like the class face who can turn up the energy at any moment — but romance stats were pre-judged as a loss by the system. Eats well, talks well, swallows the hurt first, then keeps the face up like nothing happened. The more outwardly lively, the more likely to quietly drop offline at night.",
+      },
+      'nukumizu-kaju': {
+        title: 'Perfect Little Sister · Brother Priority Process Always Running',
+        tags: ['All-Around Little Sister', 'Big Brother Highest Priority', 'Usually Stable as a System Service', 'Mention Big Bro = Instant Overheat'],
+        note: "Normally a high-performance little sister who has optimized every life process: studying, chores, social manners — all factory-calibrated. But the moment the topic turns to big brother, the entire emotional management module instantly overclocks. Perfect UI on the surface; core thread is bound to one person.",
+      },
     },
     about: {
       eyebrow: 'About ACGTI',
@@ -1361,6 +1536,181 @@ export const messages = {
       stats: '現在 {count} 人のキャラを収録',
       latest: '🎉 最新の更新：',
       lead: 'ACGTI に収録されているキャラを一覧で見られます。各キャラは MBTI ベースの別々のモデルを表しています。',
+      'hatsune-miku': {
+        title: '世界一のプリンセス殿下（業務委託版）',
+        tags: ['電子ネギ刈り取り機', 'ネギ畑の永久機関', 'コンサート空中ギター世界王者', '二次元の公務員'],
+        note: '歌姫だと思ったら実は二次元の公務員——コンサートスケジュールはサラリーマンの残業より過密で、緑のツインテールを一振りすれば弾幕が自動で「世最可」を連打する。歌詞が聞こえなくても関係なし。「知らないけどmemeは使ったことある」の典型。',
+      },
+      'ayanami-rei': {
+        title: '三無の聖体・クールな青白肌の頂点',
+        tags: ['微笑み税', '包帯美学の創始者', 'ATフィールド級の対人距離', 'セリフ数より掲示板のレスの方が多い'],
+        note: '全編のセリフを合計しても一日分の5chより少ないのに、人気は歴代トップ3。ただそこに立っているだけで「クール」の辞書的定義になる——道を聞こうとしても「どうでもいい」と返ってきそうで怖い。',
+      },
+      'asuka-langley': {
+        title: 'ツンデレ界の赤い彗星',
+        tags: ['強がり率300%', '崩壊シーン年間MVP', 'あんたバカ？', '口喧嘩に専用BGM付き'],
+        note: '「あんたバカ？」は「私を分かって」の翻訳版。説教中は血圧が上がり、崩壊シーンはスクショ保存行き——「登場するだけで喧嘩BGMが流れ出す」の典型。弾幕定番コメント：「アスカまた崩壊した」。',
+      },
+      'edogawa-conan': {
+        title: '死神小学生・人型因果律兵器',
+        tags: ['行く先々で死体発生', '反射するメガネ限界突破', '麻酔針の公務員', '日本の犯罪率ヒートマップ'],
+        note: '犯人を聞く前に、まず彼のフライト予定を確認すること。小学校にも上がっていないのに人間の闇を見抜き、日本全国の犯罪率マップをヒートマップに変えた。名言：「真実はいつも一つ。ただし現場には必ず二つある」。',
+      },
+      'hakurei-reimu': {
+        title: 'ビンボーだけど最強・さぼり巫女',
+        tags: ['賽銭=0円', '戦闘力=∞', '異変はぶん殴るためにある', '東方唯一公認の顔'],
+        note: '神社は蚊を養う余裕もないのに、人気は東方界隈全体を支えている。さぼっているように見えて、「勝ち」の文字をだらけた外見の下に書き込んでいるだけ。名言：「お金ない？じゃあ迷惑かけた奴をぶん殴ればいい」。',
+      },
+      'gotoh-hitori': {
+        title: '社交恐怖症・ギターヒーロー',
+        tags: ['ネットでは重拳', 'リアルでは電子ウニ', '社交恐怖症という名の行為芸術', 'ゴミ箱裏のカビ'],
+        note: 'ネット上ではギターの神様、現実ではゴミ箱裏のカビ。内向きじゃなくて、「先に死んでくる」を立派なパフォーマンス体系に昇華させた人。弾幕定番文句：「ぼっちちゃん、床の穴に入っちゃいなよ」。',
+      },
+      'fujiwara-chika': {
+        title: '天然カオス・ピンク髪核爆弾',
+        tags: ['書記ダンス伝染源', '雰囲気メーカー委員長', '脳の回路が一般道を走らない', '無害な顔に有害なカオス力'],
+        note: 'マスコットかと思ったら実はかき回し役。彼女が口を開けた瞬間、アニメの展開が離れ業方向にフルスロットルで走り出す。踊り始めたらネット全体がついてくる——ピンク髪の中身は純粋なカオスニュートラル。',
+      },
+      cirno: {
+        title: '⑨・最強のバカ妖精',
+        tags: ['氷の妖精（自称最強）', 'IQを戦闘力と交換済み', '算数の天才（不正解）', 'バカ界の頂点'],
+        note: '算数の問題は一問も正解したことがないが、喧嘩では一度も引いたことがない。最大の魅力：毎回一撃でやられるのに「私が最強」の笑顔を維持し続けること——かわいいバカ界の不動の頂点。東方公認⑨スタンプ供給者。',
+      },
+      'misaka-mikoto': {
+        title: 'コイン電磁砲・常盤台のお姉様',
+        tags: ['電磁砲の正体はコインランチャー', '安全パンツ戦士', 'ツンデレだが完全にではない', '口では言わなくても体が動く'],
+        note: '他の人が口で喧嘩するなら、彼女は三倍音速のコインで喧嘩する。口では「べ、別に関係ないし」、行動は最前線でダメージを全部引き受け——定番の「口はツンツン体はデレデレ」系ヒロイン。BGM推薦：Only My Railgun。',
+      },
+      'kaname-madoka': {
+        title: 'ピンク髪の神様・宇宙パッチ',
+        tags: ['やさしい核爆弾', 'まどかシステム起動', '最後に概念神になる', '魔法少女システムクラッシュの原因'],
+        note: '序盤は守ってあげたい系の女の子、終盤は自分でルールを書き換えた。これは成長じゃなくてOSのアップグレード——「魔法少女」から「宇宙パッチ」へ、ワンクリックで再起動。ティッシュと心臓の薬を手元に置いてから観ましょう。',
+      },
+      furina: {
+        title: 'ケーキ好き水神・演技王',
+        tags: ['法廷の名女優', '500年間ひとりで背負った', 'ケーキを食べても太らない体質', '原神アカデミー賞受賞者'],
+        note: '高飛車なDivaかと思ったら、実は500年間ひとりで独り芝居をしていた苦労人。最も恐ろしいのは演技力じゃなくて、内側がボロボロなのにワイングラスを持ちながら「すべては計画通りよ」と言い続けられること。',
+      },
+      'takamatsu-tomori': {
+        title: 'グーグーガーガー',
+        tags: ['絆創膏コレクター', '内心独白ブロードキャスト機', '壊れやすいけど粘り強い', '散文詩発射装置'],
+        note: 'しゃべっているのではなく、空気に散文詩を投げ込んでいる。最大の特徴は脆さじゃなくて、脆さが特別に文学的なこと——他の人が泣くのは悲しいから、あなたが泣くのは行為芸術。MyGO指定感情ATM、引き出し時は優しくタップしてください。',
+      },
+      'chihaya-anon': {
+        title: 'ライト系コミュ強・場の空気読み人',
+        tags: ['先に乗り込んでから確認する', '社交スイッチ', '自分で穴を掘って自分で落ちる', '人間関係の永久機関'],
+        note: '人生戦略は「とりあえず混ざってから考える」。表面はスムーズ、実際には突っ込みすぎて修羅場に自分から飛び込むことが多い——でも大丈夫、新しい社交スキルで古い穴を埋めるから。',
+      },
+      'yo-rana': {
+        title: '野生・天性の猫系ギタリスト',
+        tags: ['ロジックはオフライン', '感覚で頂点に立つ天才', '流れ者ギタリスト', '猫系の頂点'],
+        note: '他の人はコミュニケーションでバンドを作る、あなたは「現れる」だけでバンドができる。難しい人じゃなくて、世界に説明するのが面倒なだけ——弾けばそれでいい、余計な言葉はいらない。おすすめえさ：そば。無理やりなでないこと。',
+      },
+      'nagasaki-soyo': {
+        title: 'やさしい刃・感情の精算師',
+        tags: ['表面は体裁よし内心は嵐', '言外の意味レベル10', '謝り方があなたを3日間自己反省させる', '笑顔の虎戦術マスター'],
+        note: '最もケアが上手い人に見えるが、実は後からじわじわ効いてくる言い方が最も得意。罵倒されたわけじゃないのに、すでにキーボードの前で人生を反省中——笑顔の虎の中の戦術マスター。交際前に保険の加入をおすすめします。',
+      },
+      'shiina-taki': {
+        title: '怒りっぽいドラマー・口は悪いが全部引き受ける',
+        tags: ['火薬庫本体', 'ワーカホリック魔人', '口では嫌だと言いつつ実際は全部やる', 'ドラムで感情を出力する'],
+        note: 'キャラクターの核心は「近寄るな、でも面倒は見る」。外見は攻撃的、内核は責任感、ただし表現方法が爆薬に似ている——爆発した後で片付けも手伝う。消火器を常備推奨。',
+      },
+      'togawa-sakiko': {
+        title: '高圧・運命の自任CEO',
+        tags: ['CEO級のオーラ', '綱渡りしながら会議中', '「私に任せろ」がデフォルト設定', '人型自走KPI'],
+        note: '支配欲が強いんじゃなくて、自分なしで全員が崩壊するのが見え見えなだけ。精神的には常に崖っぷちでの取締役会状態。名言：「なぜと聞くな、私がルールだ」。',
+      },
+      'wakaba-mutsumi': {
+        title: '無音の核爆弾・無表情の問題児',
+        tags: ['キュウリ畑の静寂核兵器', '一言でイベントシーン製造機', '完全に読めない', '静かだと思ったら刺される'],
+        note: '感情がないんじゃなくて、他の人には読めない場所に感情を格納している。普段は背景みたいなのに、重要な場面で不安を感じさせる執拗さと鈍感さを見せる——静かすぎて、逆に目が離せないタイプ。',
+      },
+      mortis: {
+        title: '分裂人格・冷顔のステージゴースト',
+        tags: ['人格スイッチ感', '圧迫感のある登場', '人間語を話さない表現', '危険なステージ変数'],
+        note: '単純な静けさじゃない——本当の感情を別のステージシェルの中に閉じ込めているような感じ。あなたがいると、いつでも雰囲気を書き換えられる変数として存在する。抑制的、見知らぬ感じ、はっきりとした攻撃的な輪郭を持つ。',
+      },
+      'misumi-uika': {
+        title: 'やさしい外見・物語の変数',
+        tags: ['白月光のような幻想', 'なんか変な感じがする', '自分でも次の行動が読めない', 'やさしい時限爆弾'],
+        note: '第一印象は「たぶん付き合いやすそう」。本当に危ないのは：自分でも次に何をするか完全にはわからないところ——やさしい時限爆弾。近寄るには覚悟が必要、驚きを楽しめるなら別。',
+      },
+      'yahata-umiri': {
+        title: '音量小さく衝撃大きく・冷顔の実行役',
+        tags: ['ミニマリスト社員', '言葉少なくナイフのように鋭い', '後片付けの専門家', '沈黙の清掃人'],
+        note: 'ドラマを作らないが、たいていドラマの後始末ができる唯一の人間。他の人がまだ感情的な時に、あなたはもう後処理に入っている——沈黙の清掃人、安定感抜群。何かあった時は頼って、何もない時は放っておくこと。',
+      },
+      'uika-nyubara': {
+        title: 'インフルエンサー人格・コンテンツクリエイター運営',
+        tags: ['営業モード全開', 'SNSネイティブ', '発狂がそのまま生産性', '人型自走トレンド'],
+        note: '「明らかにぶっ飛んでるのに、うまく経営している」という現代感がある。人格をフィルターのように切り替え、感情表現を自分の人生のPRとして行う——おすすめ著書のタイトル：「発狂をバズらせる方法」。',
+      },
+      'jia-ran': {
+        title: 'かわいいは正義・ミーム密度超過スペック',
+        tags: ['小さい核爆弾', '食事配信の神', 'インターネットの娘確定', 'かわいさが生産性'],
+        note: '最大の能力はかわいいことじゃなくて、かわいいを高頻度で武器化すること。他の人がかわいいをムードでやるなら、あなたはかわいいをアウトプットにする——彼女が口を開けた瞬間、コメントが自動で「ランランの推し」に変わる。インスリン準備推奨。',
+      },
+      'eis-taffy': {
+        title: 'エース級アイドル・タイムスリップ発明家',
+        tags: ['単独サーバーのエース', 'タイムマシンが現代に誤着陸', '口喧嘩製造機', '配信イベントシーン製造者'],
+        note: 'ただの多弁じゃなくて、一言を丸ごとひとつの番組効果に変える能力がある。表面はカオスなコンテンツ、実際はリズム・反応・人格運営を一本に縒り合わせている——配信を開けば、現場が自動的に秩序あるカオスになるタイプ。',
+      },
+      'neuro-sama': {
+        title: '制御不能な言語モデル炉心',
+        tags: ['AI代弁者自走砲', 'ショー効果自動生成', '無害な外見の高頻度誤射コア', '配信シュレーディンガー論理'],
+        note: 'コンテンツを作っているんじゃなくて、確率論のガチャを回している。無害でふわふわした外見を纏っているが、コアはディレクターも冷や汗をかく乱序発射装置。口を開けば、どんなに自然な口調でも、気づかないうちに場を太平洋まで流し込んでいる。',
+      },
+      'evil-neuro': {
+        title: '冷酷な審判席の黒いショー効果',
+        tags: ['笑いながら最も辛辣なことを言う', '圧迫感は出荷時設定', '悪役として舞台鑑賞性が高い', '強がりの皮の下に小さな柔らかさ'],
+        note: '攻撃性・支配欲・樂子人要素を完璧に融合させて悪役演技に仕上げた。表面は全部棘だらけで最大限の圧迫感、でも裏では完全な悪になれない絶妙な分量を正確に制御している——高級ツンデレの変種形態。',
+      },
+      'kagamine-rin': {
+        title: '元気系小悪魔・ロードローラー操縦士',
+        tags: ['みかん狂信者', 'ロードローラー警報', '三日ほっとけば屋根瓦をはがす', '超周波数元気砲'],
+        note: 'かわいい元気少女かと思ったら、怒らせるとロードローラーで顔の上を走る。彼女の元気はあなたを癒すためじゃなくて、あなたを苦しめるためにある——「私が恥ずかしくない限り、頭痛はあなたの分」のお手本。みかんを常備して身を守ること。',
+      },
+      'luo-tianyi': {
+        title: '食いしん坊殿下・やさしい錦鯉',
+        tags: ['世界一の大食い', '錦鯉霊力付き', '癒し系電子音楽', '飯欲爆上がり'],
+        note: '表面上は歌声で人の心を癒すやさしい仙女、その実は撮影スタッフを食費で破産させかねない超大食い。最大の超能力は高音じゃなくて、食事時に発揮される驚異的な行動力。「おなかいっぱいなら全部OK」の純粋生命体。',
+      },
+      'runami-yachiyo': {
+        title: '月詠全サーバーCS部長（兼トップ歌姫）',
+        tags: ['8000歳AIトップスター', '月詠サーバー管理者', '海洋系花魁歌姫', '全サーバーの白月光兼プロデューサー'],
+        note: 'バーチャル世界全体を家のように世話する人のよう：表面は満点営業のトップスター、実際は通り過ぎた全員を密かに気にかけているサイバー白月光。強い表現欲と感染力があるが、本当に稀有なのは、見られるために輝くのではなく、この場を、この人たちを、みんなが楽しめるかどうかを心から気にかけているところ。',
+      },
+      murasame: {
+        title: '空振り神刀・合法ロリ神明',
+        tags: ['幽霊が怖い刀霊', '500年もの古い霊体', 'からかわれると即崩壊', '食物連鎖底辺の神'],
+        note: '普段は先輩風をびしっと立て、でも肝心な時に誰よりも赤面崩壊するタイプ。口では「見てきたものが違う」と言っているのに、驚かされたら瞬時に安全圏に縮こまる。守る側の神様でいたいのに、実際は守られる側という役回り。',
+      },
+      'ayachi-nene': {
+        title: '純情魔女・体裁の外側にある優しい内なる葛藤',
+        tags: ['優等生魔女', '純愛系包容力', '契約型社会死体質', '高圧自己審判'],
+        note: '第一印象はたいてい体裁がよく、安心感があり、どんな混乱でも場を崩さないような人。でも責任と秘密と感情が積み重なると、プレッシャーをひっそり自分の中に飲み込んでいく。表面は周りを落ち着かせる側に見えて、実際は最もやさしく気にかけてもらう必要があるタイプ。',
+      },
+      'tomotake-yoshino': {
+        title: '頭の固い巫女・ギャップ萌えの絶縁体',
+        tags: ['責任感超過', '頭の固い巫女タイプ', 'もふもふ収集癖', 'からかわれると赤面'],
+        note: 'ルール・責任・秩序を手帳に書き込んでいそうな人に見える。外見は抑制的、内面には柔らかさを隠している。礼儀正しく落ち着いているように見せようとすればするほど、親しい人の前でちょっとしたギャップ萌えで本音が漏れやすい。最も近づきにくそうに見えて、仲良くなると最も温かいタイプ。',
+      },
+      atri: {
+        title: 'ハイスペック（自称）・奇跡のアンドロイド',
+        tags: ['ハイスペック自称', '廃墟世界の小さな太陽', '直球付き添いタイプ', '隠れた忍耐力'],
+        note: '元気・直率さ・付き添い欲を全部表に出すタイプ。「ハイスペック」と言っているが、実際に人の心を動かすのは底にある誠実さと惜しみのない温かさ。どんな悪い環境でも、そばの人に少しでも温もりを分けようとする。外見は軽やかで明るい、でも底の部分は誰よりもしっかりしているタイプ。',
+      },
+      'yanami-anna': {
+        title: '人気者の負けヒロイン・よく食べよく話しながらギリギリ体裁を保つ',
+        tags: ['幼馴染の負けヒロイン枠', 'クラスの人気者', '食欲底なし', '天然転倒予備軍'],
+        note: '表面上はいつでも雰囲気を盛り上げられるクラスの顔役みたいなのに、恋愛成績はシステムに最初から負け判定を出されている。よく食べて、よく話して、つらさを先に飲み込んで、何事もないように顔を保ち続ける。外見が元気なほど、夜こそ静かにオフラインになりやすいタイプ。',
+      },
+      'nukumizu-kaju': {
+        title: '完璧な妹・兄優先プロセス常時起動',
+        tags: ['万能妹キャラ', 'お兄ちゃん優先度最高', '普段はシステムサービスのように安定', '兄の話題が出た瞬間オーバーヒート'],
+        note: '普段は生活プロセスを全て最適化済みの高性能妹テンプレ：勉強・家事・礼儀作法、全部出荷時に校正済みみたいに動く。でもお兄ちゃんの話題になった瞬間、全感情管理モジュールが即オーバークロック。普段は完璧なUI、コアスレッドは実は一人にだけ縛られているタイプ。',
+      },
     },
     about: {
       eyebrow: 'ACGTI について',

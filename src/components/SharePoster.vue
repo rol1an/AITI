@@ -20,6 +20,36 @@ defineExpose({
 
 const primaryCharacter = computed(() => props.result.characterMatches[0] ?? null)
 const resultThemeColor = computed(() => primaryCharacter.value?.accent ?? props.result.archetype.accent ?? '#e2ad3b')
+const posterSubtitle = computed(() => {
+  if (primaryCharacter.value) {
+    if (isHiddenCharacter(primaryCharacter.value)) {
+      return getHiddenCharacterTitle(locale.value, primaryCharacter.value)
+    }
+
+    return t(`characters.${primaryCharacter.value.id}.title`, undefined, primaryCharacter.value.title)
+  }
+
+  return t(`archetypes.${props.result.archetype.id}.subtitle`, undefined, props.result.archetype.subtitle)
+})
+const posterTags = computed(() => {
+  if (primaryCharacter.value) {
+    if (isHiddenCharacter(primaryCharacter.value)) {
+      return getHiddenCharacterTags(locale.value)
+    }
+
+    return primaryCharacter.value.tags
+      .map((tag, index) => t(`characters.${primaryCharacter.value!.id}.tags.${index}`, undefined, tag))
+      .slice(0, 4)
+  }
+
+  const fallbackTags = props.result.tags.length ? props.result.tags : props.result.archetype.tags
+  return fallbackTags
+    .map((tag, index) => t(`archetypes.${props.result.archetype.id}.tags.${index}`, undefined, tag))
+    .slice(0, 4)
+})
+const posterNarrativeRole = computed(() =>
+  t(`archetypes.${props.result.archetype.id}.narrativeRole`, undefined, props.result.archetype.narrativeRole),
+)
 function hexToRgb(hex: string) {
   const normalized = hex.replace('#', '')
   const full = normalized.length === 3
@@ -121,9 +151,7 @@ const raritySummaryLabel = computed(() => {
           <h2 class="share-poster__title" :style="{ color: resultThemeColor }">
             {{ primaryCharacter ? getLocalizedCharacterName(primaryCharacter, locale, { revealHidden: true }) : t('archetypes.' + result.archetype.id + '.name', undefined, result.archetype.name) }}
           </h2>
-          <p class="share-poster__subtitle">
-            {{ primaryCharacter && isHiddenCharacter(primaryCharacter) ? getHiddenCharacterTitle(locale, primaryCharacter) : (primaryCharacter?.title || result.archetype.subtitle) }}
-          </p>
+          <p class="share-poster__subtitle">{{ posterSubtitle }}</p>
         </div>
 
         <div class="share-poster__metrics">
@@ -141,9 +169,7 @@ const raritySummaryLabel = computed(() => {
 
         <div class="share-poster__tags">
           <span
-            v-for="tag in (primaryCharacter && isHiddenCharacter(primaryCharacter)
-              ? getHiddenCharacterTags(locale)
-              : (primaryCharacter?.tags || (result.tags.length ? result.tags : result.archetype.tags)).slice(0, 4))"
+            v-for="tag in posterTags"
             :key="tag"
             class="tag-pill"
             :style="{ backgroundColor: resultThemeColor + '15', color: resultThemeColor }"
@@ -157,7 +183,7 @@ const raritySummaryLabel = computed(() => {
           </div>
           <div class="share-poster__block">
             <p class="block-label"><AppIcon name="book" /> {{ t('result.narrativeRole', undefined, '剧情位置') }}</p>
-            <p class="block-content">{{ result.archetype.narrativeRole }}</p>
+            <p class="block-content">{{ posterNarrativeRole }}</p>
           </div>
           <div class="share-poster__block">
             <p class="block-label"><AppIcon name="character" /> {{ t('result.hitCharacter', undefined, '对应角色') }}</p>
@@ -166,7 +192,7 @@ const raritySummaryLabel = computed(() => {
               <span style="font-weight: normal; color: #8c9ba5; font-size: 0.9em; margin-left: 4px;">{{ primaryCharacter ? getLocalizedCharacterSeries(primaryCharacter, locale) : t('app.common.unknownSeries') }}</span>
             </p>
             <p v-if="primaryCharacter?.personaBasis?.type === 'fandom-impression'" style="margin: 6px 0 0; font-size: 11px; color: #a08a3a; font-weight: 600; line-height: 1.5;">
-              {{ t('result.personaBasisBadge') }}：{{ primaryCharacter.personaBasis.summary }}
+              {{ t('result.personaBasisBadge') }}：{{ t('result.personaBasisTip') }}
             </p>
           </div>
         </div>

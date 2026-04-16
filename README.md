@@ -10,7 +10,7 @@ ACG Type Indicator
 
 <p align="center">
   <a href="https://acgti.tianxingleo.top/"><img src="https://img.shields.io/badge/Deploy-Cloudflare_Pages-F38020?style=flat-square&logo=cloudflare" alt="Deploy to Cloudflare Pages" /></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-blue.svg?style=flat-square" alt="License" /></a>
   <img src="https://img.shields.io/badge/Hits-4.5M+-green.svg?style=flat-square" alt="Hits" />
 </p>
 
@@ -136,7 +136,7 @@ src/
 ## 📰 时间线
 
 - **2026.4.15 15:00:** GitHub 仓库 ⭐ 数量达到 400
-- **2026.4.14 15:00** [网站](https://acgti.tianxingleo.top/)访问量超过 400 万，发布 blog：[【复盘】从一晚上一米工位到3天400w+浏览量的网站，我做了什么](https://tianxingleo.top/2026/04/12/%E4%BB%8E%E4%B8%80%E6%99%9A%E4%B8%8A%E4%B8%80%E7%B1%B3%E5%B7%A5%E4%BD%8D%E5%88%B02%E5%A4%A968w%E4%BA%BA%E8%AE%BF%E9%97%AE%E7%9A%84%E7%BD%91%E7%AB%99%EF%BC%8C%E6%88%91%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88/)
+- **2026.4.14 15:00:** [网站](https://acgti.tianxingleo.top/)访问量超过 400 万，发布 blog：[【复盘】从一晚上一米工位到3天400w+浏览量的网站，我做了什么](https://tianxingleo.top/2026/04/12/%E4%BB%8E%E4%B8%80%E6%99%9A%E4%B8%8A%E4%B8%80%E7%B1%B3%E5%B7%A5%E4%BD%8D%E5%88%B02%E5%A4%A968w%E4%BA%BA%E8%AE%BF%E9%97%AE%E7%9A%84%E7%BD%91%E7%AB%99%EF%BC%8C%E6%88%91%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88/)
 - **2026.4.13 21:00:** [网站](https://acgti.tianxingleo.top/)访问人数达到 100 万，仓库Star 数达到 300
 - **2026.4.12 8:00:** 访问人数达到 50 万
 - **2026.4.11 23:00:** 进入 [**永雏塔菲**](https://www.bilibili.com/video/BV11FDyBZEN1/?spm_id_from=333.337.search-card.all.click) 直播间
@@ -202,7 +202,18 @@ git push origin v0.2.0
 
 ### 代码授权
 
-本项目前端源代码基于 [MIT License](LICENSE) 开源。您可以自由地学习、修改和分发本项目的源代码，但请保留原作者的版权声明。
+本项目前端源代码基于 [Apache License 2.0](LICENSE) 开源。您可以学习、修改和分发本项目的代码，但在再分发或衍生发布时，需要一并提供许可证文本、保留适用的版权与归属声明，并对已修改文件作出显著标识。根目录中的 [NOTICE](NOTICE) 记录了本项目的原始归属信息。
+
+### 归属与修改说明
+
+- 本项目由 **tianxingleo / Li Tianxing** 原始创建，原始仓库为 <https://github.com/tianxingleo/ACGTI>。
+- 再分发或衍生版本不应删除原始版权与归属信息，也不应将修改版本描述为完全独立原创而不提及来源。
+- 修改过的版本应明确说明哪些文件或内容已经调整，避免与原始项目混淆。
+
+### 品牌与官方关系声明
+
+- `ACGTI` 项目名称、仓库标识、站点文案结构以及项目级品牌表达，不因 Apache-2.0 自动授予商标或官方背书许可。
+- 任何再分发、镜像站、改版站或衍生项目，均不得暗示自己与原作者存在官方合作、官方维护或获得原作者认可，除非另有明确授权。
 
 ### 知识产权与素材声明 ⚠️
 

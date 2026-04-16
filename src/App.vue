@@ -74,6 +74,7 @@ watch(() => route.path, () => {
 })
 
 const showFooter = computed(() => route.path !== '/quiz')
+const routeTransitionName = computed(() => (route.path === '/quiz' ? 'page-fade-static' : 'page-fade'))
 
 const authorSocialLinks: AuthorSocialLink[] = [
   {
@@ -181,7 +182,7 @@ const authorSocialLinks: AuthorSocialLink[] = [
 
     <main class="site-main">
       <router-view v-slot="{ Component }">
-          <transition name="page-fade" mode="out-in">
+          <transition :name="routeTransitionName" mode="out-in">
             <component :is="Component" />
           </transition>
         </router-view>

@@ -450,13 +450,28 @@
     "accent": "#7FD8B3"
   },
   "matikanetannhauser": {
-    "image": "/images/characters/待兼诗歌剧.webp",
-    "thumb": "/images/characters/thumbs/待兼诗歌剧.webp",
+    "image": "/images/characters/曼波.webp",
+    "thumb": "/images/characters/thumbs/曼波.webp",
     "accent": "#F5C04D"
   },
   "cartethyia": {
-    "image": "/images/characters/卡提希娅.webp",
-    "thumb": "/images/characters/thumbs/卡提希娅.webp",
+    "image": "/images/characters/卡提西亚.webp",
+    "thumb": "/images/characters/thumbs/卡提西亚.webp",
     "accent": "#9FD5E8"
+  },
+  "azuma-seren": {
+    "image": "/images/characters/东雪莲.webp",
+    "thumb": "/images/characters/thumbs/东雪莲.webp",
+    "accent": "#d8dff8"
+  },
+  "izumi-konata": {
+    "image": "/images/characters/泉此方.webp",
+    "thumb": "/images/characters/thumbs/泉此方.webp",
+    "accent": "#3f8cff"
+  },
+  "reze": {
+    "image": "/images/characters/雷塞.webp",
+    "thumb": "/images/characters/thumbs/雷塞.webp",
+    "accent": "#7b5bbd"
   }
 }

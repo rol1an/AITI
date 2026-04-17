@@ -3795,5 +3795,183 @@
       "confidence": "high",
       "summary": "主要依据作品里“温柔接近、任务伪装、危险执行与有限真心并存”的稳定剧情张力映射。"
     }
+  },
+  {
+    "id": "kaguya-chojikuu",
+    "name": "辉夜",
+    "series": "超时空辉夜姬！",
+    "addedAt": "2026-04-17",
+    "image": "/images/characters/超时空辉夜姬辉夜.webp",
+    "matchCode": "INFJ",
+    "matchCodeFlex": [
+      "INTJ"
+    ],
+    "code": "KGYA",
+    "title": "神秘顶流AI·把整个创作宇宙当直播间在看",
+    "archetypeId": "moonlit-guardian",
+    "tags": [
+      "虚拟空间管理人",
+      "顶流主播",
+      "高概念AI",
+      "神秘守望者"
+    ],
+    "note": "你像那种存在感很高、却不会把情绪直接摊在脸上的人。你看起来离大家有点远，像悬在高处的虚拟偶像或神明 NPC，但实际上又一直在默默看着每个人怎么创作、怎么发光。属于“表面像高位冷感设定怪，底层其实很在意整个世界运转得够不够自由热闹”的类型。",
+    "vector": {
+      "expression": 0,
+      "temperature": 1,
+      "judgement": 2,
+      "order": 1,
+      "agency": 2,
+      "aura": 3
+    },
+    "signature": {
+      "uniqueAxes": {
+        "aura": 3,
+        "agency": 2,
+        "judgement": 2
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q7",
+          "expected": "agree",
+          "weight": 1.1
+        },
+        {
+          "questionId": "q20",
+          "expected": "agree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q34",
+          "expected": "agree",
+          "weight": 1.2
+        }
+      ]
+    },
+    "personaBasis": {
+      "type": "canon",
+      "label": "官方设定映射",
+      "confidence": "high",
+      "summary": "主要依据官方角色页中“虚拟空间管理人、顶流主播、神秘 AI 与创作生态守望者”的稳定设定映射。"
+    }
+  },
+  {
+    "id": "bilibili-22",
+    "name": "22娘",
+    "series": "bilibili",
+    "addedAt": "2026-04-17",
+    "image": "/images/characters/22.webp",
+    "matchCode": "ENFP",
+    "matchCodeFlex": [
+      "ESFJ",
+      "ENFJ"
+    ],
+    "code": "B022",
+    "title": "元气站娘·修播放器会修出新bug的热心姐姐",
+    "archetypeId": "luminous-lead",
+    "tags": [
+      "阳光元气",
+      "热心冒失",
+      "审核员",
+      "姐姐位"
+    ],
+    "note": "你属于那种会先冲上去帮忙、帮到一半再发现自己可能把场面搞得更热闹的人。你有很强的感染力，气氛低了会想拉起来，朋友出事了会先站出来，可执行过程有时又会拐进奇怪的方向。属于“虽然不一定最稳，但一定是全场最有活人感的那个”的类型。",
+    "vector": {
+      "expression": 3,
+      "temperature": 3,
+      "judgement": 1,
+      "order": 0,
+      "agency": 2,
+      "aura": 2
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": 3,
+        "temperature": 3
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q1",
+          "expected": "agree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q17",
+          "expected": "agree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q29",
+          "expected": "agree",
+          "weight": 1.2
+        }
+      ]
+    },
+    "personaBasis": {
+      "type": "canon",
+      "label": "官方设定映射",
+      "confidence": "high",
+      "summary": "主要依据哔哩哔哩官方关于我们页面中“阳光热心、略冒失、姐姐位与播放器维护梗”的稳定设定映射。"
+    }
+  },
+  {
+    "id": "bilibili-33",
+    "name": "33娘",
+    "series": "bilibili",
+    "addedAt": "2026-04-17",
+    "image": "/images/characters/33.webp",
+    "matchCode": "INTP",
+    "matchCodeFlex": [
+      "INTJ",
+      "ISTJ"
+    ],
+    "code": "B033",
+    "title": "冷静技术位·表情省电但后台全靠她撑着",
+    "archetypeId": "icebound-observer",
+    "tags": [
+      "沉默寡言",
+      "轻微腹黑",
+      "程序员机娘",
+      "冷静吐槽役"
+    ],
+    "note": "你看起来像那种不会主动制造热闹、甚至还有点懒得解释的人，但系统一出问题就会有人下意识找你。你不一定最会安慰人，却经常是最能把事情真正修好的人。属于“表面低功耗三无，实则后台核心线程”的类型。",
+    "vector": {
+      "expression": -2,
+      "temperature": 0,
+      "judgement": 2,
+      "order": 2,
+      "agency": 2,
+      "aura": 2
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": -2,
+        "order": 2,
+        "agency": 2
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q7",
+          "expected": "agree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q20",
+          "expected": "agree",
+          "weight": 1.1
+        },
+        {
+          "questionId": "q35",
+          "expected": "disagree",
+          "weight": 1.2
+        }
+      ]
+    },
+    "personaBasis": {
+      "type": "canon",
+      "label": "官方设定映射",
+      "confidence": "high",
+      "summary": "主要依据哔哩哔哩官方关于我们页面中“沉默冷静、技术力强、略腹黑的程序员机娘”设定映射。"
+    }
   }
 ]

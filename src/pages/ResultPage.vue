@@ -217,20 +217,6 @@ function toRgbString(color: { r: number; g: number; b: number }, alpha?: number)
   return `rgba(${color.r}, ${color.g}, ${color.b}, ${alpha})`
 }
 
-const exportBtnTextColor = computed(() => {
-  const { r, g, b } = hexToRgb(resultThemeColor.value)
-  // WCAG relative luminance
-  const toLinear = (c: number) => {
-    const s = c / 255
-    return s <= 0.03928 ? s / 12.92 : Math.pow((s + 0.055) / 1.055, 2.4)
-  }
-  const bgL = 0.2126 * toLinear(r) + 0.7152 * toLinear(g) + 0.0722 * toLinear(b)
-  const whiteL = 1.0
-  const darkL = 0.0222 // #111827
-  const whiteContrast = (Math.max(bgL, whiteL) + 0.05) / (Math.min(bgL, whiteL) + 0.05)
-  const darkContrast = (Math.max(bgL, darkL) + 0.05) / (Math.min(bgL, darkL) + 0.05)
-  return whiteContrast >= darkContrast ? '#ffffff' : '#111827'
-})
 const rarityMeta = computed(() => getCharacterRarityMeta(primaryCharacter.value?.id))
 const rarityTierLabel = computed(() => {
   const tier = rarityMeta.value?.tier
@@ -440,7 +426,7 @@ function viewMatchedCharacter(characterId: string) {
             <button
               class="action-btn hero-export-btn"
               :disabled="share.isExporting.value"
-              :style="{ backgroundColor: resultThemeColor, color: exportBtnTextColor }"
+              :style="{ backgroundColor: resultThemeColor, color: '#fff' }"
               @click="exportPosterImage"
             >
               <AppIcon name="spinner" v-if="share.isExporting.value" style="animation: spin 1s linear infinite" />
@@ -659,7 +645,7 @@ function viewMatchedCharacter(characterId: string) {
             {{ t('result.share') }}
           </button>
           
-          <button class="sidebar-export-btn" @click="exportPosterImage" :disabled="share.isExporting.value" :style="{ background: resultThemeColor, color: exportBtnTextColor, marginTop: '4px' }">
+          <button class="sidebar-export-btn" @click="exportPosterImage" :disabled="share.isExporting.value" :style="{ background: resultThemeColor, color: '#fff', marginTop: '4px' }">
             <AppIcon name="spinner" v-if="share.isExporting.value" style="animation: spin 1s linear infinite" />
             <AppIcon name="download" v-else />
             {{ share.isExporting.value ? t('common.generating', undefined, '生成中...') : t('common.saveImage', undefined, '导出图片') }}

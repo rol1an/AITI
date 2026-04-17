@@ -299,6 +299,12 @@ function compareByLocalizedName(left: CharacterMatch, right: CharacterMatch) {
 <style scoped>
 .page-stack--narrow {
   gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-panel.compact {
+  max-width: 1200px;
 }
 
 .stats-panel {
@@ -322,6 +328,11 @@ function compareByLocalizedName(left: CharacterMatch, right: CharacterMatch) {
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.75rem;
+}
+
+.stats-panel,
+.sort-panel {
+  flex: 0 1 auto;
 }
 
 .sort-panel {

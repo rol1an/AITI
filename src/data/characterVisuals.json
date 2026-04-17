@@ -473,5 +473,20 @@
     "image": "/images/characters/雷塞.webp",
     "thumb": "/images/characters/thumbs/雷塞.webp",
     "accent": "#7b5bbd"
+  },
+  "kaguya-chojikuu": {
+    "image": "/images/characters/超时空辉夜姬辉夜.webp",
+    "thumb": "/images/characters/thumbs/超时空辉夜姬辉夜.webp",
+    "accent": "#c8b6ff"
+  },
+  "bilibili-22": {
+    "image": "/images/characters/22.webp",
+    "thumb": "/images/characters/thumbs/22.webp",
+    "accent": "#5aa9ff"
+  },
+  "bilibili-33": {
+    "image": "/images/characters/33.webp",
+    "thumb": "/images/characters/thumbs/33.webp",
+    "accent": "#7aa7ff"
   }
 }

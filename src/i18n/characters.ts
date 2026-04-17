@@ -592,6 +592,24 @@ const characterNameI18n: Record<string, LocalizedText> = {
     en: 'Reze',
     ja: 'レゼ',
   },
+  'kaguya-chojikuu': {
+    'zh-CN': '辉夜',
+    'zh-TW': '輝夜',
+    en: 'Kaguya',
+    ja: '輝夜',
+  },
+  'bilibili-22': {
+    'zh-CN': '22娘',
+    'zh-TW': '22娘',
+    en: '22 Niang',
+    ja: '22娘',
+  },
+  'bilibili-33': {
+    'zh-CN': '33娘',
+    'zh-TW': '33娘',
+    en: '33 Niang',
+    ja: '33娘',
+  },
 }
 
 const seriesI18n: Record<string, LocalizedText> = {
@@ -936,6 +954,12 @@ const seriesI18n: Record<string, LocalizedText> = {
     'zh-TW': '鏈鋸人',
     en: 'Chainsaw Man',
     ja: 'チェンソーマン',
+  },
+  bilibili: {
+    'zh-CN': 'bilibili',
+    'zh-TW': 'bilibili',
+    en: 'bilibili',
+    ja: 'bilibili',
   },
 }
 

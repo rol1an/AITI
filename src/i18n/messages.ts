@@ -76,8 +76,8 @@ export const messages = {
     },
     home: {
       updateBadge: {
-        tag: '4.15 重大更新',
-        title: '角色库扩充到原来的 300%',
+        tag: '4.17 重大更新',
+        title: '角色库扩充到原来的 400%',
         text: '欢迎回来再测一次。最近新增了很多角色，这次命中的角色代码可能和你之前完全不同。',
         link: '开始测试 / 重新测试',
         dismiss: '关闭更新公告',
@@ -207,10 +207,10 @@ export const messages = {
       },
       rarityTierDescriptions: {
         ex: '隐藏角色独立标签，不参与普通稀有度分层',
-        ur: '累计理论出货率前 {startPercent}% - {endPercent}% 区间（第 {start} - {end} 位）',
-        ssr: '累计理论出货率 {startPercent}% - {endPercent}% 区间（第 {start} - {end} 位）',
-        sr: '累计理论出货率 {startPercent}% - {endPercent}% 区间（第 {start} - {end} 位）',
-        r: '累计理论出货率 {startPercent}% - {endPercent}% 区间（第 {start} - {end} 位）',
+        ur: '累计理论出货率覆盖 {startPercent}% - {endPercent}% 的稀有分档（本档含第 {start} - {end} 位角色）',
+        ssr: '累计理论出货率覆盖 {startPercent}% - {endPercent}% 的稀有分档（本档含第 {start} - {end} 位角色）',
+        sr: '累计理论出货率覆盖 {startPercent}% - {endPercent}% 的稀有分档（本档含第 {start} - {end} 位角色）',
+        r: '累计理论出货率覆盖 {startPercent}% - {endPercent}% 的稀有分档（本档含第 {start} - {end} 位角色）',
       },
       toc: '本页内容',
       tocItems: ['1. 人格特质倾向', '2. 亮点与短板', '3. 角色映射标签'],
@@ -427,8 +427,8 @@ export const messages = {
     },
     home: {
       updateBadge: {
-        tag: '4.15 重大更新',
-        title: '角色庫擴充到原來的 300%',
+        tag: '4.17 重大更新',
+        title: '角色庫擴充到原來的 400%',
         text: '歡迎回來再測一次。最近新增了很多角色，這次命中的角色代碼可能和你之前完全不同。',
         link: '開始測試 / 重新測試',
         dismiss: '關閉更新公告',
@@ -558,10 +558,10 @@ export const messages = {
       },
       rarityTierDescriptions: {
         ex: '隱藏角色獨立標籤，不參與普通稀有度分層',
-        ur: '累計理論出貨率前 {startPercent}% - {endPercent}% 區間（第 {start} - {end} 位）',
-        ssr: '累計理論出貨率 {startPercent}% - {endPercent}% 區間（第 {start} - {end} 位）',
-        sr: '累計理論出貨率 {startPercent}% - {endPercent}% 區間（第 {start} - {end} 位）',
-        r: '累計理論出貨率 {startPercent}% - {endPercent}% 區間（第 {start} - {end} 位）',
+        ur: '累計理論出貨率覆蓋 {startPercent}% - {endPercent}% 的稀有分檔（本檔含第 {start} - {end} 位角色）',
+        ssr: '累計理論出貨率覆蓋 {startPercent}% - {endPercent}% 的稀有分檔（本檔含第 {start} - {end} 位角色）',
+        sr: '累計理論出貨率覆蓋 {startPercent}% - {endPercent}% 的稀有分檔（本檔含第 {start} - {end} 位角色）',
+        r: '累計理論出貨率覆蓋 {startPercent}% - {endPercent}% 的稀有分檔（本檔含第 {start} - {end} 位角色）',
       },
       toc: '本頁內容',
       tocItems: ['1. 人格特質傾向', '2. 亮點與短板', '3. 角色映射標籤'],
@@ -1078,8 +1078,8 @@ export const messages = {
     },
     home: {
       updateBadge: {
-        tag: '4.15 Major Update',
-        title: 'The character library is now 300% of the original size',
+        tag: '4.17 Major Update',
+        title: 'The character library is now 400% of the original size',
         text: 'Come back and retake it. A lot of new characters were added, so your matched character code may be very different this time.',
         link: 'Start / Retake',
         dismiss: 'Dismiss update notice',
@@ -1209,10 +1209,10 @@ export const messages = {
       },
       rarityTierDescriptions: {
         ex: 'Hidden characters use a separate badge and do not join the normal rarity pool.',
-        ur: 'Cumulative baseline rate {startPercent}% - {endPercent}% (ranks #{start} - #{end})',
-        ssr: 'Cumulative baseline rate {startPercent}% - {endPercent}% (ranks #{start} - #{end})',
-        sr: 'Cumulative baseline rate {startPercent}% - {endPercent}% (ranks #{start} - #{end})',
-        r: 'Cumulative baseline rate {startPercent}% - {endPercent}% (ranks #{start} - #{end})',
+        ur: 'Rarity tier covering cumulative baseline rates {startPercent}% - {endPercent}% (includes ranks #{start} - #{end})',
+        ssr: 'Rarity tier covering cumulative baseline rates {startPercent}% - {endPercent}% (includes ranks #{start} - #{end})',
+        sr: 'Rarity tier covering cumulative baseline rates {startPercent}% - {endPercent}% (includes ranks #{start} - #{end})',
+        r: 'Rarity tier covering cumulative baseline rates {startPercent}% - {endPercent}% (includes ranks #{start} - #{end})',
       },
       toc: 'On this page',
       tocItems: ['1. Trait tendencies', '2. Strengths and blind spots', '3. Character tags'],
@@ -1609,8 +1609,8 @@ export const messages = {
     },
     home: {
       updateBadge: {
-        tag: '4.15 大型更新',
-        title: 'キャラライブラリが初期比 300% に拡張',
+        tag: '4.17 大型更新',
+        title: 'キャラライブラリが初期比 400% に拡張',
         text: '前に遊んだ人も、もう一度どうぞ。最近たくさんの新キャラが追加され、今回のキャラコードは以前とかなり変わる可能性があります。',
         link: '始める / もう一度',
         dismiss: '更新告知を閉じる',
@@ -1740,10 +1740,10 @@ export const messages = {
       },
       rarityTierDescriptions: {
         ex: '隠しキャラは独立バッジ扱いで、通常レア度帯には参加しません。',
-        ur: '累計理論排出率 {startPercent}% - {endPercent}% 帯（{start} - {end}位）',
-        ssr: '累計理論排出率 {startPercent}% - {endPercent}% 帯（{start} - {end}位）',
-        sr: '累計理論排出率 {startPercent}% - {endPercent}% 帯（{start} - {end}位）',
-        r: '累計理論排出率 {startPercent}% - {endPercent}% 帯（{start} - {end}位）',
+        ur: '累計理論排出率 {startPercent}% - {endPercent}% をカバーするレア帯（{start} - {end}位を含む）',
+        ssr: '累計理論排出率 {startPercent}% - {endPercent}% をカバーするレア帯（{start} - {end}位を含む）',
+        sr: '累計理論排出率 {startPercent}% - {endPercent}% をカバーするレア帯（{start} - {end}位を含む）',
+        r: '累計理論排出率 {startPercent}% - {endPercent}% をカバーするレア帯（{start} - {end}位を含む）',
       },
       toc: 'このページ',
       tocItems: ['1. 特性の傾向', '2. 強みと弱み', '3. キャラタグ'],

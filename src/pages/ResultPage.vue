@@ -876,6 +876,8 @@ function viewMatchedCharacter(characterId: string) {
   letter-spacing: 0.04em;
   box-shadow: var(--hero-pill-shadow);
   white-space: nowrap;
+  line-height: 1;
+  box-sizing: border-box;
 }
 
 .hero-metric small {
@@ -1571,6 +1573,8 @@ function viewMatchedCharacter(characterId: string) {
   min-height: 34px;
   font-size: 16px;
   border-radius: 999px;
+  line-height: 1;
+  padding-bottom: 7px; /* Fine-tune visual vertical center due to uppercase english letter metrics */
 }
 
 .profile-probability {

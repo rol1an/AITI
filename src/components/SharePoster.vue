@@ -410,12 +410,14 @@ const raritySummaryLabel = computed(() => {
   align-items: center;
   justify-content: center;
   min-height: 34px;
-  padding: 6px 12px;
+  padding: 6px 12px 7px; /* bottom padding tuned for visual centering of inner text */
   border-radius: 999px;
   border: 1px solid transparent;
   font-size: 18px;
   letter-spacing: 0.04em;
   word-break: keep-all;
+  line-height: 1;
+  box-sizing: border-box;
 }
 
 .metric-subvalue {

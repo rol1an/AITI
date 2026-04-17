@@ -11,7 +11,7 @@ ACG Type Indicator
 <p align="center">
   <a href="https://acgti.tianxingleo.top/"><img src="https://img.shields.io/badge/Deploy-Cloudflare_Pages-F38020?style=flat-square&logo=cloudflare" alt="Deploy to Cloudflare Pages" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-blue.svg?style=flat-square" alt="License" /></a>
-  <img src="https://img.shields.io/badge/Hits-5.0M+-green.svg?style=flat-square" alt="Hits" />
+  <img src="https://img.shields.io/badge/Hits-5.5M+-green.svg?style=flat-square" alt="Hits" />
 </p>
 
 [**✨ 立即体验**](https://acgti.tianxingleo.top/) | [**📖 阅读文档**](#️-架构与原理) | [**🤝 参与贡献**](#-贡献)
@@ -39,7 +39,7 @@ ACG Type Indicator
 
 - **MBTI 四维判定**：基于 E/I、S/N、T/F、J/P 四大维度构建严谨的底层框架。
 - **8 种专属原型**：发光主角位 · 冰面观察者 · 誓约队长 · 灵巧回旋者 · 温柔修复者 · 影面策士 · 混沌火花 · 月下守护者。
-- **91 位角色库**：当前包含 91 位角色，涵盖 VOCALOID、EVA、名侦探柯南、东方、孤独摇滚、MyGO、原神等热门作品，持续扩充中。
+- **105 位角色库**：当前包含 105 位角色，涵盖 60+ 部热门作品，包括 BanG Dream!（Ave Mujica / MyGO）、孤独摇滚！、鸣潮、明日方舟、轻音少女、我推的孩子、Re:从零开始的异世界生活、败犬女主太多了！、辉夜大小姐想让我告白、青春猪头少年、魔法少女小圆、某科学的超电磁炮、名侦探柯南、EVA、东方Project、VOCALOID、原神、崩坏：星穹铁道、紫罗兰永恒花园、四月是你的谎言、葬送的芙丽莲、间谍过家家、刀剑神域、Fate/stay night、电锯人、少女乐队的呐喊等，持续扩充中。
 - **可视化交互**：16personalities 风格的交互式倾向滑块，直观展现你的思维倾向。
 - **一键分享**：精美的结果图报表，支持一键导出 PNG 海报分享给同好。
 - **纯前端架构**：无后端、无注册、无数据收集，测算过程全部在本地浏览器完成，极致极速且保护隐私。
@@ -127,7 +127,7 @@ src/
 |:-----|:-----|
 | `src/data/questions.json` | 39 道情境式题目 — 维度、原型权重、场景标签 |
 | `src/data/archetypes.json` | 8 个角色原型 — 名称、描述、亮点、短板 |
-| `src/data/characters.json` | 42 个角色条目（含 2 个隐藏角色）— 角色代码、MBTI 映射、标签、六维向量 |
+| `src/data/characters.json` | 105 个角色条目 — 角色代码、MBTI 映射、标签、六维向量 |
 | `src/data/characterVisuals.json` | 角色视觉配置 — 立绘、色彩、主题 |
 | `src/data/characterProbabilities.json` | 角色命中概率 — 基于人群统计的先验分布 |
 

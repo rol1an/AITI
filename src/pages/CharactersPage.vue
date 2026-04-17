@@ -18,7 +18,7 @@ const { locale, t } = useI18n()
 type CharacterSortField = 'rarity' | 'release' | 'series'
 type SortDirection = 'asc' | 'desc'
 
-const sortField = ref<CharacterSortField>('rarity')
+const sortField = ref<CharacterSortField>('release')
 const sortDirection = ref<SortDirection>('asc')
 const isSortMenuOpen = ref(false)
 const sortDropdownRef = ref<HTMLElement | null>(null)
@@ -340,12 +340,12 @@ function compareByLocalizedName(left: CharacterMatch, right: CharacterMatch) {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  min-height: 44px;
-  padding: 0.7rem 1rem;
+  min-height: auto;
+  padding: 0.6rem 1.25rem;
   border-radius: 999px;
-  background: #ffffff;
-  border: 1px solid #dbe5ea;
-  box-shadow: 0 6px 16px rgba(24, 39, 51, 0.06);
+  background: var(--surface-color, #ffffff);
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   color: #23313a;
   cursor: pointer;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
@@ -354,8 +354,7 @@ function compareByLocalizedName(left: CharacterMatch, right: CharacterMatch) {
 .sort-dropdown-trigger:hover,
 .sort-direction-btn:hover,
 .sort-dropdown.is-open .sort-dropdown-trigger {
-  border-color: #bcd5c8;
-  box-shadow: 0 10px 22px rgba(24, 39, 51, 0.08);
+  box-shadow: 0 6px 16px rgba(24, 39, 51, 0.08);
   transform: translateY(-1px);
 }
 
@@ -421,8 +420,9 @@ function compareByLocalizedName(left: CharacterMatch, right: CharacterMatch) {
 }
 
 .sort-direction-btn {
-  width: 44px;
-  padding: 0;
+  min-width: 48px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .sort-direction-btn svg {

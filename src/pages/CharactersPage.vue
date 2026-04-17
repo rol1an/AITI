@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 
 import { useQuiz } from '../composables/useQuiz'
 import { useI18n } from '../i18n'
@@ -20,14 +20,24 @@ type SortDirection = 'asc' | 'desc'
 
 const sortField = ref<CharacterSortField>('rarity')
 const sortDirection = ref<SortDirection>('asc')
+const isSortMenuOpen = ref(false)
+const sortDropdownRef = ref<HTMLElement | null>(null)
 
 // 进入图鉴页时才加载角色数据
 onMounted(() => {
   void ensureData()
+  document.addEventListener('click', closeSortMenu)
+})
+
+onUnmounted(() => {
+  document.removeEventListener('click', closeSortMenu)
 })
 
 const visibleCharacters = computed(() => characters.value.filter((character) => !isHiddenCharacter(character)))
 const hiddenCharacters = computed(() => characters.value.filter((character) => isHiddenCharacter(character)))
+const visibleCharacterIndexMap = computed(() => new Map(
+  visibleCharacters.value.map((character, index) => [character.id, index]),
+))
 
 const orderedCharacters = computed(() => {
   const sortedVisibleCharacters = [...visibleCharacters.value].sort(compareCharacters)
@@ -72,11 +82,29 @@ const sortOptions = computed(() => ([
   { value: 'release', label: t('characters.sortFields.release') },
   { value: 'series', label: t('characters.sortFields.series') },
 ]) as Array<{ value: CharacterSortField; label: string }>)
+const currentSortLabel = computed(() => {
+  return sortOptions.value.find((option) => option.value === sortField.value)?.label ?? ''
+})
+const currentDirectionLabel = computed(() => t(`characters.sortDirections.${sortDirection.value}`))
 
-const directionOptions = computed(() => ([
-  { value: 'asc', label: t('characters.sortDirections.asc') },
-  { value: 'desc', label: t('characters.sortDirections.desc') },
-]) as Array<{ value: SortDirection; label: string }>)
+function toggleSortMenu() {
+  isSortMenuOpen.value = !isSortMenuOpen.value
+}
+
+function selectSortField(field: CharacterSortField) {
+  sortField.value = field
+  isSortMenuOpen.value = false
+}
+
+function toggleSortDirection() {
+  sortDirection.value = sortDirection.value === 'asc' ? 'desc' : 'asc'
+}
+
+function closeSortMenu(event: MouseEvent) {
+  if (sortDropdownRef.value && !sortDropdownRef.value.contains(event.target as Node)) {
+    isSortMenuOpen.value = false
+  }
+}
 
 function compareCharacters(left: CharacterMatch, right: CharacterMatch) {
   switch (sortField.value) {
@@ -114,7 +142,18 @@ function compareReleaseDate(left: CharacterMatch, right: CharacterMatch) {
   }
 
   if (leftHasDate !== rightHasDate) {
+    if (sortDirection.value === 'asc') {
+      return leftHasDate ? 1 : -1
+    }
+
     return leftHasDate ? -1 : 1
+  }
+
+  const leftIndex = visibleCharacterIndexMap.value.get(left.id) ?? Number.MAX_SAFE_INTEGER
+  const rightIndex = visibleCharacterIndexMap.value.get(right.id) ?? Number.MAX_SAFE_INTEGER
+
+  if (leftIndex !== rightIndex) {
+    return sortDirection.value === 'asc' ? leftIndex - rightIndex : rightIndex - leftIndex
   }
 
   return compareByLocalizedName(left, right)
@@ -144,39 +183,75 @@ function compareByLocalizedName(left: CharacterMatch, right: CharacterMatch) {
     <section class="hero-panel center compact">
       <h1 class="display-title">{{ t('characters.title') }}</h1>
       <p class="lead">{{ t('characters.lead') }}</p>
-      
-      <div class="stats-panel" v-if="orderedCharacters.length > 0">
-        <span class="stat-count">{{ localizedStatsText }}</span>
-        <span class="stat-divider" v-if="latestCharacters.length > 0">｜</span>
-        <span class="stat-latest" v-if="latestCharacters.length > 0">
-          {{ t('characters.latest') }}
-          <template v-for="(char, index) in latestCharacters" :key="char.id">
-            <RouterLink 
-              class="latest-link"
-              :to="{ path: '/result', query: { character: char.id } }"
-            >{{ getLocalizedCharacterName(char, locale) }}</RouterLink><span v-if="index < latestCharacters.length - 1">, </span>
-          </template>
-        </span>
-      </div>
+     
+      <div class="hero-toolbar" v-if="orderedCharacters.length > 0">
+        <div class="stats-panel">
+          <span class="stat-count">{{ localizedStatsText }}</span>
+          <span class="stat-divider" v-if="latestCharacters.length > 0">｜</span>
+          <span class="stat-latest" v-if="latestCharacters.length > 0">
+            {{ t('characters.latest') }}
+            <template v-for="(char, index) in latestCharacters" :key="char.id">
+              <RouterLink 
+                class="latest-link"
+                :to="{ path: '/result', query: { character: char.id } }"
+              >{{ getLocalizedCharacterName(char, locale) }}</RouterLink><span v-if="index < latestCharacters.length - 1">, </span>
+            </template>
+          </span>
+        </div>
 
-      <div class="sort-panel" v-if="visibleCharacters.length > 0">
-        <label class="sort-field">
-          <span class="sort-label">{{ t('characters.sortLabel') }}</span>
-          <select v-model="sortField" class="sort-select">
-            <option v-for="option in sortOptions" :key="option.value" :value="option.value">
-              {{ option.label }}
-            </option>
-          </select>
-        </label>
+        <div class="sort-panel" v-if="visibleCharacters.length > 0">
+          <div class="sort-dropdown" :class="{ 'is-open': isSortMenuOpen }" ref="sortDropdownRef">
+            <button
+              class="sort-dropdown-trigger"
+              type="button"
+              :aria-label="`${t('characters.sortLabel')}：${currentSortLabel}`"
+              :aria-expanded="isSortMenuOpen"
+              @click.stop="toggleSortMenu"
+            >
+              <span class="sort-trigger-prefix">{{ t('characters.sortLabel') }}</span>
+              <span class="sort-trigger-value">{{ currentSortLabel }}</span>
+              <span class="arrow"></span>
+            </button>
 
-        <label class="sort-field">
-          <span class="sort-label">{{ t('characters.sortDirectionLabel') }}</span>
-          <select v-model="sortDirection" class="sort-select">
-            <option v-for="option in directionOptions" :key="option.value" :value="option.value">
-              {{ option.label }}
-            </option>
-          </select>
-        </label>
+            <transition name="dropdown">
+              <ul class="sort-dropdown-menu" v-show="isSortMenuOpen" role="listbox">
+                <li
+                  v-for="option in sortOptions"
+                  :key="option.value"
+                  role="option"
+                  :aria-selected="option.value === sortField"
+                  :class="{ active: option.value === sortField }"
+                  @click.stop="selectSortField(option.value)"
+                >
+                  {{ option.label }}
+                </li>
+              </ul>
+            </transition>
+          </div>
+
+          <button
+            class="sort-direction-btn"
+            type="button"
+            :aria-label="`${t('characters.sortDirectionLabel')}：${currentDirectionLabel}`"
+            :title="`${t('characters.sortDirectionLabel')}：${currentDirectionLabel}`"
+            @click="toggleSortDirection"
+          >
+            <svg v-if="sortDirection === 'asc'" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 17V7" />
+              <path d="M4 10l3-3 3 3" />
+              <path d="M13 7h7" />
+              <path d="M13 12h5" />
+              <path d="M13 17h3" />
+            </svg>
+            <svg v-else viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 7v10" />
+              <path d="M4 14l3 3 3-3" />
+              <path d="M13 7h3" />
+              <path d="M13 12h5" />
+              <path d="M13 17h7" />
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -227,7 +302,6 @@ function compareByLocalizedName(left: CharacterMatch, right: CharacterMatch) {
 }
 
 .stats-panel {
-  margin-top: 0.5rem;
   padding: 0.6rem 1.25rem;
   background: var(--surface-color, #ffffff);
   border-radius: 999px;
@@ -240,45 +314,125 @@ function compareByLocalizedName(left: CharacterMatch, right: CharacterMatch) {
   font-size: 0.95rem;
 }
 
-.sort-panel {
-  margin-top: 1rem;
+.hero-toolbar {
+  width: 100%;
+  margin-top: 0.75rem;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 0.75rem;
 }
 
-.sort-field {
-  display: inline-flex;
+.sort-panel {
+  display: flex;
   align-items: center;
-  gap: 0.55rem;
-  padding: 0.75rem 1rem;
-  border-radius: 999px;
-  background: #ffffff;
-  border: 1px solid #dfe7eb;
-  box-shadow: 0 6px 16px rgba(24, 39, 51, 0.06);
+  gap: 0.75rem;
 }
 
-.sort-label {
-  color: #5d6b75;
+.sort-dropdown {
+  position: relative;
+}
+
+.sort-dropdown-trigger,
+.sort-direction-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #dbe5ea;
+  box-shadow: 0 6px 16px rgba(24, 39, 51, 0.06);
+  color: #23313a;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.sort-dropdown-trigger:hover,
+.sort-direction-btn:hover,
+.sort-dropdown.is-open .sort-dropdown-trigger {
+  border-color: #bcd5c8;
+  box-shadow: 0 10px 22px rgba(24, 39, 51, 0.08);
+  transform: translateY(-1px);
+}
+
+.sort-trigger-prefix {
+  color: #6b7a84;
   font-size: 0.9rem;
   font-weight: 700;
   white-space: nowrap;
 }
 
-.sort-select {
-  appearance: none;
-  border: none;
-  background: transparent;
-  color: #23313a;
+.sort-trigger-value {
   font-size: 0.95rem;
-  font-weight: 700;
-  padding-right: 1rem;
-  cursor: pointer;
+  font-weight: 800;
+  color: #2c3c45;
 }
 
-.sort-select:focus {
-  outline: none;
+.sort-dropdown-trigger .arrow {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #6b7a84;
+  border-bottom: 2px solid #6b7a84;
+  transform: rotate(45deg) translateY(-1px);
+  transition: transform 0.2s ease;
+}
+
+.sort-dropdown.is-open .arrow {
+  transform: rotate(-135deg) translateY(-1px);
+}
+
+.sort-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  min-width: 180px;
+  margin: 0;
+  padding: 0.4rem;
+  list-style: none;
+  border-radius: 18px;
+  border: 1px solid #dbe5ea;
+  background: #ffffff;
+  box-shadow: 0 18px 40px rgba(27, 39, 48, 0.14);
+  z-index: 10;
+}
+
+.sort-dropdown-menu li {
+  padding: 0.72rem 0.9rem;
+  border-radius: 12px;
+  color: #4d5c66;
+  font-weight: 700;
+  line-height: 1.3;
+  cursor: pointer;
+  transition: background-color 0.16s ease, color 0.16s ease;
+}
+
+.sort-dropdown-menu li:hover {
+  background: #f4f8f6;
+  color: #2c3c45;
+}
+
+.sort-dropdown-menu li.active {
+  background: #e8f4ee;
+  color: #2d7f5e;
+}
+
+.sort-direction-btn {
+  width: 44px;
+  padding: 0;
+}
+
+.sort-direction-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .stat-count {
@@ -478,13 +632,32 @@ function compareByLocalizedName(left: CharacterMatch, right: CharacterMatch) {
 }
 
 @media (max-width: 600px) {
-  .sort-panel {
-    flex-direction: column;
+  .hero-toolbar {
     align-items: stretch;
   }
 
-  .sort-field {
+  .stats-panel,
+  .sort-panel {
+    width: 100%;
+  }
+
+  .sort-panel {
+    justify-content: center;
+  }
+
+  .sort-dropdown {
+    flex: 1 1 auto;
+  }
+
+  .sort-dropdown-trigger {
+    width: 100%;
     justify-content: space-between;
+  }
+
+  .sort-dropdown-menu {
+    left: 0;
+    right: 0;
+    min-width: 0;
   }
 
   .characters-grid {

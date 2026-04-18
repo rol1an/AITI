@@ -511,7 +511,7 @@ function buildSubmitPayload() {
     submissionId: submissionId,
     archetypeCode: r.archetype?.id || 'unknown-archetype',
     characterCode: r.code || r.mbtiCode || 'UNKN',
-    predictedMbti: r.mbtiCode && /^[EISEN][STN][TF][JP]$/i.test(r.mbtiCode) ? r.mbtiCode : undefined,
+    predictedMbti: r.mbtiCode && /^[EI][SN][TF][JP]$/i.test(r.mbtiCode) ? r.mbtiCode : undefined,
     dimensionScores: {
       ei: typeof scores.E_I?.percentage === 'number' ? Math.max(0, Math.min(100, scores.E_I.percentage)) : 50,
       sn: typeof scores.S_N?.percentage === 'number' ? Math.max(0, Math.min(100, scores.S_N.percentage)) : 50,

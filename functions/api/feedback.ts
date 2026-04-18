@@ -11,7 +11,7 @@ import {
 } from './_shared'
 
 export async function onRequestPost(context: any) {
-  const { DB } = context.env as { DB: D1Database }
+  const { DB } = context.env as { DB: any }
 
   // --- 限流 ---
   const ip = context.request.headers.get('CF-Connecting-IP') || 'unknown'
@@ -28,12 +28,15 @@ export async function onRequestPost(context: any) {
 
   // Turnstile 校验（前端需传 turnstileToken 字段）
   const turnstileToken = str(raw.turnstileToken, 2048)
-  if (!turnstileToken) {
+  const turnstileSecret = String(context.env.TURNSTILE_SECRET ?? '').trim()
+  if (turnstileSecret && !turnstileToken) {
     return new Response('Missing Turnstile token', { status: 400 })
   }
-  const turnstileOk = await verifyTurnstile(turnstileToken, ip, context.env)
-  if (!turnstileOk) {
-    return new Response('Forbidden', { status: 403 })
+  if (turnstileToken) {
+    const turnstileOk = await verifyTurnstile(turnstileToken, ip, context.env)
+    if (!turnstileOk) {
+      return new Response('Forbidden', { status: 403 })
+    }
   }
 
   // 白名单提取字段

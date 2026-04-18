@@ -185,6 +185,23 @@ npx wrangler pages dev dist --d1=DB
 
 构建产物输出到 `dist/`，配置为相对路径（`base: './'`）。后端 API 基于 Cloudflare Pages Functions，使用 D1 数据库存储匿名统计数据，部署在 Cloudflare Pages 上。
 
+### Turnstile 与环境变量
+
+如果你要在反馈页启用真实的人机验证，需要分别配置前端站点密钥和后端 secret：
+
+- `VITE_TURNSTILE_SITE_KEY`：前端使用的 Turnstile site key，建议配置在 Cloudflare Pages 的环境变量中。
+- `TURNSTILE_SECRET`：后端验证用的 secret，建议使用 `wrangler pages secret put TURNSTILE_SECRET --project-name acgti` 写入。
+
+当前实现会在未配置这些值时自动降级，方便本地联调；但生产环境建议补齐后再公开反馈入口。
+
+### 预览与正式库
+
+上线前建议把预览环境和正式环境的 D1 数据库拆开，避免测试数据污染正式统计：
+
+- Preview 环境使用独立的 `acgti-stats-preview`
+- Production 环境使用独立的 `acgti-stats-prod`
+- 两边都先执行 `migrations/0001_init.sql` 和 `migrations/0002_rate_limit.sql`
+
 ## 🤝 贡献
 
 欢迎 **Star** · 欢迎 **Fork** · 欢迎 **Issue** · 欢迎 **PR**！

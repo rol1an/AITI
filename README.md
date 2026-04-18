@@ -192,6 +192,8 @@ npx wrangler pages dev dist --d1=DB
 - `VITE_TURNSTILE_SITE_KEY`：前端使用的 Turnstile site key，建议配置在 Cloudflare Pages 的环境变量中。
 - `TURNSTILE_SECRET`：后端验证用的 secret，建议使用 `wrangler pages secret put TURNSTILE_SECRET --project-name acgti` 写入。
 
+补充说明：结果页会优先读取构建期的 `VITE_TURNSTILE_SITE_KEY`，并在为空时回退到运行时 `/api/config`。运行时接口支持从 `VITE_TURNSTILE_SITE_KEY` 或 `TURNSTILE_SITE_KEY` 读取站点密钥。
+
 当前实现会在未配置这些值时自动降级，方便本地联调；但生产环境建议补齐后再公开反馈入口。
 
 ### 预览与正式库
@@ -200,7 +202,16 @@ npx wrangler pages dev dist --d1=DB
 
 - Preview 环境使用独立的 `acgti-stats-preview`
 - Production 环境使用独立的 `acgti-stats-prod`
-- 两边都先执行 `migrations/0001_init.sql` 和 `migrations/0002_rate_limit.sql`
+- 两边都先执行 `migrations/0001_init.sql`、`migrations/0002_rate_limit.sql`、`migrations/0003_simplify_answers.sql`、`migrations/0004_stats_snapshot.sql`、`migrations/0005_restore_submission_answers.sql`
+
+如果需要按题查看提交明细，可查询 `submission_answers` 表：
+
+```sql
+SELECT submission_id, question_id, answer_value
+FROM submission_answers
+ORDER BY submission_id DESC, question_id ASC
+LIMIT 200;
+```
 
 ## 🤝 贡献
 

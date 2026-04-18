@@ -79,11 +79,11 @@ export async function onRequestPost(context: any) {
   // answers 校验：不再要求精确题数，只校验格式合法性
   let answersJson: string | null = null
   let answerCount = 0
+  let validatedAnswers: Array<{ questionId: string; answerValue: number }> = []
   if (raw.answers !== undefined) {
     if (!Array.isArray(raw.answers)) {
       return new Response('Invalid answers', { status: 400 })
     }
-    const validated: Array<{ questionId: string; answerValue: number }> = []
     for (const a of raw.answers) {
       if (
         typeof a !== 'object' || a === null ||
@@ -97,11 +97,11 @@ export async function onRequestPost(context: any) {
       if (!qid || val === null) {
         return new Response('Invalid answers', { status: 400 })
       }
-      validated.push({ questionId: qid, answerValue: val })
+      validatedAnswers.push({ questionId: qid, answerValue: val })
     }
-    if (validated.length > 0) {
-      answersJson = JSON.stringify(validated)
-      answerCount = validated.length
+    if (validatedAnswers.length > 0) {
+      answersJson = JSON.stringify(validatedAnswers)
+      answerCount = validatedAnswers.length
     }
   }
 
@@ -130,6 +130,34 @@ export async function onRequestPost(context: any) {
       answerCount || null,
       questionsVersion || null,
     ).run()
+
+    console.log('✅ submission stored', {
+      submissionId,
+      answerCount,
+      hasAnswersJson: !!answersJson,
+    })
+
+    // 兼容按题明细查询：逐题写入 submission_answers（用于直接 SQL 查看每道题）
+    if (validatedAnswers.length > 0) {
+      try {
+        await DB.batch(
+          validatedAnswers.map((a) =>
+            DB.prepare(
+              `INSERT OR REPLACE INTO submission_answers
+                (submission_id, question_id, answer_value)
+               VALUES (?, ?, ?)`
+            ).bind(submissionId, a.questionId, a.answerValue)
+          )
+        )
+
+        console.log('✅ submission_answers stored', {
+          submissionId,
+          answerRows: validatedAnswers.length,
+        })
+      } catch (detailErr) {
+        console.error('❌ submission_answers write failed:', detailErr)
+      }
+    }
 
     return new Response(null, { status: 204 })
   } catch (err) {

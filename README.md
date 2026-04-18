@@ -42,7 +42,7 @@ ACG Type Indicator
 - **105 位角色库**：当前包含 105 位角色，涵盖 60+ 部热门作品，包括 BanG Dream!（Ave Mujica / MyGO）、孤独摇滚！、鸣潮、明日方舟、轻音少女、我推的孩子、Re:从零开始的异世界生活、败犬女主太多了！、辉夜大小姐想让我告白、青春猪头少年、魔法少女小圆、某科学的超电磁炮、名侦探柯南、EVA、东方Project、VOCALOID、原神、崩坏：星穹铁道、紫罗兰永恒花园、四月是你的谎言、葬送的芙丽莲、间谍过家家、刀剑神域、Fate/stay night、电锯人、少女乐队的呐喊等，持续扩充中。
 - **可视化交互**：16personalities 风格的交互式倾向滑块，直观展现你的思维倾向。
 - **一键分享**：精美的结果图报表，支持一键导出 PNG 海报分享给同好。
-- **纯前端架构**：无后端、无注册，测试结果全部在本地浏览器完成计算。
+- **轻量全栈**：测试结果在本地浏览器完成计算；结果页会匿名上报最终命中角色与原型到后端，用于全站统计、题目校准与角色映射优化；不要求注册，不收集邮箱等直接身份信息。
 
 ## 🛠️ 技术栈
 
@@ -54,6 +54,10 @@ ACG Type Indicator
   <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
   &nbsp;
   <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Cloudflare_Pages-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare Pages" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Cloudflare_D1-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare D1" />
 </div>
 
 ## ⚙️ 架构与原理
@@ -96,6 +100,8 @@ src/
 │   ├── characters.json  # 角色资料库
 │   ├── characterVisuals.json       # 角色视觉配置
 │   └── characterProbabilities.json # 角色命中概率
+├── i18n/                # 国际化
+│   └── messages.ts      # 多语言文案（简中/繁中/英/日）
 ├── pages/               # 页面组件
 │   ├── HomePage.vue     # 首页
 │   ├── IntroPage.vue    # 测试说明页
@@ -109,6 +115,7 @@ src/
 │   ├── quizEngine.ts    # 评分、原型匹配、角色命中逻辑
 │   ├── characterVisuals.ts    # 角色视觉数据注水
 │   ├── characterProbability.ts # 角色命中概率计算
+│   ├── statsReporter.ts       # 结果匿名上报
 │   ├── adsense.ts       # Google AdSense 配置
 │   └── storage.ts       # localStorage 工具
 ├── router/
@@ -116,6 +123,20 @@ src/
 ├── App.vue              # 根组件
 ├── main.ts              # 入口文件
 └── style.css            # 全局样式
+
+functions/                # Cloudflare Pages Functions（后端 API）
+├── api/
+│   ├── _shared.ts       # D1 绑定与公共类型
+│   ├── submit.ts        # 结果匿名上报
+│   ├── feedback.ts      # 用户 MBTI 反馈
+│   ├── ping.ts          # 健康检查
+│   └── stats/           # 统计查询接口
+│       ├── overview.ts
+│       ├── archetypes.ts
+│       └── characters.ts
+
+migrations/               # Cloudflare D1 数据库迁移
+└── 0001_init.sql
 ```
 
 </details>
@@ -152,14 +173,67 @@ src/
 # 安装依赖
 npm install
 
-# 启动开发服务器
+# 启动前端开发服务器
 npm run dev
 
 # 构建
 npm run build
+
+# 启动全栈本地开发（含 Cloudflare D1 + Pages Functions）
+npm run dev:pages
 ```
 
-构建产物输出到 `dist/`，配置为相对路径（`base: './'`），可直接部署到 Cloudflare Pages 等静态托管平台。
+推荐的本地联调流程（避免 `--proxy` 弃用告警）：
+
+```bash
+# 终端 1（仓库根目录）：监听构建产物到 dist/
+npm run build:watch
+
+# 终端 2（仓库根目录）：启动 Pages + Functions + D1
+npm run dev:pages
+```
+
+然后访问：`http://127.0.0.1:8788/#/stats`
+
+注意：
+
+- `wrangler pages dev ...` 必须在仓库根目录执行，不要在 `cron-worker/` 目录执行。
+- 如果需要单独调试 Cron Worker，请在 `cron-worker/` 目录运行 `npm run dev`。该模式下出现 “Scheduled Workers are not automatically triggered during local development.” 是正常提示，可按日志里的 `curl /cdn-cgi/handler/scheduled` 手动触发。
+
+构建产物输出到 `dist/`，配置为相对路径（`base: './'`）。后端 API 基于 Cloudflare Pages Functions，使用 D1 数据库存储匿名统计数据，部署在 Cloudflare Pages 上。
+
+### Turnstile 与环境变量
+
+如果你要在反馈页启用真实的人机验证，需要分别配置前端站点密钥和后端 secret：
+
+- `VITE_TURNSTILE_SITE_KEY`：前端使用的 Turnstile site key，建议配置在 Cloudflare Pages 的环境变量中。
+- `TURNSTILE_SECRET`：后端验证用的 secret，建议使用 `wrangler pages secret put TURNSTILE_SECRET --project-name acgti` 写入。
+
+本地联调建议：
+
+- 前端本地变量写入 `.env.local`（已在 `.gitignore` 忽略）：`VITE_TURNSTILE_SITE_KEY=你的真实或测试 site key`
+- Pages Functions 本地变量写入 `.dev.vars`（已在 `.gitignore` 忽略）：`TURNSTILE_SECRET=你的真实或测试 secret`
+
+补充说明：结果页会优先读取构建期的 `VITE_TURNSTILE_SITE_KEY`，并在为空时回退到运行时 `/api/config`。运行时接口支持从 `VITE_TURNSTILE_SITE_KEY` 或 `TURNSTILE_SITE_KEY` 读取站点密钥。本地地址（localhost / 127.0.0.1 / 0.0.0.0）在未配置 Turnstile 时会自动回退到 Cloudflare 官方测试 key，方便你直接跑通完整链路。
+
+当前实现会在未配置这些值时自动降级，方便本地联调；但生产环境建议补齐后再公开反馈入口。
+
+### 预览与正式库
+
+上线前建议把预览环境和正式环境的 D1 数据库拆开，避免测试数据污染正式统计：
+
+- Preview 环境使用独立的 `acgti-stats-preview`
+- Production 环境使用独立的 `acgti-stats-prod`
+- 两边都先执行 `migrations/0001_init.sql`、`migrations/0002_rate_limit.sql`、`migrations/0003_simplify_answers.sql`、`migrations/0004_stats_snapshot.sql`、`migrations/0005_restore_submission_answers.sql`
+
+如果需要按题查看提交明细，可查询 `submission_answers` 表：
+
+```sql
+SELECT submission_id, question_id, answer_value
+FROM submission_answers
+ORDER BY submission_id DESC, question_id ASC
+LIMIT 200;
+```
 
 ## 🤝 贡献
 
@@ -197,12 +271,13 @@ npm run build
 - **外部贡献**：Fork 本仓库后，向 `dev` 分支提交 Pull Request
 - **CI 校验**：仓库已配置 GitHub Actions，会在 `push` 到 `main`/`dev` 和所有 PR 上自动执行 `npm ci` 与 `npm run build`
 
-线上部署由 Cloudflare Pages 负责。
+线上部署由 Cloudflare Pages 负责，后端 API 通过 Cloudflare Pages Functions 运行，数据存储在 Cloudflare D1 数据库中。
 
 ## 📦 持续集成与部署
 
 - **GitHub Actions**：负责在 `main` push / PR 时校验构建是否通过
-- **Cloudflare Pages**：负责连接 GitHub 后的自动构建与部署
+- **Cloudflare Pages**：负责连接 GitHub 后的自动构建与部署，同时托管 Pages Functions 后端 API
+- **Cloudflare D1**：SQLite 边缘数据库，存储匿名统计数据
 - **GitHub Release**：在推送 `v*` tag 时自动构建 `dist/`、打包为 zip，并创建 Release
 
 发版方式示例：
@@ -216,7 +291,7 @@ git push origin v0.2.0
 
 ### 代码授权
 
-本项目前端源代码基于 [Apache License 2.0](LICENSE) 开源。您可以学习、修改和分发本项目的代码，但在再分发或衍生发布时，需要一并提供许可证文本、保留适用的版权与归属声明，并对已修改文件作出显著标识。根目录中的 [NOTICE](NOTICE) 记录了本项目的原始归属信息。
+本项目源代码基于 [Apache License 2.0](LICENSE) 开源。您可以学习、修改和分发本项目的代码，但在再分发或衍生发布时，需要一并提供许可证文本、保留适用的版权与归属声明，并对已修改文件作出显著标识。根目录中的 [NOTICE](NOTICE) 记录了本项目的原始归属信息。
 
 ### 归属与修改说明
 
@@ -238,8 +313,10 @@ git push origin v0.2.0
 
 ### 隐私与数据安全
 
-- 本工具为**纯前端运行**架构（无后端服务器）。
-- 您的所有测试过程、点击数据与最终生成的结果海报，均只在您的**本地浏览器**中计算生成。我们**不会**收集、上传或存储您的任何答题数据或个人隐私信息。
+- 本工具的核心计算过程在**本地浏览器**中完成。
+- 结果页会**匿名上报最终命中角色、原型与维度倾向**到后端（Cloudflare D1），用于全站统计、题目校准与角色映射优化。
+- 我们**不会**收集邮箱、手机号、昵称等直接身份信息，也不会存储完整 IP 或 User-Agent。
+- 用户可自愿在结果页提交"真实 MBTI"反馈，用于校准题目权重，该反馈完全匿名且可选。
 
 ### 测试结果声明
 

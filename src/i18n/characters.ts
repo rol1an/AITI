@@ -610,6 +610,36 @@ const characterNameI18n: Record<string, LocalizedText> = {
     en: '33 Niang',
     ja: '33娘',
   },
+  'qb': {
+    'zh-CN': '丘比',
+    'zh-TW': '丘比',
+    en: 'Kyubey',
+    ja: 'キュゥべえ',
+  },
+  'kushima-kamome': {
+    'zh-CN': '久岛鸥',
+    'zh-TW': '久島鷗',
+    en: 'Kamome Kushima',
+    ja: '久島鴎',
+  },
+  'makise-kurisu': {
+    'zh-CN': '牧濑红莉栖',
+    'zh-TW': '牧瀨紅莉棲',
+    en: 'Kurisu Makise',
+    ja: '牧瀬紅莉栖',
+  },
+  'shiina-mayuri': {
+    'zh-CN': '椎名真由理',
+    'zh-TW': '椎名真由理',
+    en: 'Mayuri Shiina',
+    ja: '椎名まゆり',
+  },
+  'amane-suzuha': {
+    'zh-CN': '阿万音铃羽',
+    'zh-TW': '阿萬音鈴羽',
+    en: 'Suzuha Amane',
+    ja: '阿万音鈴羽',
+  },
 }
 
 const seriesI18n: Record<string, LocalizedText> = {
@@ -960,6 +990,18 @@ const seriesI18n: Record<string, LocalizedText> = {
     'zh-TW': 'bilibili',
     en: 'bilibili',
     ja: 'bilibili',
+  },
+  'Summer Pockets': {
+    'zh-CN': 'Summer Pockets',
+    'zh-TW': 'Summer Pockets',
+    en: 'Summer Pockets',
+    ja: 'サマーポケッツ',
+  },
+  '命运石之门': {
+    'zh-CN': '命运石之门',
+    'zh-TW': '命運石之門',
+    en: 'Steins;Gate',
+    ja: 'シュタインズ・ゲート',
   },
 }
 

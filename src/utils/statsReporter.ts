@@ -8,13 +8,14 @@ export interface SubmitPayload {
   appVersion: string
   archetypeCode: string
   characterCode: string
+  predictedMbti?: string
   dimensionScores: {
     ei?: number
     sn?: number
     tf?: number
     jp?: number
   }
-  answers: Array<{ questionId: string; answerValue: number }>
+  answers?: Array<{ questionId: string; answerValue: number }>
   durationMs?: number
 }
 

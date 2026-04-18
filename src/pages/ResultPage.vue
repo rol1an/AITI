@@ -442,16 +442,19 @@ function buildSubmitPayload() {
     submissionId: submissionId.value,
     archetypeCode: r.archetype.id,
     characterCode: r.code || r.mbtiCode,
+    predictedMbti: r.mbtiCode || undefined,
     dimensionScores: {
       ei: scores.E_I?.percentage ?? null,
       sn: scores.S_N?.percentage ?? null,
       tf: scores.T_F?.percentage ?? null,
       jp: scores.J_P?.percentage ?? null,
     },
-    answers: rawAnswers.map((val: number, idx: number) => ({
-      questionId: `q${idx + 1}`,
-      answerValue: val,
-    })),
+    answers: rawAnswers.length > 0
+      ? rawAnswers.map((val: number, idx: number) => ({
+          questionId: `q${idx + 1}`,
+          answerValue: val,
+        }))
+      : undefined,
     durationMs: undefined,
   }
 }

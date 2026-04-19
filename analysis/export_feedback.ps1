@@ -16,6 +16,18 @@ if (-not $Local) {
   $scopeArgs += "--remote"
 }
 
+function Invoke-Wrangler {
+  param([string[]]$WranglerArgs)
+
+  $npx = Get-Command npx.cmd -ErrorAction SilentlyContinue
+  if (-not $npx) {
+    $npx = Get-Command npx -ErrorAction Stop
+  }
+
+  & $npx.Source @WranglerArgs
+  $script:WranglerLastExitCode = $LASTEXITCODE
+}
+
 function Export-D1Table {
   param(
     [string]$TableName,
@@ -23,17 +35,17 @@ function Export-D1Table {
   )
 
   Write-Host "Exporting table $TableName -> $OutputPath"
-  & npx wrangler d1 export $DatabaseName @scopeArgs --table=$TableName --no-schema --output=$OutputPath
-  if ($LASTEXITCODE -ne 0) {
-    Write-Warning "Skipped $TableName because wrangler returned exit code $LASTEXITCODE."
+  Invoke-Wrangler (@("wrangler", "d1", "export", $DatabaseName) + $scopeArgs + @("--table", $TableName, "--no-schema", "--output", $OutputPath))
+  if ($script:WranglerLastExitCode -ne 0) {
+    Write-Warning "Skipped $TableName because wrangler returned exit code $script:WranglerLastExitCode."
   }
 }
 
 $fullPath = Join-Path $OutputDir "full_$date.sql"
 Write-Host "Exporting full database -> $fullPath"
-& npx wrangler d1 export $DatabaseName @scopeArgs --output=$fullPath
-if ($LASTEXITCODE -ne 0) {
-  throw "Full D1 export failed with exit code $LASTEXITCODE."
+Invoke-Wrangler (@("wrangler", "d1", "export", $DatabaseName) + $scopeArgs + @("--output", $fullPath))
+if ($script:WranglerLastExitCode -ne 0) {
+  throw "Full D1 export failed with exit code $script:WranglerLastExitCode."
 }
 
 Export-D1Table "mbti_feedback" (Join-Path $OutputDir "mbti_feedback_data_$date.sql")

@@ -1,5 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+// 兼容旧 hash 路由：在 router 创建之前替换 URL
+// 这样 createWebHistory 初始化时直接读到正确路径
+const hashMatch = window.location.hash.match(/^#\/(.+)/)
+if (hashMatch) {
+  window.history.replaceState(null, '', '/' + hashMatch[1])
+}
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -15,14 +22,5 @@ const router = createRouter({
     return { top: 0 }
   },
 })
-
-// 兼容旧 hash 路由：检测 URL 中的 #/xxx 并重定向到 /xxx
-const hashMatch = window.location.hash.match(/^#\/(.+)/)
-if (hashMatch) {
-  const path = '/' + hashMatch[1]
-  window.history.replaceState(null, '', path)
-  // 让 vue-router 在初始化后正确导航
-  router.push(path).catch(() => {})
-}
 
 export default router

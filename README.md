@@ -18,6 +18,9 @@
   <a href="https://acgti.tianxingleo.top/"><img src="https://img.shields.io/badge/Deploy-Cloudflare_Pages-F38020?style=flat-square&logo=cloudflare" alt="Deploy to Cloudflare Pages" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-blue.svg?style=flat-square" alt="License" /></a>
   <img src="https://img.shields.io/badge/Hits-5.5M+-green.svg?style=flat-square" alt="Hits" />
+</p>
+
+<p align="center">
   <img
     src="https://count.getloli.com/@ACG-TI?name=ACG-TI&theme=asoul&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=auto"
     alt="ACG-TI counter"

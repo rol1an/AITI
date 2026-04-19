@@ -536,6 +536,8 @@ export const messages = {
       name: '角色',
       count: '命中次数',
       percent: '占比',
+      loadMore: '加载更多',
+      showing: '当前显示 {current} / {total} 位角色',
     },
     startNote: '统计数据从 2026.4.18 18:00 开始记录',
     footer: {
@@ -1363,6 +1365,8 @@ export const messages = {
       name: '角色',
       count: '命中次數',
       percent: '佔比',
+      loadMore: '載入更多',
+      showing: '目前顯示 {current} / {total} 位角色',
     },
     startNote: '統計數據從 2026.4.18 18:00 開始記錄',
     footer: {
@@ -2067,6 +2071,8 @@ export const messages = {
       name: 'Character',
       count: 'Matches',
       percent: 'Share',
+      loadMore: 'Load More',
+      showing: 'Showing {current} / {total} characters',
     },
     startNote: 'Statistics have been recorded since April 18, 2026 at 18:00',
     footer: {
@@ -2763,6 +2769,8 @@ export const messages = {
       name: 'キャラクター',
       count: 'マッチ数',
       percent: '割合',
+      loadMore: 'もっと見る',
+      showing: '{current} / {total} キャラを表示中',
     },
     startNote: '統計データは 2026.4.18 18:00 から記録されています',
     footer: {

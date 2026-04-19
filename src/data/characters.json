@@ -2382,10 +2382,6 @@
     "series": "明日方舟",
     "image": "/images/characters/凯尔希.png",
     "matchCode": "INTJ",
-    "matchCodeFlex": [
-      "INFJ",
-      "ENTJ"
-    ],
     "code": "KALS",
     "title": "罗德岛基石·Mon3tr牌外置执行力",
     "archetypeId": "shadow-strategist",

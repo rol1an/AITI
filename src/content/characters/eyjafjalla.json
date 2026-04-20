@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "id": "eyjafjalla",
+    "name": "艾雅法拉",
+    "series": "明日方舟",
+    "matchCode": "INFJ",
+    "matchCodeFlex": [
+      "ISFJ"
+    ],
+    "code": "EYJA",
+    "title": "温柔核弹·盲目的火山学者",
+    "archetypeId": "gentle-healer",
+    "tags": [
+      "前辈！",
+      "听力受损",
+      "最强法系输出",
+      "文献狂魔"
+    ],
+    "note": "柔弱乖巧的学妹外表下，藏着能瞬间融化整个战场的毁灭性火山魔法。尽管身体正被矿石病一点点夺走听力与视力，她依然执着于探寻父母留下的火山研究。每次战斗结束后那声甜甜的“前辈”，是对抗这片废土残酷世界最好的止痛药。",
+    "vector": {
+      "expression": -0.2,
+      "temperature": 0.59,
+      "judgement": 0.39,
+      "order": 0.39,
+      "agency": 0.39,
+      "aura": 0.39
+    },
+    "signature": {
+      "uniqueAxes": {
+        "temperature": 3,
+        "judgement": 2,
+        "order": 2
+      }
+    },
+    "matchWeight": 1.0696
+  },
+  "visual": {
+    "image": "/images/characters/艾雅法拉.webp",
+    "thumb": "/images/characters/thumbs/艾雅法拉.webp",
+    "accent": "#E25B45"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "艾雅法拉",
+      "zh-TW": "艾雅法拉",
+      "en": "Eyjafjalla",
+      "ja": "エイヤフィヤトラ"
+    },
+    "series": {
+      "zh-CN": "明日方舟",
+      "zh-TW": "明日方舟",
+      "en": "Arknights",
+      "ja": "アークナイツ"
+    }
+  }
+}

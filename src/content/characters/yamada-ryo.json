@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "id": "yamada-ryo",
+    "name": "山田凉",
+    "series": "孤独摇滚！",
+    "addedAt": "2026-04-16",
+    "matchCode": "INTP",
+    "matchCodeFlex": [
+      "ISTP"
+    ],
+    "code": "RYOO",
+    "title": "吃草贝斯手·超脱的屑",
+    "archetypeId": "trickster-orbit",
+    "tags": [
+      "钱包空空",
+      "绝赞吃草中",
+      "一本正经地胡说八道",
+      "孤高（自称）"
+    ],
+    "note": "被叫作「怪人」会暗自窃喜的孤高贝斯手。人生哲学极度自我，有钱全砸在乐器上，没钱就拔路边的野草吃，甚至还能面不改色地骗队友的钱买零食。你以为她高冷深沉，其实她只是懒得遵守人类社会的常识。纯粹的、脱离了低级趣味的「屑」。",
+    "vector": {
+      "expression": -0.5,
+      "temperature": -0.25,
+      "judgement": 0.25,
+      "order": -0.75,
+      "agency": 0,
+      "aura": 0.25
+    },
+    "signature": {
+      "uniqueAxes": {
+        "order": -3,
+        "expression": -2,
+        "temperature": -1
+      }
+    },
+    "matchWeight": 1.0135
+  },
+  "visual": {
+    "image": "/images/characters/山田凉.webp",
+    "thumb": "/images/characters/thumbs/山田凉.webp",
+    "accent": "#4868A8"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "山田凉",
+      "zh-TW": "山田涼",
+      "en": "Ryo Yamada",
+      "ja": "山田リョウ"
+    },
+    "series": {
+      "zh-CN": "孤独摇滚！",
+      "zh-TW": "孤獨搖滾！",
+      "en": "Bocchi the Rock!",
+      "ja": "ぼっち・ざ・ろっく！"
+    }
+  }
+}

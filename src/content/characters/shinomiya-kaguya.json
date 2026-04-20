@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "id": "shinomiya-kaguya",
+    "name": "四宫辉夜",
+    "series": "辉夜大小姐想让我告白",
+    "addedAt": "2026-04-16",
+    "matchCode": "INTJ",
+    "matchCodeFlex": [
+      "INFJ",
+      "ENTJ"
+    ],
+    "code": "KGYA",
+    "title": "纯情财阀·恋爱脑补帝",
+    "archetypeId": "shadow-strategist",
+    "tags": [
+      "天才脑补狂",
+      "傲娇教科书",
+      "死要面子活受罪",
+      "如何让对方先告白"
+    ],
+    "note": "表面上是完美无瑕的财阀大小姐、冷酷无情的计谋家，实际上是个连智能手机都不会用的纯情恋爱脑。她的人生格言是「先告白的人在恋爱中是输家」，然后为了让对方先开口，可以调动整个财阀的资源演一出大戏。属于「智商换情商」的典型。",
+    "vector": {
+      "expression": -0.18,
+      "temperature": 0,
+      "judgement": 0.53,
+      "order": 0.53,
+      "agency": 0.35,
+      "aura": 0.53
+    },
+    "signature": {
+      "uniqueAxes": {
+        "judgement": 3,
+        "order": 3,
+        "expression": -1
+      }
+    },
+    "matchWeight": 1.0384
+  },
+  "visual": {
+    "image": "/images/characters/四宫辉夜.webp",
+    "thumb": "/images/characters/thumbs/四宫辉夜.webp",
+    "accent": "#B81D29"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "四宫辉夜",
+      "zh-TW": "四宮輝夜",
+      "en": "Kaguya Shinomiya",
+      "ja": "四宮かぐや"
+    },
+    "series": {
+      "zh-CN": "辉夜大小姐想让我告白",
+      "zh-TW": "輝夜姬想讓人告白",
+      "en": "Kaguya-sama: Love Is War",
+      "ja": "かぐや様は告らせたい"
+    }
+  }
+}

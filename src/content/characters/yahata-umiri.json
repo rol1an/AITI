@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "id": "yahata-umiri",
+    "name": "八幡海铃 / Timoris",
+    "series": "BanG Dream! Ave Mujica",
+    "matchCode": "ISTJ",
+    "code": "TMRS",
+    "title": "不响但很重·冷面执行官",
+    "archetypeId": "moonlit-guardian",
+    "tags": [
+      "极简主义打工人",
+      "话少刀快",
+      "收场专业户",
+      "沉默の清道夫"
+    ],
+    "note": "你不制造drama，但你通常是drama里最能收场的人。别人还在情绪波动，你已经开始处理后果了——属于「沉默の清道夫，稳得一批」。建议有事找她，没事别烦她。",
+    "vector": {
+      "expression": -0.36,
+      "temperature": -0.18,
+      "judgement": 0.54,
+      "order": 0.54,
+      "agency": 0.36,
+      "aura": 0.36
+    },
+    "matchWeight": 0.87
+  },
+  "visual": {
+    "image": "/images/characters/八幡海铃.webp",
+    "thumb": "/images/characters/thumbs/八幡海铃.webp",
+    "accent": "#60779a"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "八幡海铃 / Timoris",
+      "zh-TW": "八幡海鈴 / Timoris",
+      "en": "Umiri Yahata / Timoris",
+      "ja": "八幡海鈴 / Timoris"
+    },
+    "series": {
+      "zh-CN": "BanG Dream! Ave Mujica",
+      "zh-TW": "BanG Dream! Ave Mujica",
+      "en": "BanG Dream! Ave Mujica",
+      "ja": "BanG Dream! Ave Mujica"
+    }
+  }
+}

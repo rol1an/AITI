@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "id": "shorekeeper",
+    "name": "守岸人",
+    "series": "鸣潮",
+    "matchCode": "INFJ",
+    "matchCodeFlex": [
+      "INTJ"
+    ],
+    "code": "SHKP",
+    "title": "黑海岸之主·为你降生的数据",
+    "archetypeId": "moonlit-guardian",
+    "tags": [
+      "只注视你一人",
+      "星海与蝴蝶",
+      "AI生出人类情感",
+      "隐性偏执"
+    ],
+    "note": "诞生于数据的星海，原本只是个毫无感情、负责维系世界运转的观测者，却因为你的存在而长出了名为“私心”的灵魂。她能把整个世界的命运与概率算得清清楚楚，但她所有的神性与计算，最终都只为保护你这一件事而服务。",
+    "vector": {
+      "expression": -0.37,
+      "temperature": 0,
+      "judgement": 0.55,
+      "order": 0.37,
+      "agency": 0.37,
+      "aura": 0.55
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": -2,
+        "judgement": 3,
+        "aura": 3
+      }
+    },
+    "matchWeight": 1.0388
+  },
+  "visual": {
+    "image": "/images/characters/守岸人.webp",
+    "thumb": "/images/characters/thumbs/守岸人.webp",
+    "accent": "#4B629A"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "守岸人",
+      "zh-TW": "守岸人",
+      "en": "Shorekeeper",
+      "ja": "ショアキーパー"
+    },
+    "series": {
+      "zh-CN": "鸣潮",
+      "zh-TW": "鳴潮",
+      "en": "Wuthering Waves",
+      "ja": "鳴潮"
+    }
+  }
+}

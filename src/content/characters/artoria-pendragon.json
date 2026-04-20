@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "id": "artoria-pendragon",
+    "name": "阿尔托莉雅",
+    "series": "Fate/stay night",
+    "addedAt": "2026-04-17",
+    "matchCode": "ISTJ",
+    "matchCodeFlex": [
+      "ISFJ"
+    ],
+    "code": "ARTO",
+    "title": "呆毛骑士王·誓约胜利之剑",
+    "archetypeId": "oathbound-captain",
+    "tags": [
+      "卫宫家破产元凶",
+      "王不懂人心",
+      "吃货属性",
+      "凛然的剑士"
+    ],
+    "note": "头顶呆毛的骑士王，平时是严肃古板、恪守骑士精神的君主，到了饭点则是能把卫宫家吃破产的无底洞。你看起来很稳，很难被轻易撼动，像那种会把原则和责任感都执行到近乎苛刻的人。你不是冷漠，只是太习惯先把自己放到最后。属于「哪怕心里有波动，表面也还是会先站成一把剑」的类型。",
+    "vector": {
+      "expression": -0.17,
+      "temperature": 0.17,
+      "judgement": 0.52,
+      "order": 0.52,
+      "agency": 0.35,
+      "aura": 0.52
+    },
+    "signature": {
+      "uniqueAxes": {
+        "judgement": 3,
+        "order": 3,
+        "aura": 3
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q20",
+          "expected": "agree",
+          "weight": 1.3
+        },
+        {
+          "questionId": "q34",
+          "expected": "agree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q35",
+          "expected": "disagree",
+          "weight": 1.1
+        }
+      ]
+    },
+    "personaBasis": {
+      "type": "canon",
+      "label": "官方设定映射",
+      "confidence": "high",
+      "summary": "主要依据Fate官站与士郎契约的最优从者、TYPE-MOON系资料中重视骑士道、公平对决的王设定映射。"
+    },
+    "matchWeight": 0.9681
+  },
+  "visual": {
+    "image": "/images/characters/阿尔托莉雅.webp",
+    "thumb": "/images/characters/thumbs/阿尔托莉雅.webp",
+    "accent": "#0F4C81"
+  },
+  "i18n": {}
+}

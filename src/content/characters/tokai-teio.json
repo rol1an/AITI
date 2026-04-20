@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "id": "tokai-teio",
+    "name": "东海帝皇",
+    "series": "赛马娘 Pretty Derby",
+    "matchCode": "ESFP",
+    "matchCodeFlex": [
+      "ENFP"
+    ],
+    "code": "TEIO",
+    "title": "不屈的奇迹·帝皇舞步",
+    "archetypeId": "luminous-lead",
+    "tags": [
+      "蜂蜜特饮狂热粉",
+      "会长唯粉",
+      "骨折也拦不住",
+      "天生的发光体"
+    ],
+    "note": "永远充满活力，做梦都想成为像“皇帝”一样无败的三冠赛马娘。就算遭遇了足以终结职业生涯的粉碎性骨折，也能在所有人都不看好的绝境中奇迹复活。属于那种“只要她还在场上奔跑，你就会忍不住被她的光芒感染并大声欢呼”的耀眼存在。",
+    "vector": {
+      "expression": 0.52,
+      "temperature": 0.35,
+      "judgement": 0.17,
+      "order": -0.17,
+      "agency": 0.52,
+      "aura": 0.52
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": 3,
+        "agency": 3,
+        "aura": 3
+      }
+    },
+    "matchWeight": 1.0623
+  },
+  "visual": {
+    "image": "/images/characters/东海帝皇.webp",
+    "thumb": "/images/characters/thumbs/东海帝皇.webp",
+    "accent": "#3B81C8"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "东海帝皇",
+      "zh-TW": "東海帝皇",
+      "en": "Tokai Teio",
+      "ja": "トウカイテイオー"
+    },
+    "series": {
+      "zh-CN": "赛马娘 Pretty Derby",
+      "zh-TW": "賽馬娘 Pretty Derby",
+      "en": "Uma Musume Pretty Derby",
+      "ja": "ウマ娘 プリティーダービー"
+    }
+  }
+}

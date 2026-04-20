@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "id": "sakagami-tomoyo",
+    "name": "坂上智代",
+    "series": "CLANNAD",
+    "addedAt": "2026-04-16",
+    "matchCode": "ESTJ",
+    "matchCodeFlex": [
+      "ENTJ"
+    ],
+    "code": "TMYO",
+    "title": "武帝·为了樱花树的会长",
+    "archetypeId": "oathbound-captain",
+    "tags": [
+      "连击破百",
+      "小镇最强传说",
+      "笨拙的责任感",
+      "飞踢警告"
+    ],
+    "note": "曾经是打遍小镇无敌手、能把人踢在半空中下不来的不良少女，现在却是认真负责、背负一切的学生会长。战斗力虽然爆表，但在喜欢的人面前却总是展现出笨拙又惹人怜爱的一面。是一个把“责任”和“爱”都死死扛在肩上的武帝。",
+    "vector": {
+      "expression": 0.17,
+      "temperature": 0.17,
+      "judgement": 0.52,
+      "order": 0.52,
+      "agency": 0.52,
+      "aura": 0.35
+    },
+    "signature": {
+      "uniqueAxes": {
+        "judgement": 3,
+        "order": 3,
+        "agency": 3
+      }
+    },
+    "matchWeight": 1.0764
+  },
+  "visual": {
+    "image": "/images/characters/坂上智代.webp",
+    "thumb": "/images/characters/thumbs/坂上智代.webp",
+    "accent": "#9BB7D4"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "坂上智代",
+      "zh-TW": "坂上智代",
+      "en": "Tomoyo Sakagami",
+      "ja": "坂上智代"
+    }
+  }
+}

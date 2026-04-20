@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "id": "tachibana-kanade",
+    "name": "立华奏",
+    "series": "Angel Beats!",
+    "addedAt": "2026-04-15",
+    "matchCode": "ISTJ",
+    "matchCodeFlex": [
+      "INTJ"
+    ],
+    "code": "KNDE",
+    "title": "死后世界的天使·麻婆豆腐狂热粉",
+    "archetypeId": "moonlit-guardian",
+    "tags": [
+      "三无天使",
+      "超辣麻婆豆腐党",
+      "Hand Sonic",
+      "笨拙的温柔"
+    ],
+    "note": "你给人的第一印象往往是安静、冷硬、难以靠近，像那种会把规则执行到底的人。但真正的核心并不是冷漠，而是你早就习惯在不被理解的情况下继续守住自己该守的东西。属于“高冷只是外壳，温柔却一直在做事”的类型。",
+    "vector": {
+      "expression": -0.47,
+      "temperature": -0.16,
+      "judgement": 0.47,
+      "order": 0.47,
+      "agency": 0.31,
+      "aura": 0.47
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": -3,
+        "judgement": 3,
+        "order": 3
+      }
+    },
+    "matchWeight": 1.0453
+  },
+  "visual": {
+    "image": "/images/characters/立华奏.webp",
+    "thumb": "/images/characters/thumbs/立华奏.webp",
+    "accent": "#A6C1D6"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "立华奏",
+      "zh-TW": "立華奏",
+      "en": "Kanade Tachibana",
+      "ja": "立華かなで"
+    },
+    "series": {
+      "zh-CN": "Angel Beats!",
+      "zh-TW": "Angel Beats!",
+      "en": "Angel Beats!",
+      "ja": "Angel Beats!"
+    }
+  }
+}

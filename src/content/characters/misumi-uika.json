@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "id": "misumi-uika",
+    "name": "三角初华 / Doloris",
+    "series": "BanG Dream! Ave Mujica",
+    "matchCode": "INFJ",
+    "code": "DLRS",
+    "title": "温柔皮下的剧情变量",
+    "archetypeId": "gentle-healer",
+    "tags": [
+      "白月光假象",
+      "越看越不对劲",
+      "自己也不知道下一步",
+      "温柔型不定时炸弹"
+    ],
+    "note": "你给人的第一印象是「应该很好相处」，但真正危险的地方在于：你自己也未必完全知道自己下一步会做什么——属于「温柔型不定时炸弹」。建议远离，除非你享受被炸的刺激。",
+    "vector": {
+      "expression": 0,
+      "temperature": 0.26,
+      "judgement": 0.26,
+      "order": 0,
+      "agency": 0.52,
+      "aura": 0.77
+    },
+    "signature": {
+      "uniqueAxes": {
+        "aura": 3,
+        "agency": 2,
+        "temperature": 1
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q6",
+          "expected": "neutral",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q9",
+          "expected": "neutral",
+          "weight": 1.5
+        },
+        {
+          "questionId": "q19",
+          "expected": "neutral",
+          "weight": 1.6
+        },
+        {
+          "questionId": "q30",
+          "expected": "neutral",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q35",
+          "expected": "agree",
+          "weight": 1.5
+        }
+      ]
+    },
+    "matchWeight": 1.1111
+  },
+  "visual": {
+    "image": "/images/characters/三角初华.webp",
+    "thumb": "/images/characters/thumbs/三角初华.webp",
+    "accent": "#cf79a4"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "三角初华 / Doloris",
+      "zh-TW": "三角初華 / Doloris",
+      "en": "Uika Misumi / Doloris",
+      "ja": "三角初華 / Doloris"
+    },
+    "series": {
+      "zh-CN": "BanG Dream! Ave Mujica",
+      "zh-TW": "BanG Dream! Ave Mujica",
+      "en": "BanG Dream! Ave Mujica",
+      "ja": "BanG Dream! Ave Mujica"
+    }
+  }
+}

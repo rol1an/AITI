@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "id": "jia-ran",
+    "name": "嘉然",
+    "series": "A-SOUL",
+    "matchCode": "ENFP",
+    "code": "DINA",
+    "title": "可爱即正义·梗密度超标体",
+    "archetypeId": "luminous-lead",
+    "tags": [
+      "小小只核弹",
+      "吃饭直播都封神",
+      "互联网女儿实锤",
+      "可爱生产力"
+    ],
+    "note": "你最大的能力不是可爱，是把可爱做成高频武器。别人卖萌是一种状态，你卖萌是一种生产力——她一开口，弹幕自动变成「然然我的然然」，哪怕她只是在念广告词。建议备好胰岛素，甜度超标。",
+    "vector": {
+      "expression": 0.57,
+      "temperature": 0.57,
+      "judgement": -0.19,
+      "order": -0.19,
+      "agency": 0.38,
+      "aura": 0.38
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": 3,
+        "temperature": 3,
+        "order": -1
+      }
+    },
+    "matchWeight": 1.089
+  },
+  "visual": {
+    "image": "/images/characters/嘉然.webp",
+    "thumb": "/images/characters/thumbs/嘉然.webp",
+    "accent": "#f5ba82"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "嘉然",
+      "zh-TW": "嘉然",
+      "en": "Diana",
+      "ja": "嘉然"
+    },
+    "series": {
+      "zh-CN": "A-SOUL",
+      "zh-TW": "A-SOUL",
+      "en": "A-SOUL",
+      "ja": "A-SOUL"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "id": "awa-subaru",
+    "name": "安和昴",
+    "series": "少女乐队的呐喊 (GBC)",
+    "matchCode": "ENFJ",
+    "matchCodeFlex": [
+      "ESFJ",
+      "ENTP"
+    ],
+    "code": "SUBA",
+    "title": "演技派鼓手·团队粘合剂",
+    "archetypeId": "trickster-orbit",
+    "tags": [
+      "刺猬群里的正常人",
+      "狡猾的妥协者",
+      "表面乖巧内里叛逆",
+      "情绪价值ATM"
+    ],
+    "note": "在一个全员带刺、动不动就爆炸的乐队里，你是唯一一个懂得用「演技」来维持局面的狡猾大人预备役。你太清楚怎么敷衍大人的期待，所以把所有的叛逆和不甘都砸碎在鼓点里。你不是没脾气，你只是知道什么时候该发疯，什么时候该装乖。",
+    "vector": {
+      "expression": 0.29,
+      "temperature": 0.58,
+      "judgement": 0.29,
+      "order": 0.29,
+      "agency": 0.58,
+      "aura": 0.29
+    },
+    "signature": {
+      "uniqueAxes": {
+        "temperature": 2,
+        "agency": 2,
+        "order": 1
+      }
+    },
+    "matchWeight": 1.0304
+  },
+  "visual": {
+    "image": "/images/characters/安和昴.webp",
+    "thumb": "/images/characters/thumbs/安和昴.webp",
+    "accent": "#C3D825"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "安和昴",
+      "zh-TW": "安和昴",
+      "en": "Subaru Awa",
+      "ja": "安和すばる"
+    },
+    "series": {
+      "zh-CN": "少女乐队的呐喊 (GBC)",
+      "zh-TW": "少女樂隊的吶喊 (GBC)",
+      "en": "Girls Band Cry",
+      "ja": "ガールズバンドクライ"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "id": "miyazono-kaori",
+    "name": "宫园薰",
+    "series": "四月是你的谎言",
+    "matchCode": "ENFP",
+    "matchCodeFlex": [
+      "INFP",
+      "ESFP"
+    ],
+    "code": "KAOR",
+    "title": "自由的灵魂·不羁的演奏者",
+    "archetypeId": "luminous-lead",
+    "tags": [
+      "友人A的劫难",
+      "撕毁乐谱的狂徒",
+      "泪目制造机",
+      "只此一次的春天"
+    ],
+    "note": "你就像一阵无法捕捉的春风，蛮横地闯入别人的黑白世界并强行涂上色彩。你不按规矩出牌，把每一次登台都当成生命的最后一次狂欢。你给所有人留下了最刻骨铭心的春天，自己却只愿意当一个任性的「骗子」。",
+    "vector": {
+      "expression": 0.39,
+      "temperature": 0.59,
+      "judgement": -0.2,
+      "order": -0.39,
+      "agency": 0.39,
+      "aura": 0.39
+    },
+    "signature": {
+      "uniqueAxes": {
+        "temperature": 3,
+        "order": -2,
+        "judgement": -1
+      }
+    },
+    "matchWeight": 1.0286
+  },
+  "visual": {
+    "image": "/images/characters/宫园薰.webp",
+    "thumb": "/images/characters/thumbs/宫园薰.webp",
+    "accent": "#E4D1A0"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "宫园薰",
+      "zh-TW": "宮園薰",
+      "en": "Kaori Miyazono",
+      "ja": "宮園かをり"
+    },
+    "series": {
+      "zh-CN": "四月是你的谎言",
+      "zh-TW": "四月是你的謊言",
+      "en": "Your Lie in April",
+      "ja": "四月は君の嘘"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "id": "kusanagi-nene",
+    "name": "草薙宁宁",
+    "series": "世界计划",
+    "matchCode": "INTP",
+    "matchCodeFlex": [
+      "ISTP"
+    ],
+    "code": "NENE-K",
+    "title": "社恐毒舌·天才游戏少女",
+    "archetypeId": "icebound-observer",
+    "tags": [
+      "阴暗角落地缚灵",
+      "线上重拳出击",
+      "线下唯唯诺诺",
+      "歌姬"
+    ],
+    "note": "现实中是个严重社恐、看到生人就想找地缝钻进去的自闭少女；但只要给她一个手柄或键盘，马上化身为毒舌输出机，喷得对手找不着北。然而只要站上她真正热爱的舞台，那份极具穿透力的歌声又会耀眼得让人移不开视线。",
+    "vector": {
+      "expression": -0.73,
+      "temperature": -0.24,
+      "judgement": 0.49,
+      "order": -0.24,
+      "agency": 0.24,
+      "aura": 0.24
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": -3,
+        "judgement": 2,
+        "temperature": -1
+      }
+    },
+    "matchWeight": 1.0102
+  },
+  "visual": {
+    "image": "/images/characters/草薙宁宁.webp",
+    "thumb": "/images/characters/thumbs/草薙宁宁.webp",
+    "accent": "#19C08D"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "草薙宁宁",
+      "zh-TW": "草薙寧寧",
+      "en": "Nene Kusanagi",
+      "ja": "草薙寧々"
+    },
+    "series": {
+      "zh-CN": "世界计划",
+      "zh-TW": "世界計畫",
+      "en": "Project Sekai",
+      "ja": "プロジェクトセカイ"
+    }
+  }
+}

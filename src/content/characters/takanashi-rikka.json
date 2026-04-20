@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "id": "takanashi-rikka",
+    "name": "小鸟游六花",
+    "series": "中二病也要谈恋爱！",
+    "matchCode": "INFP",
+    "matchCodeFlex": [
+      "ENFP"
+    ],
+    "code": "RIKA",
+    "title": "邪王真眼使·中二病重患",
+    "archetypeId": "chaos-spark",
+    "tags": [
+      "邪王真眼",
+      "爆裂吧现实",
+      "战五渣",
+      "呆毛雷达"
+    ],
+    "note": "平时眼罩绷带齐上阵，满嘴「不可视境界线」，结果只要被轻轻敲一下头就会立马抱头蹲防。属于典型的「战斗全靠脑补，实战全靠抱大腿」。她虽然活在自己的设定里，却对感情有着最纯粹的执着。",
+    "vector": {
+      "expression": 0.47,
+      "temperature": 0.24,
+      "judgement": -0.24,
+      "order": -0.47,
+      "agency": 0.47,
+      "aura": 0.47
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": 2,
+        "order": -2,
+        "judgement": -1
+      }
+    },
+    "matchWeight": 1.0303
+  },
+  "visual": {
+    "image": "/images/characters/小鸟游六花.webp",
+    "thumb": "/images/characters/thumbs/小鸟游六花.webp",
+    "accent": "#6D327B"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "小鸟游六花",
+      "zh-TW": "小鳥遊六花",
+      "en": "Rikka Takanashi",
+      "ja": "小鳥遊六花"
+    },
+    "series": {
+      "zh-CN": "中二病也要谈恋爱！",
+      "zh-TW": "中二病也想談戀愛！",
+      "en": "Love, Chunibyo & Other Delusions!",
+      "ja": "中二病でも恋がしたい！"
+    }
+  }
+}

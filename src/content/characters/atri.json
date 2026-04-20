@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "id": "atri",
+    "name": "亚托莉",
+    "series": "ATRI -My Dear Moments-",
+    "matchCode": "ENFP",
+    "matchCodeFlex": [
+      "ESFJ",
+      "ENFJ"
+    ],
+    "code": "ATRI",
+    "title": "高性能(自称)·奇迹的仿生人",
+    "archetypeId": "chaos-spark",
+    "tags": [
+      "高性能自称",
+      "废土小太阳",
+      "直球陪伴型",
+      "隐忍的温柔"
+    ],
+    "note": "你像那种会把元气、直率和陪伴欲全部摆到台面上的人，嘴上说自己高性能，实际最打动人的却是情绪里的真诚和不保留。哪怕在很坏的环境里，你也会努力把一点点热量分给身边的人。属于“看起来轻快明亮，底层却比谁都能扛”的类型。",
+    "vector": {
+      "expression": 0.54,
+      "temperature": 0.54,
+      "judgement": -0.18,
+      "order": -0.36,
+      "agency": 0.36,
+      "aura": 0.36
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": 3,
+        "temperature": 3,
+        "order": -2
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q17",
+          "expected": "agree",
+          "weight": 1.15
+        },
+        {
+          "questionId": "q19",
+          "expected": "agree",
+          "weight": 1.25
+        },
+        {
+          "questionId": "q22",
+          "expected": "agree",
+          "weight": 1.35
+        }
+      ]
+    },
+    "matchWeight": 0.9641
+  },
+  "visual": {
+    "image": "/images/characters/亚托莉.webp",
+    "thumb": "/images/characters/thumbs/亚托莉.webp",
+    "accent": "#e63f32"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "亚托莉",
+      "zh-TW": "亞托莉",
+      "en": "ATRI",
+      "ja": "アトリ"
+    },
+    "series": {
+      "zh-CN": "ATRI -My Dear Moments-",
+      "zh-TW": "ATRI -My Dear Moments-",
+      "en": "ATRI -My Dear Moments-",
+      "ja": "ATRI -My Dear Moments-"
+    }
+  }
+}

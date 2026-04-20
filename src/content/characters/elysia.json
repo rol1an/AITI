@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "id": "elysia",
+    "name": "爱莉希雅",
+    "series": "崩坏3",
+    "matchCode": "ENFJ",
+    "matchCodeFlex": [
+      "ESFJ",
+      "ENFP"
+    ],
+    "code": "ELYS",
+    "title": "无瑕的粉色妖精小姐♪",
+    "archetypeId": "luminous-lead",
+    "tags": [
+      "社交悍匪天花板",
+      "粉色滤镜本体",
+      "如飞花般绚丽",
+      "爱门"
+    ],
+    "note": "表面上是个喜欢贴贴、满嘴甜言蜜语的粉色社牛，实际上把「爱所有人」当成了一生贯彻的信仰。她不是没有悲伤，只是选择把最绚丽无瑕的笑容留给世界——属于那种「一出场就自带粉色聚光灯」的神。建议备好纸巾，笑着笑着就让人破防了。",
+    "vector": {
+      "expression": 0.53,
+      "temperature": 0.53,
+      "judgement": 0.18,
+      "order": 0,
+      "agency": 0.35,
+      "aura": 0.53
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": 3,
+        "temperature": 3,
+        "aura": 3
+      }
+    },
+    "matchWeight": 1.0984
+  },
+  "visual": {
+    "image": "/images/characters/爱莉希雅.webp",
+    "thumb": "/images/characters/thumbs/爱莉希雅.webp",
+    "accent": "#F4A7B9"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "爱莉希雅",
+      "zh-TW": "愛莉希雅",
+      "en": "Elysia",
+      "ja": "エリシア"
+    },
+    "series": {
+      "zh-CN": "崩坏3",
+      "zh-TW": "崩壞3rd",
+      "en": "Honkai Impact 3rd",
+      "ja": "崩壊3rd"
+    }
+  }
+}

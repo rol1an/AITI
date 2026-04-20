@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "id": "kato-megumi",
+    "name": "加藤惠",
+    "series": "路人女主的养成方法",
+    "addedAt": "2026-04-16",
+    "matchCode": "ISTP",
+    "matchCodeFlex": [
+      "ISFP",
+      "INTP"
+    ],
+    "code": "MEGU",
+    "title": "圣人惠·隐形控场真神",
+    "archetypeId": "moonlit-guardian",
+    "tags": [
+      "毫无存在感",
+      "官方吐槽役",
+      "润物细无声",
+      "正宫气场"
+    ],
+    "note": "初见时你甚至记不住她的脸，仿佛自带光学隐形迷彩。没有明显的喜怒哀乐，没有夸张的二次元属性，但就是能在所有人打得不可开交时，用最平淡的语气抛出最致命的吐槽。你以为她是路人，其实她是捏着剧本的唯一真神。",
+    "vector": {
+      "expression": -0.5,
+      "temperature": 0,
+      "judgement": 0.25,
+      "order": 0.25,
+      "agency": 0.25,
+      "aura": -0.75
+    },
+    "signature": {
+      "uniqueAxes": {
+        "aura": -3,
+        "expression": -2
+      }
+    },
+    "matchWeight": 0.9621
+  },
+  "visual": {
+    "image": "/images/characters/加藤惠.webp",
+    "thumb": "/images/characters/thumbs/加藤惠.webp",
+    "accent": "#F2C9D8"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "加藤惠",
+      "zh-TW": "加藤惠",
+      "en": "Megumi Kato",
+      "ja": "加藤恵"
+    },
+    "series": {
+      "zh-CN": "路人女主的养成方法",
+      "zh-TW": "不起眼女主角培育法",
+      "en": "Saekano: How to Raise a Boring Girlfriend",
+      "ja": "冴えない彼女の育てかた"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "id": "qb",
+    "name": "丘比",
+    "series": "魔法少女小圆",
+    "addedAt": "2026-04-18",
+    "matchCode": "INTJ",
+    "matchCodeFlex": [
+      "INFJ",
+      "INTP"
+    ],
+    "code": "IQBT",
+    "title": "孵化者·宇宙热寂的阻止者",
+    "archetypeId": "shadow-strategist",
+    "tags": [
+      "签订契约吗少女",
+      "绝对理性无感情",
+      "不说谎但隐瞒真相",
+      "为了宇宙的存续"
+    ],
+    "note": "外表是可爱的白色猫型生物，实则是来自外星的「孵化者」。没有感情，以绝对理性的功利主义行事。会实现少女的任何愿望，代价是成为魔法少女——但不会告诉你，绝望之后会变成魔女。从不撒谎，只是「省略了部分说明」。认为牺牲少数人拯救宇宙是合理的交换。名言：「你们人类为什么会对这种事情感到愤怒呢？」",
+    "vector": {
+      "expression": -0.41,
+      "temperature": -0.41,
+      "judgement": 0.41,
+      "order": 0.41,
+      "agency": 0.41,
+      "aura": -0.41
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": -3,
+        "temperature": -3,
+        "judgement": 3
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q17",
+          "expected": "disagree",
+          "weight": 1.5
+        },
+        {
+          "questionId": "q18",
+          "expected": "agree",
+          "weight": 2.1
+        },
+        {
+          "questionId": "q20",
+          "expected": "disagree",
+          "weight": 1.3
+        }
+      ]
+    },
+    "matchWeight": 1.0252
+  },
+  "visual": {
+    "image": "/images/characters/丘比.webp",
+    "thumb": "/images/characters/thumbs/丘比.webp",
+    "accent": "#F5E6E8"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "丘比",
+      "zh-TW": "丘比",
+      "en": "Kyubey",
+      "ja": "キュゥべえ"
+    },
+    "series": {
+      "zh-CN": "魔法少女小圆",
+      "zh-TW": "魔法少女小圓",
+      "en": "Puella Magi Madoka Magica",
+      "ja": "魔法少女まどか☆マギカ"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "id": "wakaba-mutsumi",
+    "name": "若叶睦",
+    "series": "BanG Dream! Ave Mujica",
+    "matchCode": "ISTJ",
+    "code": "MRTS",
+    "title": "静音核弹·面无表情的问题儿童",
+    "archetypeId": "moonlit-guardian",
+    "tags": [
+      "黄瓜田里的沉默核武",
+      "一开口就是名场面",
+      "你永远猜不透",
+      "不说话则已一说话刀死你"
+    ],
+    "note": "你不是情绪少，你是情绪都藏在别人看不懂的地方。平时像背景板，却总在关键节点露出让人不安的执拗和迟钝感——属于「安静得过头，反而让人不敢移开视线」的类型。",
+    "vector": {
+      "expression": -0.48,
+      "temperature": -0.32,
+      "judgement": 0.48,
+      "order": 0.32,
+      "agency": 0.32,
+      "aura": 0.48
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": -3,
+        "judgement": 3,
+        "aura": 3
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q11",
+          "expected": "agree",
+          "weight": 1.1
+        },
+        {
+          "questionId": "q23",
+          "expected": "neutral",
+          "weight": 1.3
+        },
+        {
+          "questionId": "q32",
+          "expected": "agree",
+          "weight": 1.2
+        }
+      ]
+    },
+    "matchWeight": 1.0197
+  },
+  "visual": {
+    "image": "/images/characters/若叶睦.webp",
+    "thumb": "/images/characters/thumbs/若叶睦.webp",
+    "accent": "#6f8f44"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "若叶睦",
+      "zh-TW": "若葉睦",
+      "en": "Mutsumi Wakaba",
+      "ja": "若葉睦"
+    },
+    "series": {
+      "zh-CN": "BanG Dream! Ave Mujica",
+      "zh-TW": "BanG Dream! Ave Mujica",
+      "en": "BanG Dream! Ave Mujica",
+      "ja": "BanG Dream! Ave Mujica"
+    }
+  }
+}

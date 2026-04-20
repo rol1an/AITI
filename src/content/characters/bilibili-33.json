@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "id": "bilibili-33",
+    "name": "33娘",
+    "series": "bilibili",
+    "addedAt": "2026-04-17",
+    "matchCode": "INTP",
+    "matchCodeFlex": [
+      "INTJ",
+      "ISTJ"
+    ],
+    "code": "B033",
+    "title": "冷静技术位·表情省电但后台全靠她撑着",
+    "archetypeId": "icebound-observer",
+    "tags": [
+      "沉默寡言",
+      "轻微腹黑",
+      "程序员机娘",
+      "冷静吐槽役"
+    ],
+    "note": "你看起来像那种不会主动制造热闹、甚至还有点懒得解释的人，但系统一出问题就会有人下意识找你。你不一定最会安慰人，却经常是最能把事情真正修好的人。属于“表面低功耗三无，实则后台核心线程”的类型。",
+    "vector": {
+      "expression": -0.45,
+      "temperature": 0,
+      "judgement": 0.45,
+      "order": 0.45,
+      "agency": 0.45,
+      "aura": 0.45
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": -2,
+        "order": 2,
+        "agency": 2
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q7",
+          "expected": "agree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q20",
+          "expected": "agree",
+          "weight": 1.1
+        },
+        {
+          "questionId": "q35",
+          "expected": "disagree",
+          "weight": 1.2
+        }
+      ]
+    },
+    "personaBasis": {
+      "type": "canon",
+      "label": "官方设定映射",
+      "confidence": "high",
+      "summary": "主要依据哔哩哔哩官方关于我们页面中「沉默冷静、技术力强、略腹黑的程序员机娘」设定映射。"
+    },
+    "matchWeight": 0.96
+  },
+  "visual": {
+    "image": "/images/characters/33.webp",
+    "thumb": "/images/characters/thumbs/33.webp",
+    "accent": "#7aa7ff"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "33娘",
+      "zh-TW": "33娘",
+      "en": "33 Niang",
+      "ja": "33娘"
+    },
+    "series": {
+      "zh-CN": "bilibili",
+      "zh-TW": "bilibili",
+      "en": "bilibili",
+      "ja": "bilibili"
+    }
+  }
+}

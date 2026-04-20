@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "id": "kaltsit",
+    "name": "凯尔希",
+    "series": "明日方舟",
+    "matchCode": "INTJ",
+    "code": "KALS",
+    "title": "罗德岛基石·Mon3tr牌外置执行力",
+    "archetypeId": "shadow-strategist",
+    "tags": [
+      "冷面医生",
+      "高压医嘱系领导",
+      "Mon3tr发射器",
+      "全局推演型保护欲"
+    ],
+    "note": "你不是单纯高冷，你只是已经把局势、风险、伤亡和后手全算过一遍了。表面像医务室里最不好惹的那位主任，开口不是命令就是医嘱，情绪稳定得像根本不会波动；但真到残局，她又会把责任、承诺和所有人的命一起扛起来。属于「嘴上像在给你下最后通牒，实际上已经把你从灭团线拽回来了」的类型。",
+    "vector": {
+      "expression": -0.31,
+      "temperature": -0.16,
+      "judgement": 0.47,
+      "order": 0.47,
+      "agency": 0.47,
+      "aura": 0.47
+    },
+    "signature": {
+      "uniqueAxes": {
+        "judgement": 3,
+        "order": 3,
+        "aura": 3
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q34",
+          "expected": "agree",
+          "weight": 1.3
+        },
+        {
+          "questionId": "q37",
+          "expected": "agree",
+          "weight": 1.25
+        },
+        {
+          "questionId": "q38",
+          "expected": "agree",
+          "weight": 1.2
+        }
+      ]
+    },
+    "matchWeight": 1.0323
+  },
+  "visual": {
+    "image": "/images/characters/凯尔希.webp",
+    "thumb": "/images/characters/thumbs/凯尔希.webp",
+    "accent": "#00B578"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "凯尔希",
+      "zh-TW": "凱爾希",
+      "en": "Kal",
+      "ja": "ケルシー"
+    },
+    "series": {
+      "zh-CN": "明日方舟",
+      "zh-TW": "明日方舟",
+      "en": "Arknights",
+      "ja": "アークナイツ"
+    }
+  }
+}

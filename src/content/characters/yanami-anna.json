@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "id": "yanami-anna",
+    "name": "八奈见杏菜",
+    "series": "败犬女主太多了！",
+    "matchCode": "ESFJ",
+    "matchCodeFlex": [
+      "ENFP",
+      "ESFP"
+    ],
+    "code": "ANNA",
+    "title": "人气败犬·能吃能聊还能硬撑体面",
+    "archetypeId": "luminous-lead",
+    "tags": [
+      "幼驯染败犬位",
+      "班级人气王",
+      "食欲深不见底",
+      "天然翻车预备役"
+    ],
+    "note": "你表面像那种随时都能把气氛带热的班级门面，实际上恋爱战绩已经被系统提前判负。能吃、能聊、能把难受先咽下去，嘴上还要装得像没事一样。属于“越是看起来活泼，越容易在夜里偷偷掉线”的类型。",
+    "vector": {
+      "expression": 0.64,
+      "temperature": 0.43,
+      "judgement": 0,
+      "order": -0.21,
+      "agency": 0.43,
+      "aura": 0.43
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": 3,
+        "temperature": 2,
+        "order": -1
+      }
+    },
+    "matchWeight": 1.0799
+  },
+  "visual": {
+    "image": "/images/characters/八奈见杏菜.webp",
+    "thumb": "/images/characters/thumbs/八奈见杏菜.webp",
+    "accent": "#4f86d9"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "八奈见杏菜",
+      "zh-TW": "八奈見杏菜",
+      "en": "Anna Yanami",
+      "ja": "八奈見杏菜"
+    },
+    "series": {
+      "zh-CN": "败犬女主太多了！",
+      "zh-TW": "敗北女角太多了！",
+      "en": "Too Many Losing Heroines!",
+      "ja": "負けヒロインが多すぎる！"
+    }
+  }
+}

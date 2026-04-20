@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "id": "yor-forger",
+    "name": "约尔·福杰",
+    "series": "间谍过家家",
+    "addedAt": "2026-04-16",
+    "matchCode": "ISFJ",
+    "matchCodeFlex": [
+      "ISTJ",
+      "INFP"
+    ],
+    "code": "YORF",
+    "title": "荆棘公主·脑回路清奇的杀手",
+    "archetypeId": "moonlit-guardian",
+    "tags": [
+      "物理系厨神",
+      "天然呆人妻",
+      "一脚踢飞汽车",
+      "烦恼不如暗杀"
+    ],
+    "note": "表面上是温婉可人、连切菜都能切到自己手的贤妻良母，背地里却是代号“荆棘公主”的顶尖杀手。她的脑回路跟她的物理战斗力一样异于常人，遇到解决不了的人际交往问题，第一反应往往是“是不是把他偷偷杀掉比较好”。",
+    "vector": {
+      "expression": 0,
+      "temperature": 0.46,
+      "judgement": -0.23,
+      "order": 0.23,
+      "agency": 0.46,
+      "aura": 0.69
+    },
+    "signature": {
+      "uniqueAxes": {
+        "aura": 3,
+        "temperature": 2,
+        "judgement": -1
+      }
+    },
+    "matchWeight": 1.0634
+  },
+  "visual": {
+    "image": "/images/characters/约尔.webp",
+    "thumb": "/images/characters/thumbs/约尔.webp",
+    "accent": "#912429"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "约尔·福杰",
+      "zh-TW": "約兒·佛傑",
+      "en": "Yor Forger",
+      "ja": "ヨル・フォージャー"
+    },
+    "series": {
+      "zh-CN": "间谍过家家",
+      "zh-TW": "間諜家家酒",
+      "en": "SPY x FAMILY",
+      "ja": "SPY×FAMILY"
+    }
+  }
+}

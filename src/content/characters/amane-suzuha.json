@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "id": "amane-suzuha",
+    "name": "阿万音铃羽",
+    "series": "命运石之门",
+    "addedAt": "2026-04-18",
+    "matchCode": "ESTP",
+    "matchCodeFlex": [
+      "ENTP",
+      "ENTJ"
+    ],
+    "code": "SZHA",
+    "title": "打工战士·从未来而来的少女",
+    "archetypeId": "oathbound-captain",
+    "tags": [
+      "Okey Donkey",
+      "约翰·提托",
+      "打工战士",
+      "失败了失败了失败了"
+    ],
+    "note": "从2036年骑着自行车穿越回来的人，比起「思考人生」更擅长直接动手改变它。你身上有一种很纯粹的执行力——认准了目标就会冲上去，坚定地奋斗到底。你不是那种会在意别人怎么看自己的人，但你对重要的事和重要的人有着近乎执拗的追求。属于「嘴上不说，但会用行动把整个世界扛起来」的类型。",
+    "vector": {
+      "expression": 0.41,
+      "temperature": 0.2,
+      "judgement": 0.2,
+      "order": 0,
+      "agency": 0.61,
+      "aura": 0.61
+    },
+    "signature": {
+      "uniqueAxes": {
+        "agency": 3,
+        "aura": 3
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q7",
+          "expected": "agree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q9",
+          "expected": "disagree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q29",
+          "expected": "agree",
+          "weight": 1.3
+        }
+      ]
+    },
+    "personaBasis": {
+      "type": "canon",
+      "label": "作品剧情映射",
+      "confidence": "high",
+      "summary": "主要依据《命运石之门》中来自未来的反抗军战士、高行动力与使命感并存的设定映射。"
+    },
+    "matchWeight": 1.0599
+  },
+  "visual": {
+    "image": "/images/characters/阿万音铃羽.webp",
+    "thumb": "/images/characters/thumbs/阿万音铃羽.webp",
+    "accent": "#8B4513"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "阿万音铃羽",
+      "zh-TW": "阿萬音鈴羽",
+      "en": "Suzuha Amane",
+      "ja": "阿万音鈴羽"
+    },
+    "series": {
+      "zh-CN": "命运石之门",
+      "zh-TW": "命運石之門",
+      "en": "Steins;Gate",
+      "ja": "シュタインズ・ゲート"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "id": "murasame",
+    "name": "丛雨",
+    "series": "千恋＊万花",
+    "matchCode": "ENFP",
+    "matchCodeFlex": [
+      "ENTP",
+      "ESFP"
+    ],
+    "code": "MRSM",
+    "title": "拔刀白给·合法萝莉神明",
+    "archetypeId": "chaos-spark",
+    "tags": [
+      "怕鬼的刀灵",
+      "五百年老灵体",
+      "一逗就破防",
+      "食物链底端神明"
+    ],
+    "note": "你像那种平时会把长辈架子端得很足、关键时刻却比谁都容易脸红破防的人。嘴上总说自己见多识广，真碰上灵异和惊吓环节又会瞬间缩回安全区。属于“明明想当保护别人的神明，结果更需要别人护着”的类型。",
+    "vector": {
+      "expression": 0.64,
+      "temperature": 0.43,
+      "judgement": 0,
+      "order": -0.21,
+      "agency": 0.43,
+      "aura": 0.43
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": 3,
+        "temperature": 2,
+        "order": -1
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q17",
+          "expected": "agree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q23",
+          "expected": "agree",
+          "weight": 1.15
+        },
+        {
+          "questionId": "q28",
+          "expected": "disagree",
+          "weight": 1.1
+        }
+      ]
+    },
+    "matchWeight": 1.0174
+  },
+  "visual": {
+    "image": "/images/characters/丛雨.webp",
+    "thumb": "/images/characters/thumbs/丛雨.webp",
+    "accent": "#86c166"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "丛雨",
+      "zh-TW": "叢雨",
+      "en": "Murasame",
+      "ja": "ムラサメ"
+    },
+    "series": {
+      "zh-CN": "千恋＊万花",
+      "zh-TW": "千戀＊萬花",
+      "en": "Senren * Banka",
+      "ja": "千恋＊万花"
+    }
+  }
+}

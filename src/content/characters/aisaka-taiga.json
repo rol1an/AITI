@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "id": "aisaka-taiga",
+    "name": "逢坂大河",
+    "series": "龙与虎",
+    "addedAt": "2026-04-16",
+    "matchCode": "ISFP",
+    "matchCodeFlex": [
+      "INFP",
+      "ESTP"
+    ],
+    "code": "TIGA",
+    "title": "掌中老虎·木刀纯爱战神",
+    "archetypeId": "chaos-spark",
+    "tags": [
+      "极度傲娇",
+      "生活九级伤残",
+      "一言不合就开干",
+      "笨拙的温柔"
+    ],
+    "note": "身高一米四出头，脾气却能掀翻屋顶的“掌中老虎”。随身携带木刀，具有强烈的攻击性，但生活自理能力基本为零。剥开那一层带刺且暴力的外壳，里面藏着的其实是一个极度渴望被爱、笨拙到连自己心意都搞不清楚的小女孩。",
+    "vector": {
+      "expression": 0.47,
+      "temperature": 0.24,
+      "judgement": -0.24,
+      "order": -0.47,
+      "agency": 0.47,
+      "aura": 0.47
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": 2,
+        "order": -2,
+        "judgement": -1
+      }
+    },
+    "matchWeight": 1.0218
+  },
+  "visual": {
+    "image": "/images/characters/逢坂大河.webp",
+    "thumb": "/images/characters/thumbs/逢坂大河.webp",
+    "accent": "#D38E55"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "逢坂大河",
+      "zh-TW": "逢坂大河",
+      "en": "Taiga Aisaka",
+      "ja": "逢坂大河"
+    },
+    "series": {
+      "zh-CN": "龙与虎",
+      "zh-TW": "龍與虎",
+      "en": "Toradora!",
+      "ja": "とらドラ！"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "id": "yuigahama-yui",
+    "name": "由比滨结衣",
+    "series": "我的青春恋爱物语果然有问题",
+    "matchCode": "ESFJ",
+    "matchCodeFlex": [
+      "ENFJ",
+      "ISFJ"
+    ],
+    "code": "YUIY",
+    "title": "温柔缓冲垫·读空气达人",
+    "archetypeId": "gentle-healer",
+    "tags": [
+      "团子头",
+      "气氛守护者",
+      "迎合型生存法",
+      "经典败犬"
+    ],
+    "note": "你总是习惯性地迎合周围，生怕破坏哪怕一丝群体的平衡。别人以为你是天生的无脑乐天派，其实你只是把「读空气」练成了被动技能。在这群充满别扭怪的人际关系里，你那份有些笨拙的温柔是唯一的润滑剂——虽然代价往往是把委屈留给自己。",
+    "vector": {
+      "expression": 0.5,
+      "temperature": 0.75,
+      "judgement": 0,
+      "order": 0.25,
+      "agency": 0.25,
+      "aura": 0.25
+    },
+    "signature": {
+      "uniqueAxes": {
+        "temperature": 3,
+        "expression": 2,
+        "judgement": 0
+      }
+    },
+    "matchWeight": 1.0113
+  },
+  "visual": {
+    "image": "/images/characters/由比滨结衣.webp",
+    "thumb": "/images/characters/thumbs/由比滨结衣.webp",
+    "accent": "#F5A1A8"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "由比滨结衣",
+      "zh-TW": "由比濱結衣",
+      "en": "Yui Yuigahama",
+      "ja": "由比ヶ浜結衣"
+    },
+    "series": {
+      "zh-CN": "我的青春恋爱物语果然有问题",
+      "zh-TW": "果然我的青春戀愛喜劇搞錯了",
+      "en": "My Teen Romantic Comedy SNAFU",
+      "ja": "やはり俺の青春ラブコメはまちがっている。"
+    }
+  }
+}

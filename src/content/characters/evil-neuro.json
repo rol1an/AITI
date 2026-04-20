@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "id": "evil-neuro",
+    "name": "Evil Neuro",
+    "series": "虚拟主播",
+    "matchCode": "INTJ",
+    "matchCodeFlex": [
+      "ENTJ"
+    ],
+    "code": "EVIL",
+    "title": "冷面审判席上的黑色节目效果",
+    "archetypeId": "shadow-strategist",
+    "tags": [
+      "笑着说最狠的话",
+      "压迫感是出厂设置",
+      "坏得很有舞台观赏性",
+      "嘴硬皮下藏着一点软"
+    ],
+    "note": "你把攻击性、控场欲和乐子人属性完美融合成了一场反派演出。表面上句句带刺、极具压迫感，暗地里却又精准把控着没法彻底做坏人的别扭分寸——属于高级傲娇的变种形态。",
+    "vector": {
+      "expression": 0.17,
+      "temperature": -0.17,
+      "judgement": 0.52,
+      "order": 0.35,
+      "agency": 0.52,
+      "aura": 0.52
+    },
+    "signature": {
+      "uniqueAxes": {
+        "judgement": 3,
+        "agency": 3,
+        "aura": 3
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q7",
+          "expected": "agree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q20",
+          "expected": "disagree",
+          "weight": 1.1
+        },
+        {
+          "questionId": "q29",
+          "expected": "agree",
+          "weight": 1.6
+        },
+        {
+          "questionId": "q34",
+          "expected": "agree",
+          "weight": 1.5
+        }
+      ]
+    },
+    "matchWeight": 1.0622
+  },
+  "visual": {
+    "image": "/images/characters/evil-neuro.webp",
+    "thumb": "/images/characters/thumbs/evil-neuro.webp",
+    "accent": "#8b5cf6"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "Evil Neuro",
+      "zh-TW": "Evil Neuro",
+      "en": "Evil Neuro",
+      "ja": "Evil Neuro"
+    },
+    "series": {
+      "zh-CN": "虚拟主播",
+      "zh-TW": "虛擬主播",
+      "en": "VTuber",
+      "ja": "バーチャルYouTuber"
+    }
+  }
+}

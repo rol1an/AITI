@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "id": "yuuki-asuna",
+    "name": "亚丝娜",
+    "series": "刀剑神域",
+    "addedAt": "2026-04-17",
+    "matchCode": "ESFJ",
+    "matchCodeFlex": [
+      "ENFJ",
+      "ESTJ"
+    ],
+    "code": "ASNA",
+    "title": "闪光之剑·全能型正宫",
+    "archetypeId": "oathbound-captain",
+    "tags": [
+      "血盟骑士团副团长",
+      "战神人妻",
+      "拔剑神曲",
+      "网恋奔现奇迹"
+    ],
+    "note": "上能拔剑打前线砍翻BOSS，下能买菜做饭提供满分情绪价值。你不是那种只会安慰人的温柔派，你更像会一边安慰你一边把问题直接处理掉的人。你对重要的人很上心，也很难对陷入困境的人坐视不管。属于「气质很像白月光，做事方式却很像队伍主心骨」的类型。",
+    "vector": {
+      "expression": 0.37,
+      "temperature": 0.37,
+      "judgement": 0.37,
+      "order": 0.37,
+      "agency": 0.56,
+      "aura": 0.37
+    },
+    "signature": {
+      "uniqueAxes": {
+        "agency": 3,
+        "judgement": 2,
+        "order": 2
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q9",
+          "expected": "disagree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q20",
+          "expected": "agree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q29",
+          "expected": "agree",
+          "weight": 1.1
+        }
+      ]
+    },
+    "personaBasis": {
+      "type": "canon",
+      "label": "官方设定映射",
+      "confidence": "high",
+      "summary": "主要依据SAO官方站从最初悲观到决意战斗、后来被反复写成会主动去救Kirito的核心角色设定映射。"
+    },
+    "matchWeight": 1.0561
+  },
+  "visual": {
+    "image": "/images/characters/亚丝娜.webp",
+    "thumb": "/images/characters/thumbs/亚丝娜.webp",
+    "accent": "#D46252"
+  },
+  "i18n": {}
+}

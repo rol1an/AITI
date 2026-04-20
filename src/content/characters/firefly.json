@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "id": "firefly",
+    "name": "流萤",
+    "series": "崩坏：星穹铁道",
+    "addedAt": "2026-04-16",
+    "matchCode": "INFJ",
+    "matchCodeFlex": [
+      "INFP",
+      "ISFJ"
+    ],
+    "code": "FIRE",
+    "title": "萤火燃烧型·外表很轻，做决定时却一点都不轻",
+    "archetypeId": "moonlit-guardian",
+    "tags": [
+      "温柔外壳",
+      "宿命感",
+      "燃烧自己",
+      "克制执行者"
+    ],
+    "note": "你表面像那种说话轻、动作轻、情绪也轻的人，仿佛风一吹就会散。但真正遇到必须做决定的时刻，你反而会非常坚定，甚至带一点把自己也一起押上去的决绝。属于“看起来最脆，实际最能扛”的类型。",
+    "vector": {
+      "expression": 0,
+      "temperature": 0.43,
+      "judgement": 0.43,
+      "order": 0.21,
+      "agency": 0.43,
+      "aura": 0.64
+    },
+    "signature": {
+      "uniqueAxes": {
+        "temperature": 2,
+        "agency": 2,
+        "aura": 3
+      }
+    },
+    "matchWeight": 1.072
+  },
+  "visual": {
+    "image": "/images/characters/流萤.webp",
+    "thumb": "/images/characters/thumbs/流萤.webp",
+    "accent": "#7FD8B3"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "流萤",
+      "zh-TW": "流螢",
+      "en": "Firefly",
+      "ja": "ホタル"
+    },
+    "series": {
+      "zh-CN": "崩坏：星穹铁道",
+      "zh-TW": "崩壞：星穹鐵道",
+      "en": "Honkai: Star Rail",
+      "ja": "崩壊：スターレイル"
+    }
+  }
+}

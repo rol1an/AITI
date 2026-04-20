@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "id": "bilibili-22",
+    "name": "22娘",
+    "series": "bilibili",
+    "addedAt": "2026-04-17",
+    "matchCode": "ENFP",
+    "matchCodeFlex": [
+      "ESFJ",
+      "ENFJ"
+    ],
+    "code": "B022",
+    "title": "元气站娘·修播放器会修出新bug的热心姐姐",
+    "archetypeId": "luminous-lead",
+    "tags": [
+      "阳光元气",
+      "热心冒失",
+      "审核员",
+      "姐姐位"
+    ],
+    "note": "你属于那种会先冲上去帮忙、帮到一半再发现自己可能把场面搞得更热闹的人。你有很强的感染力，气氛低了会想拉起来，朋友出事了会先站出来，可执行过程有时又会拐进奇怪的方向。属于“虽然不一定最稳，但一定是全场最有活人感的那个”的类型。",
+    "vector": {
+      "expression": 0.58,
+      "temperature": 0.58,
+      "judgement": 0.19,
+      "order": 0,
+      "agency": 0.38,
+      "aura": 0.38
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": 3,
+        "temperature": 3
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q1",
+          "expected": "agree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q17",
+          "expected": "agree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q29",
+          "expected": "agree",
+          "weight": 1.2
+        }
+      ]
+    },
+    "personaBasis": {
+      "type": "canon",
+      "label": "官方设定映射",
+      "confidence": "high",
+      "summary": "主要依据哔哩哔哩官方关于我们页面中“阳光热心、略冒失、姐姐位与播放器维护梗”的稳定设定映射。"
+    },
+    "matchWeight": 1.0487
+  },
+  "visual": {
+    "image": "/images/characters/22.webp",
+    "thumb": "/images/characters/thumbs/22.webp",
+    "accent": "#5aa9ff"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "22娘",
+      "zh-TW": "22娘",
+      "en": "22 Niang",
+      "ja": "22娘"
+    },
+    "series": {
+      "zh-CN": "bilibili",
+      "zh-TW": "bilibili",
+      "en": "bilibili",
+      "ja": "bilibili"
+    }
+  }
+}

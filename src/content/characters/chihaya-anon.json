@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "id": "chihaya-anon",
+    "name": "千早爱音",
+    "series": "BanG Dream! It's MyGO!!!!!",
+    "matchCode": "ESFJ",
+    "code": "ANON",
+    "title": "轻社牛·场面人",
+    "archetypeId": "luminous-lead",
+    "tags": [
+      "先上车再补票",
+      "社交启动器",
+      "自己挖坑自己跳",
+      "人际关系永动机"
+    ],
+    "note": "你的人生策略是「先混进去再说」。表面上圆滑，实际上经常因为冲太快把自己冲进修罗场——但没关系，你会用新的社牛把旧坑填上。属于「社牛但容易翻车」的典型。",
+    "vector": {
+      "expression": 0.61,
+      "temperature": 0.41,
+      "judgement": 0,
+      "order": -0.2,
+      "agency": 0.61,
+      "aura": 0.2
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": 3,
+        "agency": 3,
+        "temperature": 2
+      }
+    },
+    "matchWeight": 1.0431
+  },
+  "visual": {
+    "image": "/images/characters/千早爱音.webp",
+    "thumb": "/images/characters/thumbs/千早爱音.webp",
+    "accent": "#f2c84d"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "千早爱音",
+      "zh-TW": "千早愛音",
+      "en": "Anon Chihaya",
+      "ja": "千早愛音"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "id": "furukawa-nagisa",
+    "name": "古河渚",
+    "series": "Clannad",
+    "matchCode": "ISFJ",
+    "matchCodeFlex": [
+      "INFP"
+    ],
+    "code": "NAGI",
+    "title": "团子大家族·坚韧的白雪",
+    "archetypeId": "gentle-healer",
+    "tags": [
+      "极其爱哭",
+      "团子狂魔",
+      "外柔内刚",
+      "催泪瓦斯"
+    ],
+    "note": "看起来像个风一吹就会倒的软弱少女，缺乏自信到常常停滞不前。但实际上，她拥有一颗比谁都坚韧的心，一旦为了爱的人，哪怕面临绝望也能咬牙走下去。她那如春风般的温柔，拥有让人不知不觉落泪的魔力。",
+    "vector": {
+      "expression": 0.24,
+      "temperature": 0.73,
+      "judgement": 0.24,
+      "order": 0.24,
+      "agency": -0.24,
+      "aura": 0.49
+    },
+    "signature": {
+      "uniqueAxes": {
+        "temperature": 3,
+        "expression": 1,
+        "agency": -1
+      }
+    },
+    "matchWeight": 1.0399
+  },
+  "visual": {
+    "image": "/images/characters/古河渚.webp",
+    "thumb": "/images/characters/thumbs/古河渚.webp",
+    "accent": "#E1A7B1"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "古河渚",
+      "zh-TW": "古河渚",
+      "en": "Nagisa Furukawa",
+      "ja": "古河渚"
+    },
+    "series": {
+      "zh-CN": "Clannad",
+      "zh-TW": "Clannad",
+      "en": "CLANNAD",
+      "ja": "CLANNAD"
+    }
+  }
+}

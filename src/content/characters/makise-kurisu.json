@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "id": "makise-kurisu",
+    "name": "牧濑红莉栖",
+    "series": "命运石之门",
+    "addedAt": "2026-04-18",
+    "matchCode": "INTJ",
+    "matchCodeFlex": [
+      "INFJ",
+      "ISTJ"
+    ],
+    "code": "KRSU",
+    "title": "傲娇天才·助手",
+    "archetypeId": "shadow-strategist",
+    "tags": [
+      "克里斯蒂娜（禁止）",
+      "脑科学天才",
+      "栗悟饭与龟波气功",
+      "傲娇教科书"
+    ],
+    "note": "18岁拿到大学学位的天才脑科学家，嘴上说「我对这种非科学话题没兴趣」，身体却很诚实地留在Lab里帮你修微波炉。你给人的第一印象是高冷难接近，但相处久了会发现你只是不擅长表达柔软的一面——明明很在意却要用「笨蛋」来掩饰。属于「表面像冰山，内心其实一直在偷偷观察你」的类型。",
+    "vector": {
+      "expression": 0,
+      "temperature": 0,
+      "judgement": 0.59,
+      "order": 0.39,
+      "agency": 0.59,
+      "aura": 0.39
+    },
+    "signature": {
+      "uniqueAxes": {
+        "judgement": 3,
+        "agency": 3,
+        "order": 2
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q7",
+          "expected": "agree",
+          "weight": 1.3
+        },
+        {
+          "questionId": "q20",
+          "expected": "agree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q34",
+          "expected": "disagree",
+          "weight": 1.2
+        }
+      ]
+    },
+    "personaBasis": {
+      "type": "canon",
+      "label": "作品剧情映射",
+      "confidence": "high",
+      "summary": "主要依据《命运石之门》中天才科学家身份、理性分析能力与隐藏的温柔一面映射。"
+    },
+    "matchWeight": 1.0481
+  },
+  "visual": {
+    "image": "/images/characters/牧濑红莉栖.webp",
+    "thumb": "/images/characters/thumbs/牧濑红莉栖.webp",
+    "accent": "#C75050"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "牧濑红莉栖",
+      "zh-TW": "牧瀨紅莉棲",
+      "en": "Kurisu Makise",
+      "ja": "牧瀬紅莉栖"
+    },
+    "series": {
+      "zh-CN": "命运石之门",
+      "zh-TW": "命運石之門",
+      "en": "Steins;Gate",
+      "ja": "シュタインズ・ゲート"
+    }
+  }
+}

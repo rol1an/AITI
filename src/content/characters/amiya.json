@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "id": "amiya",
+    "name": "阿米娅",
+    "series": "明日方舟",
+    "matchCode": "INFJ",
+    "matchCodeFlex": [
+      "ENFJ"
+    ],
+    "code": "AMYA",
+    "title": "罗德岛领袖·贴心魔王",
+    "archetypeId": "oathbound-captain",
+    "tags": [
+      "罗德岛CEO",
+      "是兔子还是驴",
+      "刀客塔的监护人",
+      "魔王武装"
+    ],
+    "note": "表面上是乖巧可爱、随时提醒你不要休息的贴心小助理，实际上是背负着整个罗德岛命运的年轻领袖。她有着与年龄不符的沉稳与决断力，但只要你在身边，她又会露出少女那般依赖的笑容。",
+    "vector": {
+      "expression": 0.18,
+      "temperature": 0.36,
+      "judgement": 0.36,
+      "order": 0.36,
+      "agency": 0.54,
+      "aura": 0.54
+    },
+    "signature": {
+      "uniqueAxes": {
+        "agency": 3,
+        "aura": 3,
+        "temperature": 2
+      }
+    },
+    "matchWeight": 1.0703
+  },
+  "visual": {
+    "image": "/images/characters/阿米娅.webp",
+    "thumb": "/images/characters/thumbs/阿米娅.webp",
+    "accent": "#E6A23C"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "阿米娅",
+      "zh-TW": "阿米婭",
+      "en": "Amiya",
+      "ja": "アーミヤ"
+    },
+    "series": {
+      "zh-CN": "明日方舟",
+      "zh-TW": "明日方舟",
+      "en": "Arknights",
+      "ja": "アークナイツ"
+    }
+  }
+}

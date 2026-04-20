@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "id": "hatsune-miku",
+    "name": "初音未来",
+    "series": "VOCALOID",
+    "matchCode": "ENFP",
+    "matchCodeFlex": [
+      "ENFJ",
+      "ESFJ"
+    ],
+    "code": "HTMK",
+    "title": "世界第一的公主殿下（劳务派遣版）",
+    "archetypeId": "luminous-lead",
+    "tags": [
+      "电子韭菜收割机",
+      "葱田永动机",
+      "演唱会空气吉他冠军",
+      "二次元公务员"
+    ],
+    "note": "你以为她是歌姬，其实她是二次元公务员——演唱会排期比社畜加班还密，葱色双马尾一晃，弹幕自动刷「世最可」，哪怕你根本没听清歌词。属于那种「我不认识她，但我刷过她的表情包」的典中典。",
+    "vector": {
+      "expression": 0.59,
+      "temperature": 0.39,
+      "judgement": 0,
+      "order": 0,
+      "agency": 0.59,
+      "aura": 0.39
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": 3,
+        "temperature": 2,
+        "agency": 3,
+        "aura": 2
+      }
+    },
+    "personaBasis": {
+      "type": "fandom-impression",
+      "label": "圈层印象映射",
+      "confidence": "low",
+      "summary": "主要依据社区常见形象、二创传播与企划衍生印象，非官方唯一人格结论。"
+    },
+    "matchWeight": 1.0599
+  },
+  "visual": {
+    "image": "/images/characters/初音未来.webp",
+    "thumb": "/images/characters/thumbs/初音未来.webp",
+    "accent": "#39c5bb"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "初音未来",
+      "zh-TW": "初音未來",
+      "en": "Hatsune Miku",
+      "ja": "初音ミク"
+    },
+    "series": {
+      "zh-CN": "VOCALOID",
+      "zh-TW": "VOCALOID",
+      "en": "VOCALOID",
+      "ja": "VOCALOID"
+    }
+  }
+}

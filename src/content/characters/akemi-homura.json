@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "id": "akemi-homura",
+    "name": "晓美焰",
+    "series": "魔法少女小圆",
+    "matchCode": "INTJ",
+    "matchCodeFlex": [
+      "INFJ"
+    ],
+    "code": "HOMU",
+    "title": "轮回的观测者·爱的偏执狂",
+    "archetypeId": "icebound-observer",
+    "tags": [
+      "军火女王",
+      "护妻狂魔",
+      "悲剧轮回",
+      "为了你与世界为敌"
+    ],
+    "note": "最初是个怯懦的麻花辫眼镜娘，为了拯救唯一的救赎，硬生生把自己逼成了一个冷酷无情的军火大佬。跨越无数次绝望的轮回，甚至不惜篡夺神明的力量，只为换取那个人平凡的幸福。她的爱沉重到令人窒息，却又伟大到令人震悚。",
+    "vector": {
+      "expression": -0.3,
+      "temperature": -0.3,
+      "judgement": 0.45,
+      "order": 0.45,
+      "agency": 0.45,
+      "aura": 0.45
+    },
+    "signature": {
+      "uniqueAxes": {
+        "agency": 3,
+        "order": 3,
+        "temperature": -2
+      }
+    },
+    "matchWeight": 1.0167
+  },
+  "visual": {
+    "image": "/images/characters/晓美焰.webp",
+    "thumb": "/images/characters/thumbs/晓美焰.webp",
+    "accent": "#71558A"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "晓美焰",
+      "zh-TW": "曉美焰",
+      "en": "Homura Akemi",
+      "ja": "暁美ほむら"
+    },
+    "series": {
+      "zh-CN": "魔法少女小圆",
+      "zh-TW": "魔法少女小圓",
+      "en": "Puella Magi Madoka Magica",
+      "ja": "魔法少女まどか☆マギカ"
+    }
+  }
+}

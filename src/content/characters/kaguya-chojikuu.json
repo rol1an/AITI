@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "id": "kaguya-chojikuu",
+    "name": "辉夜",
+    "series": "超时空辉夜姬！",
+    "addedAt": "2026-04-17",
+    "matchCode": "INFJ",
+    "matchCodeFlex": [
+      "INTJ"
+    ],
+    "code": "CKGY",
+    "title": "神秘顶流AI·把整个创作宇宙当直播间在看",
+    "archetypeId": "moonlit-guardian",
+    "tags": [
+      "虚拟空间管理人",
+      "顶流主播",
+      "高概念AI",
+      "神秘守望者"
+    ],
+    "note": "你像那种存在感很高、却不会把情绪直接摊在脸上的人。你看起来离大家有点远，像悬在高处的虚拟偶像或神明 NPC，但实际上又一直在默默看着每个人怎么创作、怎么发光。属于“表面像高位冷感设定怪，底层其实很在意整个世界运转得够不够自由热闹”的类型。",
+    "vector": {
+      "expression": 0,
+      "temperature": 0.23,
+      "judgement": 0.46,
+      "order": 0.23,
+      "agency": 0.46,
+      "aura": 0.69
+    },
+    "signature": {
+      "uniqueAxes": {
+        "aura": 3,
+        "agency": 2,
+        "judgement": 2
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q7",
+          "expected": "agree",
+          "weight": 1.1
+        },
+        {
+          "questionId": "q20",
+          "expected": "agree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q34",
+          "expected": "agree",
+          "weight": 1.2
+        }
+      ]
+    },
+    "personaBasis": {
+      "type": "canon",
+      "label": "官方设定映射",
+      "confidence": "high",
+      "summary": "主要依据官方角色页中“虚拟空间管理人、顶流主播、神秘 AI 与创作生态守望者”的稳定设定映射。"
+    },
+    "matchWeight": 1.0626
+  },
+  "visual": {
+    "image": "/images/characters/超时空辉夜姬辉夜.webp",
+    "thumb": "/images/characters/thumbs/超时空辉夜姬辉夜.webp",
+    "accent": "#c8b6ff"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "辉夜",
+      "zh-TW": "輝夜",
+      "en": "Kaguya",
+      "ja": "輝夜"
+    },
+    "series": {
+      "zh-CN": "超时空辉夜姬！",
+      "zh-TW": "超時空輝耀姬！",
+      "en": "Cho-Kaguyahime!",
+      "ja": "超かぐや姫！"
+    }
+  }
+}

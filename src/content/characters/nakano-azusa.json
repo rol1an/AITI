@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "id": "nakano-azusa",
+    "name": "中野梓",
+    "series": "轻音少女",
+    "matchCode": "ISTJ",
+    "matchCodeFlex": [
+      "ISFJ"
+    ],
+    "code": "AZUS",
+    "title": "傲娇学妹·被玩弄的吉他手",
+    "archetypeId": "moonlit-guardian",
+    "tags": [
+      "梓喵",
+      "容易被忽悠",
+      "轻音部唯一的常识人",
+      "口嫌体正直"
+    ],
+    "note": "轻音部里唯一的常识人和秩序守护者，平时总把“要好好练习”挂在嘴边，但只要学姐们递上一块蛋糕、套上猫耳，马上就会满脸通红地沦陷。属于典型的“嘴上说着不要，身体却很诚实”的认真型学妹，好欺负程度满分。",
+    "vector": {
+      "expression": -0.24,
+      "temperature": 0.24,
+      "judgement": 0.49,
+      "order": 0.73,
+      "agency": 0.24,
+      "aura": 0.24
+    },
+    "signature": {
+      "uniqueAxes": {
+        "order": 3,
+        "judgement": 2,
+        "expression": -1
+      }
+    },
+    "matchWeight": 1.0203
+  },
+  "visual": {
+    "image": "/images/characters/中野梓.webp",
+    "thumb": "/images/characters/thumbs/中野梓.webp",
+    "accent": "#D84E59"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "中野梓",
+      "zh-TW": "中野梓",
+      "en": "Azusa Nakano",
+      "ja": "中野梓"
+    },
+    "series": {
+      "zh-CN": "轻音少女",
+      "zh-TW": "輕音少女",
+      "en": "K-ON!",
+      "ja": "けいおん!"
+    }
+  }
+}

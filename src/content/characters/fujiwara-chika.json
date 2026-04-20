@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "id": "fujiwara-chika",
+    "name": "藤原千花",
+    "series": "辉夜大小姐想让我告白",
+    "matchCode": "ENTP",
+    "code": "CHKA",
+    "title": "天然混沌·粉毛核弹",
+    "archetypeId": "trickster-orbit",
+    "tags": [
+      "书记舞病毒源头",
+      "气氛组组长",
+      "脑回路不走寻常路",
+      "无害的脸有害的整活力"
+    ],
+    "note": "你以为她是吉祥物，结果她是搅屎棍。她一开口，整部番的走向就会往离谱的方向狂飙。她一跳舞，整个B站都要跟着扭——属于「粉毛切开都是黑的」反面教材（她是粉毛切开是混沌）。",
+    "vector": {
+      "expression": 0.6,
+      "temperature": 0.4,
+      "judgement": 0,
+      "order": -0.4,
+      "agency": 0.4,
+      "aura": 0.4
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": 3,
+        "order": -2,
+        "temperature": 2
+      }
+    },
+    "matchWeight": 1.0386
+  },
+  "visual": {
+    "image": "/images/characters/藤原千花.webp",
+    "thumb": "/images/characters/thumbs/藤原千花.webp",
+    "accent": "#f3a6d6"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "藤原千花",
+      "zh-TW": "藤原千花",
+      "en": "Chika Fujiwara",
+      "ja": "藤原千花"
+    },
+    "series": {
+      "zh-CN": "辉夜大小姐想让我告白",
+      "zh-TW": "輝夜姬想讓人告白",
+      "en": "Kaguya-sama: Love Is War",
+      "ja": "かぐや様は告らせたい"
+    }
+  }
+}

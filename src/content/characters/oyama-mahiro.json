@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "id": "oyama-mahiro",
+    "name": "绪山真寻",
+    "series": "别当哥哥了！",
+    "matchCode": "INTP",
+    "matchCodeFlex": [
+      "ISFP",
+      "INFP"
+    ],
+    "code": "MAHR",
+    "title": "废柴尼特·被迫变身的妹妹",
+    "archetypeId": "trickster-orbit",
+    "tags": [
+      "前世是游戏废人",
+      "性别认知持续掉线",
+      "无可救药的死宅",
+      "萌混过关"
+    ],
+    "note": "你以为她是个天真可爱的初中生，其实躯壳里装了个无可救药的死宅。从最开始的疯狂抗拒，到后来的“女孩子真香”，她用亲身经历展示了什么叫极度被动的人格。每天的终极目标只是想缩在房间里打游戏，却总是被命运（和亲妹妹）安排得明明白白。",
+    "vector": {
+      "expression": -0.22,
+      "temperature": 0.22,
+      "judgement": -0.45,
+      "order": -0.45,
+      "agency": -0.67,
+      "aura": 0.22
+    },
+    "signature": {
+      "uniqueAxes": {
+        "agency": -3,
+        "order": -2,
+        "judgement": -2
+      }
+    },
+    "matchWeight": 1.0172
+  },
+  "visual": {
+    "image": "/images/characters/绪山真寻.webp",
+    "thumb": "/images/characters/thumbs/绪山真寻.webp",
+    "accent": "#F596AA"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "绪山真寻",
+      "zh-TW": "緒山真尋",
+      "en": "Mahiro Oyama",
+      "ja": "緒山まひろ"
+    },
+    "series": {
+      "zh-CN": "别当哥哥了！",
+      "zh-TW": "別當哥哥了！",
+      "en": "Onimai: I\\",
+      "ja": "お兄ちゃんはおしまい！"
+    }
+  }
+}

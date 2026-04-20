@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "id": "yo-rana",
+    "name": "要乐奈",
+    "series": "BanG Dream! It's MyGO!!!!!",
+    "matchCode": "ISTP",
+    "code": "BAFE",
+    "title": "野生·天赋怪猫猫",
+    "archetypeId": "icebound-observer",
+    "tags": [
+      "逻辑不联网",
+      "手感通天",
+      "流浪吉他手",
+      "猫系天花板"
+    ],
+    "note": "别人组乐队靠沟通，你组乐队靠「出现」。你不是难懂，你只是懒得向这个世界解释——弹就完了，哪那么多废话。建议饲养时投喂荞麦面，不要强行撸猫。",
+    "vector": {
+      "expression": -0.47,
+      "temperature": -0.24,
+      "judgement": 0.47,
+      "order": -0.24,
+      "agency": 0.47,
+      "aura": 0.47
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": -2,
+        "order": -1,
+        "agency": 2
+      }
+    },
+    "matchWeight": 1.0023
+  },
+  "visual": {
+    "image": "/images/characters/乐奈.webp",
+    "thumb": "/images/characters/thumbs/乐奈.webp",
+    "accent": "#6e8d53"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "要乐奈",
+      "zh-TW": "要樂奈",
+      "en": "Rana Kaname",
+      "ja": "要楽奈"
+    }
+  }
+}

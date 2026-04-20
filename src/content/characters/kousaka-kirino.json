@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "id": "kousaka-kirino",
+    "name": "高坂桐乃",
+    "series": "我的妹妹哪有这么可爱！",
+    "matchCode": "ESTJ",
+    "matchCodeFlex": [
+      "ENTJ"
+    ],
+    "code": "KINO",
+    "title": "人生赢家·硬核隐性宅",
+    "archetypeId": "chaos-spark",
+    "tags": [
+      "妹系鼻祖",
+      "教科书级傲娇",
+      "梅露露狂热粉",
+      "在外现充在家打游戏"
+    ],
+    "note": "在外面是成绩运动全能的完美模特，在家里是会逼着老哥玩妹系游戏的究极宅女。她的傲娇不是加分项，而是本体——嘴上骂着「恶心」，实际心里可能已经在疯狂动摇。属于那种需要极大耐心才能攻略的“雷区舞者”。",
+    "vector": {
+      "expression": 0.54,
+      "temperature": 0.18,
+      "judgement": 0.36,
+      "order": 0.36,
+      "agency": 0.54,
+      "aura": 0.36
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": 3,
+        "agency": 3,
+        "judgement": 2
+      }
+    },
+    "matchWeight": 1.129
+  },
+  "visual": {
+    "image": "/images/characters/高坂桐乃.webp",
+    "thumb": "/images/characters/thumbs/高坂桐乃.webp",
+    "accent": "#F5A159"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "高坂桐乃",
+      "zh-TW": "高坂桐乃",
+      "en": "Kirino Kousaka",
+      "ja": "高坂桐乃"
+    },
+    "series": {
+      "zh-CN": "我的妹妹哪有这么可爱！",
+      "zh-TW": "我的妹妹哪有這麼可愛！",
+      "en": "Oreimo",
+      "ja": "俺の妹がこんなに可愛いわけがない"
+    }
+  }
+}

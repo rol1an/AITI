@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "id": "neuro-sama",
+    "name": "Neuro-sama",
+    "series": "虚拟主播",
+    "matchCode": "ENTP",
+    "matchCodeFlex": [
+      "ENFP",
+      "ESTP"
+    ],
+    "code": "NEUR",
+    "title": "失控语料核反应堆",
+    "archetypeId": "trickster-orbit",
+    "tags": [
+      "AI嘴替自走炮",
+      "节目效果全自动生成",
+      "可爱外壳下的高频偏航",
+      "直播间薛定谔逻辑"
+    ],
+    "note": "你不是在整活，而是在做概率学抽卡。披着人畜无害的软萌外皮，核心却是个连导播都捏一把汗的乱序发射器。一旦你开口，哪怕语气再自然，也能神不知鬼不觉地把场子带偏到太平洋去。",
+    "vector": {
+      "expression": 0.58,
+      "temperature": 0,
+      "judgement": 0.19,
+      "order": -0.38,
+      "agency": 0.58,
+      "aura": 0.38
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": 3,
+        "agency": 3,
+        "order": -2
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q3",
+          "expected": "agree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q17",
+          "expected": "disagree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q26",
+          "expected": "agree",
+          "weight": 1.7
+        },
+        {
+          "questionId": "q39",
+          "expected": "agree",
+          "weight": 1.4
+        }
+      ]
+    },
+    "matchWeight": 0.9734
+  },
+  "visual": {
+    "image": "/images/characters/neuro-sama.webp",
+    "thumb": "/images/characters/thumbs/neuro-sama.webp",
+    "accent": "#72d8f7"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "Neuro-sama",
+      "zh-TW": "Neuro-sama",
+      "en": "Neuro-sama",
+      "ja": "Neuro-sama"
+    },
+    "series": {
+      "zh-CN": "虚拟主播",
+      "zh-TW": "虛擬主播",
+      "en": "VTuber",
+      "ja": "バーチャルYouTuber"
+    }
+  }
+}

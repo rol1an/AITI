@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "id": "akiyama-mio",
+    "name": "秋山澪",
+    "series": "轻音少女",
+    "matchCode": "ISFJ",
+    "matchCodeFlex": [
+      "ISTJ"
+    ],
+    "code": "MIOA",
+    "title": "蓝白碗·胆小鬼贝斯手",
+    "archetypeId": "moonlit-guardian",
+    "tags": [
+      "反差萌",
+      "猛男必听萌系歌词",
+      "左撇子",
+      "极度怕鬼"
+    ],
+    "note": "明明长着一张高冷御姐的脸，却能被一个鬼故事吓得魂飞魄散。作为团队里唯一的常识人，每天都在崩溃的边缘努力维持秩序。别看她平时那么严肃，她写的歌词可是能让猛男落泪的究极甜妹风。",
+    "vector": {
+      "expression": -0.24,
+      "temperature": 0.24,
+      "judgement": 0.49,
+      "order": 0.73,
+      "agency": 0.24,
+      "aura": 0.24
+    },
+    "signature": {
+      "uniqueAxes": {
+        "order": 3,
+        "expression": -1,
+        "aura": 1
+      }
+    },
+    "matchWeight": 1.0252
+  },
+  "visual": {
+    "image": "/images/characters/秋山澪.webp",
+    "thumb": "/images/characters/thumbs/秋山澪.webp",
+    "accent": "#2B2E4A"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "秋山澪",
+      "zh-TW": "秋山澪",
+      "en": "Mio Akiyama",
+      "ja": "秋山澪"
+    },
+    "series": {
+      "zh-CN": "轻音少女",
+      "zh-TW": "輕音少女",
+      "en": "K-ON!",
+      "ja": "けいおん!"
+    }
+  }
+}

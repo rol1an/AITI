@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "id": "phoebe",
+    "name": "菲比",
+    "series": "鸣潮",
+    "matchCode": "ISFJ",
+    "matchCodeFlex": [
+      "INFJ"
+    ],
+    "code": "PHEB",
+    "title": "隐海修会·虔诚圣职者",
+    "archetypeId": "gentle-healer",
+    "tags": [
+      "虔诚祈祷",
+      "悲惨过去",
+      "治愈系",
+      "无私奉献"
+    ],
+    "note": "因为船难失去双亲，最终在隐海修会成为一名虔诚的圣职者。她将过去的创伤转化为对世界的温柔与悲悯，像静谧的海洋一般包容着所有的苦难。你看着她，就会觉得一切浮躁都能被治愈——属于标准的「灵魂避风港」。",
+    "vector": {
+      "expression": -0.22,
+      "temperature": 0.67,
+      "judgement": 0.22,
+      "order": 0.45,
+      "agency": 0.22,
+      "aura": 0.45
+    },
+    "signature": {
+      "uniqueAxes": {
+        "temperature": 3,
+        "order": 2,
+        "expression": -1
+      }
+    },
+    "matchWeight": 1.061
+  },
+  "visual": {
+    "image": "/images/characters/菲比.webp",
+    "thumb": "/images/characters/thumbs/菲比.webp",
+    "accent": "#4A6E91"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "菲比",
+      "zh-TW": "菲比",
+      "en": "Phoebe",
+      "ja": "フィービー"
+    },
+    "series": {
+      "zh-CN": "鸣潮",
+      "zh-TW": "鳴潮",
+      "en": "Wuthering Waves",
+      "ja": "鳴潮"
+    }
+  }
+}

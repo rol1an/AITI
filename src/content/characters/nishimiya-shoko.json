@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "id": "nishimiya-shoko",
+    "name": "西宫硝子",
+    "series": "声之形",
+    "matchCode": "INFP",
+    "matchCodeFlex": [
+      "ISFJ"
+    ],
+    "code": "SHOK",
+    "title": "无声的温柔·悲悯的赎罪者",
+    "archetypeId": "gentle-healer",
+    "tags": [
+      "讨好型人格",
+      "极致温柔",
+      "让人心疼",
+      "哪怕受伤也要微笑"
+    ],
+    "note": "世界对她充满了不公与恶意，但她却依然选择用最温柔的微笑去拥抱一切。她总是习惯性把所有的错揽在自己身上，在无声的世界里一次次试图与他人和解。这种近乎卑微的善良，让人只想穿越屏幕去给她一个大大的拥抱。",
+    "vector": {
+      "expression": -0.46,
+      "temperature": 0.69,
+      "judgement": 0,
+      "order": 0.23,
+      "agency": -0.46,
+      "aura": 0.23
+    },
+    "signature": {
+      "uniqueAxes": {
+        "temperature": 3,
+        "expression": -2,
+        "agency": -2
+      }
+    },
+    "matchWeight": 0.9836
+  },
+  "visual": {
+    "image": "/images/characters/西宫硝子.webp",
+    "thumb": "/images/characters/thumbs/西宫硝子.webp",
+    "accent": "#E7B0C5"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "西宫硝子",
+      "zh-TW": "西宮硝子",
+      "en": "Shoko Nishimiya",
+      "ja": "西宮硝子"
+    },
+    "series": {
+      "zh-CN": "声之形",
+      "zh-TW": "聲之形",
+      "en": "A Silent Voice",
+      "ja": "聲の形"
+    }
+  }
+}

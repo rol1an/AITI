@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "id": "doro",
+    "name": "doro",
+    "series": "胜利女神：妮姬",
+    "addedAt": "2026-04-16",
+    "matchCode": "ENTP",
+    "matchCodeFlex": [
+      "ESTP"
+    ],
+    "code": "DORO",
+    "title": "粉色恶魔·精神污染源",
+    "archetypeId": "trickster-orbit",
+    "tags": [
+      "眼神清澈但愚蠢",
+      "背对着你",
+      "妮姬精神图腾",
+      "万物皆可doro"
+    ],
+    "note": "明明本体是高贵的朝圣者桃乐丝，却被网友抽象成了这只眼神呆滞、极具精神污染的四足生物。你永远不知道她那空洞的微笑背后在盘算什么，但只要她一出现，整个频道的智商都会被拉低。建议不要直视她的眼睛。",
+    "vector": {
+      "expression": 0.47,
+      "temperature": 0,
+      "judgement": -0.47,
+      "order": -0.47,
+      "agency": 0.32,
+      "aura": 0.47
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": 3,
+        "order": -3,
+        "judgement": -3
+      }
+    },
+    "matchWeight": 1.0065
+  },
+  "visual": {
+    "image": "/images/characters/doro.webp",
+    "thumb": "/images/characters/thumbs/doro.webp",
+    "accent": "#F8B4C4"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "doro",
+      "zh-TW": "doro",
+      "en": "doro",
+      "ja": "Doro"
+    },
+    "series": {
+      "zh-CN": "胜利女神：妮姬",
+      "zh-TW": "勝利女神：妮姬",
+      "en": "GODDESS OF VICTORY: NIKKE",
+      "ja": "勝利の女神：NIKKE"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "id": "reze",
+    "name": "雷塞",
+    "series": "电锯人",
+    "addedAt": "2026-04-17",
+    "matchCode": "ESTP",
+    "matchCodeFlex": [
+      "ENFP",
+      "ENTP"
+    ],
+    "code": "REZE",
+    "title": "危险甜心·温柔像真的，危险也是真的",
+    "archetypeId": "chaos-spark",
+    "tags": [
+      "温柔伪装",
+      "任务型危险感",
+      "高魅力接近",
+      "真心掺在谎里"
+    ],
+    "note": "你给人的第一感觉往往很容易让人卸下防备：亲近、轻松、会接话，也很会制造那种“终于有人认真看见我了”的错觉。但你的内核并不适合被简单归类成恋爱向滤镜，很多温柔背后都带着任务、试探与风险，而最复杂的地方在于那份靠近又不是全假。属于“接近时像夏夜晚风，翻脸时像爆炸前最后一秒安静”的类型。",
+    "vector": {
+      "expression": 0.41,
+      "temperature": 0.2,
+      "judgement": 0.2,
+      "order": 0,
+      "agency": 0.61,
+      "aura": 0.61
+    },
+    "signature": {
+      "uniqueAxes": {
+        "agency": 3,
+        "aura": 3
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q1",
+          "expected": "agree",
+          "weight": 1.1
+        },
+        {
+          "questionId": "q17",
+          "expected": "disagree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q20",
+          "expected": "disagree",
+          "weight": 1.2
+        }
+      ]
+    },
+    "personaBasis": {
+      "type": "canon",
+      "label": "作品剧情映射",
+      "confidence": "high",
+      "summary": "主要依据作品里“温柔接近、任务伪装、危险执行与有限真心并存”的稳定剧情张力映射。"
+    },
+    "matchWeight": 1.0431
+  },
+  "visual": {
+    "image": "/images/characters/雷塞.webp",
+    "thumb": "/images/characters/thumbs/雷塞.webp",
+    "accent": "#7b5bbd"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "雷塞",
+      "zh-TW": "蕾潔",
+      "en": "Reze",
+      "ja": "レゼ"
+    },
+    "series": {
+      "zh-CN": "电锯人",
+      "zh-TW": "鏈鋸人",
+      "en": "Chainsaw Man",
+      "ja": "チェンソーマン"
+    }
+  }
+}

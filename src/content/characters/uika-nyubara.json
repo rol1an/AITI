@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "id": "uika-nyubara",
+    "name": "祐天寺若麦 / Amoris",
+    "series": "BanG Dream! Ave Mujica",
+    "matchCode": "ENTP",
+    "code": "AMRS",
+    "title": "流量感人格·乐子人运营",
+    "archetypeId": "trickster-orbit",
+    "tags": [
+      "营业感拉满",
+      "社交媒体原住民",
+      "整活就是生产力",
+      "人形自走热点"
+    ],
+    "note": "你有一种「明明在发疯，但发得很会经营」的现代感。人设切换像开滤镜，情绪表达像在给自己的人生做运营——建议出书《如何把发疯变成流量密码》。",
+    "vector": {
+      "expression": 0.69,
+      "temperature": 0.23,
+      "judgement": 0,
+      "order": -0.23,
+      "agency": 0.46,
+      "aura": 0.46
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": 3,
+        "order": -1,
+        "agency": 2
+      }
+    },
+    "matchWeight": 1.0313
+  },
+  "visual": {
+    "image": "/images/characters/祐天寺若麦.webp",
+    "thumb": "/images/characters/thumbs/祐天寺若麦.webp",
+    "accent": "#f08aa9"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "祐天寺若麦 / Amoris",
+      "zh-TW": "祐天寺若麥 / Amoris",
+      "en": "Nyubara Uika / Amoris",
+      "ja": "祐天寺若麦 / Amoris"
+    },
+    "series": {
+      "zh-CN": "BanG Dream! Ave Mujica",
+      "zh-TW": "BanG Dream! Ave Mujica",
+      "en": "BanG Dream! Ave Mujica",
+      "ja": "BanG Dream! Ave Mujica"
+    }
+  }
+}

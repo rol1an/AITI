@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "id": "kitagawa-marin",
+    "name": "喜多川海梦",
+    "series": "更衣人偶坠入爱河",
+    "addedAt": "2026-04-17",
+    "matchCode": "ENFP",
+    "matchCodeFlex": [
+      "ESFP",
+      "ENFJ"
+    ],
+    "code": "MARN",
+    "title": "纯爱辣妹·行动力超载的宅女之光",
+    "archetypeId": "luminous-lead",
+    "tags": [
+      "宅女之光",
+      "金发辣妹",
+      "喜欢就大声说",
+      "直球克星"
+    ],
+    "note": "谁能拒绝一个把「喜欢」大声说出来，而且行动力爆表、拉着你一起疯狂出Cos的纯情辣妹呢？你是那种会把「喜欢」直接挂在脸上、看到别人认真做喜欢的事也会立刻两眼发光的人。你不只是外向，最厉害的是你会把身边人的热情一起点起来。属于「自己亮就算了，还会顺手把别人也带亮」的类型。",
+    "vector": {
+      "expression": 0.53,
+      "temperature": 0.53,
+      "judgement": 0,
+      "order": -0.18,
+      "agency": 0.53,
+      "aura": 0.35
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": 3,
+        "temperature": 3,
+        "agency": 3
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q1",
+          "expected": "agree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q17",
+          "expected": "agree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q29",
+          "expected": "agree",
+          "weight": 1.3
+        }
+      ]
+    },
+    "personaBasis": {
+      "type": "canon",
+      "label": "官方设定映射",
+      "confidence": "high",
+      "summary": "主要依据动画官网「明るく裏表のない」、班级人气者、热爱动画游戏漫画并向往cosplay设定映射。"
+    },
+    "matchWeight": 1.0187
+  },
+  "visual": {
+    "image": "/images/characters/喜多川海梦.webp",
+    "thumb": "/images/characters/thumbs/喜多川海梦.webp",
+    "accent": "#F4C4D1"
+  },
+  "i18n": {}
+}

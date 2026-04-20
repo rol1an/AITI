@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "id": "shirai-kuroko",
+    "name": "白井黑子",
+    "series": "某科学的超电磁炮",
+    "addedAt": "2026-04-16",
+    "matchCode": "ESTJ",
+    "matchCodeFlex": [
+      "ESFJ",
+      "ENTJ"
+    ],
+    "code": "KRKO",
+    "title": "风纪执行位·公务模式与姐姐大人过热的叠加态",
+    "archetypeId": "oathbound-captain",
+    "tags": [
+      "姐姐大人单推人",
+      "空间移动 Level 4",
+      "大小姐敬语～ですの",
+      "风纪委员铁面执法"
+    ],
+    "note": "你以为她只是个每天高呼「姐姐大人」的痴汉，但其实她是常盘台唯一的 Level 4 空间移动能力者兼学园都市治安维护铁血风纪委员。她把「对姐姐大人过热」和「绝对的正义感」这两种截然相反的属性完美融合——工作时雷厉风行、办案果断，一旦切到姐姐大人频道就立刻系统超频。属于「公务模式和感情模式切换速度比空间移动还快」的典范。",
+    "vector": {
+      "expression": 0.45,
+      "temperature": 0.3,
+      "judgement": 0.45,
+      "order": 0.45,
+      "agency": 0.45,
+      "aura": 0.3
+    },
+    "signature": {
+      "uniqueAxes": {
+        "order": 3,
+        "expression": 3,
+        "agency": 3,
+        "judgement": 3
+      }
+    },
+    "matchWeight": 1.0817
+  },
+  "visual": {
+    "image": "/images/characters/白井黑子.webp",
+    "thumb": "/images/characters/thumbs/白井黑子.webp",
+    "accent": "#d86b84"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "白井黑子",
+      "zh-TW": "白井黑子",
+      "en": "Kuroko Shirai",
+      "ja": "白井黒子"
+    },
+    "series": {
+      "zh-CN": "某科学的超电磁炮",
+      "zh-TW": "科學超電磁砲",
+      "en": "A Certain Scientific Railgun",
+      "ja": "とある科学の超電磁砲"
+    }
+  }
+}

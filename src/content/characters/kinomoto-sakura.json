@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "id": "kinomoto-sakura",
+    "name": "木之本樱",
+    "series": "魔卡少女樱",
+    "addedAt": "2026-04-17",
+    "matchCode": "ENFJ",
+    "matchCodeFlex": [
+      "ESFJ",
+      "ENFP"
+    ],
+    "code": "SAKR",
+    "title": "初代萌王·治愈系魔法使",
+    "archetypeId": "gentle-healer",
+    "tags": [
+      "绝对没问题的",
+      "库洛牌打工妹",
+      "无敌的温柔",
+      "童年白月光"
+    ],
+    "note": "初代萌王，她的那句「絶対、大丈夫だよ」堪称能治愈一切精神内耗的终极咒语。你最大的优点不是单纯开朗，而是总能带着一点天然和真诚把复杂的事也往前推。别人觉得麻烦时，你会先上手；别人害怕时，你反而会用很轻的方式把气氛托住。属于「像春天一样看着软，实际非常能打」的类型。",
+    "vector": {
+      "expression": 0.58,
+      "temperature": 0.58,
+      "judgement": 0.19,
+      "order": 0,
+      "agency": 0.38,
+      "aura": 0.38
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": 3,
+        "temperature": 3
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q1",
+          "expected": "agree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q19",
+          "expected": "disagree",
+          "weight": 1.1
+        },
+        {
+          "questionId": "q23",
+          "expected": "agree",
+          "weight": 1.2
+        }
+      ]
+    },
+    "personaBasis": {
+      "type": "canon",
+      "label": "官方设定映射",
+      "confidence": "high",
+      "summary": "主要依据官方站「元气がとりえ」的小学四年生、作为卡牌捕获者行动设定映射。"
+    },
+    "matchWeight": 0.9948
+  },
+  "visual": {
+    "image": "/images/characters/木之本樱.webp",
+    "thumb": "/images/characters/thumbs/木之本樱.webp",
+    "accent": "#FFB7C5"
+  },
+  "i18n": {}
+}

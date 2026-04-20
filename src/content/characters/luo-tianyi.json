@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "id": "luo-tianyi",
+    "name": "洛天依",
+    "series": "Vsinger",
+    "matchCode": "ISFP",
+    "matchCodeFlex": [
+      "INFP",
+      "ESFJ"
+    ],
+    "code": "LTYI",
+    "title": "吃货殿下·温柔锦鲤",
+    "archetypeId": "gentle-healer",
+    "tags": [
+      "世界第一大吃货",
+      "锦鲤附体",
+      "治愈系电音",
+      "干饭爆表"
+    ],
+    "note": "表面上是个能用歌声治愈人心的温柔仙女，背地里却是个能把剧组吃破产的超级大胃王。她最大的超能力不是飙高音，而是在干饭时展现出的惊人行动力。属于「只要吃饱了就什么都好说」的纯粹生物。",
+    "vector": {
+      "expression": 0.25,
+      "temperature": 0.75,
+      "judgement": -0.25,
+      "order": 0,
+      "agency": 0.25,
+      "aura": 0.5
+    },
+    "signature": {
+      "uniqueAxes": {
+        "temperature": 3,
+        "judgement": -1,
+        "aura": 2
+      }
+    },
+    "matchWeight": 1.0496
+  },
+  "visual": {
+    "image": "/images/characters/luo-tianyi.webp",
+    "thumb": "/images/characters/thumbs/luo-tianyi.webp",
+    "accent": "#66ccff"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "洛天依",
+      "zh-TW": "洛天依",
+      "en": "Luo Tianyi",
+      "ja": "洛天依"
+    },
+    "series": {
+      "zh-CN": "Vsinger",
+      "zh-TW": "Vsinger",
+      "en": "Vsinger",
+      "ja": "Vsinger"
+    }
+  }
+}

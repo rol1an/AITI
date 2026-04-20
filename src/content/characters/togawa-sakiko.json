@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "id": "togawa-sakiko",
+    "name": "丰川祥子",
+    "series": "BanG Dream! Ave Mujica",
+    "matchCode": "ENTJ",
+    "code": "SAKI",
+    "title": "高压·命运の甲方",
+    "archetypeId": "shadow-strategist",
+    "tags": [
+      "CEO级气场",
+      "边开会边走钢丝",
+      "我说把人生交给我",
+      "人形自走KPI"
+    ],
+    "note": "你不是控制欲强，你只是觉得大家离了你都要出事。精神像在开董事会+在悬崖边跑马拉松——名言：「别问为什么，因为我就是规则」。建议远离，除非你想体验每天被Deadline追着跑的感觉。",
+    "vector": {
+      "expression": -0.16,
+      "temperature": -0.16,
+      "judgement": 0.49,
+      "order": 0.49,
+      "agency": 0.49,
+      "aura": 0.49
+    },
+    "signature": {
+      "uniqueAxes": {
+        "judgement": 3,
+        "agency": 3,
+        "aura": 3
+      }
+    },
+    "matchWeight": 1.0605
+  },
+  "visual": {
+    "image": "/images/characters/丰川祥子.webp",
+    "thumb": "/images/characters/thumbs/丰川祥子.webp",
+    "accent": "#5f4c8a"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "丰川祥子",
+      "zh-TW": "豐川祥子",
+      "en": "Sakiko Togawa",
+      "ja": "豊川祥子"
+    },
+    "series": {
+      "zh-CN": "BanG Dream! Ave Mujica",
+      "zh-TW": "BanG Dream! Ave Mujica",
+      "en": "BanG Dream! Ave Mujica",
+      "ja": "BanG Dream! Ave Mujica"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "id": "rem",
+    "name": "蕾姆",
+    "series": "Re:从零开始的异世界生活",
+    "addedAt": "2026-04-16",
+    "matchCode": "ISFJ",
+    "matchCodeFlex": [
+      "INFJ"
+    ],
+    "code": "REMM",
+    "title": "鬼族女仆·究极奉献者",
+    "archetypeId": "gentle-healer",
+    "tags": [
+      "丢你蕾姆",
+      "全能家务",
+      "一旦认准死不回头",
+      "流星锤警告"
+    ],
+    "note": "平时是家务万能、温柔体贴的完美女仆，一旦你触发了她的信任开关，她连命都可以不要。不过友情提示：在取得信任之前，请小心她手里那把带着倒刺的流星锤。属于那种「只要你别作死，她就是人间天使」的奉献型人格。",
+    "vector": {
+      "expression": 0,
+      "temperature": 0.69,
+      "judgement": 0.46,
+      "order": 0.46,
+      "agency": 0.23,
+      "aura": 0.23
+    },
+    "signature": {
+      "uniqueAxes": {
+        "temperature": 3,
+        "order": 2,
+        "judgement": 2
+      }
+    },
+    "matchWeight": 1.0389
+  },
+  "visual": {
+    "image": "/images/characters/蕾姆.webp",
+    "thumb": "/images/characters/thumbs/蕾姆.webp",
+    "accent": "#62B1E8"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "蕾姆",
+      "zh-TW": "雷姆",
+      "en": "Rem",
+      "ja": "レム"
+    },
+    "series": {
+      "zh-CN": "Re:从零开始的异世界生活",
+      "zh-TW": "Re:從零開始的異世界生活",
+      "en": "Re:Zero - Starting Life in Another World",
+      "ja": "Re:ゼロから始める異世界生活"
+    }
+  }
+}

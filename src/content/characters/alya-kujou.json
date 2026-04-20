@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "id": "alya-kujou",
+    "name": "艾莉",
+    "series": "时不时说一句俄语来掩饰害羞的邻座艾莉同学",
+    "addedAt": "2026-04-17",
+    "matchCode": "INTJ",
+    "matchCodeFlex": [
+      "INFJ",
+      "ISTJ"
+    ],
+    "code": "ALYA",
+    "title": "银发优等生·完美主义冰美人的加密娇羞",
+    "archetypeId": "moonlit-guardian",
+    "tags": [
+      "白毛控狂喜",
+      "高冷全靠装",
+      "俄语加密娇羞",
+      "纸老虎天花板"
+    ],
+    "note": "看似是完美高冷、不容搭话的银发优等生，背地里却总是用俄语嘀咕些让人脸红心跳的娇羞台词。你给人的第一印象通常是不好接近、标准很高、像随时都在给周围人打分的类型。可一旦你开始把谁放进自己的「例外名单」，态度就会悄悄松动，嘴上还不承认。属于「表面高冷审判席，实际内心已经偷偷给你开后门」的类型。",
+    "vector": {
+      "expression": -0.21,
+      "temperature": 0.21,
+      "judgement": 0.63,
+      "order": 0.42,
+      "agency": 0.42,
+      "aura": 0.42
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": -1,
+        "judgement": 3,
+        "order": 2
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q20",
+          "expected": "agree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q34",
+          "expected": "agree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q37",
+          "expected": "disagree",
+          "weight": 1.1
+        }
+      ]
+    },
+    "personaBasis": {
+      "type": "canon",
+      "label": "官方设定映射",
+      "confidence": "high",
+      "summary": "主要依据官方角色页「孤高のお姫様」、完美主义、努力家、負けず嫌い设定映射。"
+    },
+    "matchWeight": 1.0232
+  },
+  "visual": {
+    "image": "/images/characters/艾莉.webp",
+    "thumb": "/images/characters/thumbs/艾莉.webp",
+    "accent": "#C4DAE8"
+  },
+  "i18n": {}
+}

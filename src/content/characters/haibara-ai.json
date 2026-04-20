@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "id": "haibara-ai",
+    "name": "灰原哀",
+    "series": "名侦探柯南",
+    "matchCode": "INTJ",
+    "matchCodeFlex": [
+      "INTP",
+      "ISTJ"
+    ],
+    "code": "HAIB",
+    "title": "A药之母·科学界冷面吐槽役",
+    "archetypeId": "icebound-observer",
+    "tags": [
+      "死神小学生的刹车片",
+      "毒舌女王",
+      "APTX4869发明家",
+      "外冷内热体质"
+    ],
+    "note": "你以为她是冷血无情的科学家，其实她是全剧最清醒的吐槽担当。日常工作除了研究解药，就是用冰冷的语言给某位死神小学生踩刹车。她的冷幽默就像她发明的药一样致命——属于「不开口则已，一开口刀刀暴击」的典范。",
+    "vector": {
+      "expression": -0.42,
+      "temperature": -0.21,
+      "judgement": 0.63,
+      "order": 0.42,
+      "agency": 0.21,
+      "aura": 0.42
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": -2,
+        "judgement": 3,
+        "temperature": -1
+      }
+    },
+    "matchWeight": 0.9971
+  },
+  "visual": {
+    "image": "/images/characters/灰原哀.webp",
+    "thumb": "/images/characters/thumbs/灰原哀.webp",
+    "accent": "#705877"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "灰原哀",
+      "zh-TW": "灰原哀",
+      "en": "Ai Haibara",
+      "ja": "灰原哀"
+    },
+    "series": {
+      "zh-CN": "名侦探柯南",
+      "zh-TW": "名偵探柯南",
+      "en": "Detective Conan",
+      "ja": "名探偵コナン"
+    }
+  }
+}

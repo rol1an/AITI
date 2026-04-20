@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "id": "kitashirakawa-tamako",
+    "name": "北白川玉子",
+    "series": "玉子市场",
+    "matchCode": "ESFJ",
+    "matchCodeFlex": [
+      "ENFJ"
+    ],
+    "code": "TAMA",
+    "title": "商店街团宠·打糕店招牌",
+    "archetypeId": "luminous-lead",
+    "tags": [
+      "年糕脑",
+      "天然呆满级",
+      "肥鸟饲养员",
+      "日常系天花板"
+    ],
+    "note": "满脑子都是年糕的商店街团宠，神经大条到连别人对自己的喜欢都察觉不到。她那种毫无防备的天然呆属性，能轻易把任何紧张的气氛化解成软糯的日常。名言大概是：没有什么事情是吃一口年糕解决不了的！",
+    "vector": {
+      "expression": 0.46,
+      "temperature": 0.69,
+      "judgement": 0,
+      "order": 0.23,
+      "agency": 0.46,
+      "aura": 0.23
+    },
+    "signature": {
+      "uniqueAxes": {
+        "temperature": 3,
+        "expression": 2,
+        "aura": 1
+      }
+    },
+    "matchWeight": 1.0635
+  },
+  "visual": {
+    "image": "/images/characters/北白川玉子.webp",
+    "thumb": "/images/characters/thumbs/北白川玉子.webp",
+    "accent": "#EF838D"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "北白川玉子",
+      "zh-TW": "北白川玉子",
+      "en": "Tamako Kitashirakawa",
+      "ja": "北白川たまこ"
+    },
+    "series": {
+      "zh-CN": "玉子市场",
+      "zh-TW": "玉子市場",
+      "en": "Tamako Market",
+      "ja": "たまこまーけっと"
+    }
+  }
+}

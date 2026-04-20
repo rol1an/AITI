@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "id": "ijichi-nijika",
+    "name": "伊地知虹夏",
+    "series": "孤独摇滚！",
+    "addedAt": "2026-04-15",
+    "matchCode": "ESFJ",
+    "matchCodeFlex": [
+      "ENFJ",
+      "ESFP"
+    ],
+    "code": "NIKA",
+    "title": "下北泽大天使·纽带缔结者",
+    "archetypeId": "luminous-lead",
+    "tags": [
+      "下北泽大天使",
+      "结束乐队老妈",
+      "呆毛本体",
+      "顶级吐槽役"
+    ],
+    "note": "你是那种能把散掉的人重新拢回来的人。你给人的安全感不只来自热情，更来自你会主动照顾气氛、分担压力，并在所有人都快乱成一团时先一步把局面稳住。属于“看起来像阳角气氛组，实际上是团队续命核心”的类型。",
+    "vector": {
+      "expression": 0.52,
+      "temperature": 0.52,
+      "judgement": 0.17,
+      "order": 0.17,
+      "agency": 0.52,
+      "aura": 0.35
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": 3,
+        "temperature": 3,
+        "agency": 3
+      }
+    },
+    "matchWeight": 1.0614
+  },
+  "visual": {
+    "image": "/images/characters/伊地知虹夏.webp",
+    "thumb": "/images/characters/thumbs/伊地知虹夏.webp",
+    "accent": "#F3C043"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "伊地知虹夏",
+      "zh-TW": "伊地知虹夏",
+      "en": "Nijika Ijichi",
+      "ja": "伊地知虹夏"
+    },
+    "series": {
+      "zh-CN": "孤独摇滚！",
+      "zh-TW": "孤獨搖滾！",
+      "en": "Bocchi the Rock!",
+      "ja": "ぼっち・ざ・ろっく！"
+    }
+  }
+}

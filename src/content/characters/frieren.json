@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "id": "frieren",
+    "name": "芙丽莲",
+    "series": "葬送的芙丽莲",
+    "addedAt": "2026-04-15",
+    "matchCode": "INTP",
+    "matchCodeFlex": [
+      "ISTP",
+      "INTJ"
+    ],
+    "code": "FREN",
+    "title": "千年的长寿精灵·民间戏法收集者",
+    "archetypeId": "icebound-observer",
+    "tags": [
+      "宝箱怪诱捕器",
+      "奶奶级赖床选手",
+      "战力天花板",
+      "不到最后不出手"
+    ],
+    "note": "你像那种对外总是显得情绪很淡、反应很慢的人，不是因为你真的漠不关心，而是你习惯先站得更远一点再看清一切。你擅长把判断和力量都留到最关键的时刻，却也会把那些别人看来毫无意义的小事默默珍藏起来。属于“日常像在发呆，关键时刻却重得惊人”的类型。",
+    "vector": {
+      "expression": -0.46,
+      "temperature": 0,
+      "judgement": 0.46,
+      "order": -0.23,
+      "agency": 0.23,
+      "aura": 0.69
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": -2,
+        "aura": 3,
+        "order": -1
+      }
+    },
+    "matchWeight": 1.0026
+  },
+  "visual": {
+    "image": "/images/characters/芙丽莲.webp",
+    "thumb": "/images/characters/thumbs/芙丽莲.webp",
+    "accent": "#C8B6D8"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "芙丽莲",
+      "zh-TW": "芙莉蓮",
+      "en": "Frieren",
+      "ja": "フリーレン"
+    },
+    "series": {
+      "zh-CN": "葬送的芙丽莲",
+      "zh-TW": "葬送的芙莉蓮",
+      "en": "Frieren: Beyond Journey\\",
+      "ja": "葬送のフリーレン"
+    }
+  }
+}

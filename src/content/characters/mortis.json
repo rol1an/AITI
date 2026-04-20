@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "id": "mortis",
+    "name": "Mortis",
+    "series": "BanG Dream! Ave Mujica",
+    "matchCode": "INTJ",
+    "code": "MRTS-X",
+    "title": "异相人格·冷面舞台幽灵",
+    "archetypeId": "shadow-strategist",
+    "tags": [
+      "人格切换感",
+      "压迫性登场",
+      "不说人话式表达",
+      "危险的舞台变量"
+    ],
+    "note": "这不是单纯的安静，而是像把真实情绪锁进另一个舞台壳里。你给人的感觉更像一个随时会改写氛围的变量，克制、陌生，而且带着明确的攻击性轮廓。",
+    "vector": {
+      "expression": -0.33,
+      "temperature": -0.33,
+      "judgement": 0.5,
+      "order": 0.17,
+      "agency": 0.5,
+      "aura": 0.5
+    },
+    "signature": {
+      "uniqueAxes": {
+        "agency": 3,
+        "aura": 3,
+        "temperature": -2
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q20",
+          "expected": "disagree",
+          "weight": 1.2
+        },
+        {
+          "questionId": "q34",
+          "expected": "agree",
+          "weight": 1.1
+        },
+        {
+          "questionId": "q39",
+          "expected": "disagree",
+          "weight": 1.2
+        }
+      ]
+    },
+    "matchWeight": 1.0319
+  },
+  "visual": {
+    "image": "/images/characters/若叶睦.webp",
+    "thumb": "/images/characters/thumbs/若叶睦.webp",
+    "accent": "#4a4f67"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "Mortis",
+      "zh-TW": "Mortis",
+      "en": "Mortis",
+      "ja": "モーティス"
+    },
+    "series": {
+      "zh-CN": "BanG Dream! Ave Mujica",
+      "zh-TW": "BanG Dream! Ave Mujica",
+      "en": "BanG Dream! Ave Mujica",
+      "ja": "BanG Dream! Ave Mujica"
+    }
+  }
+}

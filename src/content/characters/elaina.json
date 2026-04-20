@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "id": "elaina",
+    "name": "伊蕾娜",
+    "series": "魔女之旅",
+    "addedAt": "2026-04-14",
+    "matchCode": "INTP",
+    "matchCodeFlex": [
+      "ENTP",
+      "ISTP"
+    ],
+    "code": "ELNA",
+    "title": "灰之魔女·冷静旁观型旅行博主",
+    "archetypeId": "trickster-orbit",
+    "tags": [
+      "高机动旅人",
+      "礼貌但不圣母",
+      "天才魔女",
+      "嘴上平静心里吐槽"
+    ],
+    "note": "你不是那种会强行把自己塞进所有剧情里的人，更像一路路过、一路观察、一路记录的高配旅人。外表礼貌克制，判断也很清醒，遇事不会轻易道德过载；但只要世界足够有趣，你的好奇心又会立刻上线。属于“看起来淡淡的，实际上对新鲜故事最没抵抗力”的类型。",
+    "vector": {
+      "expression": 0.27,
+      "temperature": 0,
+      "judgement": 0.53,
+      "order": -0.27,
+      "agency": 0.53,
+      "aura": 0.53
+    },
+    "signature": {
+      "uniqueAxes": {
+        "judgement": 2,
+        "agency": 2,
+        "order": -1
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q3",
+          "expected": "agree",
+          "weight": 1.15
+        },
+        {
+          "questionId": "q6",
+          "expected": "agree",
+          "weight": 1.25
+        },
+        {
+          "questionId": "q39",
+          "expected": "disagree",
+          "weight": 1.1
+        }
+      ]
+    },
+    "matchWeight": 1.0024
+  },
+  "visual": {
+    "image": "/images/characters/伊蕾娜.webp",
+    "thumb": "/images/characters/thumbs/伊蕾娜.webp",
+    "accent": "#8A8FBF"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "伊蕾娜",
+      "zh-TW": "伊蕾娜",
+      "en": "Elaina",
+      "ja": "イレイナ"
+    },
+    "series": {
+      "zh-CN": "魔女之旅",
+      "zh-TW": "魔女之旅",
+      "en": "Wandering Witch",
+      "ja": "魔女の旅々"
+    }
+  }
+}

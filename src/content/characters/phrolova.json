@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "id": "phrolova",
+    "name": "弗洛洛",
+    "hidden": true,
+    "series": "鸣潮",
+    "matchCode": "INTJ",
+    "code": "PHRV",
+    "title": "忧伤指挥家·把理想国写进丧钟的人",
+    "archetypeId": "shadow-strategist",
+    "tags": [
+      "安静型压迫感",
+      "危险的演奏者",
+      "理想世界执念",
+      "美学级反派气场"
+    ],
+    "note": "你给人的感觉不是普通高冷，而是那种会安静站在场中央、却让所有人自动收声的危险存在。表面上情绪很淡，实际内核全是被悲伤和执念拧出来的控制力，像是在重新给世界定调的人。",
+    "vector": {
+      "expression": -0.36,
+      "temperature": -0.36,
+      "judgement": 0.54,
+      "order": 0.18,
+      "agency": 0.36,
+      "aura": 0.54
+    },
+    "signature": {
+      "uniqueAxes": {
+        "judgement": 4,
+        "temperature": -3,
+        "aura": 4
+      },
+      "questionAffinity": [
+        {
+          "questionId": "q20",
+          "expected": "disagree",
+          "weight": 1.8
+        },
+        {
+          "questionId": "q34",
+          "expected": "agree",
+          "weight": 1.7
+        },
+        {
+          "questionId": "q35",
+          "expected": "agree",
+          "weight": 1.6
+        },
+        {
+          "questionId": "q37",
+          "expected": "agree",
+          "weight": 1.7
+        },
+        {
+          "questionId": "q39",
+          "expected": "disagree",
+          "weight": 1.8
+        }
+      ]
+    },
+    "matchWeight": 1.0177
+  },
+  "visual": {
+    "image": "/images/characters/弗洛洛.webp",
+    "thumb": "/images/characters/thumbs/弗洛洛.webp",
+    "accent": "#b3202d"
+  },
+  "i18n": {
+    "series": {
+      "zh-CN": "鸣潮",
+      "zh-TW": "鳴潮",
+      "en": "Wuthering Waves",
+      "ja": "鳴潮"
+    }
+  }
+}

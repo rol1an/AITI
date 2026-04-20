@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "id": "gotoh-hitori",
+    "name": "后藤一里",
+    "series": "孤独摇滚！",
+    "matchCode": "INFP",
+    "code": "BCHI",
+    "title": "社恐蒸发型吉他英雄",
+    "archetypeId": "moonlit-guardian",
+    "tags": [
+      "线上重拳出击",
+      "线下电子海胆",
+      "社交恐惧行为艺术",
+      "垃圾桶后面的霉菌"
+    ],
+    "note": "在网路上她是吉他上帝，在现实中她是垃圾桶后面的霉菌。她不是内向，她是把「我先死一下」发展成了完整的表演体系——建议申遗。弹幕常用语：「波奇，你还是找个地缝钻进去吧」。",
+    "vector": {
+      "expression": -0.76,
+      "temperature": 0.38,
+      "judgement": 0,
+      "order": 0,
+      "agency": 0.38,
+      "aura": 0.38
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": -2,
+        "temperature": 1,
+        "aura": 1
+      }
+    },
+    "matchWeight": 1.0912
+  },
+  "visual": {
+    "image": "/images/characters/后藤一里.webp",
+    "thumb": "/images/characters/thumbs/后藤一里.webp",
+    "accent": "#e7a7be"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "后藤一里",
+      "zh-TW": "後藤一里",
+      "en": "Hitori Gotoh",
+      "ja": "後藤ひとり"
+    },
+    "series": {
+      "zh-CN": "孤独摇滚！",
+      "zh-TW": "孤獨搖滾！",
+      "en": "Bocchi the Rock!",
+      "ja": "ぼっち・ざ・ろっく！"
+    }
+  }
+}

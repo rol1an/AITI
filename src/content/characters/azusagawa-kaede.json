@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "id": "azusagawa-kaede",
+    "name": "梓川枫",
+    "series": "青春猪头少年不会梦到兔女郎学姐",
+    "addedAt": "2026-04-16",
+    "matchCode": "INFP",
+    "matchCodeFlex": [
+      "ISFP"
+    ],
+    "code": "KAED",
+    "title": "熊猫睡衣·努力的家里蹲",
+    "archetypeId": "gentle-healer",
+    "tags": [
+      "兄控天花板",
+      "看家本领是卖萌",
+      "畏惧外界",
+      "今日份的努力"
+    ],
+    "note": "披着熊猫睡衣的重度家里蹲，把“哥哥”视为全世界的绝对中心。因为惧怕外界的视线而把自己锁在家里，但却愿意为了哥哥，用尽全身力气去完成“出门走两步”这种常人看来微不足道的小事。她的每一次鼓起勇气，都让人心疼到想给她买一车布丁。",
+    "vector": {
+      "expression": -0.67,
+      "temperature": 0.67,
+      "judgement": 0,
+      "order": 0,
+      "agency": 0,
+      "aura": 0.33
+    },
+    "signature": {
+      "uniqueAxes": {
+        "expression": -2,
+        "agency": 0,
+        "temperature": 2
+      }
+    },
+    "matchWeight": 1.0294
+  },
+  "visual": {
+    "image": "/images/characters/梓川枫.webp",
+    "thumb": "/images/characters/thumbs/梓川枫.webp",
+    "accent": "#F2C082"
+  },
+  "i18n": {
+    "name": {
+      "zh-CN": "梓川枫",
+      "zh-TW": "梓川楓",
+      "en": "Kaede Azusagawa",
+      "ja": "梓川かえで"
+    },
+    "series": {
+      "zh-CN": "青春猪头少年不会梦到兔女郎学姐",
+      "zh-TW": "青春豬頭少年不會夢到兔女郎學姊",
+      "en": "Rascal Does Not Dream of Bunny Girl Senpai",
+      "ja": "青春ブタ野郎はバニーガール先輩の夢を見ない"
+    }
+  }
+}

@@ -64,5 +64,12 @@
     "thumb": "/images/characters/thumbs/喜多川海梦.webp",
     "accent": "#F4C4D1"
   },
-  "i18n": {}
+  "i18n": {
+    "name": {
+      "zh-CN": "喜多川海梦",
+      "zh-TW": "喜多川海夢",
+      "en": "Marin Kitagawa",
+      "ja": "喜多川海夢"
+    }
+  }
 }

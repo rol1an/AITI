@@ -645,6 +645,60 @@ const characterNameI18n: Record<string, LocalizedText> = {
     'zh-TW': '羅小黑',
     en: 'Luo Xiaohei',
     ja: 'ラ・シャオヘイ',
+  },
+  'alya-kujou': {
+    'zh-CN': '艾莉',
+    'zh-TW': '艾莉亞',
+    en: 'Alya Kujou',
+    ja: '久世政近の隣の席のロシアン彼女',
+  },
+  'artoria-pendragon': {
+    'zh-CN': '阿尔托莉雅',
+    'zh-TW': '阿爾托莉雅',
+    en: 'Artoria Pendragon',
+    ja: 'アルトリア・ペンドラゴン',
+  },
+  'inaba-meguru': {
+    'zh-CN': '因幡巡',
+    'zh-TW': '因幡巡',
+    en: 'Meguru Inaba',
+    ja: '因幡巡',
+  },
+  'kinomoto-sakura': {
+    'zh-CN': '木之本樱',
+    'zh-TW': '木之本櫻',
+    en: 'Sakura Kinomoto',
+    ja: '木之本桜',
+  },
+  'kitagawa-marin': {
+    'zh-CN': '喜多川海梦',
+    'zh-TW': '喜多川海夢',
+    en: 'Marin Kitagawa',
+    ja: '喜多川海夢',
+  },
+  'phrolova': {
+    'zh-CN': '弗洛洛',
+    'zh-TW': '弗洛洛',
+    en: 'Phrolova',
+    ja: 'フローロヴァ',
+  },
+  'tokisaki-kurumi': {
+    'zh-CN': '时崎狂三',
+    'zh-TW': '時崎狂三',
+    en: 'Kurumi Tokisaki',
+    ja: '時崎狂三',
+  },
+  'yuuki-asuna': {
+    'zh-CN': '亚丝娜',
+    'zh-TW': '亞絲娜',
+    en: 'Asuna Yuuki',
+    ja: '結城明日奈',
+  },
+  'zero-two': {
+    'zh-CN': '02',
+    'zh-TW': '02',
+    en: 'Zero Two',
+    ja: 'ゼロツー',
   }
 }
 
@@ -1014,6 +1068,48 @@ const seriesI18n: Record<string, LocalizedText> = {
     'zh-TW': '羅小黑戰記',
     en: 'The Legend of Hei',
     ja: 'ロシャオヘイセンキ',
+  },
+  '时不时说一句俄语来掩饰害羞的邻座艾莉同学': {
+    'zh-CN': '时不时说一句俄语来掩饰害羞的邻座艾莉同学',
+    'zh-TW': '不時說一句俄語來掩飾害羞的鄰座艾莉同學',
+    en: 'Alya Sometimes Hides Her Feelings in Russian',
+    ja: '時々ボソッとロシア語でデレる隣のアーリャさん',
+  },
+  'Fate/stay night': {
+    'zh-CN': 'Fate/stay night',
+    'zh-TW': 'Fate/stay night',
+    en: 'Fate/stay night',
+    ja: 'Fate/stay night',
+  },
+  '魔卡少女樱': {
+    'zh-CN': '魔卡少女樱',
+    'zh-TW': '魔卡少女櫻',
+    en: 'Cardcaptor Sakura',
+    ja: 'カードキャプターさくら',
+  },
+  '更衣人偶坠入爱河': {
+    'zh-CN': '更衣人偶坠入爱河',
+    'zh-TW': '更衣人偶墜入愛河',
+    en: 'My Dress-Up Darling',
+    ja: 'その着せ替え人形は恋をする',
+  },
+  '约会大作战': {
+    'zh-CN': '约会大作战',
+    'zh-TW': '約會大作戰',
+    en: 'Date A Live',
+    ja: 'デート・ア・ライブ',
+  },
+  '刀剑神域': {
+    'zh-CN': '刀剑神域',
+    'zh-TW': '刀劍神域',
+    en: 'Sword Art Online',
+    ja: 'ソードアート・オンライン',
+  },
+  'DARLING in the FRANXX': {
+    'zh-CN': 'DARLING in the FRANXX',
+    'zh-TW': 'DARLING in the FRANXX',
+    en: 'DARLING in the FRANXX',
+    ja: 'ダーリン・イン・ザ・フランキス',
   }
 }
 

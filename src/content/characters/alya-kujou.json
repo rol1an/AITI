@@ -64,5 +64,12 @@
     "thumb": "/images/characters/thumbs/艾莉.webp",
     "accent": "#C4DAE8"
   },
-  "i18n": {}
+  "i18n": {
+    "name": {
+      "zh-CN": "艾莉",
+      "zh-TW": "艾莉亞",
+      "en": "Alya Kujou",
+      "ja": "久世政近の隣の席のロシアン彼女"
+    }
+  }
 }

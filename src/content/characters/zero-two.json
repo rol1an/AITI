@@ -63,5 +63,12 @@
     "thumb": "/images/characters/thumbs/02.webp",
     "accent": "#F58F98"
   },
-  "i18n": {}
+  "i18n": {
+    "name": {
+      "zh-CN": "02",
+      "zh-TW": "02",
+      "en": "Zero Two",
+      "ja": "ゼロツー"
+    }
+  }
 }

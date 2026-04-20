@@ -63,5 +63,12 @@
     "thumb": "/images/characters/thumbs/木之本樱.webp",
     "accent": "#FFB7C5"
   },
-  "i18n": {}
+  "i18n": {
+    "name": {
+      "zh-CN": "木之本樱",
+      "zh-TW": "木之本櫻",
+      "en": "Sakura Kinomoto",
+      "ja": "木之本桜"
+    }
+  }
 }

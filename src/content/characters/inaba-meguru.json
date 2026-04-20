@@ -59,6 +59,12 @@
     "accent": "#f08a43"
   },
   "i18n": {
+    "name": {
+      "zh-CN": "因幡巡",
+      "zh-TW": "因幡巡",
+      "en": "Meguru Inaba",
+      "ja": "因幡巡"
+    },
     "series": {
       "zh-CN": "魔女的夜宴",
       "zh-TW": "魔女的夜宴",

@@ -63,5 +63,12 @@
     "thumb": "/images/characters/thumbs/阿尔托莉雅.webp",
     "accent": "#0F4C81"
   },
-  "i18n": {}
+  "i18n": {
+    "name": {
+      "zh-CN": "阿尔托莉雅",
+      "zh-TW": "阿爾托莉雅",
+      "en": "Artoria Pendragon",
+      "ja": "アルトリア・ペンドラゴン"
+    }
+  }
 }

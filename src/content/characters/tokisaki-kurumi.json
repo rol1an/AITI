@@ -63,5 +63,12 @@
     "thumb": "/images/characters/thumbs/时崎狂三.webp",
     "accent": "#8A0F1E"
   },
-  "i18n": {}
+  "i18n": {
+    "name": {
+      "zh-CN": "时崎狂三",
+      "zh-TW": "時崎狂三",
+      "en": "Kurumi Tokisaki",
+      "ja": "時崎狂三"
+    }
+  }
 }

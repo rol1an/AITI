@@ -65,6 +65,12 @@
     "accent": "#b3202d"
   },
   "i18n": {
+    "name": {
+      "zh-CN": "弗洛洛",
+      "zh-TW": "弗洛洛",
+      "en": "Phrolova",
+      "ja": "フローロヴァ"
+    },
     "series": {
       "zh-CN": "鸣潮",
       "zh-TW": "鳴潮",

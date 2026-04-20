@@ -64,5 +64,12 @@
     "thumb": "/images/characters/thumbs/亚丝娜.webp",
     "accent": "#D46252"
   },
-  "i18n": {}
+  "i18n": {
+    "name": {
+      "zh-CN": "亚丝娜",
+      "zh-TW": "亞絲娜",
+      "en": "Asuna Yuuki",
+      "ja": "結城明日奈"
+    }
+  }
 }

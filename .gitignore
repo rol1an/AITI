@@ -59,6 +59,7 @@ __pycache__/
 venv/
 
 # Local analysis outputs
+analysis/README.md
 analysis/backup/
 analysis/reports/
 analysis/*.db

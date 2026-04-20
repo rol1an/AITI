@@ -75,6 +75,36 @@
       "zh-TW": "BanG Dream! Ave Mujica",
       "en": "BanG Dream! Ave Mujica",
       "ja": "BanG Dream! Ave Mujica"
+    },
+    "zh-TW": {
+      "title": "溫柔皮下的劇情變量",
+      "note": "你給人的第一印象是「應該很好相處」，但真正危險的地方在於：你自己也未必完全知道自己下一步會做什麼——屬於「溫柔型不定時炸彈」。建議遠離，除非你享受被炸的刺激。",
+      "tags": [
+        "白月光假象",
+        "越看越不對勁",
+        "自己也不知道下一步",
+        "溫柔型不定時炸彈"
+      ]
+    },
+    "en": {
+      "title": "Gentle Surface, Plot Variable",
+      "note": "First impression: \"probably easy to get along with.\" Real danger: even you don\\'t fully know what you\\'ll do next. A gentle timed explosive. Approach with caution unless you enjoy being surprised.",
+      "tags": [
+        "White Moonlight Illusion",
+        "Something Feels Off",
+        "\"Even She Doesn't Know Her Next Move\"",
+        "Gentle Timed Explosive"
+      ]
+    },
+    "ja": {
+      "title": "やさしい外見・物語の変数",
+      "note": "第一印象は「たぶん付き合いやすそう」。本当に危ないのは：自分でも次に何をするか完全にはわからないところ——やさしい時限爆弾。近寄るには覚悟が必要、驚きを楽しめるなら別。",
+      "tags": [
+        "白月光のような幻想",
+        "なんか変な感じがする",
+        "自分でも次の行動が読めない",
+        "やさしい時限爆弾"
+      ]
     }
   }
 }

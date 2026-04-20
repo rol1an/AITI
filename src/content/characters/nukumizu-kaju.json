@@ -52,6 +52,35 @@
       "zh-TW": "敗北女角太多了！",
       "en": "Too Many Losing Heroines!",
       "ja": "負けヒロインが多すぎる！"
+    },
+    "zh-TW": {
+      "title": "完美妹妹·兄控保護程式常駐後台",
+      "note": "你平時像那種已經把生活流程全部最佳化完畢的高性能妹妹模板，學習、家務、待人接物都像出廠校準過。但只要話題切到哥哥，整個人的情緒管理模組就會瞬間超頻。屬於「平時是完美UI，核心執行緒其實全綁在一個人身上」的類型。",
+      "tags": [
+        "全能妹妹",
+        "哥哥優先級最高",
+        "平時穩得像系統服務",
+        "一提兄長立刻過熱"
+      ]
+    },
+    "en": {
+      "title": "Perfect Little Sister · Brother Priority Process Always Running",
+      "tags": [
+        "All-Around Little Sister",
+        "Big Brother Highest Priority",
+        "Usually Stable as a System Service",
+        "Mention Big Bro = Instant Overheat"
+      ]
+    },
+    "ja": {
+      "title": "完璧な妹・兄優先プロセス常時起動",
+      "note": "普段は生活プロセスを全て最適化済みの高性能妹テンプレ：勉強・家事・礼儀作法、全部出荷時に校正済みみたいに動く。でもお兄ちゃんの話題になった瞬間、全感情管理モジュールが即オーバークロック。普段は完璧なUI、コアスレッドは実は一人にだけ縛られているタイプ。",
+      "tags": [
+        "万能妹キャラ",
+        "お兄ちゃん優先度最高",
+        "普段はシステムサービスのように安定",
+        "兄の話題が出た瞬間オーバーヒート"
+      ]
     }
   }
 }

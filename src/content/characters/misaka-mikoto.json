@@ -48,6 +48,34 @@
       "zh-TW": "科學超電磁砲",
       "en": "A Certain Scientific Railgun",
       "ja": "とある科学の超電磁砲"
+    },
+    "zh-TW": {
+      "title": "硬幣電磁炮·常盤台大姐頭",
+      "note": "別人吵架靠嘴，她吵架靠三倍音速硬幣。嘴上「我才不管」，行動上已經衝到最前面扛傷害——屬於「嘴上傲，身體誠」的經典款女主。建議搭配BGM《Only My Railgun》食用，效果更佳。",
+      "tags": [
+        "超電磁炮實為硬幣發射器",
+        "安全褲戰士",
+        "傲嬌但不完全傲",
+        "嘴上說不管身體很誠實"
+      ]
+    },
+    "en": {
+      "tags": [
+        "Railgun Is Actually a Coin Launcher",
+        "Safety Shorts Warrior",
+        "Tsundere but Not Completely",
+        "Mouth Says No Body Says Yes"
+      ]
+    },
+    "ja": {
+      "title": "コイン電磁砲・常盤台のお姉様",
+      "note": "他の人が口で喧嘩するなら、彼女は三倍音速のコインで喧嘩する。口では「べ、別に関係ないし」、行動は最前線でダメージを全部引き受け——定番の「口はツンツン体はデレデレ」系ヒロイン。BGM推薦：Only My Railgun。",
+      "tags": [
+        "電磁砲の正体はコインランチャー",
+        "安全パンツ戦士",
+        "ツンデレだが完全にではない",
+        "口では言わなくても体が動く"
+      ]
     }
   }
 }

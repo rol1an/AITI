@@ -48,6 +48,34 @@
       "zh-TW": "BanG Dream! Ave Mujica",
       "en": "BanG Dream! Ave Mujica",
       "ja": "BanG Dream! Ave Mujica"
+    },
+    "zh-TW": {
+      "title": "高壓·命運の甲方",
+      "note": "你不是控制欲強，你只是覺得大家離了你都要出事。精神像在開董事會+在懸崖邊跑馬拉松——名言：「別問為什麼，因為我就是規則」。建議遠離，除非你想體驗每天被Deadline追著跑的感覺。",
+      "tags": [
+        "CEO級氣場",
+        "邊開會邊走鋼絲",
+        "我說把人生交給我",
+        "人形自走KPI"
+      ]
+    },
+    "en": {
+      "tags": [
+        "CEO-Level Presence",
+        "Boardroom on a Tightrope",
+        "\"Leave It to Me\" Default Setting",
+        "Human KPI Dashboard"
+      ]
+    },
+    "ja": {
+      "title": "高圧・運命の自任CEO",
+      "note": "支配欲が強いんじゃなくて、自分なしで全員が崩壊するのが見え見えなだけ。精神的には常に崖っぷちでの取締役会状態。名言：「なぜと聞くな、私がルールだ」。",
+      "tags": [
+        "CEO級のオーラ",
+        "綱渡りしながら会議中",
+        "「私に任せろ」がデフォルト設定",
+        "人型自走KPI"
+      ]
     }
   }
 }

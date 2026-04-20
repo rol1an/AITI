@@ -48,6 +48,36 @@
       "zh-TW": "新世紀福音戰士",
       "en": "Neon Genesis Evangelion",
       "ja": "新世紀エヴァンゲリオン"
+    },
+    "zh-TW": {
+      "title": "三無聖體·冷白皮天花板",
+      "note": "全劇台詞加起來不如你一天刷的貼吧多，但人氣能殺進歷史前三。她站在那裡就是「高冷」的詞典釋義——你甚至不敢問路，怕她回你一句「どうでもいい」（關我屁事）。",
+      "tags": [
+        "微笑稅",
+        "繃帶美學創始人",
+        "AT力場級社交距離",
+        "台詞比貼吧水帖少"
+      ]
+    },
+    "en": {
+      "title": "Three Nulls Saint · Cold Pale Skin Ceiling",
+      "note": "Her total dialogue barely tops your daily forum scroll, yet her popularity ranks top three in all of history. Standing there, she IS the dictionary definition of \\\"cool and distant\\\" — you wouldn\\'t dare ask for directions, afraid she\\'d reply with \"どうでもいい.\" (Not my problem.)",
+      "tags": [
+        "Smile Tax",
+        "Bandage Aesthetic Founder",
+        "AT Field Social Distance",
+        "Fewer Lines Than a Spam Post"
+      ]
+    },
+    "ja": {
+      "title": "三無の聖体・クールな青白肌の頂点",
+      "note": "全編のセリフを合計しても一日分の5chより少ないのに、人気は歴代トップ3。ただそこに立っているだけで「クール」の辞書的定義になる——道を聞こうとしても「どうでもいい」と返ってきそうで怖い。",
+      "tags": [
+        "微笑み税",
+        "包帯美学の創始者",
+        "ATフィールド級の対人距離",
+        "セリフ数より掲示板のレスの方が多い"
+      ]
     }
   }
 }

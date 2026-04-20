@@ -59,6 +59,35 @@
       "zh-TW": "長崎爽世",
       "en": "Soyo Nagasaki",
       "ja": "長崎そよ"
+    },
+    "zh-TW": {
+      "title": "溫柔刀·情緒精算師",
+      "note": "你看起來最會照顧人，其實最會把話說得讓人後勁很大。她沒罵你，但你已經跪在鍵盤前反思人生——屬於「笑面虎中的戰術大師」。建議交往前先買好保險。",
+      "tags": [
+        "表面體面內心風暴",
+        "話裡有話十級學者",
+        "道歉讓你自我反省三天",
+        "笑面虎戰術大師"
+      ]
+    },
+    "en": {
+      "title": "Gentle Blade · Emotional Actuary",
+      "tags": [
+        "Presentable Surface Internal Storm",
+        "Subtext Level 10 Scholar",
+        "Apology Makes You Self-Reflect for 3 Days",
+        "Smiling Tiger Tactics Master"
+      ]
+    },
+    "ja": {
+      "title": "やさしい刃・感情の精算師",
+      "note": "最もケアが上手い人に見えるが、実は後からじわじわ効いてくる言い方が最も得意。罵倒されたわけじゃないのに、すでにキーボードの前で人生を反省中——笑顔の虎の中の戦術マスター。交際前に保険の加入をおすすめします。",
+      "tags": [
+        "表面は体裁よし内心は嵐",
+        "言外の意味レベル10",
+        "謝り方があなたを3日間自己反省させる",
+        "笑顔の虎戦術マスター"
+      ]
     }
   }
 }

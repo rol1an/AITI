@@ -83,6 +83,35 @@
       "zh-TW": "東方Project",
       "en": "Touhou Project",
       "ja": "東方Project"
+    },
+    "zh-TW": {
+      "title": "貧窮但能打·摸魚巫女",
+      "note": "神社窮得養蚊子，但她人氣養活了整個東方圈。你以為她在擺爛，其實她只是把「贏」字寫在了懶狗皮下面。名言：「沒錢？那就把惹事的揍一頓」。屬於「窮得理直氣壯」的典範。",
+      "tags": [
+        "香火錢=0",
+        "戰力∞",
+        "異變就是拿來揍的",
+        "東方圈唯一指定門面"
+      ]
+    },
+    "en": {
+      "title": "Broke But Unbeatable · Slacker Shrine Maiden",
+      "tags": [
+        "Donations = Zero",
+        "Combat Power = ∞",
+        "Incidents Are For Punching",
+        "\"Touhou's Only Official Mascot\""
+      ]
+    },
+    "ja": {
+      "title": "ビンボーだけど最強・さぼり巫女",
+      "note": "神社は蚊を養う余裕もないのに、人気は東方界隈全体を支えている。さぼっているように見えて、「勝ち」の文字をだらけた外見の下に書き込んでいるだけ。名言：「お金ない？じゃあ迷惑かけた奴をぶん殴ればいい」。",
+      "tags": [
+        "賽銭=0円",
+        "戦闘力=∞",
+        "異変はぶん殴るためにある",
+        "東方唯一公認の顔"
+      ]
     }
   }
 }

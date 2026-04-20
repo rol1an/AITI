@@ -65,6 +65,35 @@
       "zh-TW": "BanG Dream! Ave Mujica",
       "en": "BanG Dream! Ave Mujica",
       "ja": "BanG Dream! Ave Mujica"
+    },
+    "zh-TW": {
+      "title": "靜音核彈·面無表情的問題兒童",
+      "note": "你不是情緒少，你是情緒都藏在別人看不懂的地方。平時像背景板，卻總在關鍵節點露出讓人不安的執拗和遲鈍感——屬於「安靜得過頭，反而讓人不敢移開視線」的類型。",
+      "tags": [
+        "黃瓜田裡的沉默核武",
+        "一開口就是名場面",
+        "你永遠猜不透",
+        "不說話則已一說話刀死你"
+      ]
+    },
+    "en": {
+      "title": "Silent Nuke · Expressionless Problem Child",
+      "tags": [
+        "Silent Warhead in a Cucumber Field",
+        "One-Liner Iconic Scene Generator",
+        "Impossible to Read",
+        "\"Quiet Until You're Stabbed\""
+      ]
+    },
+    "ja": {
+      "title": "無音の核爆弾・無表情の問題児",
+      "note": "感情がないんじゃなくて、他の人には読めない場所に感情を格納している。普段は背景みたいなのに、重要な場面で不安を感じさせる執拗さと鈍感さを見せる——静かすぎて、逆に目が離せないタイプ。",
+      "tags": [
+        "キュウリ畑の静寂核兵器",
+        "一言でイベントシーン製造機",
+        "完全に読めない",
+        "静かだと思ったら刺される"
+      ]
     }
   }
 }

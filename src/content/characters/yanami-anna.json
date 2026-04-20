@@ -52,6 +52,35 @@
       "zh-TW": "敗北女角太多了！",
       "en": "Too Many Losing Heroines!",
       "ja": "負けヒロインが多すぎる！"
+    },
+    "zh-TW": {
+      "title": "人氣敗犬·能吃能聊還能硬撐體面",
+      "note": "你表面像那種隨時都能把氣氛帶熱的班級門面，實際上戀愛戰績已經被系統提前判負。能吃、能聊、能把難受先咽下去，嘴上還要裝得像沒事一樣。屬於「越是看起來活潑，越容易在夜裡偷偷掉線」的類型。",
+      "tags": [
+        "幼馴染敗犬位",
+        "班級人氣王",
+        "食欲深不見底",
+        "天然翻車預備役"
+      ]
+    },
+    "en": {
+      "title": "Popular Childhood Friend Loser · Eats Big, Talks Big, Barely Holds It Together",
+      "tags": [
+        "Childhood Friend Loser Slot",
+        "Class Popular Kid",
+        "Bottomless Appetite",
+        "Natural Derailment Candidate"
+      ]
+    },
+    "ja": {
+      "title": "人気者の負けヒロイン・よく食べよく話しながらギリギリ体裁を保つ",
+      "note": "表面上はいつでも雰囲気を盛り上げられるクラスの顔役みたいなのに、恋愛成績はシステムに最初から負け判定を出されている。よく食べて、よく話して、つらさを先に飲み込んで、何事もないように顔を保ち続ける。外見が元気なほど、夜こそ静かにオフラインになりやすいタイプ。",
+      "tags": [
+        "幼馴染の負けヒロイン枠",
+        "クラスの人気者",
+        "食欲底なし",
+        "天然転倒予備軍"
+      ]
     }
   }
 }

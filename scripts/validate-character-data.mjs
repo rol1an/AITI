@@ -311,6 +311,17 @@ function main() {
       if (!char._i18n.name || Object.keys(char._i18n.name).length === 0) {
         warn(`${prefix} 源文件中缺少 i18n.name 翻译`)
       }
+      // title/note/tags 翻译完整性
+      for (const locale of ['zh-TW', 'en', 'ja']) {
+        const localeData = char._i18n[locale]
+        if (!localeData) {
+          warn(`${prefix} 源文件中缺少 i18n.${locale} 翻译（title/note/tags）`)
+        } else {
+          if (!localeData.title) warn(`${prefix} 源文件中缺少 i18n.${locale}.title`)
+          if (!localeData.note) warn(`${prefix} 源文件中缺少 i18n.${locale}.note`)
+          if (!localeData.tags) warn(`${prefix} 源文件中缺少 i18n.${locale}.tags`)
+        }
+      }
     } else {
       if (!nameI18n[char.id]) {
         warn(`${prefix} 在 i18n/characters.ts 中无名称翻译`)

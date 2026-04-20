@@ -42,6 +42,36 @@
       "zh-TW": "千早愛音",
       "en": "Anon Chihaya",
       "ja": "千早愛音"
+    },
+    "zh-TW": {
+      "title": "輕社牛·場面人",
+      "note": "你的人生策略是「先混進去再說」。表面上圓滑，實際上經常因為衝太快把自己衝進修羅場——但沒關係，你會用新的社牛把舊坑填上。屬於「社牛但容易翻車」的典型。",
+      "tags": [
+        "先上車再補票",
+        "社交啟動器",
+        "自己挖坑自己跳",
+        "人際關係永動機"
+      ]
+    },
+    "en": {
+      "title": "Light Social Butterfly · Scene Player",
+      "note": "Your life strategy is \"blend in first, figure it out later.\" Smooth on the surface, but you often charge in too fast and land in the drama yourself — no worries, you\\'ll use new social skills to cover the old mess.",
+      "tags": [
+        "Board First Ask Questions Later",
+        "Social Ignition Switch",
+        "Digs Own Pit Falls In",
+        "Interpersonal Perpetual Motion Machine"
+      ]
+    },
+    "ja": {
+      "title": "ライト系コミュ強・場の空気読み人",
+      "note": "人生戦略は「とりあえず混ざってから考える」。表面はスムーズ、実際には突っ込みすぎて修羅場に自分から飛び込むことが多い——でも大丈夫、新しい社交スキルで古い穴を埋めるから。",
+      "tags": [
+        "先に乗り込んでから確認する",
+        "社交スイッチ",
+        "自分で穴を掘って自分で落ちる",
+        "人間関係の永久機関"
+      ]
     }
   }
 }

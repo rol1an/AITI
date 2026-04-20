@@ -31,7 +31,7 @@ export async function fetchResultStats(
 }
 // 使用 sendBeacon 优先，fallback 到 fetch keepalive
 
-const APP_VERSION = '0.3.1-sn-jp1'
+const APP_VERSION = '0.3.2-ei-fix'
 
 export interface SubmitPayload {
   submissionId: string

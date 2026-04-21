@@ -8,8 +8,8 @@ const STORAGE_KEY = 'aiti:locale'
 const currentLocale = ref<AppLocale>(DEFAULT_LOCALE)
 
 function mergeDeep(target: unknown, source: unknown): unknown {
-  if (!source || typeof source !== 'object') {
-    return target
+  if (typeof source !== 'object' || source === null) {
+    return source !== undefined ? source : target
   }
 
   if (!target || typeof target !== 'object' || Array.isArray(target) || Array.isArray(source)) {

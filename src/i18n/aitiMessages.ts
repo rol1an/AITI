@@ -44,7 +44,7 @@ export const aitiMessages = {
             },
         },
         home: {
-            heroTitle: '“你更像哪一类 AI？”',
+            heroTitle: '“你更像哪一类大模型？”',
             heroSubtitle: '这个“研究生”，其实就是你。是你凌晨两点跑不出数据时那个想砸电脑的自己，是被导师一句“再想想”搞得失眠的自己，是在文献的海洋里感觉要溺水的自己，也是在组会前紧张到手心出汗的自己。',
             start: '开始测试 / 重新测试 →',
             starProject: '去给项目 Star',

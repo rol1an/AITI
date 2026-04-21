@@ -1,11 +1,33 @@
 import { readonly, ref } from 'vue'
 
-import characterMessages from '../data/characterMessages.json'
 import { localeLabels, messages } from './messages'
+import { aitiMessages } from './aitiMessages'
 import { DEFAULT_LOCALE, SUPPORTED_LOCALES, type AppLocale } from './types'
 
-const STORAGE_KEY = 'acgti:locale'
+const STORAGE_KEY = 'aiti:locale'
 const currentLocale = ref<AppLocale>(DEFAULT_LOCALE)
+
+function mergeDeep(target: unknown, source: unknown): unknown {
+  if (!source || typeof source !== 'object') {
+    return target
+  }
+
+  if (!target || typeof target !== 'object' || Array.isArray(target) || Array.isArray(source)) {
+    return source
+  }
+
+  const output = { ...(target as Record<string, unknown>) }
+  for (const [key, value] of Object.entries(source as Record<string, unknown>)) {
+    output[key] = key in output ? mergeDeep(output[key], value) : value
+  }
+  return output
+}
+
+function getLocaleMessages(locale: AppLocale) {
+  const base = messages[locale]
+  const overlay = aitiMessages[locale as keyof typeof aitiMessages]
+  return mergeDeep(base, overlay) as typeof base
+}
 
 function normalizeLocale(input?: string | null): AppLocale | null {
   if (!input) return null
@@ -59,31 +81,6 @@ function interpolate(template: string, params?: Record<string, string | number>)
   return template.replace(/\{(\w+)\}/g, (_, key) => String(params[key] ?? ''))
 }
 
-type CharacterMessage = {
-  title?: string
-  note?: string
-  tags?: string[]
-}
-
-type CharacterMessageLocale = Record<string, CharacterMessage>
-
-function getCharacterMessage(locale: AppLocale, key: string) {
-  const match = /^characters\.([a-z0-9-]+)\.(title|note|tags\.(\d+))$/.exec(key)
-  if (!match) return undefined
-
-  const [, characterId, field, tagIndex] = match
-  const localeMessages = (characterMessages as Record<AppLocale, CharacterMessageLocale>)[locale]
-  const fallbackMessages = (characterMessages as Record<AppLocale, CharacterMessageLocale>)[DEFAULT_LOCALE]
-  const message = localeMessages?.[characterId] ?? fallbackMessages?.[characterId]
-
-  if (!message) return undefined
-  if (field === 'title') return message.title
-  if (field === 'note') return message.note
-
-  const index = Number(tagIndex)
-  return Number.isInteger(index) ? message.tags?.[index] : undefined
-}
-
 export function setLocale(locale: AppLocale) {
   currentLocale.value = locale
   applyDocumentLanguage(locale)
@@ -98,14 +95,12 @@ export function getLocale() {
 }
 
 export function t(key: string, params?: Record<string, string | number>, defaultVal?: string) {
-  const value = getCharacterMessage(currentLocale.value, key)
-    ?? deepGet(messages[currentLocale.value], key)
-    ?? deepGet(messages[DEFAULT_LOCALE], key)
+  const value = deepGet(getLocaleMessages(currentLocale.value), key) ?? deepGet(getLocaleMessages(DEFAULT_LOCALE), key)
   return interpolate(typeof value === 'string' ? value : (defaultVal ?? key), params)
 }
 
 export function tm<T>(key: string): T {
-  return (deepGet(messages[currentLocale.value], key) ?? deepGet(messages[DEFAULT_LOCALE], key)) as T
+  return (deepGet(getLocaleMessages(currentLocale.value), key) ?? deepGet(getLocaleMessages(DEFAULT_LOCALE), key)) as T
 }
 
 export function useI18n() {

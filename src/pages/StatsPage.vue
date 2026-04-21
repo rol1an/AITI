@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
 
-import archetypesData from '../data/archetypes.json'
-import charactersData from '../data/characters.json'
+import archetypesData from '../data/aitiArchetypes.json'
+import charactersData from '../data/aitiCharacters.json'
 import characterVisualsData from '../data/characterVisuals.json'
 import { useI18n } from '../i18n'
 import { getLocalizedCharacterName, getLocalizedCharacterSeries } from '../i18n/characters'
@@ -10,8 +10,8 @@ import { resolvePublicAsset } from '../utils/characterVisuals'
 import { useSeo } from '../composables/useSeo'
 
 useSeo({
-  title: 'ACGTI 全局统计 - 测试数据概览',
-  description: '查看 ACGTI 官网的全局测试统计数据，包括各人格类型分布、热门角色命中排行和测试参与趋势。',
+  title: 'AITI 全局统计 - 画像数据概览',
+  description: '查看 AITI 官网的全局测试统计数据，包括各画像分布、热门模型命中排行和测试参与趋势。',
   path: '/stats',
 })
 

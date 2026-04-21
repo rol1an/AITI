@@ -14,6 +14,7 @@ import { getCharacterRarityMeta } from '../utils/characterRarity'
 import { formatCharacterProbability } from '../utils/characterProbability'
 import { normalizeMbtiCode } from '../utils/quizEngine'
 import { reportResultInBackground, submitFeedback, fetchResultStats, type ResultStats } from '../utils/statsReporter'
+import type { QuizResult } from '../types/quiz'
 
 // SharePoster 只在用户点击"导出图片"时才加载和挂载
 const SharePosterAsync = defineAsyncComponent(() => import('../components/SharePoster.vue'))
@@ -22,7 +23,9 @@ const route = useRoute()
 const router = useRouter()
 const quiz = useQuiz()
 const activeDebugResult = ref<ReturnType<typeof quiz.createDebugResult>>(null)
-const result = computed(() => activeDebugResult.value ?? quiz.latestResult.value)
+const submittedResult = ref<QuizResult | null>(null)
+const result = computed(() => activeDebugResult.value ?? submittedResult.value ?? quiz.latestResult.value)
+const resultLoaded = ref(false)
 const isCharacterImageBroken = ref(false)
 const share = useShare()
 const posterRef = ref<{ rootEl: HTMLElement | null } | null>(null)
@@ -31,17 +34,37 @@ const { locale, t, tm } = useI18n()
 const resultAdSlot = String(import.meta.env.VITE_ADSENSE_SLOT_RESULT ?? '').trim()
 const liveStats = ref<ResultStats | null>(null)
 
+function parseAnswersFromRoute(raw: unknown, expectedLength: number) {
+  const text = typeof raw === 'string' ? raw.trim() : ''
+  if (!text || text.length !== expectedLength) {
+    return null
+  }
+
+  const parsed = Array.from(text).map((char) => {
+    if (char >= '0' && char <= '3') {
+      return Number(char)
+    }
+    return -10
+  })
+
+  if (parsed.every((value) => value >= 0 && value <= 3)) {
+    return parsed
+  }
+
+  return null
+}
+
 // 动态 SEO：根据测试结果更新页面标题
 const seoTitle = computed(() => {
   if (result.value) {
     const name = result.value.code || result.value.mbtiCode || ''
-    return `测试结果 ${name} - ACGTI`
+    return `测试结果 ${name} - AITI`
   }
-  return '你的测试结果 - ACGTI | 二次元角色原型测试'
+  return '你的测试结果 - AITI | AI 模型画像测试'
 })
 useSeo({
   title: seoTitle,
-  description: '查看你的 ACGTI 二次元角色原型测试结果，了解你的角色代码、MBTI 维度倾向和对应二次元角色原型解析。',
+  description: '查看你的 AITI AI 模型画像测试结果，了解你的模型代码、偏好维度倾向和对应画像解析。',
   path: '/result',
 })
 
@@ -74,9 +97,36 @@ const heroQuote = computed(() => {
 
 // 结果页需要数据来处理 debug 查询和角色匹配
 onMounted(async () => {
+  try {
+    const rawPendingResult = window.sessionStorage.getItem('aiti:pending-result')
+    if (rawPendingResult) {
+      submittedResult.value = JSON.parse(rawPendingResult) as QuizResult
+      window.sessionStorage.removeItem('aiti:pending-result')
+    }
+  } catch {
+    submittedResult.value = null
+  }
+
   await quiz.ensureData()
+
+  const routeAnswers = parseAnswersFromRoute(route.query.a, quiz.questions.value.length)
+  if (routeAnswers) {
+    routeAnswers.forEach((value, index) => {
+      quiz.selectOptionAt(index, value)
+    })
+  }
+
   quiz.resumeLastResult()
   applyDebugResultFromRoute()
+
+  if (!result.value) {
+    const recomputed = quiz.finalizeQuiz()
+    if (recomputed) {
+      submittedResult.value = recomputed
+    }
+  }
+
+  resultLoaded.value = true
 
   // Turnstile temporarily disabled.
   // await loadRuntimeTurnstileSiteKey()
@@ -84,46 +134,43 @@ onMounted(async () => {
   //   finalKey: summarizeKeyForLog(turnstileSiteKey.value),
   // })
 
-  if (!result.value) {
-    void router.replace('/quiz')
-    return
-  }
+  if (result.value) {
+    // 获取站内真实统计数据（fire-and-forget）
+    const charCode = result.value.code || result.value.mbtiCode || ''
+    const archCode = result.value.archetype?.id || ''
+    if (charCode || archCode) {
+      fetchResultStats(charCode, archCode).then((data) => {
+        if (data) liveStats.value = data
+      })
+    }
 
-  // 获取站内真实统计数据（fire-and-forget）
-  const charCode = result.value.code || result.value.mbtiCode || ''
-  const archCode = result.value.archetype?.id || ''
-  if (charCode || archCode) {
-    fetchResultStats(charCode, archCode).then((data) => {
-      if (data) liveStats.value = data
-    })
-  }
+    // Turnstile temporarily disabled.
+    // void mountTurnstileWidget()
 
-  // Turnstile temporarily disabled.
-  // void mountTurnstileWidget()
+    // 后台静默上报（fire-and-forget）
+    const record = quiz.state.latestRecord
+    const answerCount = Array.isArray(record?.answers)
+      ? record.answers.filter((v: number) => Number.isFinite(v) && v >= -3 && v <= 3).length
+      : 0
 
-  // 后台静默上报（fire-and-forget）
-  const record = quiz.state.latestRecord
-  const answerCount = Array.isArray(record?.answers)
-    ? record.answers.filter((v: number) => Number.isFinite(v) && v >= -3 && v <= 3).length
-    : 0
+    // 没有完整答案不上报（debug 结果、分享链接等场景）
+    if (answerCount < quiz.questions.value.length) {
+      console.log('⏭️ Skip submit: answers incomplete', { answerCount, expected: quiz.questions.value.length })
+      return
+    }
 
-  // 没有完整答案不上报（debug 结果、分享链接等场景）
-  if (answerCount < quiz.questions.value.length) {
-    console.log('⏭️ Skip submit: answers incomplete', { answerCount, expected: quiz.questions.value.length })
-    return
-  }
+    // 会话级去重：同一测试结果只上报一次
+    const reportKey = `aiti:reported:${record?.createdAt ?? 'unknown'}`
+    if (sessionStorage.getItem(reportKey)) {
+      console.log('⏭️ Skip submit: already reported in this session')
+      return
+    }
 
-  // 会话级去重：同一测试结果只上报一次
-  const reportKey = `acgti:reported:${record?.createdAt ?? 'unknown'}`
-  if (sessionStorage.getItem(reportKey)) {
-    console.log('⏭️ Skip submit: already reported in this session')
-    return
-  }
-
-  const payload = buildSubmitPayload()
-  if (payload) {
-    sessionStorage.setItem(reportKey, '1')
-    reportResultInBackground(payload)
+    const payload = buildSubmitPayload()
+    if (payload) {
+      sessionStorage.setItem(reportKey, '1')
+      reportResultInBackground(payload)
+    }
   }
 })
 
@@ -142,10 +189,6 @@ watch(
   () => [route.query.type, route.query.character],
   () => {
     applyDebugResultFromRoute()
-
-    if (!result.value) {
-      void router.replace('/quiz')
-    }
   },
 )
 
@@ -553,13 +596,13 @@ function collectAnswerList() {
   const answerSource = recordAnswers.length > 0 ? 'latestRecord' : 'quiz.state'
   const answerList = rawAnswers
     .map((val: number, idx: number) => {
-      if (!Number.isFinite(val) || val < -3 || val > 3) {
+      if (!Number.isFinite(val) || val < 0 || val > 3) {
         return null
       }
       const questionId = quiz.questions.value[idx]?.id ?? `q${idx + 1}`
       return {
         questionId,
-        answerValue: Math.max(-2, Math.min(2, Math.round(val))),
+        answerValue: Math.max(0, Math.min(3, Math.round(val))),
       }
     })
     .filter((item): item is { questionId: string; answerValue: number } => item !== null)
@@ -704,7 +747,7 @@ async function handleFeedbackSubmit() {
                 <svg style="width: 18px; height: 18px;" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                 {{ t('result.sponsorHero') }}
               </RouterLink>
-              <a href="https://github.com/tianxingleo/ACGTI" target="_blank" rel="noopener noreferrer" class="action-btn ghost" style="text-decoration: none;">
+              <a href="https://github.com/tianxingleo/AITI" target="_blank" rel="noopener noreferrer" class="action-btn ghost" style="text-decoration: none;">
                 <svg style="width: 18px; height: 18px;" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                 GitHub Star
               </a>
@@ -1006,7 +1049,7 @@ async function handleFeedbackSubmit() {
             <h3 class="discussion-title">{{ t('result.discussionTitle') }}</h3>
             <p class="discussion-copy">{{ t('result.discussionCopy') }}</p>
             <a
-              href="https://github.com/tianxingleo/ACGTI/discussions"
+              href="https://github.com/tianxingleo/AITI/discussions"
               target="_blank"
               rel="noopener noreferrer"
               class="discussion-button"
@@ -1091,13 +1134,13 @@ async function handleFeedbackSubmit() {
           <p style="margin: 8px 0 12px; font-size: 14px; line-height: 1.5; color: #5f6b75;">
             {{ t('result.ossCopy') }}
           </p>
-          <a href="https://github.com/tianxingleo/ACGTI" target="_blank" rel="noopener noreferrer" class="project-link" style="display: flex; align-items: center; justify-content: center; gap: 6px; background: #3ba17c; color: white; border-radius: 20px; padding: 6px 12px; font-weight: 600; text-decoration: none;">
+          <a href="https://github.com/tianxingleo/AITI" target="_blank" rel="noopener noreferrer" class="project-link" style="display: flex; align-items: center; justify-content: center; gap: 6px; background: #3ba17c; color: white; border-radius: 20px; padding: 6px 12px; font-weight: 600; text-decoration: none;">
             <svg style="width: 14px; height: 14px;" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             {{ t('result.ossButton') }}
           </a>
           <p class="project-cta">
             {{ t('result.ossHint') }}
-            <a href="https://github.com/tianxingleo/ACGTI/issues" target="_blank" rel="noopener noreferrer">{{ t('result.ossIssue') }}</a>
+            <a href="https://github.com/tianxingleo/AITI/issues" target="_blank" rel="noopener noreferrer">{{ t('result.ossIssue') }}</a>
           </p>
         </div>
 
@@ -1127,6 +1170,16 @@ async function handleFeedbackSubmit() {
         </div>
       </aside>
     </div>
+  </div>
+  <div v-else class="result-page result-page-empty">
+    <section class="result-empty-card">
+      <h1>结果正在生成</h1>
+      <p>如果你刚刚完成测试，这一页会在结果数据准备好后显示。你也可以返回继续测试。</p>
+      <div class="result-empty-actions">
+        <button class="action-btn light" type="button" @click="retry">返回重测</button>
+        <button class="action-btn hero-export-btn" type="button" @click="router.push('/quiz')">去做题页</button>
+      </div>
+    </section>
   </div>
 </template>
 

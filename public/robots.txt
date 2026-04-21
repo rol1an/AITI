@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://acgti.tianxingleo.top/sitemap.xml
+Sitemap: https://aiti.tianxingleo.top/sitemap.xml

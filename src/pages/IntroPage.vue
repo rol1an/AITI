@@ -7,8 +7,8 @@ const { t, tm } = useI18n()
 const relayFeedback = ref('')
 
 useSeo({
-  title: 'ACGTI 介绍页 - ACG Type Indicator | 测试说明',
-  description: '了解 ACGTI（ACG Type Indicator）的测试规则、隐私说明和分享方式；如需查看项目说明，请前往关于页面。',
+  title: 'AITI 介绍页 - AI Type Indicator | 测试说明',
+  description: '了解 AITI（AI Type Indicator）的测试规则、隐私说明和分享方式；如需查看项目说明，请前往关于页面。',
   path: '/intro',
 })
 
@@ -34,7 +34,7 @@ async function copyQuizLink() {
           </div>
           <p class="eyebrow">{{ t('intro.eyebrow') }}</p>
           <h1 class="page-title">{{ t('intro.title') }}</h1>
-          <p class="brand-line">ACGTI 介绍页 · ACG Type Indicator</p>
+          <p class="brand-line">AITI 介绍页 · AI Type Indicator</p>
           <p class="lead">{{ t('intro.lead') }}</p>
           <div class="action-wrap">
             <RouterLink class="btn btn-primary main-btn" to="/quiz">{{ t('intro.start') }}</RouterLink>

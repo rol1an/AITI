@@ -1,14 +1,12 @@
 {
-  "name": "acgti",
+  "name": "aiti",
   "private": true,
   "version": "0.2.0",
   "license": "Apache-2.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "validate:data": "node scripts/validate-character-data.mjs",
-    "generate:data": "node scripts/build-character-data.mjs",
-    "build": "node scripts/validate-character-data.mjs && node scripts/build-character-data.mjs && vue-tsc -b && vite build",
+    "build": "vue-tsc -b && vite build",
     "preview": "vite preview",
     "build:watch": "vite build --watch",
     "dev:pages": "wrangler pages dev dist --d1=DB --port 8788"

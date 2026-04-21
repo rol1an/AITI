@@ -11,10 +11,10 @@ const hiddenCharacterSeriesI18n: LocalizedText = {
 }
 
 const hiddenCharacterNoteI18n: LocalizedText = {
-  'zh-CN': '你命中了{label}。ACGTI 不会直接公开其角色名，结果页仅保留角色代码、形象和气质解读。',
-  'zh-TW': '你命中了{label}。ACGTI 不會直接公開其角色名，結果頁僅保留角色代碼、形象與氣質解讀。',
-  en: 'You hit {label}. ACGTI keeps the actual character name masked and only shows the code, image, and personality reading.',
-  ja: '{label} に命中しました。ACGTIでは実際のキャラ名は伏せたまま、コードとビジュアル、解説のみを表示します。',
+  'zh-CN': '你命中了{label}。AITI 不会直接公开其模型名，结果页仅保留代码、形象和气质解读。',
+  'zh-TW': '你命中了{label}。AITI 不會直接公開其模型名，結果頁僅保留代碼、形象與氣質解讀。',
+  en: 'You hit {label}. AITI keeps the actual model name masked and only shows the code, image, and personality reading.',
+  ja: '{label} に命中しました。AITI では実際のモデル名は伏せたまま、コードとビジュアル、解説のみを表示します。',
 }
 
 const hiddenCharacterTagsI18n: Record<AppLocale, string[]> = {
@@ -645,60 +645,6 @@ const characterNameI18n: Record<string, LocalizedText> = {
     'zh-TW': '羅小黑',
     en: 'Luo Xiaohei',
     ja: 'ラ・シャオヘイ',
-  },
-  'alya-kujou': {
-    'zh-CN': '艾莉',
-    'zh-TW': '艾莉亞',
-    en: 'Alya Kujou',
-    ja: '久世政近の隣の席のロシアン彼女',
-  },
-  'artoria-pendragon': {
-    'zh-CN': '阿尔托莉雅',
-    'zh-TW': '阿爾托莉雅',
-    en: 'Artoria Pendragon',
-    ja: 'アルトリア・ペンドラゴン',
-  },
-  'inaba-meguru': {
-    'zh-CN': '因幡巡',
-    'zh-TW': '因幡巡',
-    en: 'Meguru Inaba',
-    ja: '因幡巡',
-  },
-  'kinomoto-sakura': {
-    'zh-CN': '木之本樱',
-    'zh-TW': '木之本櫻',
-    en: 'Sakura Kinomoto',
-    ja: '木之本桜',
-  },
-  'kitagawa-marin': {
-    'zh-CN': '喜多川海梦',
-    'zh-TW': '喜多川海夢',
-    en: 'Marin Kitagawa',
-    ja: '喜多川海夢',
-  },
-  'phrolova': {
-    'zh-CN': '弗洛洛',
-    'zh-TW': '弗洛洛',
-    en: 'Phrolova',
-    ja: 'フローロヴァ',
-  },
-  'tokisaki-kurumi': {
-    'zh-CN': '时崎狂三',
-    'zh-TW': '時崎狂三',
-    en: 'Kurumi Tokisaki',
-    ja: '時崎狂三',
-  },
-  'yuuki-asuna': {
-    'zh-CN': '亚丝娜',
-    'zh-TW': '亞絲娜',
-    en: 'Asuna Yuuki',
-    ja: '結城明日奈',
-  },
-  'zero-two': {
-    'zh-CN': '02',
-    'zh-TW': '02',
-    en: 'Zero Two',
-    ja: 'ゼロツー',
   }
 }
 
@@ -795,7 +741,7 @@ const seriesI18n: Record<string, LocalizedText> = {
   },
   '别当哥哥了！': {
     'zh-CN': '别当哥哥了！',
-    'zh-TW': '不當哥哥了！',
+    'zh-TW': '別當哥哥了！',
     en: 'Onimai: I\'m Now Your Sister!',
     ja: 'お兄ちゃんはおしまい！',
   },
@@ -909,7 +855,7 @@ const seriesI18n: Record<string, LocalizedText> = {
   },
   '轻音少女': {
     'zh-CN': '轻音少女',
-    'zh-TW': 'K-ON！輕音部',
+    'zh-TW': '輕音少女',
     en: 'K-ON!',
     ja: 'けいおん!',
   },
@@ -975,7 +921,7 @@ const seriesI18n: Record<string, LocalizedText> = {
   },
   '少女乐队的呐喊 (GBC)': {
     'zh-CN': '少女乐队的呐喊 (GBC)',
-    'zh-TW': '少女樂團吶喊吧 (GBC)',
+    'zh-TW': '少女樂隊的吶喊 (GBC)',
     en: 'Girls Band Cry',
     ja: 'ガールズバンドクライ',
   },
@@ -1068,48 +1014,6 @@ const seriesI18n: Record<string, LocalizedText> = {
     'zh-TW': '羅小黑戰記',
     en: 'The Legend of Hei',
     ja: 'ロシャオヘイセンキ',
-  },
-  '时不时说一句俄语来掩饰害羞的邻座艾莉同学': {
-    'zh-CN': '时不时说一句俄语来掩饰害羞的邻座艾莉同学',
-    'zh-TW': '不時輕聲地以俄語遮羞的鄰座艾莉同學',
-    en: 'Alya Sometimes Hides Her Feelings in Russian',
-    ja: '時々ボソッとロシア語でデレる隣のアーリャさん',
-  },
-  'Fate/stay night': {
-    'zh-CN': 'Fate/stay night',
-    'zh-TW': 'Fate/stay night',
-    en: 'Fate/stay night',
-    ja: 'Fate/stay night',
-  },
-  '魔卡少女樱': {
-    'zh-CN': '魔卡少女樱',
-    'zh-TW': '庫洛魔法使',
-    en: 'Cardcaptor Sakura',
-    ja: 'カードキャプターさくら',
-  },
-  '更衣人偶坠入爱河': {
-    'zh-CN': '更衣人偶坠入爱河',
-    'zh-TW': '戀上換裝娃娃',
-    en: 'My Dress-Up Darling',
-    ja: 'その着せ替え人形は恋をする',
-  },
-  '约会大作战': {
-    'zh-CN': '约会大作战',
-    'zh-TW': '約會大作戰',
-    en: 'Date A Live',
-    ja: 'デート・ア・ライブ',
-  },
-  '刀剑神域': {
-    'zh-CN': '刀剑神域',
-    'zh-TW': '刀劍神域',
-    en: 'Sword Art Online',
-    ja: 'ソードアート・オンライン',
-  },
-  'DARLING in the FRANXX': {
-    'zh-CN': 'DARLING in the FRANXX',
-    'zh-TW': 'DARLING in the FRANXX',
-    en: 'DARLING in the FRANXX',
-    ja: 'ダーリン・イン・ザ・フランキス',
   }
 }
 

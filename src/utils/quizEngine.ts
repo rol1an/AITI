@@ -10,7 +10,6 @@ import type {
   QuestionArchetypeWeightId,
   QuizResult,
 } from '../types/quiz'
-import questionDimensionWeights from '../data/questionDimensionWeights.json' with { type: 'json' }
 import { getCharacterPopulationProbability } from './characterProbability.ts'
 
 const DIMENSION_LETTERS: Record<DimensionPair, [MBTILetter, MBTILetter]> = {
@@ -21,52 +20,65 @@ const DIMENSION_LETTERS: Record<DimensionPair, [MBTILetter, MBTILetter]> = {
 }
 
 const TYPE_TO_ARCHETYPE: Record<string, ArchetypeId> = {
-  INTJ: 'shadow-strategist',
-  INTP: 'icebound-observer',
-  ENTJ: 'oathbound-captain',
-  ENTP: 'trickster-orbit',
-  INFJ: 'gentle-healer',
-  INFP: 'moonlit-guardian',
-  ENFJ: 'luminous-lead',
-  ENFP: 'trickster-orbit',
-  ISTJ: 'moonlit-guardian',
-  ISFJ: 'gentle-healer',
-  ESTJ: 'oathbound-captain',
-  ESFJ: 'luminous-lead',
-  ISTP: 'icebound-observer',
-  ISFP: 'moonlit-guardian',
-  ESTP: 'chaos-spark',
-  ESFP: 'chaos-spark',
+  INTJ: 'gpt',
+  INTP: 'llama',
+  ENTJ: 'glm',
+  ENTP: 'gemini',
+  INFJ: 'claude',
+  INFP: 'kimi',
+  ENFJ: 'minimax',
+  ENFP: 'doubao-seed',
+  ISTJ: 'qwen',
+  ISFJ: 'wenxin',
+  ESTJ: 'mimo',
+  ESFJ: 'hunyuan',
+  ISTP: 'deepseek',
+  ISFP: 'doubao-seed',
+  ESTP: 'grok',
+  ESFP: 'minimax',
+}
+
+const ARCHETYPE_TO_MBTI: Record<ArchetypeId, string> = {
+  claude: 'INFJ',
+  gpt: 'INTJ',
+  gemini: 'ENTP',
+  grok: 'ESTP',
+  deepseek: 'ISTP',
+  kimi: 'INFP',
+  'doubao-seed': 'ENFP',
+  glm: 'ENTJ',
+  qwen: 'ISTJ',
+  wenxin: 'ISFJ',
+  llama: 'INTP',
+  minimax: 'ENFJ',
+  mimo: 'ESTJ',
+  hunyuan: 'ESFJ',
 }
 
 const ROLE_TO_ARCHETYPE: Record<QuestionArchetypeWeightId, ArchetypeId> = {
-  hero: 'luminous-lead',
-  strategist: 'shadow-strategist',
-  guardian: 'moonlit-guardian',
-  lonewolf: 'icebound-observer',
-  healer: 'gentle-healer',
-  berserker: 'chaos-spark',
-  trickster: 'trickster-orbit',
-  ruler: 'oathbound-captain',
-}
-
-const QUESTION_WEIGHT_FALLBACKS: Record<DimensionPair, Partial<Record<QuestionArchetypeWeightId, number>>> = {
-  'E_I': { hero: 2, trickster: 2, healer: 1, lonewolf: -2, strategist: -1 },
-  'S_N': { strategist: 2, trickster: 2, healer: 1, ruler: -1, guardian: -1 },
-  'T_F': { strategist: 2, ruler: 1, healer: -2, guardian: -1, berserker: 1 },
-  'J_P': { ruler: 2, guardian: 1, strategist: 1, trickster: -2, berserker: -1 },
+  claude: 'claude',
+  gpt: 'gpt',
+  gemini: 'gemini',
+  grok: 'grok',
+  deepseek: 'deepseek',
+  kimi: 'kimi',
+  'doubao-seed': 'doubao-seed',
+  glm: 'glm',
+  qwen: 'qwen',
+  wenxin: 'wenxin',
+  llama: 'llama',
+  minimax: 'minimax',
+  mimo: 'mimo',
+  hunyuan: 'hunyuan',
 }
 
 const VECTOR_AXES: DimensionId[] = ['expression', 'temperature', 'judgement', 'order', 'agency', 'aura']
 const ARCHETYPE_IDS = Object.values(ROLE_TO_ARCHETYPE)
-
 const MBTI_WEIGHT = 0.25
-const ARCHETYPE_WEIGHT = 0.28
-const VECTOR_WEIGHT = 0.27
-const CHARACTER_SPECIFIC_WEIGHT = 0.2
+const ARCHETYPE_WEIGHT = 0.32
+const VECTOR_WEIGHT = 0.43
+const CHARACTER_SPECIFIC_WEIGHT = 0
 const CLOSE_MATCH_THRESHOLD = 0.025
-const ENABLE_DIMENSION_WEIGHT_OVERRIDE = true
-const DIMENSION_SCORE_WEIGHTS = questionDimensionWeights as Record<string, Partial<Record<DimensionPair, number>>>
 
 // 16personalities 风格的维度标签配置
 export const TRAIT_CONFIG = {
@@ -105,22 +117,22 @@ export const TRAIT_CONFIG = {
 }
 
 export const ROLE_MAPPING: Record<string, { name: string; description: string }> = {
-  INTJ: { name: 'Analysts', description: 'Analysts are imaginative and strategic thinkers, with a plan for everything.' },
-  INTP: { name: 'Analysts', description: 'Analysts are imaginative and strategic thinkers, with a plan for everything.' },
-  ENTJ: { name: 'Analysts', description: 'Analysts are imaginative and strategic thinkers, with a plan for everything.' },
-  ENTP: { name: 'Analysts', description: 'Analysts are imaginative and strategic thinkers, with a plan for everything.' },
-  INFJ: { name: 'Diplomats', description: 'Diplomats are empathetic and principled, with a deep concern for others.' },
-  INFP: { name: 'Diplomats', description: 'Diplomats are empathetic and principled, with a deep concern for others.' },
-  ENFJ: { name: 'Diplomats', description: 'Diplomats are empathetic and principled, with a deep concern for others.' },
-  ENFP: { name: 'Diplomats', description: 'Diplomats are empathetic and principled, with a deep concern for others.' },
-  ISTJ: { name: 'Sentinels', description: 'Sentinels are cooperative and practical, bringing stability and order.' },
-  ISFJ: { name: 'Sentinels', description: 'Sentinels are cooperative and practical, bringing stability and order.' },
-  ESTJ: { name: 'Sentinels', description: 'Sentinels are cooperative and practical, bringing stability and order.' },
-  ESFJ: { name: 'Sentinels', description: 'Sentinels are cooperative and practical, bringing stability and order.' },
-  ISTP: { name: 'Explorers', description: 'Explorers are utilitarian, practical, and spontaneous, shining in situations that require quick reaction.' },
-  ISFP: { name: 'Explorers', description: 'Explorers are utilitarian, practical, and spontaneous, shining in situations that require quick reaction.' },
-  ESTP: { name: 'Explorers', description: 'Explorers are utilitarian, practical, and spontaneous, shining in situations that require quick reaction.' },
-  ESFP: { name: 'Explorers', description: 'Explorers are utilitarian, practical, and spontaneous, shining in situations that require quick reaction.' }
+  INTJ: { name: '理性规划组', description: '偏好清晰结构、目标导向和稳定输出，喜欢把问题拆开再推进。' },
+  INTP: { name: '开放极客组', description: '偏好探索与推演，喜欢在自由空间里把概念和边界讲清楚。' },
+  ENTJ: { name: '工程主推进组', description: '偏好结果、效率与掌控，适合做复杂任务的长期推进者。' },
+  ENTP: { name: '创意发散组', description: '偏好变化、联想和快速跳转，擅长把局面打开。' },
+  INFJ: { name: '温柔咨询组', description: '偏好共情、边界感与解释，擅长把难题说得让人安心。' },
+  INFP: { name: '细腻陪伴组', description: '偏好情绪温度与长期陪伴，给人稳定、柔软的支持感。' },
+  ENFJ: { name: '创意领导组', description: '偏好鼓励、表达与组织，擅长把人和事都串起来。' },
+  ENFP: { name: '活力搭子组', description: '偏好轻快互动与灵感碰撞，最擅长把气氛带起来。' },
+  ISTJ: { name: '务实秩序组', description: '偏好规则、稳定与可复用方案，适合做可靠主力。' },
+  ISFJ: { name: '耐心整理组', description: '偏好照顾细节与持续跟进，擅长安静地把事做好。' },
+  ESTJ: { name: '执行管理组', description: '偏好高效执行与任务闭环，做事直接且利落。' },
+  ESFJ: { name: '协作支撑组', description: '偏好协作、照顾与气氛维持，懂得把人拉到同一节奏。' },
+  ISTP: { name: '简洁工程组', description: '偏好直接、准确和低噪音输出，重视实用与效率。' },
+  ISFP: { name: '审美松弛组', description: '偏好感受、画面和舒适体验，表达更看重氛围。' },
+  ESTP: { name: '高刺激直球组', description: '偏好快速反馈、现场反应和刺激度，行动力很强。' },
+  ESFP: { name: '热感表演组', description: '偏好表达、互动和现场感，最会把气氛点亮。' }
 }
 
 const MBTI_PATTERN = /^[EI][SN][TF][JP]$/
@@ -221,25 +233,12 @@ function buildAnswerProfile({
       return
     }
 
-    const dimensionWeights = ENABLE_DIMENSION_WEIGHT_OVERRIDE
-      ? (DIMENSION_SCORE_WEIGHTS[question.id] ?? { [question.dimension]: question.sign })
-      : { [question.dimension]: question.sign }
-    for (const pair in dimensionWeights) {
-      const dimension = pair as DimensionPair
-      const weight = dimensionWeights[dimension] ?? 0
-      if (weight === 0) {
-        continue
-      }
-
-      rawScores[dimension] += answer * weight
-      if (weight > 0) {
-        directionalMaxScores[dimension].positive += 3 * weight
-      } else {
-        directionalMaxScores[dimension].negative += 3 * Math.abs(weight)
-      }
+    const selectedOption = question.options?.[answer]
+    if (!selectedOption) {
+      return
     }
 
-    const normalizedWeights = normalizeQuestionWeights(question.weights ?? QUESTION_WEIGHT_FALLBACKS[question.dimension])
+    const normalizedWeights = normalizeQuestionWeights(selectedOption.weights ?? {})
 
     for (const role of Object.keys(normalizedWeights) as QuestionArchetypeWeightId[]) {
       const value = normalizedWeights[role] ?? 0
@@ -258,25 +257,14 @@ function buildAnswerProfile({
     }
   })
 
-  const scores = {} as Record<DimensionPair, DimensionScore>
-  let mbtiCode = ''
-
-  for (const pair in DIMENSION_LETTERS) {
-    const dimension = pair as DimensionPair
-    const score = normalizeDimensionScore(rawScores[dimension], directionalMaxScores[dimension])
-    const [posLetter, negLetter] = DIMENSION_LETTERS[dimension]
-    const dominant = score >= 0 ? posLetter : negLetter
-    const intensity = Math.min(1, Math.abs(score))
-    const percentage = Math.round(50 + (intensity * 50))
-
-    scores[dimension] = {
-      pair: dimension,
-      score,
-      dominant,
-      percentage
-    }
-    mbtiCode += dominant
-  }
+  const mbtiCode = resolveMbtiCodeFromArchetypes(archetypeRaw)
+  const mbtiConfidence = calculateMbtiConfidence(archetypeRaw)
+  const scores = buildScoresFromMbtiCode(mbtiCode, {
+    E_I: mbtiConfidence,
+    S_N: Math.max(55, mbtiConfidence - 3),
+    T_F: Math.max(55, mbtiConfidence - 1),
+    J_P: Math.max(55, mbtiConfidence - 2),
+  }) ?? buildScoresFromMbtiCode('INTJ')!
 
   return {
     scores,
@@ -314,6 +302,25 @@ function normalizeDimensionScore(
   }
 
   return rawScore / Math.max(1, directionalMax.negative)
+}
+
+function resolveMbtiCodeFromArchetypes(archetypeRaw: ArchetypeAccumulator) {
+  const sorted = Object.entries(archetypeRaw).sort((left, right) => right[1] - left[1])
+  const bestArchetypeId = sorted[0]?.[0] as ArchetypeId | undefined
+  if (bestArchetypeId && ARCHETYPE_TO_MBTI[bestArchetypeId]) {
+    return ARCHETYPE_TO_MBTI[bestArchetypeId]
+  }
+
+  return 'INTJ'
+}
+
+function calculateMbtiConfidence(archetypeRaw: ArchetypeAccumulator) {
+  const values = Object.values(archetypeRaw).sort((left, right) => right - left)
+  const top = values[0] ?? 0
+  const second = values[1] ?? 0
+  const gap = Math.max(0, top - second)
+  const scaled = 60 + Math.min(30, Math.round(gap * 12))
+  return Math.max(55, Math.min(95, scaled))
 }
 
 function normalizeQuestionWeights(weights: Partial<Record<QuestionArchetypeWeightId, number>>) {
@@ -551,18 +558,13 @@ function scoreCharacterSpecific(
   answers: number[],
 ) {
   const uniqueAxes = character.signature?.uniqueAxes
-  const questionAffinity = character.signature?.questionAffinity ?? []
 
   const axisScore = !uniqueAxes || !Object.keys(uniqueAxes).length
     ? scoreVector(userVector, character.vector)
     : scoreUniqueAxes(userVector, uniqueAxes)
 
-  if (!questionAffinity.length) {
-    return axisScore
-  }
-
-  const affinityScore = scoreQuestionAffinity(questionAffinity, answers)
-  return axisScore * 0.45 + affinityScore * 0.55
+  void answers
+  return axisScore
 }
 
 function scoreUniqueAxes(
@@ -585,48 +587,6 @@ function scoreUniqueAxes(
   }
 
   return weightTotal ? weightedScore / weightTotal : 0.5
-}
-
-function scoreQuestionAffinity(
-  affinities: NonNullable<NonNullable<CharacterMatch['signature']>['questionAffinity']>,
-  answers: number[],
-) {
-  let weightedScore = 0
-  let weightTotal = 0
-
-  for (const affinity of affinities) {
-    const questionIndex = getQuestionIndexById(affinity.questionId)
-    if (questionIndex < 0) {
-      continue
-    }
-
-    const answer = answers[questionIndex]
-    if (!isAnsweredValue(answer)) {
-      continue
-    }
-
-    const weight = affinity.weight ?? 1
-    weightedScore += evaluateAffinity(answer, affinity.expected) * weight
-    weightTotal += weight
-  }
-
-  return weightTotal ? weightedScore / weightTotal : 0.5
-}
-
-function evaluateAffinity(answer: number, expected: 'agree' | 'disagree' | 'neutral') {
-  if (expected === 'agree') {
-    return Math.max(0, (answer + 3) / 6)
-  }
-
-  if (expected === 'disagree') {
-    return Math.max(0, (3 - answer) / 6)
-  }
-
-  return Math.max(0, 1 - Math.abs(answer) / 3)
-}
-
-function getQuestionIndexById(questionId: string) {
-  return Number.parseInt(questionId.replace(/^q/i, ''), 10) - 1
 }
 
 function collectLeadingMatches(rankings: RankedCharacter[]) {

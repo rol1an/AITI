@@ -7,7 +7,7 @@ const { t } = useI18n()
 const isPopupReady = ref(false)
 const showUpdatePopup = ref(false)
 
-const HOME_UPDATE_DISMISS_KEY = 'acgti:home-update-2026-04-18-popup-v4-dismissed'
+const HOME_UPDATE_DISMISS_KEY = 'aiti:home-update-2026-04-18-popup-v4-dismissed'
 const UPDATE_POPUP_DELAY_MS = 3000
 const UPDATE_POPUP_AUTO_HIDE_MS = 5200
 
@@ -91,6 +91,7 @@ function dismissUpdatePopup(rememberDismissal = true) {
   position: fixed;
   inset: 0;
   z-index: 60;
+  pointer-events: none;
 }
 
 .update-popup-backdrop {
@@ -108,6 +109,7 @@ function dismissUpdatePopup(rememberDismissal = true) {
   cursor: pointer;
   transform: none;
   transition: opacity 0.24s ease;
+  pointer-events: none;
 }
 
 .update-popup-backdrop:hover,
@@ -133,6 +135,7 @@ function dismissUpdatePopup(rememberDismissal = true) {
   box-shadow: 0 20px 48px rgba(23, 39, 49, 0.16);
   backdrop-filter: blur(14px);
   box-sizing: border-box;
+  pointer-events: auto;
 }
 
 .update-popup-tag {
@@ -174,6 +177,7 @@ function dismissUpdatePopup(rememberDismissal = true) {
   text-decoration: none;
   box-shadow: 0 12px 24px rgba(72, 153, 163, 0.22);
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  pointer-events: auto;
 }
 
 .update-popup-link:hover {
@@ -212,6 +216,7 @@ function dismissUpdatePopup(rememberDismissal = true) {
   color: #6f7d88;
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  pointer-events: auto;
 }
 
 .update-popup-close:hover {

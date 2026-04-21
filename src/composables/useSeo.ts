@@ -1,8 +1,8 @@
 import { useHead } from '@unhead/vue'
 import { computed, type MaybeRef, unref } from 'vue'
 
-const SITE_NAME = 'ACGTI'
-const SITE_URL = 'https://acgti.tianxingleo.top'
+const SITE_NAME = 'AITI'
+const SITE_URL = 'https://aiti.tianxingleo.top'
 
 interface SeoOptions {
   title: MaybeRef<string>

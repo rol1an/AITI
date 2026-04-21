@@ -11,7 +11,7 @@
     <main class="quiz-main">
       <section class="hero">
         <h1>{{ t('quiz.heroTitle') }}</h1>
-        <p>ACG Type Indicator</p>
+        <p>AI Type Indicator</p>
       </section>
 
       <section class="step-cards" aria-label="测试步骤">
@@ -35,42 +35,30 @@
           class="question-block"
           :class="{ 
             'needs-answer': pendingUnansweredIndex === idx,
-            'upcoming-dimmed': idx > firstUnansweredIndex && state.answers[idx] === undefined
+            'upcoming-dimmed': idx > firstUnansweredIndex && state.answers[idx] < 0
           }"
           :ref="(el) => setQuestionRef(el, idx)"
           v-reveal
         >
-          <h2>{{ t('quiz.questions.' + idx, undefined, (question.text || question.prompt || t('quiz.missingQuestion'))) }}</h2>
+          <h2>{{ question.text || question.prompt || t('quiz.missingQuestion') }}</h2>
 
-          <div class="question-scale">
-            <span class="agree-label">{{ t('quiz.agree') }}</span>
-
-            <div class="scale-buttons" role="radiogroup" :aria-label="t('quiz.questionLabel', { index: idx + 1 })">
-              <button
-                v-for="option in scaleOptions"
-                :key="option.value"
-                type="button"
-                class="scale-btn"
-                :class="[
-                  option.sizeClass,
-                  option.side === 'agree' ? 'agree-ring' : option.side === 'disagree' ? 'disagree-ring' : 'neutral-ring',
-                  { selected: state.answers[idx] === option.value }
-                ]"
-                :aria-checked="state.answers[idx] === option.value"
-                :aria-label="option.label"
-                @click="onSelect(idx, option.value)"
-              >
-                <span class="checkmark" v-if="state.answers[idx] === option.value">✓</span>
-              </button>
-            </div>
-
-            <span class="disagree-label">{{ t('quiz.disagree') }}</span>
+          <div class="question-options" role="radiogroup" :aria-label="t('quiz.questionLabel', { index: idx + 1 })">
+            <button
+              v-for="(option, optionIndex) in question.options ?? []"
+              :key="option.id"
+              type="button"
+              class="question-option"
+              :class="{ selected: state.answers[idx] === optionIndex }"
+              :aria-checked="state.answers[idx] === optionIndex"
+              :aria-label="`${option.id.toUpperCase()} ${option.label}`"
+              @click="onSelect(idx, optionIndex)"
+            >
+              <span class="option-badge">{{ option.id.toUpperCase() }}</span>
+              <span class="option-text">{{ option.label }}</span>
+              <span class="checkmark" v-if="state.answers[idx] === optionIndex">✓</span>
+            </button>
           </div>
 
-          <div class="mobile-labels">
-            <span class="agree-label">{{ t('quiz.agree') }}</span>
-            <span class="disagree-label">{{ t('quiz.disagree') }}</span>
-          </div>
         </article>
       </section>
 
@@ -97,14 +85,14 @@
           <RouterLink to="/result">{{ t('app.nav.result') }}</RouterLink>
           <span>{{ t('quiz.footerLocal') }}</span>
         </div>
-        <p>© 2026 ACGTI Project</p>
+        <p>© 2026 AITI Project</p>
       </div>
     </footer>
   </div>
 </template>
 
 <script setup lang="ts">
-import { nextTick, onMounted, ref, computed } from 'vue'
+import { nextTick, onMounted, ref } from 'vue'
 import type { ComponentPublicInstance } from 'vue'
 import { useRouter } from 'vue-router'
 
@@ -113,21 +101,13 @@ import { useI18n } from '../i18n'
 import { useSeo } from '../composables/useSeo'
 
 useSeo({
-  title: '开始 ACGTI 测试 - ACG Type Indicator | 二次元角色原型测试',
-  description: '进入 ACGTI 官网的测试页，回答 39 道情境式问题，获得唯一命中的角色代码、MBTI 维度倾向与二次元角色原型解析。免费、无需注册、纯前端运行。',
+  title: '开始 AITI 测试 - AI Type Indicator | AI 模型画像测试',
+  description: '进入 AITI 官网的测试页，回答 25 道情境式问题，获得唯一命中的模型代码、偏好维度倾向与 AI 模型画像解析。免费、无需注册、纯前端运行。',
   path: '/quiz',
 })
 
-type ScaleSide = 'agree' | 'neutral' | 'disagree'
-
-interface ScaleOption {
-  value: number
-  label: string
-  side: ScaleSide
-  sizeClass: string
-}
-
 const router = useRouter()
+const PENDING_RESULT_KEY = 'aiti:pending-result'
 const {
   questions,
   state,
@@ -150,18 +130,11 @@ const questionRefs = ref<HTMLElement[]>([])
 const pendingUnansweredIndex = ref<number | null>(null)
 let unansweredHighlightTimer: ReturnType<typeof setTimeout> | null = null
 
-const scaleOptions = computed<ScaleOption[]>(() => {
-  const scaleTitles = tm<string[]>('quiz.scale')
-  return [
-    { value: 3, label: scaleTitles[0], side: 'agree', sizeClass: 'size-xl' },
-    { value: 2, label: scaleTitles[1], side: 'agree', sizeClass: 'size-lg' },
-    { value: 1, label: scaleTitles[2], side: 'agree', sizeClass: 'size-md' },
-    { value: 0, label: scaleTitles[3], side: 'neutral', sizeClass: 'size-sm' },
-    { value: -1, label: scaleTitles[4], side: 'disagree', sizeClass: 'size-md' },
-    { value: -2, label: scaleTitles[5], side: 'disagree', sizeClass: 'size-lg' },
-    { value: -3, label: scaleTitles[6], side: 'disagree', sizeClass: 'size-xl' },
-  ]
-})
+function serializeAnswersForRoute() {
+  return state.answers
+    .map((value) => (value >= 0 && value <= 3 ? String(value) : 'x'))
+    .join('')
+}
 
 function onSelect(questionIndex: number, value: number) {
   selectOptionAt(questionIndex, value)
@@ -206,9 +179,32 @@ async function submitQuiz() {
     return
   }
 
-  const result = finalizeQuiz()
-  if (!result) return
-  router.push({ name: 'result' })
+  try {
+    const result = finalizeQuiz()
+    if (!result) return
+
+    window.sessionStorage.setItem(PENDING_RESULT_KEY, JSON.stringify(result))
+    const answerParam = serializeAnswersForRoute()
+
+    await router.push({
+      path: '/result',
+      query: {
+        a: answerParam,
+      },
+    })
+  } catch (error) {
+    console.error('Failed to submit quiz', error)
+    const answerParam = serializeAnswersForRoute()
+    try {
+      const result = finalizeQuiz()
+      if (result) {
+        window.sessionStorage.setItem(PENDING_RESULT_KEY, JSON.stringify(result))
+      }
+    } catch {
+      // ignore fallback persistence failures
+    }
+    window.location.assign(`/result?a=${encodeURIComponent(answerParam)}`)
+  }
 }
 </script>
 
@@ -379,131 +375,79 @@ async function submitQuiz() {
   line-height: 1.35;
 }
 
-.question-scale {
-  max-width: 760px;
+.question-options {
+  max-width: 860px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.agree-label,
-.disagree-label {
-  width: 64px;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.agree-label {
-  color: #33a474;
-  text-align: right;
-}
-
-.disagree-label {
-  color: #88619a;
-  text-align: left;
-}
-
-.scale-buttons {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
-.scale-btn {
-  border-radius: 999px;
-  background: #ffffff;
-  border: 3px solid;
+.question-option {
+  position: relative;
+  min-height: 124px;
+  text-align: left;
+  border-radius: 18px;
+  border: 1px solid #e5ebf0;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fafc 100%);
+  padding: 18px 18px 16px;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
+}
+
+.question-option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(17, 24, 39, 0.08);
+}
+
+.question-option.selected {
+  border-color: #33a474;
+  background: linear-gradient(180deg, rgba(51, 164, 116, 0.08) 0%, rgba(51, 164, 116, 0.16) 100%);
+  box-shadow: 0 14px 30px rgba(51, 164, 116, 0.14);
+}
+
+.option-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  position: relative;
-  transition: transform 0.18s ease, background-color 0.18s ease, opacity 0.18s ease;
-  user-select: none;
-  -webkit-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-touch-callout: none;
-  touch-action: pan-y;
-}
-
-.scale-btn::before {
-  content: '';
-  position: absolute;
-  top: -3px; left: -3px; right: -3px; bottom: -3px;
-  border-radius: 50%;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.size-sm { width: 28px; height: 28px; }
-.size-md { width: 36px; height: 36px; }
-.size-lg { width: 46px; height: 46px; }
-.size-xl { width: 56px; height: 56px; }
-
-.agree-ring { border-color: #33a474; }
-.agree-ring::before { background-color: #33a474; }
-
-.disagree-ring { border-color: #88619a; }
-.disagree-ring::before { background-color: #88619a; }
-
-.neutral-ring { border-color: #9aa5b1; }
-.neutral-ring::before { background-color: #9aa5b1; }
-
-.scale-btn:not(.selected) {
-  opacity: 0.65;
-}
-
-.scale-btn:active {
-  transform: scale(0.92);
-}
-
-@keyframes radioPop {
-  0% { transform: scale(1); }
-  60% { transform: scale(1.15); }
-  100% { transform: scale(1.06); }
-}
-
-@keyframes radioRipple {
-  0% { transform: scale(0.8); opacity: 0.4; }
-  100% { transform: scale(1.55); opacity: 0; }
-}
-
-.scale-btn.selected {
-  opacity: 1;
-  border-color: transparent;
-  transform: scale(1.06);
-  animation: radioPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-}
-
-.scale-btn.selected::before {
-  animation: radioRipple 0.5s ease-out;
-}
-
-.scale-btn.agree-ring.selected {
-  background: #33a474;
-}
-
-.scale-btn.disagree-ring.selected {
-  background: #88619a;
-}
-
-.scale-btn.neutral-ring.selected {
-  background: #9aa5b1;
-}
-
-.checkmark {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: #1f2937;
   color: #ffffff;
-  font-size: 14px;
-  line-height: 1;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
 }
 
-.mobile-labels {
-  display: none;
+.option-text {
+  display: block;
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #2f3841;
+}
+
+.question-option .checkmark {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #33a474;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .question-options {
+    grid-template-columns: 1fr;
+  }
 }
 
 .result-form-card {

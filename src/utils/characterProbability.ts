@@ -1,4 +1,4 @@
-import characterProbabilitiesData from '../data/characterProbabilities.json' with { type: 'json' }
+import characterProbabilitiesData from '../data/aitiCharacterProbabilities.json' with { type: 'json' }
 
 const probabilityDataset = characterProbabilitiesData as {
   seed: number

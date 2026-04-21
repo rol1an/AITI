@@ -161,16 +161,16 @@ export const messages = {
       dimensions: ['外向 / 内向', '实感 / 直觉', '理性 / 情感', '判断 / 感知'],
     },
     quiz: {
-        questions: questions.map((q) => q.text),
+      questions: questions.map((q) => q.text),
       heroTitle: '免费性格测试',
       steps: [
         ['STEP 1', '完成测试', '做真实的自己并诚实回答，以发现你的性格类型。'],
         ['STEP 2', '查看详细结果', '了解你的性格类型如何影响你生活的各个方面。'],
         ['STEP 3', '解锁你的潜能', '结合你的偏好维度，获取更匹配的发展建议。'],
       ],
-      noticeA: '一共 {count} 道题，做完就能解锁你的隐藏面板：除了经典的 MBTI 四维属性，还会为你直接生成最贴脸的专属二次元角色代码和原型报告。',
-      noticeB: '结果仅保存在当前浏览器，不收集邮箱、性别等个人信息。',
-      noticeC: 'ACGTI 的答题数据只会缓存在本地浏览器，完成时会匿名上报最终结果用于统计。',
+      noticeA: '在你开始之前，有几件事想先和你同步—— 一共 {count} 道题。做完之后，你会解锁一个属于自己的隐藏面板。里面有类似 MBTI 的四维属性拆解，还会直接告诉你——在众多 AI 大模型里，你更像哪一款。附带一份像模像样的原型报告，就像游戏里突然弹出的角色档案，但主角是你自己。',
+      noticeB: '关于隐私：你的所有答题数据只会缓存在当前浏览器里。我们不收集邮箱、性别、手机号，甚至不会问你是谁。完成测试时会匿名上报最终结果，仅仅用于统计“大家都更像哪款 AI”，不关联任何个人信息。',
+      noticeC: '所以，放心点。不用想太多，凭直觉选就好。准备好了吗？看看你体内住着哪款 AI 的灵魂。',
       missingQuestion: '（题干缺失）',
       agree: '同意',
       disagree: '不同意',
@@ -298,11 +298,11 @@ export const messages = {
         subtitle: '把场子点亮的人',
         narrativeRole: '主角团核心 / 气氛引擎',
         oneLiners: [
-            '你不是安静的背景板，你会把剧情推向更明亮的地方。',
-            '哪怕在最暗的剧本里，你也会强行燃起一团火。',
-            '你是天然的聚光灯引力场，不经意间就把所有人带进了你的节奏。',
-            '只要你在场，故事就不会轻易走向沉寂的结尾。'
-          ],
+          '你不是安静的背景板，你会把剧情推向更明亮的地方。',
+          '哪怕在最暗的剧本里，你也会强行燃起一团火。',
+          '你是天然的聚光灯引力场，不经意间就把所有人带进了你的节奏。',
+          '只要你在场，故事就不会轻易走向沉寂的结尾。'
+        ],
         description: '自带「高输出、强推进」的主角面板。你天生就是带领团队冲锋的那个人，注定要站在聚光灯下，是队伍里不可或缺的情绪引擎和主心骨。',
         spotlight: '当所有人犹豫时，你会先把第一步踩出去。',
         weakness: '太容易把自己燃尽，也容易因为承担太多而失去节奏。',
@@ -312,11 +312,11 @@ export const messages = {
         subtitle: '安静但看得很清楚',
         narrativeRole: '军师位 / 冷静旁白',
         oneLiners: [
-            '你像把情绪收进薄冰里的人，外界很难轻易读懂你。',
-            '比起贸然下场，你更喜欢把所有的底牌和破绽都看个透彻。',
-            '你不信沸腾的热血，你只信最精准的时机和绝对的理智。',
-            '喧嚣总是别人的，而你握着破局的最后一把钥匙。'
-          ],
+          '你像把情绪收进薄冰里的人，外界很难轻易读懂你。',
+          '比起贸然下场，你更喜欢把所有的底牌和破绽都看个透彻。',
+          '你不信沸腾的热血，你只信最精准的时机和绝对的理智。',
+          '喧嚣总是别人的，而你握着破局的最后一把钥匙。'
+        ],
         description: '低调且清醒的「高侦察」面板。你习惯先看透规则底线，再决定是否下场。你是天生的旁观者和智囊，也是残局里最稳的那个兜底人。',
         spotlight: '在所有人都看漏的时候，你会把关键线索拼起来。',
         weakness: '太习惯保持距离，容易错过本可以更热烈的连接。',
@@ -326,11 +326,11 @@ export const messages = {
         subtitle: '把队伍扛在肩上的人',
         narrativeRole: '队长位 / 编队中轴',
         oneLiners: [
-            '你很难只是随便看看，你会天然把责任和秩序接过来。',
-            '当风暴来临时，你是所有人心里最稳固的那面承重墙。',
-            '你不仅仅是在赢，你还要确保每个人都能活着走到终点。',
-            '哪怕伤痕累累，你依然会站在所有人面前挡住下一次冲击。'
-          ],
+          '你很难只是随便看看，你会天然把责任和秩序接过来。',
+          '当风暴来临时，你是所有人心里最稳固的那面承重墙。',
+          '你不仅仅是在赢，你还要确保每个人都能活着走到终点。',
+          '哪怕伤痕累累，你依然会站在所有人面前挡住下一次冲击。'
+        ],
         description: '自带「高守序、强支柱」的队长面板。你是团队里最扎实的承重墙，能顶住高压，更会在关键时刻站出来抗下所有。',
         spotlight: '不是最吵的人，但一定是最后还站着的人。',
         weakness: '太在意责任，容易把自己的需求放到最后。',
@@ -340,11 +340,11 @@ export const messages = {
         subtitle: '总能把局面绕出新花样',
         narrativeRole: '副主角 / 破局位',
         oneLiners: [
-            '你不一定按常规出牌，但你总能把剧情转出新角度。',
-            '当你觉得无聊时，就是规则开始崩盘、好戏重新开场的瞬间。',
-            '你从不走正门，但你总能在绝境中最快找到那扇隐秘的窗。',
-            '你的节奏是一个迷，而你的对手永远只能慢你一拍。'
-          ],
+          '你不一定按常规出牌，但你总能把剧情转出新角度。',
+          '当你觉得无聊时，就是规则开始崩盘、好戏重新开场的瞬间。',
+          '你从不走正门，但你总能在绝境中最快找到那扇隐秘的窗。',
+          '你的节奏是一个迷，而你的对手永远只能慢你一拍。'
+        ],
         description: '自带「高机动、多变阵」的游走面板。你对僵局极其敏感，不爱被铁律锁死，最擅长用不按套路出牌的方式制造翻盘神迹。',
         spotlight: '当规则开始卡人，你会去找缝。',
         weakness: '太喜欢变化会让别人抓不住你，也可能让自己失去稳定感。',
@@ -354,11 +354,11 @@ export const messages = {
         subtitle: '把裂缝慢慢缝回去的人',
         narrativeRole: '疗愈位 / 情感中继',
         oneLiners: [
-            '你不是最耀眼的，但你总能给人最坚实的依靠。',
-            '当世界锋芒毕露时，你用最柔软的方式接住了所有的下坠。',
-            '你不需要震耳欲聋的出场，你的存在本身就是一种深长的呼吸。',
-            '别人关心他们飞得多高，而你关心他们伤得深不深。'
-          ],
+          '你不是最耀眼的，但你总能给人最坚实的依靠。',
+          '当世界锋芒毕露时，你用最柔软的方式接住了所有的下坠。',
+          '你不需要震耳欲聋的出场，你的存在本身就是一种深长的呼吸。',
+          '别人关心他们飞得多高，而你关心他们伤得深不深。'
+        ],
         description: '自带「高治愈、强辅助」的支援面板。你对人际关系中的情绪变化极其敏锐，永远是队伍里那个默默给人加Buff、提供情绪价值的灵魂树洞。',
         spotlight: '你总能在别人快要掉下去时，给予最需要的支撑。',
         weakness: '容易过度共情，替别人承受了太多未必属于你的痛。',
@@ -368,11 +368,11 @@ export const messages = {
         subtitle: '在暗处把棋盘铺好的人',
         narrativeRole: '幕后操盘 / 黑箱智囊',
         oneLiners: [
-            '你会先考虑全局，再决定自己要站在什么位置。',
-            '大家都以为局势是被推着走，只有你知道棋盘早就摆好了。',
-            '你不需要站在舞台中央，因为舞台本身就在你的计算之内。',
-            '当别人为赢下一局而欢呼时，你已经看过了之后的十步棋。'
-          ],
+          '你会先考虑全局，再决定自己要站在什么位置。',
+          '大家都以为局势是被推着走，只有你知道棋盘早就摆好了。',
+          '你不需要站在舞台中央，因为舞台本身就在你的计算之内。',
+          '当别人为赢下一局而欢呼时，你已经看过了之后的十步棋。'
+        ],
         description: '满级「战术预判」的幕后黑手位。你习惯在暗处拆解复杂局势，从不轻易亮出底牌，但只要出手就能直接掀翻整个棋盘。',
         spotlight: '大家都以为局势是被推着走，只有你知道棋盘早就摆好了。',
         weakness: '太擅长预判会让你显得难以接近，也容易过度控制。',
@@ -382,11 +382,11 @@ export const messages = {
         subtitle: '把剧情点炸的人',
         narrativeRole: '转折触发器 / 爆点制造机',
         oneLiners: [
-            '你一出现，气氛就会开始变得不可预测。',
-            '你讨厌一眼望到头的剧本，你是为了让故事翻盘而存在的。',
-            '别跟规则讲道理，把平淡的局点炸才是你的主场。',
-            '比起完美的胜利，你更喜欢看局势失控时绽放出的火花。'
-          ],
+          '你一出现，气氛就会开始变得不可预测。',
+          '你讨厌一眼望到头的剧本，你是为了让故事翻盘而存在的。',
+          '别跟规则讲道理，把平淡的局点炸才是你的主场。',
+          '比起完美的胜利，你更喜欢看局势失控时绽放出的火花。'
+        ],
         description: '点满「高风险、强爆点」的变局面板。你讨厌一眼望到头的剧本，常常用最出人意料的方式点燃平淡的局面，危险却又魅力四射。',
         spotlight: '你不是为了稳定局面而存在，你是为了让故事开始变化。',
         weakness: '过强的冲劲会让你把局势推向不可收拾的方向。',
@@ -396,11 +396,11 @@ export const messages = {
         subtitle: '安静站在边界上的人',
         narrativeRole: '护卫位 / 结界位',
         oneLiners: [
-            '你不是冲到前面最亮的那一个，但你会一直守着重要的人和事。',
-            '当所有光芒褪去，你是最后那道不可逾越的底线。',
-            '主位负责向前奔跑，而你负责确保他们有处可归。',
-            '世界去追逐高光，而你站在这里，就是不灭的结界。'
-          ],
+          '你不是冲到前面最亮的那一个，但你会一直守着重要的人和事。',
+          '当所有光芒褪去，你是最后那道不可逾越的底线。',
+          '主位负责向前奔跑，而你负责确保他们有处可归。',
+          '世界去追逐高光，而你站在这里，就是不灭的结界。'
+        ],
         description: '自带「低输出、高防御」的守护面板。你从不抢位抢戏，却总会在关键防线上安静顶上，如同月落前最后一道不灭的光芒。',
         spotlight: '你更像是不会熄灭的背景光，而不是瞬间照亮全场的闪电。',
         weakness: '过于克制会让别人忽略你的需求，也让你的情绪积压得很深。',
@@ -509,37 +509,37 @@ export const messages = {
       saveImage: '生成并分享次元身份卡',
     },
     stats: {
-    title: '全网人格分布',
-    subtitle: '基于所有匿名测试结果的实时统计',
-    overview: {
-      total: '总测试次数',
-      today: '今日测试',
-      last24h: '近 24 小时',
-    },
-    archetypes: {
-      title: '原型排行榜',
-      subtitle: '8 大角色原型的命中分布',
-      rank: '排名',
-      name: '原型',
-      count: '命中次数',
-      percent: '占比',
-    },
-    characters: {
-      title: '角色命中榜',
-      subtitle: '最常被命中的二次元角色',
-      rank: '排名',
-      name: '角色',
-      count: '命中次数',
-      percent: '占比',
-      loadMore: '加载更多',
-      showing: '当前显示 {current} / {total} 位角色',
-    },
-    startNote: '统计数据从 2026.4.18 18:00 开始记录',
-    footer: {
-      note: '以上数据为匿名统计聚合，不代表真实人格学结论，仅供娱乐参考。',
-      updateFreq: '数据每 15 分钟更新一次',
-      lastUpdate: '最后更新：{time}',
-    },
+      title: '全网人格分布',
+      subtitle: '基于所有匿名测试结果的实时统计',
+      overview: {
+        total: '总测试次数',
+        today: '今日测试',
+        last24h: '近 24 小时',
+      },
+      archetypes: {
+        title: '原型排行榜',
+        subtitle: '8 大角色原型的命中分布',
+        rank: '排名',
+        name: '原型',
+        count: '命中次数',
+        percent: '占比',
+      },
+      characters: {
+        title: '角色命中榜',
+        subtitle: '最常被命中的二次元角色',
+        rank: '排名',
+        name: '角色',
+        count: '命中次数',
+        percent: '占比',
+        loadMore: '加载更多',
+        showing: '当前显示 {current} / {total} 位角色',
+      },
+      startNote: '统计数据从 2026.4.18 18:00 开始记录',
+      footer: {
+        note: '以上数据为匿名统计聚合，不代表真实人格学结论，仅供娱乐参考。',
+        updateFreq: '数据每 15 分钟更新一次',
+        lastUpdate: '最后更新：{time}',
+      },
     },
   },
 
@@ -690,7 +690,7 @@ export const messages = {
       dimensions: ['外向 / 內向', '實感 / 直覺', '理性 / 情感', '判斷 / 感知'],
     },
     quiz: {
-        questions: ["看到針對我喜歡的小圈子的引戰或刻板印象言論，我會感到憤怒並想要反擊或舉報。","我的人生格言是「能躺著絕不坐著，能擺爛絕不內捲」。","追番時看到「前方高能」彈幕，我非但不會提前迴避，反而會更加聚精會神地期待接下來的刺激內容。","我認為「電子陽痿」不是病，是steam裡遊戲堆滿收藏庫後的高級型態。","我會在影片創作者們索取三連時肌肉記憶地打出「下次一定」。","如果我穿越到廁紙番裡的異世界，第一件事不是去當勇者。","我覺得「戰力廚」為了誰更強吵上300樓，是一種行為藝術。","我不愛刻意整理電腦桌面或文件，就算看起來很亂我也懶得管。","我常在深夜因為情緒氾濫而發些emo的動態或評論。","我覺得「三無」屬性根本不是高冷，是懶得營業。","在現實生活中被別人用「二次元」相關的詞彙調侃時，我會感到有些尷尬或反感。","我能在漫展上和陌生人無縫對話「老師老師你是一個香香軟軟的...」。","我認為「黨爭」是ACG最偉大的發明。","遊戲卡關時，我不介意直接開風靈月影。","我覺得「動漫婆羅門」就是一群閒得蛋疼的人給自己的牌坊。","我會因為一首OP好聽而追完整部屎一樣的番。","看完劇情沉重或「致鬱」的作品後，我必須看點輕鬆搞笑的內容來緩解情緒。","我覺得遇到那0.6%的機率而「抽卡沉船」後罵官方，是玄學儀式的一部分，不罵下次會更非。","看到一部長篇或深愛的番劇終於『完結撒花』時，我會感到強烈的失落和空虛感。","我非常反感ACG圈裡拉踩、控評、打榜等「飯圈化」行為。","我常常控制不住地購買打折的遊戲或二次元週邊，哪怕買回來後根本沒時間玩或拆封（即「倉鼠症」）。","我對喜歡的Vtuber或角色投入了很深的感情，如果他們『畢業』或退圈，我會難過很久。","我現在依然會在沒人的時候（或在腦海裡）幻想自己擁有超能力，甚至會念出中二台詞。","雖然明知有些作品劇情薄弱像“工業糖精”，但我還是會因為人設可愛而看得津津有味。","如果在一個奇幻冒險的世界裡，我更願意作為隊伍中不需要操心計劃和戰鬥的「躺贏」角色生存。","我能在海量的表情包圖庫中極快地篩選出最貼切當下的回應，並在聊天中熟練地拋出它們。","我認為「結局餵屎」的作品，作者應該給讀者磕頭謝罪。","我理想中的退休生活是：宅家、打遊戲、看番、擼貓，並且拒絕任何社交。","我很喜歡看那些有些缺席、冒犯性的‘地獄笑話’，並且經常能毫無心理負擔地get到笑話。","我會去看「骨科」題材的作品。","我會只是為了抽到或看到某個喜歡的角色，去下載嘗試一款我本來毫無興趣的遊戲。","我覺得「社恐」不是缺陷，而是一種高級人設。","為了追求效率或更快看完劇情，我經常習慣使用倍速播放來看番或實況影片。","如果有人在我的留言區刷爛梗，我會直接封鎖清理。","相較於傳統的「王道、元氣」人設，我更容易被性格帶有缺陷、偏執或有些黑深殘的角色（如病嬌、重力、腹黑）吸引。","我認為「二次元」是我的精神避難所，可以在這裡發瘋。","看番或玩遊戲時，我熱衷於去挖掘背後的隱藏設定、世界觀隱喻，甚至逐幀分析細節。","我玩遊戲一定會強迫自己清除所有支線和地圖問號。","遇到喜歡的新番，我會立刻分享給群友並強行安麗。"],
+      questions: ["看到針對我喜歡的小圈子的引戰或刻板印象言論，我會感到憤怒並想要反擊或舉報。", "我的人生格言是「能躺著絕不坐著，能擺爛絕不內捲」。", "追番時看到「前方高能」彈幕，我非但不會提前迴避，反而會更加聚精會神地期待接下來的刺激內容。", "我認為「電子陽痿」不是病，是steam裡遊戲堆滿收藏庫後的高級型態。", "我會在影片創作者們索取三連時肌肉記憶地打出「下次一定」。", "如果我穿越到廁紙番裡的異世界，第一件事不是去當勇者。", "我覺得「戰力廚」為了誰更強吵上300樓，是一種行為藝術。", "我不愛刻意整理電腦桌面或文件，就算看起來很亂我也懶得管。", "我常在深夜因為情緒氾濫而發些emo的動態或評論。", "我覺得「三無」屬性根本不是高冷，是懶得營業。", "在現實生活中被別人用「二次元」相關的詞彙調侃時，我會感到有些尷尬或反感。", "我能在漫展上和陌生人無縫對話「老師老師你是一個香香軟軟的...」。", "我認為「黨爭」是ACG最偉大的發明。", "遊戲卡關時，我不介意直接開風靈月影。", "我覺得「動漫婆羅門」就是一群閒得蛋疼的人給自己的牌坊。", "我會因為一首OP好聽而追完整部屎一樣的番。", "看完劇情沉重或「致鬱」的作品後，我必須看點輕鬆搞笑的內容來緩解情緒。", "我覺得遇到那0.6%的機率而「抽卡沉船」後罵官方，是玄學儀式的一部分，不罵下次會更非。", "看到一部長篇或深愛的番劇終於『完結撒花』時，我會感到強烈的失落和空虛感。", "我非常反感ACG圈裡拉踩、控評、打榜等「飯圈化」行為。", "我常常控制不住地購買打折的遊戲或二次元週邊，哪怕買回來後根本沒時間玩或拆封（即「倉鼠症」）。", "我對喜歡的Vtuber或角色投入了很深的感情，如果他們『畢業』或退圈，我會難過很久。", "我現在依然會在沒人的時候（或在腦海裡）幻想自己擁有超能力，甚至會念出中二台詞。", "雖然明知有些作品劇情薄弱像“工業糖精”，但我還是會因為人設可愛而看得津津有味。", "如果在一個奇幻冒險的世界裡，我更願意作為隊伍中不需要操心計劃和戰鬥的「躺贏」角色生存。", "我能在海量的表情包圖庫中極快地篩選出最貼切當下的回應，並在聊天中熟練地拋出它們。", "我認為「結局餵屎」的作品，作者應該給讀者磕頭謝罪。", "我理想中的退休生活是：宅家、打遊戲、看番、擼貓，並且拒絕任何社交。", "我很喜歡看那些有些缺席、冒犯性的‘地獄笑話’，並且經常能毫無心理負擔地get到笑話。", "我會去看「骨科」題材的作品。", "我會只是為了抽到或看到某個喜歡的角色，去下載嘗試一款我本來毫無興趣的遊戲。", "我覺得「社恐」不是缺陷，而是一種高級人設。", "為了追求效率或更快看完劇情，我經常習慣使用倍速播放來看番或實況影片。", "如果有人在我的留言區刷爛梗，我會直接封鎖清理。", "相較於傳統的「王道、元氣」人設，我更容易被性格帶有缺陷、偏執或有些黑深殘的角色（如病嬌、重力、腹黑）吸引。", "我認為「二次元」是我的精神避難所，可以在這裡發瘋。", "看番或玩遊戲時，我熱衷於去挖掘背後的隱藏設定、世界觀隱喻，甚至逐幀分析細節。", "我玩遊戲一定會強迫自己清除所有支線和地圖問號。", "遇到喜歡的新番，我會立刻分享給群友並強行安麗。"],
       heroTitle: '免費性格測試',
       steps: [
         ['STEP 1', '完成測試', '做真實的自己並誠實回答，以發現你的性格類型。'],
@@ -827,11 +827,11 @@ export const messages = {
         subtitle: '把場子點亮的人',
         narrativeRole: '主角團核心 / 氣氛引擎',
         oneLiners: [
-            '你不是安靜的背景板，你會把劇情推向更明亮的地方。',
-            '哪怕在最暗的劇本裡，你也會強行燃起一團火。',
-            '你是天然的聚光燈引力場，不經意間就把所有人帶進了你的節奏。',
-            '只要你在場，故事就不會輕易走向沉寂的結尾。'
-          ],
+          '你不是安靜的背景板，你會把劇情推向更明亮的地方。',
+          '哪怕在最暗的劇本裡，你也會強行燃起一團火。',
+          '你是天然的聚光燈引力場，不經意間就把所有人帶進了你的節奏。',
+          '只要你在場，故事就不會輕易走向沉寂的結尾。'
+        ],
         description: '自帶「高輸出、強推進」的主角面板。你天生就是帶領團隊衝鋒的那個人，註定要站在聚光燈下，是隊伍裡不可或缺的情緒引擎和主心骨。',
         spotlight: '當所有人猶豫時，你會先把第一步踩出去。',
         weakness: '太容易把自己燃盡，也容易因為承擔太多而失去節奏。',
@@ -841,11 +841,11 @@ export const messages = {
         subtitle: '安靜但看得很清楚',
         narrativeRole: '軍師位 / 冷靜旁白',
         oneLiners: [
-            '你像把情緒收進薄冰裡的人，外界很難輕易讀懂你。',
-            '比起貿然下場，你更喜歡把所有的底牌和破綻都看個透徹。',
-            '你不信沸騰的熱血，你只信最精準的時機和絕對的理智。',
-            '喧囂總是別人的，而你握著破局的最後一把鑰匙。'
-          ],
+          '你像把情緒收進薄冰裡的人，外界很難輕易讀懂你。',
+          '比起貿然下場，你更喜歡把所有的底牌和破綻都看個透徹。',
+          '你不信沸騰的熱血，你只信最精準的時機和絕對的理智。',
+          '喧囂總是別人的，而你握著破局的最後一把鑰匙。'
+        ],
         description: '低調且清醒的「高偵察」面板。你習慣先看透規則底線，再決定是否下場。你是天生的旁觀者和智囊，也是殘局裡最穩的那個兜底人。',
         spotlight: '在所有人都看漏的時候，你會把關鍵線索拼起來。',
         weakness: '太習慣保持距離，容易錯過本可以更熱烈的連結。',
@@ -855,11 +855,11 @@ export const messages = {
         subtitle: '把隊伍扛在肩上的人',
         narrativeRole: '隊長位 / 編隊中軸',
         oneLiners: [
-            '你很難只是隨便看看，你會天然把責任和秩序接過來。',
-            '當風暴來臨時，你是所有人心裡最穩固的那面承重牆。',
-            '你不僅僅是在贏，你還要確保每個人都能活著走到終點。',
-            '哪怕傷痕累累，你依然會站在所有人面前擋住下一次衝擊。'
-          ],
+          '你很難只是隨便看看，你會天然把責任和秩序接過來。',
+          '當風暴來臨時，你是所有人心裡最穩固的那面承重牆。',
+          '你不僅僅是在贏，你還要確保每個人都能活著走到終點。',
+          '哪怕傷痕累累，你依然會站在所有人面前擋住下一次衝擊。'
+        ],
         description: '自帶「高守序、強支柱」的隊長面板。你是團隊裡最紮實的承重牆，能頂住高壓，更會在關鍵時刻站出來扛下所有。',
         spotlight: '不是最吵的人，但一定是最後還站著的人。',
         weakness: '太在意責任，容易把自己的需求放到最後。',
@@ -869,11 +869,11 @@ export const messages = {
         subtitle: '總能把局面繞出新花樣',
         narrativeRole: '副主角 / 破局位',
         oneLiners: [
-            '你不一定按常規出牌，但你總能把劇情轉出新角度。',
-            '當你覺得無聊時，就是規則開始崩盤、好戲重新開場的瞬間。',
-            '你從不走正門，但你總能在絕境中最快找到那扇隱密的窗。',
-            '你的節奏是一個迷，而你的對手永遠只能慢你一拍。'
-          ],
+          '你不一定按常規出牌，但你總能把劇情轉出新角度。',
+          '當你覺得無聊時，就是規則開始崩盤、好戲重新開場的瞬間。',
+          '你從不走正門，但你總能在絕境中最快找到那扇隱密的窗。',
+          '你的節奏是一個迷，而你的對手永遠只能慢你一拍。'
+        ],
         description: '自帶「高機動、多變陣」的遊走面板。你對僵局極其敏感，不愛被鐵律鎖死，最擅長用不按套路出牌的方式製造翻盤神蹟。',
         spotlight: '當規則開始卡人，你會去找縫。',
         weakness: '太喜歡變化會讓別人抓不住你，也可能讓自己失去穩定感。',
@@ -883,11 +883,11 @@ export const messages = {
         subtitle: '把裂縫慢慢縫回去的人',
         narrativeRole: '療癒位 / 情感中繼',
         oneLiners: [
-            '你不是最耀眼的，但你總能給人最堅實的依靠。',
-            '當世界鋒芒畢露時，你用最柔軟的方式接住了所有的下墜。',
-            '你不需要震耳欲聾的出場，你的存在本身就是一種深長的呼吸。',
-            '別人關心他們飛得多高，而你關心他們傷得深不深。'
-          ],
+          '你不是最耀眼的，但你總能給人最堅實的依靠。',
+          '當世界鋒芒畢露時，你用最柔軟的方式接住了所有的下墜。',
+          '你不需要震耳欲聾的出場，你的存在本身就是一種深長的呼吸。',
+          '別人關心他們飛得多高，而你關心他們傷得深不深。'
+        ],
         description: '自帶「高治癒、強輔助」的支援面板。你對人際關係中的情緒變化極其敏銳，永遠是隊伍裡那個默默給人加Buff、提供情緒價值的靈魂樹洞。',
         spotlight: '你總能在別人快要掉下去時，給予最需要的支撐。',
         weakness: '容易過度共情，替別人承受太多未必屬於你的痛。',
@@ -897,11 +897,11 @@ export const messages = {
         subtitle: '在暗處把棋盤鋪好的人',
         narrativeRole: '幕後操盤 / 黑箱智囊',
         oneLiners: [
-            '你會先考慮全局，再決定自己要站在什麼位置。',
-            '大家都以為局勢是被推著走，只有你知道棋盤早就擺好了。',
-            '你不需要站在舞台中央，因為舞台本身就在你的計算之內。',
-            '當別人為贏下一局而歡呼時，你已經看過了之後的十步棋。'
-          ],
+          '你會先考慮全局，再決定自己要站在什麼位置。',
+          '大家都以為局勢是被推著走，只有你知道棋盤早就擺好了。',
+          '你不需要站在舞台中央，因為舞台本身就在你的計算之內。',
+          '當別人為贏下一局而歡呼時，你已經看過了之後的十步棋。'
+        ],
         description: '滿級「戰術預判」的幕後黑手位。你習慣在暗處拆解複雜局勢，從不輕易亮出底牌，但只要出手就能直接掀翻整個棋盤。',
         spotlight: '大家都以為局勢是被推著走，只有你知道棋盤早就擺好了。',
         weakness: '太擅長預判會讓你顯得難以接近，也容易過度控制。',
@@ -911,11 +911,11 @@ export const messages = {
         subtitle: '把劇情點炸的人',
         narrativeRole: '轉折觸發器 / 爆點製造機',
         oneLiners: [
-            '你一出現，氣氛就會開始變得不可預測。',
-            '你討厭一眼望到頭的劇本，你是為了讓故事翻盤而存在的。',
-            '別跟規則講道理，把平淡的局點炸才是你的主場。',
-            '比起完美的勝利，你更喜歡看局勢失控時綻放出的火花。'
-          ],
+          '你一出現，氣氛就會開始變得不可預測。',
+          '你討厭一眼望到頭的劇本，你是為了讓故事翻盤而存在的。',
+          '別跟規則講道理，把平淡的局點炸才是你的主場。',
+          '比起完美的勝利，你更喜歡看局勢失控時綻放出的火花。'
+        ],
         description: '點滿「高風險、強爆點」的變局面板。你討厭一眼望到頭的劇本，常常用最出人意料的方式點燃平淡的局面，危險卻又魅力四射。',
         spotlight: '你不是為了穩定局面而存在，你是為了讓故事開始變化。',
         weakness: '過強的衝勁會讓你把局勢推向不可收拾的方向。',
@@ -925,11 +925,11 @@ export const messages = {
         subtitle: '安靜站在邊界上的人',
         narrativeRole: '護衛位 / 結界位',
         oneLiners: [
-            '你不是衝到前面最亮的那一個，但你會一直守著重要的人和事。',
-            '當所有光芒褪去，你是最後那道不可逾越的底線。',
-            '主位負責向前奔跑，而你負責確保他們有處可歸。',
-            '世界去追逐高光，而你站在這裡，就是不滅的結界。'
-          ],
+          '你不是衝到前面最亮的那一個，但你會一直守著重要的人和事。',
+          '當所有光芒褪去，你是最後那道不可逾越的底線。',
+          '主位負責向前奔跑，而你負責確保他們有處可歸。',
+          '世界去追逐高光，而你站在這裡，就是不滅的結界。'
+        ],
         description: '自帶「低輸出、高防禦」的守護面板。你從不搶位搶戲，卻總會在關鍵防線上安靜頂上，如同月落前最後一道不滅的光芒。',
         spotlight: '你更像是不會熄滅的背景光，而不是瞬間照亮全場的閃電。',
         weakness: '過於克制會讓別人忽略你的需求，也讓你的情緒積壓得很深。',
@@ -1338,37 +1338,37 @@ export const messages = {
       saveImage: '生成並分享次元身份卡',
     },
     stats: {
-    title: '全網人格分佈',
-    subtitle: '基於所有匿名測試結果的即時統計',
-    overview: {
-      total: '總測試次數',
-      today: '今日測試',
-      last24h: '近 24 小時',
-    },
-    archetypes: {
-      title: '原型排行榜',
-      subtitle: '8 大角色原型的命中分佈',
-      rank: '排名',
-      name: '原型',
-      count: '命中次數',
-      percent: '佔比',
-    },
-    characters: {
-      title: '角色命中榜',
-      subtitle: '最常被命中的二次元角色',
-      rank: '排名',
-      name: '角色',
-      count: '命中次數',
-      percent: '佔比',
-      loadMore: '載入更多',
-      showing: '目前顯示 {current} / {total} 位角色',
-    },
-    startNote: '統計數據從 2026.4.18 18:00 開始記錄',
-    footer: {
-      note: '以上數據為匿名統計聚合，不代表真實人格學結論，僅供娛樂參考。',
-      updateFreq: '數據每 15 分鐘更新一次',
-      lastUpdate: '最後更新：{time}',
-    },
+      title: '全網人格分佈',
+      subtitle: '基於所有匿名測試結果的即時統計',
+      overview: {
+        total: '總測試次數',
+        today: '今日測試',
+        last24h: '近 24 小時',
+      },
+      archetypes: {
+        title: '原型排行榜',
+        subtitle: '8 大角色原型的命中分佈',
+        rank: '排名',
+        name: '原型',
+        count: '命中次數',
+        percent: '佔比',
+      },
+      characters: {
+        title: '角色命中榜',
+        subtitle: '最常被命中的二次元角色',
+        rank: '排名',
+        name: '角色',
+        count: '命中次數',
+        percent: '佔比',
+        loadMore: '載入更多',
+        showing: '目前顯示 {current} / {total} 位角色',
+      },
+      startNote: '統計數據從 2026.4.18 18:00 開始記錄',
+      footer: {
+        note: '以上數據為匿名統計聚合，不代表真實人格學結論，僅供娛樂參考。',
+        updateFreq: '數據每 15 分鐘更新一次',
+        lastUpdate: '最後更新：{time}',
+      },
     },
   },
 
@@ -1381,14 +1381,14 @@ export const messages = {
         intro: 'Types',
         characters: 'Characters',
         stats: 'Global Stats',
-      faqEyebrow: 'FAQ',
-      faqTitle: 'Clarifying the ACGTI brand and entry points',
-      faqLead: 'These questions cover the terms most often searched by users and help both readers and search engines understand the official site, project scope, and test entry.',
-      faqItems: [
-        ['Where is the official ACGTI site?', 'The official site is acgti.tianxingleo.top. The home page leads to the quiz, project overview, and character library.'],
-        ['How is ACGTI related to MBTI?', 'ACGTI uses the four MBTI dimensions as its base scoring model, but presents the result as anime character codes and archetypes.'],
-        ['Why should I read the About page first?', 'The About page explains the project position, open-source status, current boundaries, and roadmap so visitors can quickly understand what ACGTI is for.'],
-      ],
+        faqEyebrow: 'FAQ',
+        faqTitle: 'Clarifying the ACGTI brand and entry points',
+        faqLead: 'These questions cover the terms most often searched by users and help both readers and search engines understand the official site, project scope, and test entry.',
+        faqItems: [
+          ['Where is the official ACGTI site?', 'The official site is acgti.tianxingleo.top. The home page leads to the quiz, project overview, and character library.'],
+          ['How is ACGTI related to MBTI?', 'ACGTI uses the four MBTI dimensions as its base scoring model, but presents the result as anime character codes and archetypes.'],
+          ['Why should I read the About page first?', 'The About page explains the project position, open-source status, current boundaries, and roadmap so visitors can quickly understand what ACGTI is for.'],
+        ],
         about: 'About',
         sponsor: 'Sponsor',
         result: 'Latest Result',
@@ -1518,7 +1518,7 @@ export const messages = {
       dimensions: ['Extraversion / Introversion', 'Sensing / Intuition', 'Thinking / Feeling', 'Judging / Perceiving'],
     },
     quiz: {
-        questions: ["I get angry when I see trolls or stereotypes directed at people in my favorite clique and want to fight back or report them.","My motto in life is \"Never sit down if you can lie down, never get involved if you can make a mess\".","When I see the \"High Energy Ahead\" barrage while following up, instead of avoiding it in advance, I will be more attentive in looking forward to the next exciting content.","I think \"electronic impotence\" is not a disease, but an advanced form after the warehouse of games on Steam is full.","I will type \"definitely next time\" with muscle memory when the ups ask for three consecutive rounds.","If I traveled to a different world in the toilet paper drama, the first thing I would do is not become a hero.","I think \"Zhanli Chef\" going up to the 300th floor to argue about who is stronger is a kind of performance art.","I don't like to deliberately organize my computer desktop or files, even if it looks messy, I don't bother to do it.","I often post emo updates or comments late at night because of my overwhelming emotions.","I think the \"three noes\" attributes are not cold at all, but rather too lazy to do business.","In real life, I feel a little embarrassed or disgusted when others use \"two-dimensional\" related words to tease me.","I can have a seamless conversation with strangers at comic exhibitions, \"Teacher, teacher, you are a sweet and soft person...\".","I think \"party struggle\" is the greatest invention of ACG.","When the game is stuck, I don’t mind just playing Wind Spirit Moon Shadow.","I think \"anime Brahmins\" are just the arches that a group of idle people set up for themselves.","I will follow the entire shitty series just because one OP sounds good.","After watching a work with a heavy plot or a \"depressing\" one, I have to watch something light and funny to lighten my mood.","I think it is part of the metaphysical ritual to scold the official after encountering the 0.6% probability of \"drawing cards and sinking the ship\". If you don't scold, it will be even worse next time.","When I see a long-running or beloved drama finally come to an end, I feel a strong sense of loss and emptiness.","I am very disgusted with the \"fan circle\" behaviors in the ACG circle such as trolling, criticizing, and ranking.","I often can’t help but buy discounted games or two-dimensional peripherals, even if I don’t have time to play or unpack them after buying them (that is, “hamster syndrome”).","I have deep feelings for my favorite Vtubers or characters, and I will be sad for a long time if they \"graduate\" or withdraw from the industry.","I still fantasize about having superpowers when no one else is around (or in my head), and I even read Chuuni's lines.","Although I know that some works have weak plots and are like \"industrial saccharine\", I still enjoy watching them because of the cute characters.","If I were in a fantasy adventure world, I would prefer to survive as a \"win-win\" character in the team who doesn't need to worry about planning and fighting.","I can quickly sift through the vast library of emoticons to find the most appropriate responses to the moment, and skillfully throw them out in the chat.","I think the author of a work with a \"feeding ending\" should kowtow to the readers to apologize.","My ideal retirement life is to stay at home, play games, watch TV shows, pet cats, and refuse any social interaction.","I really like to watch those \"hell jokes\" that are somewhat wicked and offensive, and I can often get the laughs without any psychological burden.","I would go to see works with \"orthopedic\" themes.","I will download and try a game that I have no interest in just to draw or see a character I like.","I think \"social fear\" is not a flaw, but an advanced character design.","In order to pursue efficiency or watch the plot faster, I often use double-speed playback to watch episodes or live videos.","If someone makes bad comments in my comment area, I will directly block them and clean them up.","Compared with the traditional \"kingly, energetic\" characters, I am more attracted to characters with flaws, paranoia, or some dark and cruel characters (such as yandere, gravity, and sinister).","I consider the “second dimension” to be my spiritual refuge, a place where I can go crazy.","When watching movies or playing games, I am keen to dig out the hidden settings and worldview metaphors behind them, and even analyze the details frame by frame.","When I play the game, I will definitely force myself to clear all the branch lines and map question marks.","When I encounter a new show that I like, I will immediately share it with my friends and forcefully promote it."],
+      questions: ["I get angry when I see trolls or stereotypes directed at people in my favorite clique and want to fight back or report them.", "My motto in life is \"Never sit down if you can lie down, never get involved if you can make a mess\".", "When I see the \"High Energy Ahead\" barrage while following up, instead of avoiding it in advance, I will be more attentive in looking forward to the next exciting content.", "I think \"electronic impotence\" is not a disease, but an advanced form after the warehouse of games on Steam is full.", "I will type \"definitely next time\" with muscle memory when the ups ask for three consecutive rounds.", "If I traveled to a different world in the toilet paper drama, the first thing I would do is not become a hero.", "I think \"Zhanli Chef\" going up to the 300th floor to argue about who is stronger is a kind of performance art.", "I don't like to deliberately organize my computer desktop or files, even if it looks messy, I don't bother to do it.", "I often post emo updates or comments late at night because of my overwhelming emotions.", "I think the \"three noes\" attributes are not cold at all, but rather too lazy to do business.", "In real life, I feel a little embarrassed or disgusted when others use \"two-dimensional\" related words to tease me.", "I can have a seamless conversation with strangers at comic exhibitions, \"Teacher, teacher, you are a sweet and soft person...\".", "I think \"party struggle\" is the greatest invention of ACG.", "When the game is stuck, I don’t mind just playing Wind Spirit Moon Shadow.", "I think \"anime Brahmins\" are just the arches that a group of idle people set up for themselves.", "I will follow the entire shitty series just because one OP sounds good.", "After watching a work with a heavy plot or a \"depressing\" one, I have to watch something light and funny to lighten my mood.", "I think it is part of the metaphysical ritual to scold the official after encountering the 0.6% probability of \"drawing cards and sinking the ship\". If you don't scold, it will be even worse next time.", "When I see a long-running or beloved drama finally come to an end, I feel a strong sense of loss and emptiness.", "I am very disgusted with the \"fan circle\" behaviors in the ACG circle such as trolling, criticizing, and ranking.", "I often can’t help but buy discounted games or two-dimensional peripherals, even if I don’t have time to play or unpack them after buying them (that is, “hamster syndrome”).", "I have deep feelings for my favorite Vtubers or characters, and I will be sad for a long time if they \"graduate\" or withdraw from the industry.", "I still fantasize about having superpowers when no one else is around (or in my head), and I even read Chuuni's lines.", "Although I know that some works have weak plots and are like \"industrial saccharine\", I still enjoy watching them because of the cute characters.", "If I were in a fantasy adventure world, I would prefer to survive as a \"win-win\" character in the team who doesn't need to worry about planning and fighting.", "I can quickly sift through the vast library of emoticons to find the most appropriate responses to the moment, and skillfully throw them out in the chat.", "I think the author of a work with a \"feeding ending\" should kowtow to the readers to apologize.", "My ideal retirement life is to stay at home, play games, watch TV shows, pet cats, and refuse any social interaction.", "I really like to watch those \"hell jokes\" that are somewhat wicked and offensive, and I can often get the laughs without any psychological burden.", "I would go to see works with \"orthopedic\" themes.", "I will download and try a game that I have no interest in just to draw or see a character I like.", "I think \"social fear\" is not a flaw, but an advanced character design.", "In order to pursue efficiency or watch the plot faster, I often use double-speed playback to watch episodes or live videos.", "If someone makes bad comments in my comment area, I will directly block them and clean them up.", "Compared with the traditional \"kingly, energetic\" characters, I am more attracted to characters with flaws, paranoia, or some dark and cruel characters (such as yandere, gravity, and sinister).", "I consider the “second dimension” to be my spiritual refuge, a place where I can go crazy.", "When watching movies or playing games, I am keen to dig out the hidden settings and worldview metaphors behind them, and even analyze the details frame by frame.", "When I play the game, I will definitely force myself to clear all the branch lines and map question marks.", "When I encounter a new show that I like, I will immediately share it with my friends and forcefully promote it."],
       heroTitle: 'Free Personality Test',
       steps: [
         ['STEP 1', 'Take the test', 'Answer honestly as yourself to find your personality pattern.'],
@@ -1653,11 +1653,11 @@ export const messages = {
         subtitle: 'The one who lights up the room',
         narrativeRole: 'Main cast core / Mood engine',
         oneLiners: [
-            'You are not background noise. You naturally push the story toward something brighter.',
-            'Even in the darkest script, you will force a fire to spark.',
-            'You effortlessly pull people into your rhythm.',
-            'As long as you are present, the story won\'t end in silence.'
-          ],
+          'You are not background noise. You naturally push the story toward something brighter.',
+          'Even in the darkest script, you will force a fire to spark.',
+          'You effortlessly pull people into your rhythm.',
+          'As long as you are present, the story won\'t end in silence.'
+        ],
         description: 'This is a high-expression, high-drive archetype. You are often the one who lifts the team up, takes initiative, and becomes the emotional engine of the group.',
         spotlight: 'When everyone hesitates, you are the one who steps forward first.',
         weakness: 'You can burn yourself out easily, especially when you carry too much for too long.',
@@ -1667,11 +1667,11 @@ export const messages = {
         subtitle: 'Quiet, but sees clearly',
         narrativeRole: 'Strategist / Calm narrator',
         oneLiners: [
-            'You tuck your emotions beneath a thin layer of ice — hard for anyone to read.',
-            'Rather than rush in, you prefer to study every hidden card and crack first.',
-            'You don\'t trust boiling passion; you trust the most precise timing and absolute reason.',
-            'The noise is always someone else\'s, while you hold the last key to breaking the deadlock.'
-          ],
+          'You tuck your emotions beneath a thin layer of ice — hard for anyone to read.',
+          'Rather than rush in, you prefer to study every hidden card and crack first.',
+          'You don\'t trust boiling passion; you trust the most precise timing and absolute reason.',
+          'The noise is always someone else\'s, while you hold the last key to breaking the deadlock.'
+        ],
         description: 'This is a low-expression, high-judgment archetype. You usually read the rules first, then the people, and only then decide whether to step in.',
         spotlight: 'When everyone misses the pattern, you are the one who connects the clues.',
         weakness: 'You keep distance so naturally that you may miss warmer connections that were actually possible.',
@@ -1681,11 +1681,11 @@ export const messages = {
         subtitle: 'The one who carries the team',
         narrativeRole: 'Leader / Formation anchor',
         oneLiners: [
-            'You can\'t just stand by — you instinctively take on responsibility and order.',
-            'When the storm hits, you are the load-bearing wall everyone leans on inside.',
-            'You\'re not just winning — you\'re making sure everyone makes it to the finish line alive.',
-            'Battered and bruised, you\'ll still step in front of everyone to block the next blow.'
-          ],
+          'You can\'t just stand by — you instinctively take on responsibility and order.',
+          'When the storm hits, you are the load-bearing wall everyone leans on inside.',
+          'You\'re not just winning — you\'re making sure everyone makes it to the finish line alive.',
+          'Battered and bruised, you\'ll still step in front of everyone to block the next blow.'
+        ],
         description: 'This is a high-order, high-drive support archetype. In a group, you act like a stabilizing frame: able to hold pressure and step up when consequences need to be carried.',
         spotlight: 'You may not be the loudest person, but you are often the one still standing at the end.',
         weakness: 'You care so much about responsibility that your own needs often come last.',
@@ -1695,11 +1695,11 @@ export const messages = {
         subtitle: 'Always finding a new angle',
         narrativeRole: 'Deuteragonist / Wildcard',
         oneLiners: [
-            'You don\'t always play by the rules, but you always twist the plot in a new direction.',
-            'The moment you get bored is when the rules collapse and the real show begins.',
-            'You never use the front door, yet you always find that hidden window fastest when cornered.',
-            'Your rhythm is a mystery, and your opponents are always one beat behind.'
-          ],
+          'You don\'t always play by the rules, but you always twist the plot in a new direction.',
+          'The moment you get bored is when the rules collapse and the real show begins.',
+          'You never use the front door, yet you always find that hidden window fastest when cornered.',
+          'Your rhythm is a mystery, and your opponents are always one beat behind.'
+        ],
         description: 'This is a high-expression, high-mobility archetype. You are sensitive to change, dislike being locked into one role, and are good at creating openings through flexibility.',
         spotlight: 'When the rules start trapping people, you look for the gap.',
         weakness: 'Too much changeability can make you hard to pin down, even for yourself.',
@@ -1709,11 +1709,11 @@ export const messages = {
         subtitle: 'The one who stitches the cracks back together',
         narrativeRole: 'Healer / Emotional relay',
         oneLiners: [
-            'You may not be the brightest in the room, but you always provide the most solid support.',
-            'When the world shows its sharpest edges, you catch every fall in the softest way.',
-            'You don\'t need a thunderous entrance — your presence itself is a long, deep breath.',
-            'Others care how high they fly; you care how deep their wounds run.'
-          ],
+          'You may not be the brightest in the room, but you always provide the most solid support.',
+          'When the world shows its sharpest edges, you catch every fall in the softest way.',
+          'You don\'t need a thunderous entrance — your presence itself is a long, deep breath.',
+          'Others care how high they fly; you care how deep their wounds run.'
+        ],
         description: 'This is a high-warmth, high-support archetype. You are sensitive to fragility in relationships and often help restore connection, soothe emotion, and hold people together.',
         spotlight: 'You tend to reach out at exactly the moment someone is about to fall.',
         weakness: 'You can over-empathize and carry pain that was never yours to begin with.',
@@ -1723,11 +1723,11 @@ export const messages = {
         subtitle: 'The one laying the board in the dark',
         narrativeRole: 'Backroom operator / Hidden advisor',
         oneLiners: [
-            'You survey the whole board first, then decide where to place yourself.',
-            'Everyone thinks events are just unfolding — only you know the board was set long ago.',
-            'You don\'t need center stage, because the stage itself is already within your calculations.',
-            'While others cheer for winning a single round, you have already seen ten moves ahead.'
-          ],
+          'You survey the whole board first, then decide where to place yourself.',
+          'Everyone thinks events are just unfolding — only you know the board was set long ago.',
+          'You don\'t need center stage, because the stage itself is already within your calculations.',
+          'While others cheer for winning a single round, you have already seen ten moves ahead.'
+        ],
         description: 'This is a high-judgment, high-presence archetype. You are good at extracting structure from complexity, staying quiet early on, and changing the situation once you act.',
         spotlight: 'Others think events are unfolding on their own, while you already saw the board taking shape.',
         weakness: 'Your habit of anticipating everything can make you feel distant or overly controlling.',
@@ -1737,11 +1737,11 @@ export const messages = {
         subtitle: 'The one who detonates the plot',
         narrativeRole: 'Twist trigger / Scene igniter',
         oneLiners: [
-            'The moment you show up, the atmosphere starts becoming unpredictable.',
-            'You hate a script you can see the end of — you exist to flip the story.',
-            'Don\'t reason with the rules — blowing up a dull spot is your true home turf.',
-            'You\'d rather watch the sparks fly when the situation spirals than claim a perfect victory.'
-          ],
+          'The moment you show up, the atmosphere starts becoming unpredictable.',
+          'You hate a script you can see the end of — you exist to flip the story.',
+          'Don\'t reason with the rules — blowing up a dull spot is your true home turf.',
+          'You\'d rather watch the sparks fly when the situation spirals than claim a perfect victory.'
+        ],
         description: 'This is a high-drive, high-volatility archetype. You dislike flat momentum and often disrupt stable situations to create new sparks, which makes you both risky and dramatic.',
         spotlight: 'You are not here to preserve the scene. You are here to make the story move.',
         weakness: 'Too much momentum can push the whole situation beyond recovery.',
@@ -1751,11 +1751,11 @@ export const messages = {
         subtitle: 'The one standing quietly at the boundary',
         narrativeRole: 'Guardian / Barrier keeper',
         oneLiners: [
-            'You\'re not the brightest one rushing to the front, but you\'ll always guard what matters.',
-            'When every light fades, you are the last uncrossable line of defense.',
-            'The protagonist runs forward; you make sure they still have somewhere to return.',
-            'The world chases the spotlight — you stand here, an unbreakable barrier.'
-          ],
+          'You\'re not the brightest one rushing to the front, but you\'ll always guard what matters.',
+          'When every light fades, you are the last uncrossable line of defense.',
+          'The protagonist runs forward; you make sure they still have somewhere to return.',
+          'The world chases the spotlight — you stand here, an unbreakable barrier.'
+        ],
         description: 'This is a low-expression, high-order, high-stability archetype. You do not seek the spotlight, but when needed you step in quietly and remain there like moonlight.',
         spotlight: 'You are more like a steady background glow than a flash that lights up the whole room at once.',
         weakness: 'Too much restraint can make others overlook your needs while your emotions build up in silence.',
@@ -2044,37 +2044,37 @@ export const messages = {
       saveImage: 'Generate & Share Identity Card',
     },
     stats: {
-    title: 'Global Personality Distribution',
-    subtitle: 'Real-time statistics based on all anonymous test results',
-    overview: {
-      total: 'Total Tests',
-      today: 'Today',
-      last24h: 'Last 24 Hours',
-    },
-    archetypes: {
-      title: 'Archetype Rankings',
-      subtitle: 'Distribution across 8 character archetypes',
-      rank: 'Rank',
-      name: 'Archetype',
-      count: 'Matches',
-      percent: 'Share',
-    },
-    characters: {
-      title: 'Character Match Rankings',
-      subtitle: 'Most frequently matched characters',
-      rank: 'Rank',
-      name: 'Character',
-      count: 'Matches',
-      percent: 'Share',
-      loadMore: 'Load More',
-      showing: 'Showing {current} / {total} characters',
-    },
-    startNote: 'Statistics have been recorded since April 18, 2026 at 18:00',
-    footer: {
-      note: 'Data shown is anonymized aggregate statistics. Not a scientific personality assessment. For entertainment purposes only.',
-      updateFreq: 'Data updates every 15 minutes',
-      lastUpdate: 'Last updated: {time}',
-    },
+      title: 'Global Personality Distribution',
+      subtitle: 'Real-time statistics based on all anonymous test results',
+      overview: {
+        total: 'Total Tests',
+        today: 'Today',
+        last24h: 'Last 24 Hours',
+      },
+      archetypes: {
+        title: 'Archetype Rankings',
+        subtitle: 'Distribution across 8 character archetypes',
+        rank: 'Rank',
+        name: 'Archetype',
+        count: 'Matches',
+        percent: 'Share',
+      },
+      characters: {
+        title: 'Character Match Rankings',
+        subtitle: 'Most frequently matched characters',
+        rank: 'Rank',
+        name: 'Character',
+        count: 'Matches',
+        percent: 'Share',
+        loadMore: 'Load More',
+        showing: 'Showing {current} / {total} characters',
+      },
+      startNote: 'Statistics have been recorded since April 18, 2026 at 18:00',
+      footer: {
+        note: 'Data shown is anonymized aggregate statistics. Not a scientific personality assessment. For entertainment purposes only.',
+        updateFreq: 'Data updates every 15 minutes',
+        lastUpdate: 'Last updated: {time}',
+      },
     },
   },
 
@@ -2216,7 +2216,7 @@ export const messages = {
       dimensions: ['外向 / 内向', '感覚 / 直観', '思考 / 感情', '判断 / 知覚'],
     },
     quiz: {
-        questions: ["私は、自分の好きな派閥の人々に向けられた荒らしや固定観念を見ると腹が立ち、反撃したり通報したくなります。","私の人生のモットーは「横になれるなら座らない、散らかしてもいいなら絶対に関わらない」です。","フォロー中に「High Energy Ahead」の連発を目にすると、事前に回避するのではなく、次のエキサイティングなコンテンツを期待して注意を払うようになります。","「電子的インポテンス」は病気ではなく、Steam のゲーム倉庫がいっぱいになった後の進行形だと思います。","アップが 3 ラウンド連続で要求したとき、私は筋肉の記憶で「必ず次回」と入力します。","トイレットペーパーのドラマで私が異世界にトリップしたら、まずヒーローになることはありません。","「ザンリシェフ」が300階まで行ってどちらが強いかを議論するのは一種のパフォーマンスアートだと思います。","私はコンピューターのデスクトップやファイルを意図的に整理するのが好きではありません。たとえ乱雑に見えても、わざわざ整理することはありません。","感情が高ぶりすぎて深夜にエモの更新やコメントを投稿することが多いです。","「3つのノー」属性は決して冷たいのではなく、むしろビジネスをするのに怠けすぎるのだと思います。","実生活でも、他人から「二次元」関連の言葉でからかわれると、少し恥ずかしかったり嫌悪感を感じたりします。","漫画展示会などで見知らぬ人とも「先生、先生、優しくて柔らかい人ですね…」とシームレスに会話できる。","私は「党派闘争」がACG最大の発明だと思っています。","ゲームに行き詰まったときは、『風霊月影』をプレイするだけでも構いません。","「アニメのバラモン」は、怠惰な人々の集団が自分たちのために立てたアーチにすぎないと思います。","1 つの OP が良いという理由だけで、クソシリーズ全体をフォローします。","重いストーリーや「憂鬱な」作品を見た後は、気分を軽くするために軽くて面白いものを見なければなりません。","0.6%の確率で「カードを引いて船を沈める」という事態に遭遇した後、役人を叱るのは形而上学的な儀式の一部だと思う。叱らないと次はさらにひどいことになります。","長く続いたドラマや愛されたドラマがついに終了するのを見ると、強い喪失感と虚無感を感じます。","私はACGサークルにおける荒らし、批判、ランキングなどの「ファンサークル」行為に非常に嫌悪感を持っています。","たとえ、購入後にプレイしたり開梱したりする時間がなくても、割引価格のゲームや 2 次元の周辺機器を買わずにはいられないことがよくあります (つまり、「ハムスター症候群」)。","大好きなVtuberやキャラクターには思い入れが深いので、もし彼らが「卒業」したり業界から撤退したりすると、ずっと悲しいです。","私は今でも周りに誰もいないとき（または頭の中で）超能力を持つことを空想し、チュウニのセリフを読んだりします。","作品によってはストーリーが弱くて「業界の甘ったるい」ような作品もあるのは承知していますが、キャラクターが可愛いので楽しく観ています。","もし私がファンタジーアドベンチャーの世界にいるとしたら、計画や戦闘について心配する必要のない、チーム内で「win-win」のキャラクターとして生き残ることを好みます。","顔文字の膨大なライブラリをすばやく調べて、その瞬間に最も適切な応答を見つけて、それらをチャットに巧みに投げかけることができます。","「餌付けエンド」のある作品の作者は読者に平伏して謝罪すべきだと思う。","私の理想的な退職後の生活は、家にいてゲームをしたり、テレビ番組を見たり、猫を撫でたりして、社会的な交流を一切拒否することです。","私は、ちょっと邪悪で不快な「地獄のジョーク」を見るのが大好きで、心理的な負担なく笑いを得ることができます。","「整形外科」をテーマにした作品を観に行ったりしていました。","好きなキャラクターを描いたり見たりするためだけに、興味のないゲームをダウンロードして試してみます。","「社会的恐怖」は欠点ではなく、高度なキャラクターデザインだと思います。","効率を追求したり、あらすじをより早く見るために、私は倍速再生を使用してエピソードやライブビデオを視聴することがよくあります。","誰かが私のコメント欄に悪いコメントをした場合は、私が直接ブロックして削除します。","従来の「王らしく、元気な」キャラクターと比較して、私は欠陥、パラノイア、またはいくつかの暗くて残酷なキャラクター（ヤンデレ、重力、邪悪なキャラクターなど）を持ったキャラクターにもっと惹かれます。","私は「二次元」を精神的な避難場所、夢中になれる場所だと考えています。","映画を見たりゲームをしたりするとき、その背後に隠された設定や世界観のメタファーを掘り出し、さらにはフレームごとに詳細を分析することに熱心です。","ゲームをプレイするときは、必ずすべての分岐線とマップのクエスチョンマークを強制的にクリアします。","気に入った新しい番組に出会うと、すぐに友達と共有して強制的に宣伝します。"],
+      questions: ["私は、自分の好きな派閥の人々に向けられた荒らしや固定観念を見ると腹が立ち、反撃したり通報したくなります。", "私の人生のモットーは「横になれるなら座らない、散らかしてもいいなら絶対に関わらない」です。", "フォロー中に「High Energy Ahead」の連発を目にすると、事前に回避するのではなく、次のエキサイティングなコンテンツを期待して注意を払うようになります。", "「電子的インポテンス」は病気ではなく、Steam のゲーム倉庫がいっぱいになった後の進行形だと思います。", "アップが 3 ラウンド連続で要求したとき、私は筋肉の記憶で「必ず次回」と入力します。", "トイレットペーパーのドラマで私が異世界にトリップしたら、まずヒーローになることはありません。", "「ザンリシェフ」が300階まで行ってどちらが強いかを議論するのは一種のパフォーマンスアートだと思います。", "私はコンピューターのデスクトップやファイルを意図的に整理するのが好きではありません。たとえ乱雑に見えても、わざわざ整理することはありません。", "感情が高ぶりすぎて深夜にエモの更新やコメントを投稿することが多いです。", "「3つのノー」属性は決して冷たいのではなく、むしろビジネスをするのに怠けすぎるのだと思います。", "実生活でも、他人から「二次元」関連の言葉でからかわれると、少し恥ずかしかったり嫌悪感を感じたりします。", "漫画展示会などで見知らぬ人とも「先生、先生、優しくて柔らかい人ですね…」とシームレスに会話できる。", "私は「党派闘争」がACG最大の発明だと思っています。", "ゲームに行き詰まったときは、『風霊月影』をプレイするだけでも構いません。", "「アニメのバラモン」は、怠惰な人々の集団が自分たちのために立てたアーチにすぎないと思います。", "1 つの OP が良いという理由だけで、クソシリーズ全体をフォローします。", "重いストーリーや「憂鬱な」作品を見た後は、気分を軽くするために軽くて面白いものを見なければなりません。", "0.6%の確率で「カードを引いて船を沈める」という事態に遭遇した後、役人を叱るのは形而上学的な儀式の一部だと思う。叱らないと次はさらにひどいことになります。", "長く続いたドラマや愛されたドラマがついに終了するのを見ると、強い喪失感と虚無感を感じます。", "私はACGサークルにおける荒らし、批判、ランキングなどの「ファンサークル」行為に非常に嫌悪感を持っています。", "たとえ、購入後にプレイしたり開梱したりする時間がなくても、割引価格のゲームや 2 次元の周辺機器を買わずにはいられないことがよくあります (つまり、「ハムスター症候群」)。", "大好きなVtuberやキャラクターには思い入れが深いので、もし彼らが「卒業」したり業界から撤退したりすると、ずっと悲しいです。", "私は今でも周りに誰もいないとき（または頭の中で）超能力を持つことを空想し、チュウニのセリフを読んだりします。", "作品によってはストーリーが弱くて「業界の甘ったるい」ような作品もあるのは承知していますが、キャラクターが可愛いので楽しく観ています。", "もし私がファンタジーアドベンチャーの世界にいるとしたら、計画や戦闘について心配する必要のない、チーム内で「win-win」のキャラクターとして生き残ることを好みます。", "顔文字の膨大なライブラリをすばやく調べて、その瞬間に最も適切な応答を見つけて、それらをチャットに巧みに投げかけることができます。", "「餌付けエンド」のある作品の作者は読者に平伏して謝罪すべきだと思う。", "私の理想的な退職後の生活は、家にいてゲームをしたり、テレビ番組を見たり、猫を撫でたりして、社会的な交流を一切拒否することです。", "私は、ちょっと邪悪で不快な「地獄のジョーク」を見るのが大好きで、心理的な負担なく笑いを得ることができます。", "「整形外科」をテーマにした作品を観に行ったりしていました。", "好きなキャラクターを描いたり見たりするためだけに、興味のないゲームをダウンロードして試してみます。", "「社会的恐怖」は欠点ではなく、高度なキャラクターデザインだと思います。", "効率を追求したり、あらすじをより早く見るために、私は倍速再生を使用してエピソードやライブビデオを視聴することがよくあります。", "誰かが私のコメント欄に悪いコメントをした場合は、私が直接ブロックして削除します。", "従来の「王らしく、元気な」キャラクターと比較して、私は欠陥、パラノイア、またはいくつかの暗くて残酷なキャラクター（ヤンデレ、重力、邪悪なキャラクターなど）を持ったキャラクターにもっと惹かれます。", "私は「二次元」を精神的な避難場所、夢中になれる場所だと考えています。", "映画を見たりゲームをしたりするとき、その背後に隠された設定や世界観のメタファーを掘り出し、さらにはフレームごとに詳細を分析することに熱心です。", "ゲームをプレイするときは、必ずすべての分岐線とマップのクエスチョンマークを強制的にクリアします。", "気に入った新しい番組に出会うと、すぐに友達と共有して強制的に宣伝します。"],
       heroTitle: '無料性格テスト',
       steps: [
         ['STEP 1', '質問に答える', '取り繕わず、普段の自分として答えてください。'],
@@ -2227,8 +2227,8 @@ export const messages = {
       noticeB: '結果はこのブラウザにのみ保存されます。メールや性別などの個人情報は収集しません。',
       noticeC: 'ACGTI は静的サイトであり、回答データはブラウザ内にのみ保存され、サーバーへは送信されません。',
       missingQuestion: '（設問なし）',
-        agree: '同意する',
-        disagree: '反対する',
+      agree: '同意する',
+      disagree: '反対する',
       questionLabel: '質問 {index}',
       progressHint: '{answered} / {total} 問回答済み',
       submit: '結果を見る',
@@ -2365,11 +2365,11 @@ export const messages = {
         subtitle: '静かだけど、よく見えている人',
         narrativeRole: '軍師 / 冷静なナレーター',
         oneLiners: [
-            'あなたは感情を薄氷の下にしまい込む人で、外からはなかなか読めません。',
-            'むやみに飛び込むより、すべての手札と弱点を徹底的に見極める方を選びます。',
-            '沸騰する情熱は信じない。信じるのは最も正確なタイミングと絶対的な理性だけ。',
-            '騒がしさはいつも他人のもの、而你は局面を開く最後の鍵を握っています。'
-          ],
+          'あなたは感情を薄氷の下にしまい込む人で、外からはなかなか読めません。',
+          'むやみに飛び込むより、すべての手札と弱点を徹底的に見極める方を選びます。',
+          '沸騰する情熱は信じない。信じるのは最も正確なタイミングと絶対的な理性だけ。',
+          '騒がしさはいつも他人のもの、而你は局面を開く最後の鍵を握っています。'
+        ],
         description: '低表現・高判断の原型です。まずルールを見て、次に人を見て、それから介入するかを決める傾向があります。',
         spotlight: 'みんなが見落としているとき、あなたは重要な手がかりをつなぎ合わせます。',
         weakness: '距離を保つことに慣れすぎて、もっと熱い結びつきを逃してしまうことがあります。',
@@ -2379,11 +2379,11 @@ export const messages = {
         subtitle: 'チームを肩で支える人',
         narrativeRole: 'リーダー / 隊列の軸',
         oneLiners: [
-            'ただ傍観することはできず、自然と責任と秩序を引き受けます。',
-            '嵐が来たとき、みんなが心の中で頼りにする最も頑丈な耐力壁はあなたです。',
-            'ただ勝つだけでなく、全員が生きてゴールにたどり着くことを確信します。',
-            '傷だらけになっても、全員の前に立って次の衝撃を挡み続けます。'
-          ],
+          'ただ傍観することはできず、自然と責任と秩序を引き受けます。',
+          '嵐が来たとき、みんなが心の中で頼りにする最も頑丈な耐力壁はあなたです。',
+          'ただ勝つだけでなく、全員が生きてゴールにたどり着くことを確信します。',
+          '傷だらけになっても、全員の前に立って次の衝撃を挡み続けます。'
+        ],
         description: '高秩序・高推進の支柱型原型です。チームの中で安定した骨組みのように働き、圧力に耐え、要所では責任を背負います。',
         spotlight: 'いちばん騒がしい人ではなくても、最後まで立っているのはあなたです。',
         weakness: '責任を重く受け止めすぎて、自分のことを後回しにしがちです。',
@@ -2393,11 +2393,11 @@ export const messages = {
         subtitle: 'いつも局面をひねって変える人',
         narrativeRole: 'サブ主人公 / 局面打開役',
         oneLiners: [
-            '常識通りに cards を出さないかもしれないが、いつもストーリーを新しい角度にひねります。',
-            'あなたが退屈し始めた瞬間、ルールが崩壊し、本当のショーが始まります。',
-            '正面玄関は使わない、でも絶体絶命のとき、隠された窓を一番早く見つけるのはあなた。',
-            'あなたのリズムは謎で、対戦相手はいつも一拍遅れるしかありません。'
-          ],
+          '常識通りに cards を出さないかもしれないが、いつもストーリーを新しい角度にひねります。',
+          'あなたが退屈し始めた瞬間、ルールが崩壊し、本当のショーが始まります。',
+          '正面玄関は使わない、でも絶体絶命のとき、隠された窓を一番早く見つけるのはあなた。',
+          'あなたのリズムは謎で、対戦相手はいつも一拍遅れるしかありません。'
+        ],
         description: '高表現・高機動の原型です。変化に敏感で、一つの役割に固定されるのを嫌い、柔軟さで転機を作るのが得意です。',
         spotlight: 'ルールが人を詰まらせ始めたとき、あなたは隙間を探します。',
         weakness: '変化を好みすぎると、周囲にも自分にも安定感を失わせることがあります。',
@@ -2407,11 +2407,11 @@ export const messages = {
         subtitle: 'ひび割れを少しずつ縫い直す人',
         narrativeRole: '回復役 / 感情の中継者',
         oneLiners: [
-            '一番目立つ存在ではないかもしれないが、いつも最も確かな支えになります。',
-            '世界が最も鋭い刃を向ける时、あなたは最も柔らかい方法ですべての落下を受け止めます。',
-            '轟くような登場は不要、あなたの存在そのものが深く長い呼吸です。',
-            '他人はどれだけ高く飛べるかを気にするが、あなたは傷がどれだけ深いかを気にします。'
-          ],
+          '一番目立つ存在ではないかもしれないが、いつも最も確かな支えになります。',
+          '世界が最も鋭い刃を向ける时、あなたは最も柔らかい方法ですべての落下を受け止めます。',
+          '轟くような登場は不要、あなたの存在そのものが深く長い呼吸です。',
+          '他人はどれだけ高く飛べるかを気にするが、あなたは傷がどれだけ深いかを気にします。'
+        ],
         description: '高温度・高支援の原型です。関係の中の脆さに敏感で、感情を和らげ、つながりを保ち、人を回復させる役に向いています。',
         spotlight: '誰かが落ちそうになるその瞬間、ちょうど手を差し伸べられる人です。',
         weakness: '共感しすぎて、本来は背負わなくていい痛みまで抱え込みやすいです。',
@@ -2421,11 +2421,11 @@ export const messages = {
         subtitle: '暗がりで盤面を整える人',
         narrativeRole: '裏方操作者 / 黒幕参謀',
         oneLiners: [
-            '全体を見渡してから、自分の立つ位置を決めます。',
-            'みんなは事態が自然に動いていると思っている、盤面がとっくに準備されていたことを知っているのはあなただけ。',
-            'センターの舞台に立つ必要はない、舞台そのものがもうあなたの計算の中にあるから。',
-            '他の人が一回の勝利に歓声を上げている間に、あなたはすでに十手先まで見ています。'
-          ],
+          '全体を見渡してから、自分の立つ位置を決めます。',
+          'みんなは事態が自然に動いていると思っている、盤面がとっくに準備されていたことを知っているのはあなただけ。',
+          'センターの舞台に立つ必要はない、舞台そのものがもうあなたの計算の中にあるから。',
+          '他の人が一回の勝利に歓声を上げている間に、あなたはすでに十手先まで見ています。'
+        ],
         description: '高判断・高気配の原型です。複雑な状況から構造を抜き出すのが得意で、すぐには表に出なくても、一度動けば戦局に大きく影響します。',
         spotlight: 'みんなは流れに押されていると思っていても、盤面ができていたことを知っているのはあなただけです。',
         weakness: '先を読みすぎることで、近寄りがたく見えたり、コントロールしすぎたりしやすいです。',
@@ -2435,11 +2435,11 @@ export const messages = {
         subtitle: '物語を爆発させる人',
         narrativeRole: '転換トリガー / 爆発製造機',
         oneLiners: [
-            'あなたが現れた瞬間、空気が予測不可能になり始めます。',
-            '結末が見える台本は嫌いです、あなたは物語をひっくり返すために存在しています。',
-            'ルールに道理を説くより、平坦な局面を爆撃するのがあなたの本来の home ground。',
-            '完璧な勝利より、状況が制御を失った時に弾ける火花の方が好きです。'
-          ],
+          'あなたが現れた瞬間、空気が予測不可能になり始めます。',
+          '結末が見える台本は嫌いです、あなたは物語をひっくり返すために存在しています。',
+          'ルールに道理を説くより、平坦な局面を爆撃するのがあなたの本来の home ground。',
+          '完璧な勝利より、状況が制御を失った時に弾ける火花の方が好きです。'
+        ],
         description: '高推進・高不安定の原型です。平坦な展開を好まず、安定した状況をかき混ぜて新しい火花を生み出します。',
         spotlight: 'あなたは場を安定させるためではなく、物語を動かすために存在します。',
         weakness: '勢いが強すぎると、状況全体を収拾不能にしてしまうことがあります。',
@@ -2449,11 +2449,11 @@ export const messages = {
         subtitle: '境界に静かに立つ人',
         narrativeRole: '護衛役 / 結界保持者',
         oneLiners: [
-            '一番前に突進む最も明るい存在ではないかもしれないが、大切な人と物事をずっと守り続けます。',
-            'すべての光が消えたとき、最後に立ちはだかる越えられない境界線はあなたです。',
-            '主人公は前へ走る役、あなたは彼らに帰る場所があることを確保する役です。',
-            '世界はスポットライトを追いかける、あなたはここに立つ、それが消えない barrier です。'
-          ],
+          '一番前に突進む最も明るい存在ではないかもしれないが、大切な人と物事をずっと守り続けます。',
+          'すべての光が消えたとき、最後に立ちはだかる越えられない境界線はあなたです。',
+          '主人公は前へ走る役、あなたは彼らに帰る場所があることを確保する役です。',
+          '世界はスポットライトを追いかける、あなたはここに立つ、それが消えない barrier です。'
+        ],
         description: '低表現・高秩序・高安定の原型です。目立とうとはしませんが、必要なときには静かに前へ出て、月光のようにそこに在り続けます。',
         spotlight: '一瞬で全体を照らす稲妻というより、消えない背景光のような存在です。',
         weakness: '抑え込みすぎると、自分の必要が見落とされ、感情が深く積もっていきます。',
@@ -2742,37 +2742,37 @@ export const messages = {
       saveImage: 'アイデンティティカードを生成・シェア',
     },
     stats: {
-    title: '全世界の性格分佈',
-    subtitle: 'すべての匿名テスト結果に基づくリアルタイム統計',
-    overview: {
-      total: '総テスト数',
-      today: '今日のテスト',
-      last24h: '過去24時間',
-    },
-    archetypes: {
-      title: 'アーキタイプランキング',
-      subtitle: '8つのキャラアーキタイプの分布',
-      rank: '順位',
-      name: 'アーキタイプ',
-      count: 'マッチ数',
-      percent: '割合',
-    },
-    characters: {
-      title: 'キャラマッチランキング',
-      subtitle: '最もマッチしやすいキャラクター',
-      rank: '順位',
-      name: 'キャラクター',
-      count: 'マッチ数',
-      percent: '割合',
-      loadMore: 'もっと見る',
-      showing: '{current} / {total} キャラを表示中',
-    },
-    startNote: '統計データは 2026.4.18 18:00 から記録されています',
-    footer: {
-      note: 'データは匿名統計集計です。科学的な性格診断ではありません。娯楽目的のみ。',
-      updateFreq: 'データは15分ごとに更新されます',
-      lastUpdate: '最終更新：{time}',
-    },
+      title: '全世界の性格分佈',
+      subtitle: 'すべての匿名テスト結果に基づくリアルタイム統計',
+      overview: {
+        total: '総テスト数',
+        today: '今日のテスト',
+        last24h: '過去24時間',
+      },
+      archetypes: {
+        title: 'アーキタイプランキング',
+        subtitle: '8つのキャラアーキタイプの分布',
+        rank: '順位',
+        name: 'アーキタイプ',
+        count: 'マッチ数',
+        percent: '割合',
+      },
+      characters: {
+        title: 'キャラマッチランキング',
+        subtitle: '最もマッチしやすいキャラクター',
+        rank: '順位',
+        name: 'キャラクター',
+        count: 'マッチ数',
+        percent: '割合',
+        loadMore: 'もっと見る',
+        showing: '{current} / {total} キャラを表示中',
+      },
+      startNote: '統計データは 2026.4.18 18:00 から記録されています',
+      footer: {
+        note: 'データは匿名統計集計です。科学的な性格診断ではありません。娯楽目的のみ。',
+        updateFreq: 'データは15分ごとに更新されます',
+        lastUpdate: '最終更新：{time}',
+      },
     },
   },
 } as const

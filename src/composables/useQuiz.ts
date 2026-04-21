@@ -1,37 +1,17 @@
 import { computed, reactive, readonly, ref } from 'vue'
 
+import questionsData from '../data/aitiQuestions.json'
+import archetypesData from '../data/aitiArchetypes.json'
+import charactersData from '../data/aitiCharacters.json'
+
 import type { Archetype, CharacterMatch, Question, QuizRecord, QuizResult } from '../types/quiz'
 import { hydrateCharacterVisual, hydrateQuizRecord } from '../utils/characterVisuals'
 import { calculateQuizResult, createDebugQuizResult } from '../utils/quizEngine'
 import { clearLastRecord, loadLastRecord, saveLastRecord } from '../utils/storage'
 
-// ── 异步加载数据 ──────────────────────────────────────────
-// 数据不再顶层静态导入，改为首次使用时按需异步加载
-let quizDataPromise: Promise<{
-  questions: Question[]
-  archetypes: Archetype[]
-  characters: CharacterMatch[]
-}> | null = null
-
-function loadQuizData() {
-  if (!quizDataPromise) {
-    quizDataPromise = Promise.all([
-      import('../data/questions.json'),
-      import('../data/archetypes.json'),
-      import('../data/characters.json'),
-    ]).then(([q, a, c]) => ({
-      questions: q.default as Question[],
-      archetypes: a.default as Archetype[],
-      characters: (c.default as CharacterMatch[]).map(hydrateCharacterVisual),
-    }))
-  }
-  return quizDataPromise
-}
-
-// ── 同步数据引用（数据加载完毕后赋值） ──────────────────────
-const questions = ref<Question[]>([])
-const archetypes = ref<Archetype[]>([])
-const characters = ref<CharacterMatch[]>([])
+const questions = ref<Question[]>((questionsData as Question[]) ?? [])
+const archetypes = ref<Archetype[]>((archetypesData as Archetype[]) ?? [])
+const characters = ref<CharacterMatch[]>((charactersData as CharacterMatch[]).map(hydrateCharacterVisual))
 
 // 数据是否已就绪
 const dataReady = computed(() => questions.value.length > 0)
@@ -119,16 +99,24 @@ function finalizeQuiz(): QuizResult | null {
     characters: characters.value,
   })
 
+  const submissionId = typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function'
+    ? crypto.randomUUID()
+    : `${Date.now()}-${Math.random().toString(36).slice(2, 10)}`
+
   const record: QuizRecord = {
     answers: [...state.answers],
     createdAt: new Date().toISOString(),
     startedAt: state.startedAt || undefined,
-    submissionId: crypto.randomUUID(),
+    submissionId,
     result,
   }
 
   state.latestRecord = hydrateQuizRecord(record)
-  saveLastRecord(record)
+  try {
+    saveLastRecord(record)
+  } catch (error) {
+    console.warn('Failed to persist latest quiz record', error)
+  }
 
   return result
 }
@@ -139,12 +127,10 @@ function resumeLastResult() {
 
 export function useQuiz() {
   return {
-    // 异步初始化：调用方在需要数据时 await
     ensureData: async () => {
-      const data = await loadQuizData()
-      questions.value = data.questions
-      archetypes.value = data.archetypes
-      characters.value = data.characters
+      questions.value = (questionsData as Question[]) ?? []
+      archetypes.value = (archetypesData as Archetype[]) ?? []
+      characters.value = (charactersData as CharacterMatch[]).map(hydrateCharacterVisual)
       // 如果 answers 长度和 questions 不匹配，重置
       if (state.answers.length !== questions.value.length) {
         state.answers = emptyAnswers()

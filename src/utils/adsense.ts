@@ -5,7 +5,7 @@ declare global {
 }
 
 const ADSENSE_CLIENT = String(import.meta.env.VITE_ADSENSE_CLIENT ?? 'ca-pub-1224030144383381').trim()
-const ADSENSE_SCRIPT_ID = 'acgti-adsense-script'
+const ADSENSE_SCRIPT_ID = 'aiti-adsense-script'
 
 export function getAdsenseClient() {
   return ADSENSE_CLIENT
@@ -41,7 +41,7 @@ export function requestAdsenseSlot() {
   }
 
   try {
-    ;(window.adsbygoogle = window.adsbygoogle || []).push({})
+    ; (window.adsbygoogle = window.adsbygoogle || []).push({})
   } catch (error) {
     console.error('AdSense slot request failed:', error)
   }

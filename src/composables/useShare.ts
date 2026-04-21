@@ -16,22 +16,22 @@ function createShareText(result: QuizResult) {
     ? t(`result.rarityTiers.${rarityMeta.tier}`, undefined, rarityMeta.tier)
     : '--'
   const displayProbability = formatCharacterProbability(result.matchProbability)
-  const siteUrl = 'https://acgti.tianxingleo.top'
+  const siteUrl = 'https://aiti.tianxingleo.top'
 
   return [
     t('app.common.shareCode', { code: result.code }),
     featured
       ? t('app.common.shareCharacter', {
-          name: getLocalizedCharacterName(featured, locale),
-          series: getLocalizedCharacterSeries(featured, locale),
-        })
+        name: getLocalizedCharacterName(featured, locale),
+        series: getLocalizedCharacterSeries(featured, locale),
+      })
       : t('app.common.shareUnknown'),
     rarityMeta
       ? t('app.common.shareRarity', {
-          tier: rarityLabel,
-          rank: rarityMeta.rank,
-          total: rarityMeta.total,
-        })
+        tier: rarityLabel,
+        rank: rarityMeta.rank,
+        total: rarityMeta.total,
+      })
       : null,
     t('app.common.shareProbability', { prob: displayProbability }),
     t('app.common.shareProbabilityDesc'),
@@ -68,7 +68,7 @@ export function useShare() {
 
       const link = document.createElement('a')
       link.href = dataUrl
-      link.download = `acgti-${result.archetype.id}.png`
+      link.download = `aiti-${result.archetype.id}.png`
       link.click()
       feedback.value = t('app.common.exportSuccess')
     } catch {

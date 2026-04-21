@@ -183,7 +183,7 @@ const raritySummaryLabel = computed(() => {
       <div class="share-poster__inner">
         <div class="share-poster__copy">
           <div class="share-poster__header">
-            <p class="share-poster__kicker">{{ t('result.shareCard', undefined, 'ACG TYPE INDICATOR') }}</p>
+            <p class="share-poster__kicker">{{ t('result.shareCard', undefined, 'AITI 模型画像') }}</p>
             <div class="share-poster__title-row">
               <span class="share-poster__code">{{ result.code }}</span>
               <p v-if="primaryCharacter?.personaBasis?.type === 'fandom-impression'" class="share-poster__basis-tip">
@@ -231,12 +231,12 @@ const raritySummaryLabel = computed(() => {
 
           <div class="share-poster__footer">
             <div class="footer-left">
-              <div class="footer-logo">ACGTI</div>
+              <div class="footer-logo">AITI</div>
               <div class="footer-desc">{{ t('result.testNote', undefined, '你的社交白皮书') }}</div>
             </div>
             <div class="footer-links">
-              <span class="footer-link-item">github.com/tianxingleo/ACGTI</span>
-              <span class="footer-link-item">acgti.tianxingleo.top</span>
+              <span class="footer-link-item">github.com/tianxingleo/AITI</span>
+              <span class="footer-link-item">aiti.tianxingleo.top</span>
             </div>
           </div>
         </div>

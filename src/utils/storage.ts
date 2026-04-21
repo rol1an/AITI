@@ -1,6 +1,6 @@
 import type { QuizRecord } from '../types/quiz'
 
-const STORAGE_KEY = 'acgti:last-result'
+const STORAGE_KEY = 'aiti:last-result'
 
 export function loadLastRecord(): QuizRecord | null {
   if (typeof window === 'undefined') {

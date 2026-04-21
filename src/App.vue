@@ -77,26 +77,14 @@ const routeTransitionName = computed(() => (route.path === '/quiz' ? 'page-fade-
 
 const authorSocialLinks: AuthorSocialLink[] = [
   {
-    label: '小黑盒',
-    href: 'https://www.xiaoheihe.cn/bbs/user_profile_share?user_id=926369fb2568&h_src=heyboxapp',
-    title: '小黑盒',
-    brand: 'xiaoheihe',
-  },
-  {
-    label: '哔哩哔哩',
-    href: 'https://b23.tv/vL9ibhc',
-    title: '哔哩哔哩',
-    brand: 'bilibili',
-  },
-  {
     label: '小红书',
-    href: 'https://xhslink.com/m/91AyZ1GSX4z',
+    href: 'https://www.xiaohongshu.com/user/profile/60ea7202000000000101fcc3',
     title: '小红书',
     brand: 'xiaohongshu',
   },
   {
     label: 'GitHub',
-    href: 'https://github.com/tianxingleo',
+    href: 'https://github.com/rol1an',
     title: 'GitHub',
     brand: 'github',
   },
@@ -132,7 +120,7 @@ const authorSocialLinks: AuthorSocialLink[] = [
       </button>
 
       <nav class="site-nav" :class="{ 'is-open': isNavOpen }" @click="handleNavClick">
-        <a href="https://github.com/tianxingleo/AITI" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 4px; color: #333e49; font-weight: 600; text-decoration: none;" :title="t('app.nav.githubTitle')">
+        <a href="https://github.com/rol1an" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 4px; color: #333e49; font-weight: 600; text-decoration: none;" :title="t('app.nav.githubTitle')">
           <svg style="width: 18px; height: 18px; color: #3ba17c;" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
           <span class="nav-star-text" style="font-size: 15px;">{{ t('app.nav.star') }} 🌟</span>
         </a>
@@ -160,7 +148,7 @@ const authorSocialLinks: AuthorSocialLink[] = [
         <RouterLink to="/stats">{{ t('app.nav.stats') || 'Stats' }}</RouterLink>
         <RouterLink to="/about">{{ t('app.nav.about') }}</RouterLink>
         <RouterLink to="/sponsor">{{ t('app.nav.sponsor') }}</RouterLink>
-        <a href="https://github.com/tianxingleo/AITI/discussions" target="_blank" rel="noopener noreferrer" class="nav-external-link">{{ t('app.nav.community') }}</a>
+        <a href="https://github.com/rol1an/discussions" target="_blank" rel="noopener noreferrer" class="nav-external-link">{{ t('app.nav.community') }}</a>
         <RouterLink to="/result">{{ t('app.nav.result') }}</RouterLink>
         <RouterLink to="/quiz" class="button button-primary nav-cta">{{ t('app.nav.cta') }}</RouterLink>
       </nav>
@@ -202,13 +190,13 @@ const authorSocialLinks: AuthorSocialLink[] = [
         <div class="footer-section">
           <h3 class="footer-title">{{ t('app.footer.sections.openSource') }}</h3>
           <p class="footer-note">{{ t('app.footer.notes.likeIt') }}</p>
-          <a href="https://github.com/tianxingleo/AITI" target="_blank" rel="noopener noreferrer" class="footer-link cta-star" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: #3ba17c; margin-top: 4px;">
+          <a href="https://github.com/rol1an" target="_blank" rel="noopener noreferrer" class="footer-link cta-star" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: #3ba17c; margin-top: 4px;">
             <svg style="width: 16px; height: 16px;" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             {{ t('app.footer.notes.star') }}
           </a>
           <p class="footer-note" style="margin-top: 8px;">
             {{ t('app.footer.notes.feedback') }}
-            <a href="https://github.com/tianxingleo/AITI/issues" target="_blank" rel="noopener noreferrer" style="color: #3ba17c; font-weight: 700; text-decoration: none;">{{ t('app.footer.notes.issue') }}</a>
+            <a href="https://github.com/rol1an/issues" target="_blank" rel="noopener noreferrer" style="color: #3ba17c; font-weight: 700; text-decoration: none;">{{ t('app.footer.notes.issue') }}</a>
           </p>
         </div>
         <div class="footer-section">

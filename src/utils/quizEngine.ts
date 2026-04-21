@@ -143,7 +143,6 @@ const DEFAULT_DEBUG_PERCENTAGES: Record<DimensionPair, number> = {
   'J_P': 76,
 }
 
-type DirectionalMax = Record<DimensionPair, { positive: number; negative: number }>
 type ArchetypeAccumulator = Record<ArchetypeId, number>
 type UserVector = Record<DimensionId, number>
 
@@ -214,15 +213,6 @@ function buildAnswerProfile({
   questions: Question[]
   archetypes: Archetype[]
 }): AnswerProfile {
-  const rawScores: Record<DimensionPair, number> = {
-    'E_I': 0, 'S_N': 0, 'T_F': 0, 'J_P': 0
-  }
-  const directionalMaxScores: DirectionalMax = {
-    'E_I': { positive: 0, negative: 0 },
-    'S_N': { positive: 0, negative: 0 },
-    'T_F': { positive: 0, negative: 0 },
-    'J_P': { positive: 0, negative: 0 }
-  }
   const archetypeRaw = createEmptyArchetypeAccumulator()
   const userVector = createEmptyUserVector()
   const archetypeMap = new Map(archetypes.map((item) => [item.id, item]))
@@ -291,17 +281,6 @@ function createEmptyUserVector(): UserVector {
 
 function isAnsweredValue(value: number) {
   return value >= -3 && value <= 3
-}
-
-function normalizeDimensionScore(
-  rawScore: number,
-  directionalMax: { positive: number; negative: number },
-) {
-  if (rawScore >= 0) {
-    return rawScore / Math.max(1, directionalMax.positive)
-  }
-
-  return rawScore / Math.max(1, directionalMax.negative)
 }
 
 function resolveMbtiCodeFromArchetypes(archetypeRaw: ArchetypeAccumulator) {
@@ -672,7 +651,7 @@ export function resolveArchetypeForMbti(mbtiCode: string, archetypes: Archetype[
   const matchedArchetypeId = TYPE_TO_ARCHETYPE[normalized]
   return (
     archetypes.find((item) => item.id === matchedArchetypeId) ??
-    archetypes.find((item) => item.id === 'luminous-lead') ??
+    archetypes.find((item) => item.id === 'claude') ??
     null
   )
 }
@@ -747,7 +726,7 @@ export function createDebugQuizResult({
 
   const matchedArchetype =
     archetypes.find((item) => item.id === character.archetypeId) ??
-    archetypes.find((item) => item.id === 'luminous-lead') ??
+    archetypes.find((item) => item.id === 'claude') ??
     null
 
   if (!matchedArchetype) {

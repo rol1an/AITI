@@ -927,6 +927,13 @@ async function handleFeedbackSubmit() {
               </h3>
             <p>{{ t('archetypes.' + result.archetype.id + '.weakness', undefined, result.archetype.weakness) }}</p>
           </article>
+          <article class="analysis-card minefield">
+            <h3>
+                <AppIcon name="warning" />
+                {{ t('result.minefield', undefined, '你的雷区') }}
+              </h3>
+            <p>{{ t('archetypes.' + result.archetype.id + '.minefield', undefined, result.archetype.minefield) }}</p>
+          </article>
         </section>
 
         <section v-if="secondaryCharacterMatches.length" class="similar-characters-section" id="similar-section" v-reveal>
@@ -1734,6 +1741,10 @@ async function handleFeedbackSubmit() {
 
 .analysis-card.bad h3 {
   color: #e26666;
+}
+
+.analysis-card.minefield h3 {
+  color: #d97706;
 }
 
 .analysis-card p {

@@ -147,6 +147,7 @@ export const aitiMessages = {
             dimensions: ['外放 / 内收', '资料 / 直觉', '理性 / 温度', '规整 / 开放'],
         },
         result: {
+            minefield: '你的雷区',
             heroCaption: '你的 AI 模型画像',
             copy: '复制文案',
             retry: '重新测试',

@@ -70,6 +70,7 @@ export interface Archetype {
   narrativeRole: string
   spotlight: string
   weakness: string
+  minefield: string
   keywords: string[]
   accent: string
   vector: Record<DimensionId, number>

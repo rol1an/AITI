@@ -857,7 +857,7 @@ async function handleFeedbackSubmit() {
           </div>
         </a>
 
-        <section class="traits-section" id="traits-section" v-reveal>
+        <section v-if="false" class="traits-section" id="traits-section" v-reveal>
           <div class="section-title-wrap">
             <div class="section-index">1</div>
             <h2 class="section-title">{{ t('result.traitsTitle') }}</h2>

@@ -27,7 +27,8 @@
     },
     "matchWeight": 1.04,
     "image": "/images/characters/claude.webp",
-    "thumb": "/images/characters/claude.webp"
+    "thumb": "/images/characters/claude.webp",
+    "accent": "#e8722a"
   },
   {
     "id": "gpt",
@@ -87,7 +88,8 @@
     },
     "matchWeight": 1.01,
     "image": "/images/characters/gemini.webp",
-    "thumb": "/images/characters/gemini.webp"
+    "thumb": "/images/characters/gemini.webp",
+    "accent": "#2563eb"
   },
   {
     "id": "grok",

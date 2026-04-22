@@ -249,41 +249,7 @@ git push origin v0.1.0
 
 - **上游项目** — 本项目基于 [tianxingleo/ACGTI](https://github.com/tianxingleo/ACGTI) 二次创作，感谢原作者的开源贡献
 - **界面风格** — 参考自 [16personalities](https://www.16personalities.com/) 的扁平化设计与专业测评体验
-- **视觉素材** — 角色立绘由 AI 生成
-
-## 支持项目
-
-如果你喜欢 AITI 并希望支持它的持续维护和更新：
-
-- ⭐ 在 GitHub 给仓库点 Star
-- 🔁 把测试链接分享给朋友、群聊或同好圈
-- 💖 赞助支持：[赞助页面](https://aititest.com/sponsor)
-
-> 赞助为自愿行为，不对应任何商品或服务。AITI 核心功能对所有用户完全免费。
-
-<details>
-<summary><b>扫码赞助</b></summary>
-
-<table>
-  <tr>
-    <td align="center">
-      <img src="https://raw.githubusercontent.com/rol1an/AITI/main/public/wechat-qr.webp" alt="微信收款码" width="200" />
-      <br/>微信支付
-    </td>
-    <td align="center">
-      <img src="https://raw.githubusercontent.com/rol1an/AITI/main/public/alipay-qr.webp" alt="支付宝收款码" width="200" />
-      <br/>支付宝
-    </td>
-  </tr>
-</table>
-
-</details>
-
-## Contributors
-
-<a href="https://github.com/rol1an/AITI/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=rol1an/AITI" />
-</a>
+- **视觉素材** — 模型插画由 **GPT image 2** 生成
 
 <div align="center">
 

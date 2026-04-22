@@ -1,50 +1,39 @@
 <h1 align="center">AITI</h1>
 
 <p align="center">
-  <strong>AI Type Indicator — 看看你最像哪个 AI 模型？</strong>
+  <strong>AI Type Indicator — 一个以 AI 大模型为参照系的人格类型测试站点</strong>
 </p>
 
 <p align="center">
-  回答 39 道情境式问题 · 获得专属 AI 人格代码 · 解锁你的 AI 原型
+  <a href="https://aititest.com/">🌐 aititest.com — AITI 官网</a>
 </p>
 
 <p align="center">
-  <a href="https://aiti.tianxingleo.top/"><img src="https://img.shields.io/badge/🚀_立即开始测试-点击进入-6366f1?style=for-the-badge" alt="立即测试" /></a>
+  回答情境式问题 · 获得专属 AI 模型代码 · 解锁你的 AI 人格画像
 </p>
 
 <p align="center">
-  <a href="https://aiti.tianxingleo.top/"><img src="https://img.shields.io/badge/Deploy-Cloudflare_Pages-F38020?style=flat-square&logo=cloudflare" alt="Cloudflare Pages" /></a>
+  <a href="#️-架构与原理">📖 阅读文档</a> ·
+  <a href="#-贡献">🤝 参与贡献</a>
+</p>
+
+<p align="center">
+  <a href="https://aititest.com/"><img src="https://img.shields.io/badge/Deploy-Cloudflare_Pages-F38020?style=flat-square&logo=cloudflare" alt="Cloudflare Pages" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-blue.svg?style=flat-square" alt="License" /></a>
-  <img src="https://img.shields.io/badge/Questions-39道-green.svg?style=flat-square" alt="39道题" />
-  <img src="https://img.shields.io/badge/AI_Models-20+-orange.svg?style=flat-square" alt="20+ AI 模型" />
+  <img src="https://img.shields.io/badge/Questions-25道-green.svg?style=flat-square" alt="25道题" />
+  <img src="https://img.shields.io/badge/AI_Models-14个-orange.svg?style=flat-square" alt="14个 AI 模型" />
 </p>
-
----
-
-## 🎯 立即体验
-
-<p align="center">
-  <a href="https://aiti.tianxingleo.top/">
-    <img src="https://img.shields.io/badge/%E2%9C%A8%20开始测试%20%E2%9C%A8-https%3A%2F%2Faiti.tianxingleo.top-6366f1?style=for-the-badge&logoColor=white" alt="开始测试" />
-  </a>
-</p>
-
-> 点击上方按钮，无需注册，30 分钟内即可获得你的专属 AI 人格报告。
-
----
-
-## 📸 界面预览
 
 <p align="center">
   <img
     src="https://raw.githubusercontent.com/rol1an/AITI/main/docs/preview-home.webp"
-    alt="首页"
+    alt="首页截图"
     width="45%"
   />
   &nbsp;
   <img
     src="https://raw.githubusercontent.com/rol1an/AITI/main/docs/preview-quiz.webp"
-    alt="答题页"
+    alt="答题截图"
     width="45%"
   />
 </p>
@@ -52,13 +41,13 @@
 <p align="center">
   <img
     src="https://raw.githubusercontent.com/rol1an/AITI/main/docs/preview-result.webp"
-    alt="结果页"
+    alt="结果截图"
     width="45%"
   />
   &nbsp;
   <img
     src="https://raw.githubusercontent.com/rol1an/AITI/main/docs/preview-characters.webp"
-    alt="全部画像"
+    alt="全部画像截图"
     width="45%"
   />
 </p>
@@ -69,45 +58,41 @@
 
 ## ✨ 核心特性
 
-| 特性 | 说明 |
-|:---|:---|
-| 🧠 **四维人格判定** | 基于表达力、温度感、判断力、秩序感四大维度构建底层框架 |
-| 🤖 **8 种 AI 原型** | 精准映射不同 AI 模型的思维与交互风格 |
-| 📦 **20+ AI 角色库** | 涵盖 Claude、GPT、Gemini、DeepSeek、Kimi、LLaMA、Qwen、Mistral 等主流模型 |
-| 📊 **可视化交互** | 16personalities 风格的倾向滑块，直观展示你的思维坐标 |
-| 🖼️ **一键分享** | 精美结果海报，一键导出 PNG 分享给朋友 |
-| 🔒 **隐私友好** | 核心计算在本地浏览器完成，不收集邮箱等直接身份信息 |
+- **六维人格判定**：基于表达力、温度感、判断力、秩序感、能动性、气场六大维度构建严谨的底层框架。
+- **14 个 AI 模型画像**：Claude · GPT · Gemini · Grok · DeepSeek · Kimi · 豆包 · GLM · Qwen · 文心 · Llama · MiniMax · Mimo · 混元。
+- **可视化交互**：16personalities 风格的交互式倾向滑块，直观展现你的思维倾向。
+- **一键分享**：精美的结果人格模型卡，支持一键导出 PNG 海报分享给同好。
+- **轻量全栈**：测试结果在本地浏览器完成计算；结果页会匿名上报最终命中模型与画像到后端（Cloudflare D1），用于全站统计；不要求注册，不收集邮箱等直接身份信息。
 
----
-
-## 🤖 你会是哪款 AI？
-
-AITI 会将你的作答映射到以下 AI 模型中的一位：
+## 🛠️ 技术栈
 
 <div align="center">
-
-`Claude` · `GPT-4` · `Gemini` · `DeepSeek` · `Kimi` · `LLaMA` · `Qwen` · `Mistral` · 以及更多……
-
+  <img src="https://img.shields.io/badge/Vue.js_3-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D" alt="Vue.js" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Cloudflare_Pages-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare Pages" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Cloudflare_D1-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare D1" />
 </div>
 
-每位 AI 都有独特的六维人格向量（表达力 · 温度感 · 判断力 · 秩序感 · 能动性 · 气场），看看你的思维方式最贴近哪一款！
-
----
-
-## ⚙️ 工作原理
+## ⚙️ 架构与原理
 
 <details>
-<summary><b>点击展开查看测试流程</b></summary>
+<summary><b>点击展开查看工作原理</b></summary>
+
+核心计算流程如下：
 
 ```
-回答 39 道题  →  计算四维倾向  →  匹配 AI 原型  →  命中 AI 角色  →  生成结果报告
+答题 (25道情境题) → 算分 (维度权重 + 模型权重) → 模型匹配 (14个画像) → 命中模型 (输出唯一代码) → 结果展示
 ```
 
-1. **答题** — 39 道七级量表情境题（-3 到 +3），每题关联维度权重与原型权重
-2. **算分** — 按维度累加带符号权重，计算每个维度的倾向百分比（50%–100%）
-3. **原型匹配** — 将四维结果映射到 8 种 AI 原型之一
-4. **角色命中** — 在角色库中命中 1 位主 AI 模型，输出专属代码
-5. **结果展示** — AI 代码、维度滑块、角色解析、原型描述，支持导出海报
+1. **答题** — 25 道情境式量表题，每题关联一个维度方向与模型权重
+2. **算分** — 综合维度权重与模型向量评分，输出六维倾向百分比
+3. **模型匹配** — 将六维结果映射到 14 个 AI 模型画像之一
+4. **结果展示** — 模型代码、维度倾向、画像解析、亮点/弱项/雷区，支持导出人格模型卡
 
 </details>
 
@@ -117,6 +102,7 @@ AITI 会将你的作答映射到以下 AI 模型中的一位：
 ```text
 src/
 ├── components/           # 可复用 UI 组件
+│   ├── AppIcon.vue
 │   ├── ProgressBar.vue
 │   ├── QuestionCard.vue
 │   ├── ResultSummary.vue
@@ -125,35 +111,45 @@ src/
 │   ├── useQuiz.ts       # 测试状态与逻辑
 │   └── useShare.ts      # 分享与导出功能
 ├── data/                # 静态数据
-│   ├── aitiQuestions.json    # 39 道情境式题目（含 AI 模型权重）
-│   ├── aitiArchetypes.json   # 8 个 AI 原型定义
-│   ├── aitiCharacters.json   # 20+ AI 模型角色库
-│   ├── characterVisuals.json
-│   └── characterProbabilities.json
-├── i18n/                # 多语言文案（简中/繁中/英/日）
+│   ├── aitiQuestions.json        # 25 道情境式题目（含模型权重）
+│   ├── aitiArchetypes.json       # 14 个 AI 模型原型定义
+│   ├── aitiCharacters.json       # 14 个 AI 模型画像
+│   └── aitiCharacterProbabilities.json
+├── i18n/                # 国际化文案
+│   ├── messages.ts      # 基础多语言文案
+│   └── aitiMessages.ts  # AITI 覆盖层文案
 ├── pages/               # 页面组件
 │   ├── HomePage.vue
+│   ├── IntroPage.vue
 │   ├── QuizPage.vue
 │   ├── ResultPage.vue
 │   ├── CharactersPage.vue
 │   ├── StatsPage.vue
 │   └── AboutPage.vue
-├── utils/
-│   ├── quizEngine.ts    # 评分、原型匹配、角色命中逻辑
-│   └── statsReporter.ts # 匿名结果上报
+├── types/
+│   └── quiz.ts          # TypeScript 类型定义
+└── utils/
+    ├── quizEngine.ts    # 评分、模型匹配、命中逻辑
+    └── statsReporter.ts # 结果匿名上报
 
 functions/api/            # Cloudflare Pages Functions（后端 API）
-├── submit.ts
-├── feedback.ts
-├── config.ts
-└── stats/
-
 migrations/               # Cloudflare D1 数据库迁移（8 个版本）
+cron-worker/              # 定时统计快照 Worker
 ```
 
 </details>
 
----
+<details>
+<summary><b>点击展开查看内容数据一览</b></summary>
+
+| 文件 | 说明 |
+|:-----|:-----|
+| `src/data/aitiQuestions.json` | 25 道情境式题目 — 维度、模型权重 |
+| `src/data/aitiArchetypes.json` | 14 个 AI 模型原型 — 名称、描述、亮点、弱项、雷区 |
+| `src/data/aitiCharacters.json` | 14 个 AI 模型画像 — 代码、MBTI 映射、六维向量 |
+| `src/data/aitiCharacterProbabilities.json` | 模型命中概率分布 |
+
+</details>
 
 ## 🚀 本地开发
 
@@ -168,83 +164,134 @@ npm run dev
 npm run build
 
 # 启动全栈本地开发（含 Cloudflare D1 + Pages Functions）
-# 终端 1：监听构建产物
-npm run build:watch
-
-# 终端 2：启动 Pages + Functions + D1
 npm run dev:pages
-# 访问 http://127.0.0.1:8788
 ```
 
-<details>
-<summary><b>Turnstile 与环境变量配置</b></summary>
+推荐的本地联调流程：
 
 ```bash
-# .env.local（前端，已在 .gitignore 中）
-VITE_TURNSTILE_SITE_KEY=你的 site key
+# 终端 1（仓库根目录）：监听构建产物到 dist/
+npm run build:watch
 
-# .dev.vars（Pages Functions 本地，已在 .gitignore 中）
-TURNSTILE_SECRET=你的 secret
+# 终端 2（仓库根目录）：启动 Pages + Functions + D1
+npm run dev:pages
 ```
 
-本地地址未配置 Turnstile 时会自动回退到 Cloudflare 官方测试 key，可直接跑通完整链路。
-
-</details>
-
----
+然后访问：`http://127.0.0.1:8788`
 
 ## 🤝 贡献
 
 欢迎 **Star** · 欢迎 **Fork** · 欢迎 **Issue** · 欢迎 **PR**！
 
-- 补充新 AI 模型 → 编辑 `src/data/aitiCharacters.json`
-- 添加新题目 → 编辑 `src/data/aitiQuestions.json`
+当前项目仍处于早期阶段，欢迎参与：
+
+- 提名新 AI 模型 → 提 Issue，附上模型名称与推荐理由
+- 添加或改进题目 → 编辑 `src/data/aitiQuestions.json`
 - 修复 Bug / 改进 UI → 直接提 PR
+- 讨论与反馈 → [讨论区](https://github.com/rol1an/AITI/discussions)
+
+### 欢迎二次创作
+
+欢迎基于本项目进行 Fork、改版、二次创作与衍生开发。如果你基于本项目发布自己的版本，建议：
+
+- 在 README、页脚或关于页中标注出处，并附上本项目链接：<https://github.com/rol1an/AITI>
+- 写明"基于 AITI 项目二次创作 / 修改"
+- 保留可追溯的 Git 提交历史与贡献记录
+
+### 分支管理
 
 | 分支 | 用途 |
-|:---|:---|
+| :--- | :--- |
 | `main` | 稳定版本，仅接受来自 `dev` 的合并 |
 | `dev` | 开发分支，日常开发在此进行 |
 
----
+## 📦 持续集成与部署
 
-## 📦 CI/CD
+- **GitHub Actions**：在 `main` push / PR 时校验构建是否通过
+- **Cloudflare Pages**：连接 GitHub 后自动构建与部署，同时托管 Pages Functions 后端 API
+- **Cron Worker**：每 15 分钟自动刷新统计快照到 D1
 
-- **GitHub Actions** — 在 `main` push / PR 时自动校验构建
-- **Cloudflare Pages** — 连接 GitHub 后自动构建与部署
-- **Cloudflare D1** — SQLite 边缘数据库，存储匿名统计数据
+发版方式示例：
 
 ```bash
-# 发版示例
-git tag v1.0.0
-git push origin v1.0.0
+git tag v0.1.0
+git push origin v0.1.0
 ```
 
----
+## 📄 开源协议与免责声明
 
-## 📄 开源协议
+### 代码授权
 
-本项目源代码基于 [Apache License 2.0](LICENSE) 开源。
+本项目源代码基于 [Apache License 2.0](LICENSE) 开源。您可以学习、修改和分发本项目的代码，但在再分发或衍生发布时，需要一并提供许可证文本、保留适用的版权与归属声明，并对已修改文件作出显著标识。
 
-本项目基于 **tianxingleo / Li Tianxing** 的 [ACGTI](https://github.com/tianxingleo/ACGTI) 项目二次创作，在此致谢。
+### 归属与修改说明
 
-> 角色立绘等视觉素材的版权归其原版权方所有，本项目为非商业娱乐性质的衍生创作。
+- 本项目基于 **tianxingleo / Li Tianxing** 的原始创作 [ACGTI](https://github.com/tianxingleo/ACGTI) 进行二次开发，将测试主题从二次元角色原型替换为 AI 大模型画像。
+- 欢迎以 Fork 形式继续开发、改版或进行二次创作；基于本项目公开发布衍生版本时，请引用原项目并注明来源。
+- 再分发或衍生版本不应删除原始版权与归属信息。
 
----
+### 品牌与官方关系声明
+
+- 本项目与 Anthropic（Claude）、OpenAI（GPT）、Google（Gemini）、xAI（Grok）等任何 AI 公司均无官方关联。
+- 各 AI 模型名称、品牌标识的版权归其原版权方所有，本项目为非商业娱乐性质的衍生创作。
+
+### 隐私与数据安全
+
+- 本工具的核心计算过程在**本地浏览器**中完成。
+- 结果页会**匿名上报最终命中模型与维度倾向**到后端（Cloudflare D1），用于全站统计。
+- 我们**不会**收集邮箱、手机号、昵称等直接身份信息。
+
+### 测试结果声明
+
+- 本测试为娱乐性质的人格类比工具，测试结果**不具备任何专业的心理学或医学参考价值**，请仅当作娱乐看待。
 
 ## 致谢
 
-- **界面风格** — 参考自 [16personalities](https://www.16personalities.com/) 的扁平化设计
-- **项目启发** — 基于 [tianxingleo/ACGTI](https://github.com/tianxingleo/ACGTI) 衍生开发
+- **上游项目** — 本项目基于 [tianxingleo/ACGTI](https://github.com/tianxingleo/ACGTI) 二次创作，感谢原作者的开源贡献
+- **界面风格** — 参考自 [16personalities](https://www.16personalities.com/) 的扁平化设计与专业测评体验
 - **视觉素材** — 角色立绘由 AI 生成
 
----
+## 支持项目
+
+如果你喜欢 AITI 并希望支持它的持续维护和更新：
+
+- ⭐ 在 GitHub 给仓库点 Star
+- 🔁 把测试链接分享给朋友、群聊或同好圈
+- 💖 赞助支持：[赞助页面](https://aititest.com/sponsor)
+
+> 赞助为自愿行为，不对应任何商品或服务。AITI 核心功能对所有用户完全免费。
+
+<details>
+<summary><b>扫码赞助</b></summary>
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/rol1an/AITI/main/public/wechat-qr.webp" alt="微信收款码" width="200" />
+      <br/>微信支付
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/rol1an/AITI/main/public/alipay-qr.webp" alt="支付宝收款码" width="200" />
+      <br/>支付宝
+    </td>
+  </tr>
+</table>
+
+</details>
+
+## Contributors
+
+<a href="https://github.com/rol1an/AITI/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=rol1an/AITI" />
+</a>
 
 <div align="center">
 
-**觉得有趣？先去测测你是哪款 AI 吧！**
+---
 
-[![立即测试](https://img.shields.io/badge/✨_立即测试_✨-aiti.tianxingleo.top-6366f1?style=for-the-badge)](https://aiti.tianxingleo.top/)
+**觉得有趣？来测测你是哪款 AI 吧！**
+
+[![立即测试](https://img.shields.io/badge/✨_立即测试_✨-aititest.com-6366f1?style=for-the-badge)](https://aititest.com/)
 
 ⭐ 如果喜欢这个项目，欢迎给仓库点个 Star！
 

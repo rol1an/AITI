@@ -6,8 +6,8 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "aiti-stats",
-      "database_id": "3f262357-9685-48ba-9091-44041410c9f9"
+      "database_name": "aiti-db",
+      "database_id": "102243d8-b53c-417e-bd41-d4ae688f98e2"
     }
   ]
 }

@@ -1056,7 +1056,7 @@ async function handleFeedbackSubmit() {
             <h3 class="discussion-title">{{ t('result.discussionTitle') }}</h3>
             <p class="discussion-copy">{{ t('result.discussionCopy') }}</p>
             <a
-              href="https://github.com/tianxingleo/AITI/discussions"
+              href="https://github.com/rol1an/AITI/discussions"
               target="_blank"
               rel="noopener noreferrer"
               class="discussion-button"

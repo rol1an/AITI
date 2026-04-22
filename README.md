@@ -37,13 +37,13 @@
 
 <p align="center">
   <img
-    src="https://pub-f8d3afa0c3274f1e943ee2f8c45dff96.r2.dev/26_04_85afc638204090e964a385ef024963af.webp"
+    src="https://raw.githubusercontent.com/rol1an/AITI/main/docs/preview-home.webp"
     alt="首页"
     width="45%"
   />
   &nbsp;
   <img
-    src="https://pub-f8d3afa0c3274f1e943ee2f8c45dff96.r2.dev/26_04_53f6126c96077f9990f8c8f4aef7d20d.webp"
+    src="https://raw.githubusercontent.com/rol1an/AITI/main/docs/preview-quiz.webp"
     alt="答题页"
     width="45%"
   />
@@ -51,14 +51,14 @@
 
 <p align="center">
   <img
-    src="https://pub-f8d3afa0c3274f1e943ee2f8c45dff96.r2.dev/26_04_a4b8624d8dfeeeb23ca0b2de7a344e24.webp"
-    alt="结果页一"
+    src="https://raw.githubusercontent.com/rol1an/AITI/main/docs/preview-result.webp"
+    alt="结果页"
     width="45%"
   />
   &nbsp;
   <img
-    src="https://pub-f8d3afa0c3274f1e943ee2f8c45dff96.r2.dev/26_04_83aa34b38a795f68b26eadbef4fca2b8.webp"
-    alt="结果页二"
+    src="https://raw.githubusercontent.com/rol1an/AITI/main/docs/preview-characters.webp"
+    alt="全部画像"
     width="45%"
   />
 </p>

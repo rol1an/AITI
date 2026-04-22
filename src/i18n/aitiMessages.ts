@@ -35,6 +35,7 @@ export const aitiMessages = {
                 },
             },
             common: {
+                saveImage: '生成并分享人格模型卡',
                 shareCode: '我在 AITI 命中的模型代码是 {code}',
                 shareCharacter: '命中模型：{name}（{series}）',
                 shareUnknown: '命中模型：未知画像',

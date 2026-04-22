@@ -199,11 +199,6 @@ const authorSocialLinks: AuthorSocialLink[] = [
             <a href="https://github.com/rol1an/AITI/issues" target="_blank" rel="noopener noreferrer" style="color: #3ba17c; font-weight: 700; text-decoration: none;">{{ t('app.footer.notes.issue') }}</a>
           </p>
         </div>
-        <div class="footer-section">
-          <h3 class="footer-title">{{ t('app.footer.sections.friendlyLinks') }}</h3>
-          <p class="footer-note">{{ t('app.footer.notes.saurlaxCreditBefore') }}<a href="https://saurlax.com/" target="_blank" rel="noopener noreferrer" style="color: #3ba17c; text-decoration: none; font-weight: 600;">saurlax</a>{{ t('app.footer.notes.saurlaxCreditAfter') }}</p>
-          <p class="footer-note">{{ t('app.footer.notes.sowieeeCreditBefore') }}<a href="https://github.com/SoWiEee" target="_blank" rel="noopener noreferrer" style="color: #3ba17c; text-decoration: none; font-weight: 600;">SoWiEee</a>{{ t('app.footer.notes.sowieeeCreditAfter') }}</p>
-        </div>
         <div class="footer-section author-social-section">
           <h3 class="footer-title">{{ t('app.footer.sections.authorSocial') }}</h3>
           <div class="author-social-list">

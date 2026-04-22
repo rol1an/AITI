@@ -876,7 +876,7 @@ async function handleFeedbackSubmit() {
                     color: trait.color,
                   }"
                 >
-                  {{ result.scores[trait.id].percentage }}% {{ getDominantTraitLabel(trait.id, trait.leftCode, trait.leftLabel, trait.rightLabel) }}
+                  {{ result!.scores[trait.id].percentage }}% {{ getDominantTraitLabel(trait.id, trait.leftCode, trait.leftLabel, trait.rightLabel) }}
                 </div>
 
                 <div class="trait-track" :style="{ backgroundColor: trait.color }">
@@ -900,13 +900,13 @@ async function handleFeedbackSubmit() {
             <aside class="traits-highlight">
               <p class="highlight-name">{{ t('result.strongest') }}</p>
               <h3 :style="{ color: strongestTrait?.trait.color ?? '#4298B4' }">
-                {{ strongestTrait?.score.percentage ?? 0 }}% {{ strongestTrait ? getDominantTraitLabel(strongestTrait.trait.id, strongestTrait.trait.leftCode, strongestTrait.trait.leftLabel, strongestTrait.trait.rightLabel) : '' }}
+                {{ strongestTrait?.score.percentage ?? 0 }}% {{ strongestTrait ? getDominantTraitLabel(strongestTrait!.trait.id, strongestTrait!.trait.leftCode, strongestTrait!.trait.leftLabel, strongestTrait!.trait.rightLabel) : '' }}
               </h3>
               <div class="highlight-icon-wrap">
                 <AppIcon name="chart" />
               </div>
               <p v-if="strongestTrait">
-                {{ t('result.strongestCopy', { label: getDominantTraitLabel(strongestTrait.trait.id, strongestTrait.trait.leftCode, strongestTrait.trait.leftLabel, strongestTrait.trait.rightLabel) }) }}
+                {{ t('result.strongestCopy', { label: getDominantTraitLabel(strongestTrait!.trait.id, strongestTrait!.trait.leftCode, strongestTrait!.trait.leftLabel, strongestTrait!.trait.rightLabel) }) }}
               </p>
             </aside>
           </div>

@@ -174,6 +174,12 @@ export const aitiMessages = {
             testNote: '你的 AI 交互白皮书',
             personaBasisBadge: '社区印象映射',
             personaBasisTip: '部分画像来自社区常见观感、产品气质与公开资料的综合观察，用来帮助你理解这类模型为什么会被这样描述。',
+            publicService: {
+                label: '公益广告',
+                copy: '祝母校130周年生日快乐！欢迎各位学子报考西安交通大学',
+                meta: '西安交通大学 130 周年校庆',
+                alt: '西安交通大学校徽',
+            },
             creatorLinks: {
                 title: '关注项目动态',
                 copy: '如果你想继续看模型画像更新、调参记录或后续项目动态，也可以顺手去这些平台逛一眼。',

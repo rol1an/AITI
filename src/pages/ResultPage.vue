@@ -840,14 +840,14 @@ async function handleFeedbackSubmit() {
 
         <a
           class="public-service-card public-service-card-link"
-          href="https://www.dlut.edu.cn/"
+          href="https://www.xjtu.edu.cn/"
           target="_blank"
           rel="noopener noreferrer"
           v-reveal
         >
           <div class="public-service-icon-shell">
             <div class="public-service-icon-ring">
-              <img class="public-service-emblem" src="/dlut-emblem.png" :alt="t('result.publicService.alt')" />
+              <img class="public-service-emblem" src="/xjtu-emblem.webp" :alt="t('result.publicService.alt')" />
             </div>
           </div>
           <div class="public-service-content">

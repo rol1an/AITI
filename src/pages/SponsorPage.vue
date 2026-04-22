@@ -59,7 +59,7 @@ useSeo({
               <h3 class="method-name">{{ t('sponsor.wechat') }}</h3>
               <p class="method-desc">{{ t('sponsor.wechatDesc') }}</p>
               <div class="qr-placeholder">
-                <!-- QR code coming soon -->
+                <img src="/wechat-qr.webp" alt="微信支付二维码" />
               </div>
             </div>
 
@@ -71,7 +71,7 @@ useSeo({
               <h3 class="method-name">{{ t('sponsor.alipay') }}</h3>
               <p class="method-desc">{{ t('sponsor.alipayDesc') }}</p>
               <div class="qr-placeholder">
-                <!-- QR code coming soon -->
+                <img src="/alipay-qr.webp" alt="支付宝二维码" />
               </div>
             </div>
           </div>

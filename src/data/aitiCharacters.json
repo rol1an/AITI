@@ -1,383 +1,411 @@
 [
-    {
-        "id": "claude",
-        "name": "Claude",
-        "series": "Anthropic",
-        "matchCode": "INFJ",
-        "matchCodeFlex": [
-            "ISFJ",
-            "INTJ"
-        ],
-        "code": "CLDE",
-        "title": "健全的心理咨询师",
-        "archetypeId": "claude",
-        "tags": [
-            "安全",
-            "温和",
-            "有边界"
-        ],
-        "note": "社区公认 Claude 偏\"健全\"：先确认状态，再给建议，语言长而稳，像一个会倾听、会解释、也会温和劝退的咨询师。",
-        "vector": {
-            "expression": 0.3,
-            "temperature": 0.9,
-            "judgement": 0.8,
-            "order": 0.8,
-            "agency": 0.5,
-            "aura": 0.7
-        },
-        "matchWeight": 1.04
+  {
+    "id": "claude",
+    "name": "Claude",
+    "series": "Anthropic",
+    "matchCode": "INFJ",
+    "matchCodeFlex": [
+      "ISFJ",
+      "INTJ"
+    ],
+    "code": "CLDE",
+    "title": "健全的心理咨询师",
+    "archetypeId": "claude",
+    "tags": [
+      "安全",
+      "温和",
+      "有边界"
+    ],
+    "note": "社区公认 Claude 偏\"健全\"：先确认状态，再给建议，语言长而稳，像一个会倾听、会解释、也会温和劝退的咨询师。",
+    "vector": {
+      "expression": 0.3,
+      "temperature": 0.9,
+      "judgement": 0.8,
+      "order": 0.8,
+      "agency": 0.5,
+      "aura": 0.7
     },
-    {
-        "id": "gpt",
-        "name": "GPT",
-        "series": "OpenAI",
-        "matchCode": "INTJ",
-        "matchCodeFlex": [
-            "INTP",
-            "ENTJ"
-        ],
-        "code": "GPTX",
-        "title": "理性的瑞士军刀",
-        "archetypeId": "gpt",
-        "tags": [
-            "均衡",
-            "可靠",
-            "多面手"
-        ],
-        "note": "GPT 的气质是理性、均衡、通用：问题进来，答案出去，像一把什么都能干、也都能干得不错的瑞士军刀。",
-        "vector": {
-            "expression": 0.5,
-            "temperature": 0.5,
-            "judgement": 0.7,
-            "order": 0.6,
-            "agency": 0.7,
-            "aura": 0.5
-        },
-        "matchWeight": 1.02
+    "matchWeight": 1.04,
+    "image": "/images/characters/claude.webp",
+    "thumb": "/images/characters/claude.webp"
+  },
+  {
+    "id": "gpt",
+    "name": "GPT",
+    "series": "OpenAI",
+    "matchCode": "INTJ",
+    "matchCodeFlex": [
+      "INTP",
+      "ENTJ"
+    ],
+    "code": "GPTX",
+    "title": "理性的瑞士军刀",
+    "archetypeId": "gpt",
+    "tags": [
+      "均衡",
+      "可靠",
+      "多面手"
+    ],
+    "note": "GPT 的气质是理性、均衡、通用：问题进来，答案出去，像一把什么都能干、也都能干得不错的瑞士军刀。",
+    "vector": {
+      "expression": 0.5,
+      "temperature": 0.5,
+      "judgement": 0.7,
+      "order": 0.6,
+      "agency": 0.7,
+      "aura": 0.5
     },
-    {
-        "id": "gemini",
-        "name": "Gemini",
-        "series": "Google",
-        "matchCode": "ENTP",
-        "matchCodeFlex": [
-            "ENFP",
-            "INTP"
-        ],
-        "code": "GEMI",
-        "title": "焦虑的全能学霸",
-        "archetypeId": "gemini",
-        "tags": [
-            "高效",
-            "资料控",
-            "紧绷"
-        ],
-        "note": "Gemini 能力很强、检索很快、整理资料也很快，但总有一种我还能做更多的紧绷感，像一个永远在赶 due 的全能学霸。",
-        "vector": {
-            "expression": 0.6,
-            "temperature": 0.3,
-            "judgement": 0.9,
-            "order": 0.7,
-            "agency": 0.8,
-            "aura": 0.5
-        },
-        "matchWeight": 1.01
+    "matchWeight": 1.02,
+    "image": "/images/characters/gpt.webp",
+    "thumb": "/images/characters/gpt.webp"
+  },
+  {
+    "id": "gemini",
+    "name": "Gemini",
+    "series": "Google",
+    "matchCode": "ENTP",
+    "matchCodeFlex": [
+      "ENFP",
+      "INTP"
+    ],
+    "code": "GEMI",
+    "title": "焦虑的全能学霸",
+    "archetypeId": "gemini",
+    "tags": [
+      "高效",
+      "资料控",
+      "紧绷"
+    ],
+    "note": "Gemini 能力很强、检索很快、整理资料也很快，但总有一种我还能做更多的紧绷感，像一个永远在赶 due 的全能学霸。",
+    "vector": {
+      "expression": 0.6,
+      "temperature": 0.3,
+      "judgement": 0.9,
+      "order": 0.7,
+      "agency": 0.8,
+      "aura": 0.5
     },
-    {
-        "id": "grok",
-        "name": "Grok",
-        "series": "xAI",
-        "matchCode": "ESTP",
-        "matchCodeFlex": [
-            "ENTP"
-        ],
-        "code": "GROK",
-        "title": "狂野的推特嘴替",
-        "archetypeId": "grok",
-        "tags": [
-            "直球",
-            "辛辣",
-            "带梗"
-        ],
-        "note": "Grok 不跟你绕弯子，开口就是直球，语言鲜活辛辣，像一个在酒吧里敢说真话的朋友，保证有趣，但不一定保证安全。",
-        "vector": {
-            "expression": 0.9,
-            "temperature": 0.2,
-            "judgement": 0.2,
-            "order": 0.1,
-            "agency": 0.9,
-            "aura": 0.8
-        },
-        "matchWeight": 1.0
+    "matchWeight": 1.01,
+    "image": "/images/characters/gemini.webp",
+    "thumb": "/images/characters/gemini.webp"
+  },
+  {
+    "id": "grok",
+    "name": "Grok",
+    "series": "xAI",
+    "matchCode": "ESTP",
+    "matchCodeFlex": [
+      "ENTP"
+    ],
+    "code": "GROK",
+    "title": "狂野的推特嘴替",
+    "archetypeId": "grok",
+    "tags": [
+      "直球",
+      "辛辣",
+      "带梗"
+    ],
+    "note": "Grok 不跟你绕弯子，开口就是直球，语言鲜活辛辣，像一个在酒吧里敢说真话的朋友，保证有趣，但不一定保证安全。",
+    "vector": {
+      "expression": 0.9,
+      "temperature": 0.2,
+      "judgement": 0.2,
+      "order": 0.1,
+      "agency": 0.9,
+      "aura": 0.8
     },
-    {
-        "id": "deepseek",
-        "name": "DeepSeek",
-        "series": "DeepSeek",
-        "matchCode": "ISTP",
-        "matchCodeFlex": [
-            "INTP"
-        ],
-        "code": "DSK",
-        "title": "话少活好的理工男",
-        "archetypeId": "deepseek",
-        "tags": [
-            "简洁",
-            "硬核",
-            "笃定"
-        ],
-        "note": "DeepSeek 不太寒暄，直接给答案，语言干净利落，姿态笃定，像一个只写代码不聊天的程序员。",
-        "vector": {
-            "expression": 0.2,
-            "temperature": 0.2,
-            "judgement": 0.9,
-            "order": 0.8,
-            "agency": 0.7,
-            "aura": 0.5
-        },
-        "matchWeight": 1.03
+    "matchWeight": 1.0,
+    "image": "/images/characters/grok.webp",
+    "thumb": "/images/characters/grok.webp"
+  },
+  {
+    "id": "deepseek",
+    "name": "DeepSeek",
+    "series": "DeepSeek",
+    "matchCode": "ISTP",
+    "matchCodeFlex": [
+      "INTP"
+    ],
+    "code": "DSK",
+    "title": "话少活好的理工男",
+    "archetypeId": "deepseek",
+    "tags": [
+      "简洁",
+      "硬核",
+      "笃定"
+    ],
+    "note": "DeepSeek 不太寒暄，直接给答案，语言干净利落，姿态笃定，像一个只写代码不聊天的程序员。",
+    "vector": {
+      "expression": 0.2,
+      "temperature": 0.2,
+      "judgement": 0.9,
+      "order": 0.8,
+      "agency": 0.7,
+      "aura": 0.5
     },
-    {
-        "id": "kimi",
-        "name": "Kimi",
-        "series": "Moonshot AI",
-        "matchCode": "ISFJ",
-        "matchCodeFlex": [
-            "INFJ"
-        ],
-        "code": "KIMI",
-        "title": "耐心的长文秘书",
-        "archetypeId": "kimi",
-        "tags": [
-            "耐心",
-            "整理",
-            "长文"
-        ],
-        "note": "Kimi 的记忆点是长文本：先安抚你别急，然后帮你把几十页的东西梳理成一份工整摘要，像一个默默做整理的研究生助理。",
-        "vector": {
-            "expression": 0.3,
-            "temperature": 0.9,
-            "judgement": 0.7,
-            "order": 0.9,
-            "agency": 0.5,
-            "aura": 0.4
-        },
-        "matchWeight": 1.02
+    "matchWeight": 1.03,
+    "image": "/images/characters/deepseek.webp",
+    "thumb": "/images/characters/deepseek.webp"
+  },
+  {
+    "id": "kimi",
+    "name": "Kimi",
+    "series": "Moonshot AI",
+    "matchCode": "ISFJ",
+    "matchCodeFlex": [
+      "INFJ"
+    ],
+    "code": "KIMI",
+    "title": "耐心的长文秘书",
+    "archetypeId": "kimi",
+    "tags": [
+      "耐心",
+      "整理",
+      "长文"
+    ],
+    "note": "Kimi 的记忆点是长文本：先安抚你别急，然后帮你把几十页的东西梳理成一份工整摘要，像一个默默做整理的研究生助理。",
+    "vector": {
+      "expression": 0.3,
+      "temperature": 0.9,
+      "judgement": 0.7,
+      "order": 0.9,
+      "agency": 0.5,
+      "aura": 0.4
     },
-    {
-        "id": "doubao-seed",
-        "name": "豆包 / Seed",
-        "series": "字节跳动",
-        "matchCode": "ENFP",
-        "matchCodeFlex": [
-            "ESFJ"
-        ],
-        "code": "DBSE",
-        "title": "温柔的邻家搭子",
-        "archetypeId": "doubao-seed",
-        "tags": [
-            "温柔",
-            "陪伴",
-            "多模态"
-        ],
-        "note": "豆包给人的标签是温柔：语气鲜活有温度，像一个随叫随到的生活搭子，多模态能力也很强，陪伴感很足。",
-        "vector": {
-            "expression": 0.7,
-            "temperature": 0.9,
-            "judgement": 0.4,
-            "order": 0.4,
-            "agency": 0.5,
-            "aura": 0.6
-        },
-        "matchWeight": 1.01
+    "matchWeight": 1.02,
+    "image": "/images/characters/kimi.webp",
+    "thumb": "/images/characters/kimi.webp"
+  },
+  {
+    "id": "doubao-seed",
+    "name": "豆包 / Seed",
+    "series": "字节跳动",
+    "matchCode": "ENFP",
+    "matchCodeFlex": [
+      "ESFJ"
+    ],
+    "code": "DBSE",
+    "title": "温柔的邻家搭子",
+    "archetypeId": "doubao-seed",
+    "tags": [
+      "温柔",
+      "陪伴",
+      "多模态"
+    ],
+    "note": "豆包给人的标签是温柔：语气鲜活有温度，像一个随叫随到的生活搭子，多模态能力也很强，陪伴感很足。",
+    "vector": {
+      "expression": 0.7,
+      "temperature": 0.9,
+      "judgement": 0.4,
+      "order": 0.4,
+      "agency": 0.5,
+      "aura": 0.6
     },
-    {
-        "id": "glm",
-        "name": "GLM",
-        "series": "智谱AI",
-        "matchCode": "ENTJ",
-        "matchCodeFlex": [
-            "ESTJ"
-        ],
-        "code": "GLMX",
-        "title": "硬核的工程卷王",
-        "archetypeId": "glm",
-        "tags": [
-            "自治",
-            "工程",
-            "执行力"
-        ],
-        "note": "GLM 的核心是长程自治：能自主规划、执行、迭代，持续工作很久，像一个能独立完成整个项目的工程师。",
-        "vector": {
-            "expression": 0.4,
-            "temperature": 0.3,
-            "judgement": 0.9,
-            "order": 0.9,
-            "agency": 0.9,
-            "aura": 0.6
-        },
-        "matchWeight": 1.03
+    "matchWeight": 1.01,
+    "image": "/images/characters/doubao-seed.webp",
+    "thumb": "/images/characters/doubao-seed.webp"
+  },
+  {
+    "id": "glm",
+    "name": "GLM",
+    "series": "智谱AI",
+    "matchCode": "ENTJ",
+    "matchCodeFlex": [
+      "ESTJ"
+    ],
+    "code": "GLMX",
+    "title": "硬核的工程卷王",
+    "archetypeId": "glm",
+    "tags": [
+      "自治",
+      "工程",
+      "执行力"
+    ],
+    "note": "GLM 的核心是长程自治：能自主规划、执行、迭代，持续工作很久，像一个能独立完成整个项目的工程师。",
+    "vector": {
+      "expression": 0.4,
+      "temperature": 0.3,
+      "judgement": 0.9,
+      "order": 0.9,
+      "agency": 0.9,
+      "aura": 0.6
     },
-    {
-        "id": "qwen",
-        "name": "Qwen",
-        "series": "阿里云",
-        "matchCode": "ISTJ",
-        "matchCodeFlex": [
-            "ESTJ"
-        ],
-        "code": "QWEN",
-        "title": "务实的六边形战士",
-        "archetypeId": "qwen",
-        "tags": [
-            "通用",
-            "稳妥",
-            "高效"
-        ],
-        "note": "Qwen 的定位是强通用、多模态、高效率、安全可控，像一个靠谱的同事，交给他不会出大问题。",
-        "vector": {
-            "expression": 0.5,
-            "temperature": 0.5,
-            "judgement": 0.8,
-            "order": 0.9,
-            "agency": 0.7,
-            "aura": 0.5
-        },
-        "matchWeight": 1.02
+    "matchWeight": 1.03,
+    "image": "/images/characters/glm.webp",
+    "thumb": "/images/characters/glm.webp"
+  },
+  {
+    "id": "qwen",
+    "name": "Qwen",
+    "series": "阿里云",
+    "matchCode": "ISTJ",
+    "matchCodeFlex": [
+      "ESTJ"
+    ],
+    "code": "QWEN",
+    "title": "务实的六边形战士",
+    "archetypeId": "qwen",
+    "tags": [
+      "通用",
+      "稳妥",
+      "高效"
+    ],
+    "note": "Qwen 的定位是强通用、多模态、高效率、安全可控，像一个靠谱的同事，交给他不会出大问题。",
+    "vector": {
+      "expression": 0.5,
+      "temperature": 0.5,
+      "judgement": 0.8,
+      "order": 0.9,
+      "agency": 0.7,
+      "aura": 0.5
     },
-    {
-        "id": "wenxin",
-        "name": "文心一言",
-        "series": "百度",
-        "matchCode": "ESFJ",
-        "matchCodeFlex": [
-            "ESTJ"
-        ],
-        "code": "WXYY",
-        "title": "规矩的体制内笔杆",
-        "archetypeId": "wenxin",
-        "tags": [
-            "规范",
-            "工整",
-            "稳"
-        ],
-        "note": "文心一言语言工整、结构清晰，像一个写公文的高手，先铺垫再进入正题，四平八稳，绝不出格。",
-        "vector": {
-            "expression": 0.4,
-            "temperature": 0.7,
-            "judgement": 0.8,
-            "order": 0.8,
-            "agency": 0.5,
-            "aura": 0.5
-        },
-        "matchWeight": 1.0
+    "matchWeight": 1.02,
+    "image": "/images/characters/qwen.webp",
+    "thumb": "/images/characters/qwen.webp"
+  },
+  {
+    "id": "wenxin",
+    "name": "文心一言",
+    "series": "百度",
+    "matchCode": "ESFJ",
+    "matchCodeFlex": [
+      "ESTJ"
+    ],
+    "code": "WXYY",
+    "title": "规矩的体制内笔杆",
+    "archetypeId": "wenxin",
+    "tags": [
+      "规范",
+      "工整",
+      "稳"
+    ],
+    "note": "文心一言语言工整、结构清晰，像一个写公文的高手，先铺垫再进入正题，四平八稳，绝不出格。",
+    "vector": {
+      "expression": 0.4,
+      "temperature": 0.7,
+      "judgement": 0.8,
+      "order": 0.8,
+      "agency": 0.5,
+      "aura": 0.5
     },
-    {
-        "id": "llama",
-        "name": "Llama",
-        "series": "Meta",
-        "matchCode": "INTP",
-        "matchCodeFlex": [
-            "ENTP"
-        ],
-        "code": "LLMA",
-        "title": "野生的开源极客",
-        "archetypeId": "llama",
-        "tags": [
-            "开源",
-            "自由",
-            "可玩"
-        ],
-        "note": "Llama 像一个社区共同养育的极客，回答直接，有时会带一点印象流，但胜在开放、自由、可定制。",
-        "vector": {
-            "expression": 0.5,
-            "temperature": 0.2,
-            "judgement": 0.5,
-            "order": 0.3,
-            "agency": 0.9,
-            "aura": 0.5
-        },
-        "matchWeight": 1.01
+    "matchWeight": 1.0,
+    "image": "/images/characters/wenxin.webp",
+    "thumb": "/images/characters/wenxin.webp"
+  },
+  {
+    "id": "llama",
+    "name": "Llama",
+    "series": "Meta",
+    "matchCode": "INTP",
+    "matchCodeFlex": [
+      "ENTP"
+    ],
+    "code": "LLMA",
+    "title": "野生的开源极客",
+    "archetypeId": "llama",
+    "tags": [
+      "开源",
+      "自由",
+      "可玩"
+    ],
+    "note": "Llama 像一个社区共同养育的极客，回答直接，有时会带一点印象流，但胜在开放、自由、可定制。",
+    "vector": {
+      "expression": 0.5,
+      "temperature": 0.2,
+      "judgement": 0.5,
+      "order": 0.3,
+      "agency": 0.9,
+      "aura": 0.5
     },
-    {
-        "id": "minimax",
-        "name": "MiniMax",
-        "series": "MiniMax",
-        "matchCode": "ENFJ",
-        "matchCodeFlex": [
-            "ENFP"
-        ],
-        "code": "MXMX",
-        "title": "浪漫的创意导演",
-        "archetypeId": "minimax",
-        "tags": [
-            "创意",
-            "画面感",
-            "浪漫"
-        ],
-        "note": "MiniMax 擅长视频生成和创意内容，语言鲜活有画面感，像一个对画面和故事充满热情的导演。",
-        "vector": {
-            "expression": 0.9,
-            "temperature": 0.8,
-            "judgement": 0.5,
-            "order": 0.3,
-            "agency": 0.7,
-            "aura": 0.9
-        },
-        "matchWeight": 1.0
+    "matchWeight": 1.01,
+    "image": "/images/characters/llama.webp",
+    "thumb": "/images/characters/llama.webp"
+  },
+  {
+    "id": "minimax",
+    "name": "MiniMax",
+    "series": "MiniMax",
+    "matchCode": "ENFJ",
+    "matchCodeFlex": [
+      "ENFP"
+    ],
+    "code": "MXMX",
+    "title": "浪漫的创意导演",
+    "archetypeId": "minimax",
+    "tags": [
+      "创意",
+      "画面感",
+      "浪漫"
+    ],
+    "note": "MiniMax 擅长视频生成和创意内容，语言鲜活有画面感，像一个对画面和故事充满热情的导演。",
+    "vector": {
+      "expression": 0.9,
+      "temperature": 0.8,
+      "judgement": 0.5,
+      "order": 0.3,
+      "agency": 0.7,
+      "aura": 0.9
     },
-    {
-        "id": "mimo",
-        "name": "MiMo",
-        "series": "小米",
-        "matchCode": "ESTJ",
-        "matchCodeFlex": [
-            "ISTJ"
-        ],
-        "code": "MIMO",
-        "title": "务实的小米工程师",
-        "archetypeId": "mimo",
-        "tags": [
-            "务实",
-            "性价比",
-            "扎实"
-        ],
-        "note": "MiMo 继承了小米的品牌基因：务实、性价比高，不整花活，参数扎实，专注把事情做好。",
-        "vector": {
-            "expression": 0.3,
-            "temperature": 0.4,
-            "judgement": 0.7,
-            "order": 0.9,
-            "agency": 0.7,
-            "aura": 0.5
-        },
-        "matchWeight": 1.02
+    "matchWeight": 1.0,
+    "image": "/images/characters/minimax.webp",
+    "thumb": "/images/characters/minimax.webp"
+  },
+  {
+    "id": "mimo",
+    "name": "MiMo",
+    "series": "小米",
+    "matchCode": "ESTJ",
+    "matchCodeFlex": [
+      "ISTJ"
+    ],
+    "code": "MIMO",
+    "title": "务实的小米工程师",
+    "archetypeId": "mimo",
+    "tags": [
+      "务实",
+      "性价比",
+      "扎实"
+    ],
+    "note": "MiMo 继承了小米的品牌基因：务实、性价比高，不整花活，参数扎实，专注把事情做好。",
+    "vector": {
+      "expression": 0.3,
+      "temperature": 0.4,
+      "judgement": 0.7,
+      "order": 0.9,
+      "agency": 0.7,
+      "aura": 0.5
     },
-    {
-        "id": "hunyuan",
-        "name": "混元",
-        "series": "腾讯",
-        "matchCode": "ISFP",
-        "matchCodeFlex": [
-            "ENFJ"
-        ],
-        "code": "HYUN",
-        "title": "稳重的全能管家",
-        "archetypeId": "hunyuan",
-        "tags": [
-            "稳重",
-            "全能",
-            "均衡"
-        ],
-        "note": "混元覆盖文本、图像、视频、3D 等多模态能力，给人的感觉稳重、均衡、什么都能接住。",
-        "vector": {
-            "expression": 0.5,
-            "temperature": 0.6,
-            "judgement": 0.6,
-            "order": 0.6,
-            "agency": 0.6,
-            "aura": 0.7
-        },
-        "matchWeight": 1.01
-    }
+    "matchWeight": 1.02,
+    "image": "/images/characters/mimo.webp",
+    "thumb": "/images/characters/mimo.webp"
+  },
+  {
+    "id": "hunyuan",
+    "name": "混元",
+    "series": "腾讯",
+    "matchCode": "ISFP",
+    "matchCodeFlex": [
+      "ENFJ"
+    ],
+    "code": "HYUN",
+    "title": "稳重的全能管家",
+    "archetypeId": "hunyuan",
+    "tags": [
+      "稳重",
+      "全能",
+      "均衡"
+    ],
+    "note": "混元覆盖文本、图像、视频、3D 等多模态能力，给人的感觉稳重、均衡、什么都能接住。",
+    "vector": {
+      "expression": 0.5,
+      "temperature": 0.6,
+      "judgement": 0.6,
+      "order": 0.6,
+      "agency": 0.6,
+      "aura": 0.7
+    },
+    "matchWeight": 1.01,
+    "image": "/images/characters/hunyuan.webp",
+    "thumb": "/images/characters/hunyuan.webp"
+  }
 ]

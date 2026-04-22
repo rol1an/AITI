@@ -236,7 +236,7 @@ const raritySummaryLabel = computed(() => {
             </div>
             <div class="footer-links">
               <span class="footer-link-item">github.com/tianxingleo/AITI</span>
-              <span class="footer-link-item">aiti.tianxingleo.top</span>
+              <span class="footer-link-item">aititest.com</span>
             </div>
           </div>
         </div>

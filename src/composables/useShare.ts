@@ -16,7 +16,7 @@ function createShareText(result: QuizResult) {
     ? t(`result.rarityTiers.${rarityMeta.tier}`, undefined, rarityMeta.tier)
     : '--'
   const displayProbability = formatCharacterProbability(result.matchProbability)
-  const siteUrl = 'https://aiti.tianxingleo.top'
+  const siteUrl = 'https://aititest.com'
 
   return [
     t('app.common.shareCode', { code: result.code }),

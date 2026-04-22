@@ -25,7 +25,7 @@ const faqJsonLd = computed(() => [
     name: 'AITI',
     alternateName: 'AI Type Indicator',
     description: '以偏好维度为基础的 AI 模型画像测试工具，通过情境式问题生成专属模型代码和画像报告。',
-    url: 'https://aiti.tianxingleo.top',
+    url: 'https://aititest.com',
     applicationCategory: 'Entertainment',
     operatingSystem: 'Web',
     offers: {

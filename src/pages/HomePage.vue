@@ -49,11 +49,11 @@ useSeo({
     '@type': 'WebSite',
     name: 'AITI',
     alternateName: 'AI Type Indicator',
-    url: 'https://aiti.tianxingleo.top',
+    url: 'https://aititest.com',
     description: '以偏好维度为基础的 AI 模型画像测试',
     potentialAction: {
       '@type': 'TakeAction',
-      target: 'https://aiti.tianxingleo.top/quiz',
+      target: 'https://aititest.com/quiz',
       name: '开始测试',
     },
   },

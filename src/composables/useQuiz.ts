@@ -8,10 +8,64 @@ import type { Archetype, CharacterMatch, Question, QuizRecord, QuizResult } from
 import { hydrateCharacterVisual, hydrateQuizRecord } from '../utils/characterVisuals'
 import { calculateQuizResult, createDebugQuizResult } from '../utils/quizEngine'
 import { clearLastRecord, loadLastRecord, saveLastRecord } from '../utils/storage'
+import { tm } from '../i18n'
 
 const questions = ref<Question[]>((questionsData as Question[]) ?? [])
 const archetypes = ref<Archetype[]>((archetypesData as Archetype[]) ?? [])
 const characters = ref<CharacterMatch[]>((charactersData as CharacterMatch[]).map(hydrateCharacterVisual))
+
+// Locale-aware computed refs — auto-update when locale changes
+const localizedQuestions = computed<Question[]>(() => {
+  type QTrans = { text: string; optionA: string; optionB: string }
+  const trans = tm<QTrans[] | undefined>('quiz.questions')
+  if (!Array.isArray(trans) || trans.length === 0) return questions.value
+  return questions.value.map((q, i) => {
+    const t = trans[i]
+    if (!t) return q
+    const opts = q.options ?? []
+    return {
+      ...q,
+      text: t.text ?? q.text,
+      options: [
+        { ...(opts[0] ?? {}), label: t.optionA ?? opts[0]?.label ?? '' },
+        { ...(opts[1] ?? {}), label: t.optionB ?? opts[1]?.label ?? '' },
+      ],
+    }
+  })
+})
+
+const localizedArchetypes = computed<Archetype[]>(() => {
+  type ATrans = Partial<Pick<Archetype, 'subtitle' | 'description' | 'narrativeRole' | 'spotlight' | 'weakness' | 'minefield' | 'oneLiners' | 'mbtiReason' | 'tags' | 'keywords'>>
+  const trans = tm<Record<string, ATrans> | undefined>('archetypes')
+  if (!trans || typeof trans !== 'object') return archetypes.value
+  return archetypes.value.map((a) => {
+    const t = (trans as Record<string, ATrans>)[a.id]
+    if (!t) return a
+    return { ...a, ...t }
+  })
+})
+
+const localizedCharacters = computed<CharacterMatch[]>(() => {
+  type CTrans = { title?: string; note?: string; tags?: string[]; soulmateReason?: string; rivalDescription?: string }
+  const trans = tm<Record<string, CTrans> | undefined>('characters')
+  if (!trans || typeof trans !== 'object') return characters.value
+  return characters.value.map((c) => {
+    const t = (trans as Record<string, CTrans>)[c.id]
+    if (!t) return c
+    return {
+      ...c,
+      title: t.title ?? c.title,
+      note: t.note ?? c.note,
+      tags: t.tags ?? c.tags,
+      soulmate: c.soulmate && t.soulmateReason
+        ? { ...c.soulmate, reason: t.soulmateReason }
+        : c.soulmate,
+      rival: c.rival && t.rivalDescription
+        ? { ...c.rival, description: t.rivalDescription }
+        : c.rival,
+    }
+  })
+})
 
 // 数据是否已就绪
 const dataReady = computed(() => questions.value.length > 0)
@@ -31,7 +85,7 @@ const state = reactive({
   latestRecord: hydrateQuizRecord(loadLastRecord() as QuizRecord | null),
 })
 
-const currentQuestion = computed(() => questions.value[state.currentIndex] ?? null)
+const currentQuestion = computed(() => localizedQuestions.value[state.currentIndex] ?? null)
 const selectedOptionIndex = computed(() => state.answers[state.currentIndex] ?? UNANSWERED)
 const progress = computed(() => (questions.value.length ? (state.currentIndex + 1) / questions.value.length : 0))
 const answeredCount = computed(() => state.answers.filter((answer) => isAnsweredValue(answer)).length)
@@ -95,8 +149,8 @@ function finalizeQuiz(): QuizResult | null {
   const result = calculateQuizResult({
     answers: state.answers,
     questions: questions.value,
-    archetypes: archetypes.value,
-    characters: characters.value,
+    archetypes: localizedArchetypes.value,
+    characters: localizedCharacters.value,
   })
 
   const submissionId = typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function'
@@ -137,9 +191,9 @@ export function useQuiz() {
       }
     },
     dataReady,
-    questions,
-    archetypes,
-    characters,
+    questions: localizedQuestions,
+    archetypes: localizedArchetypes,
+    characters: localizedCharacters,
     state: readonly(state),
     currentQuestion,
     selectedOptionIndex,
@@ -161,8 +215,8 @@ export function useQuiz() {
     createDebugResult: (characterId: string): QuizResult | null =>
       createDebugQuizResult({
         characterId,
-        archetypes: archetypes.value,
-        characters: characters.value,
+        archetypes: localizedArchetypes.value,
+        characters: localizedCharacters.value,
       }),
   }
 }

@@ -6,6 +6,8 @@
 
 <p align="center">
   <a href="https://aititest.com/">🌐 aititest.com — AITI 官网</a>
+  &nbsp;·&nbsp;
+  <a href="https://aititest.com/?lang=en">🌍 English Version</a>
 </p>
 
 <p align="center">
@@ -20,7 +22,7 @@
 <p align="center">
   <a href="https://aititest.com/"><img src="https://img.shields.io/badge/Deploy-Cloudflare_Pages-F38020?style=flat-square&logo=cloudflare" alt="Cloudflare Pages" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-blue.svg?style=flat-square" alt="License" /></a>
-  <img src="https://img.shields.io/badge/Version-v0.0.2-blueviolet.svg?style=flat-square" alt="v0.0.2" />
+  <img src="https://img.shields.io/badge/Version-v0.0.3-blueviolet.svg?style=flat-square" alt="v0.0.3" />
   <img src="https://img.shields.io/badge/Questions-28道-green.svg?style=flat-square" alt="28道题" />
   <img src="https://img.shields.io/badge/AI_Models-14个-orange.svg?style=flat-square" alt="14个 AI 模型" />
 </p>
@@ -62,6 +64,7 @@
 - **标准 MBTI 四维判定**：基于 E/I、S/N、T/F、J/P 四个经典 MBTI 维度构建底层判定框架，每个维度各 7 道题，共 28 道题。
 - **14 个 AI 模型画像**：Claude · GPT · Gemini · Grok · DeepSeek · Kimi · 豆包 · GLM · Qwen · 文心 · Llama · MiniMax · Mimo · 混元。
 - **天作之合 & 欢喜冤家**：每个 AI 人格结果页新增专属速配版块，展示与其他模型的绝配关系和互怼日常。
+- **中英双语**：完整英文界面，题目、画像描述、角色介绍全部翻译；访问 [aititest.com/?lang=en](https://aititest.com/?lang=en) 直接切换英文版，或在导航栏手动切换。
 - **可视化交互**：16personalities 风格的交互式倾向滑块，直观展现你的思维倾向。
 - **一键分享**：精美的结果人格模型卡，支持一键导出 PNG 海报分享给同好。
 - **轻量全栈**：测试结果在本地浏览器完成计算；结果页会匿名上报最终命中模型与画像到后端（Cloudflare D1），用于全站统计；不要求注册，不收集邮箱等直接身份信息。
@@ -117,9 +120,9 @@ src/
 │   ├── aitiArchetypes.json       # 14 个 AI 模型原型定义
 │   ├── aitiCharacters.json       # 14 个 AI 模型画像
 │   └── aitiCharacterProbabilities.json
-├── i18n/                # 国际化文案
-│   ├── messages.ts      # 基础多语言文案
-│   └── aitiMessages.ts  # AITI 覆盖层文案
+├── i18n/                # 国际化文案（中英双语）
+│   ├── messages.ts      # 基础多语言文案（含英文基础层）
+│   └── aitiMessages.ts  # AITI 覆盖层文案（zh-CN + en 完整翻译）
 ├── pages/               # 页面组件
 │   ├── HomePage.vue
 │   ├── IntroPage.vue
@@ -248,6 +251,10 @@ git push origin v0.1.0
 - 本测试为娱乐性质的人格类比工具，测试结果**不具备任何专业的心理学或医学参考价值**，请仅当作娱乐看待。
 
 ## 📋 更新日志
+
+### v0.0.3
+- **英文版上线**：完整英文界面，覆盖 28 道题目、14 个模型画像描述、所有角色标题 / 注释 / 天作之合 & 欢喜冤家文案。访问 [aititest.com/?lang=en](https://aititest.com/?lang=en) 直接打开英文版；支持 `?lang=en` URL 参数跳转和导航栏手动切换，偏好自动保存至本地。
+- **国际化架构解冻**：locale 路由从硬编码 zh-CN 改为真正支持 en / zh-CN / zh-TW / ja；`normalizeLocale()` 恢复完整匹配逻辑，`useI18n().localeOptions` 暴露可切换的语言选项。
 
 ### v0.0.2
 - **题目维度重映射**：将 28 道题从 5 个自定义维度重映射到标准 MBTI 四维（E/I · S/N · T/F · J/P），每维各 7 题，底层判定逻辑更清晰

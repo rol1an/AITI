@@ -62,7 +62,18 @@ function detectSystemLocale(): AppLocale {
 }
 
 export function initI18n() {
-  currentLocale.value = readStoredLocale() ?? detectSystemLocale() ?? DEFAULT_LOCALE
+  const urlLang = typeof window !== 'undefined'
+    ? new URLSearchParams(window.location.search).get('lang')
+    : null
+  const fromUrl = urlLang ? normalizeLocale(urlLang) : null
+  const locale = fromUrl ?? readStoredLocale() ?? detectSystemLocale() ?? DEFAULT_LOCALE
+  currentLocale.value = locale
+  if (fromUrl) {
+    // Persist so the rest of the session keeps the chosen language
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem(STORAGE_KEY, locale)
+    }
+  }
   applyDocumentLanguage(currentLocale.value)
 }
 

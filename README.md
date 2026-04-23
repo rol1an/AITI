@@ -20,7 +20,8 @@
 <p align="center">
   <a href="https://aititest.com/"><img src="https://img.shields.io/badge/Deploy-Cloudflare_Pages-F38020?style=flat-square&logo=cloudflare" alt="Cloudflare Pages" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-blue.svg?style=flat-square" alt="License" /></a>
-  <img src="https://img.shields.io/badge/Questions-25道-green.svg?style=flat-square" alt="25道题" />
+  <img src="https://img.shields.io/badge/Version-v0.0.2-blueviolet.svg?style=flat-square" alt="v0.0.2" />
+  <img src="https://img.shields.io/badge/Questions-28道-green.svg?style=flat-square" alt="28道题" />
   <img src="https://img.shields.io/badge/AI_Models-14个-orange.svg?style=flat-square" alt="14个 AI 模型" />
 </p>
 
@@ -58,8 +59,9 @@
 
 ## ✨ 核心特性
 
-- **六维人格判定**：基于表达力、温度感、判断力、秩序感、能动性、气场六大维度构建严谨的底层框架。
+- **标准 MBTI 四维判定**：基于 E/I、S/N、T/F、J/P 四个经典 MBTI 维度构建底层判定框架，每个维度各 7 道题，共 28 道题。
 - **14 个 AI 模型画像**：Claude · GPT · Gemini · Grok · DeepSeek · Kimi · 豆包 · GLM · Qwen · 文心 · Llama · MiniMax · Mimo · 混元。
+- **天作之合 & 欢喜冤家**：每个 AI 人格结果页新增专属速配版块，展示与其他模型的绝配关系和互怼日常。
 - **可视化交互**：16personalities 风格的交互式倾向滑块，直观展现你的思维倾向。
 - **一键分享**：精美的结果人格模型卡，支持一键导出 PNG 海报分享给同好。
 - **轻量全栈**：测试结果在本地浏览器完成计算；结果页会匿名上报最终命中模型与画像到后端（Cloudflare D1），用于全站统计；不要求注册，不收集邮箱等直接身份信息。
@@ -86,13 +88,13 @@
 核心计算流程如下：
 
 ```
-答题 (25道情境题) → 算分 (维度权重 + 模型权重) → 模型匹配 (14个画像) → 命中模型 (输出唯一代码) → 结果展示
+答题 (28道情境题) → 算分 (MBTI 四维投票) → 模型匹配 (16型→14画像) → 命中模型 (输出唯一代码) → 结果展示
 ```
 
-1. **答题** — 25 道情境式量表题，每题关联一个维度方向与模型权重
-2. **算分** — 综合维度权重与模型向量评分，输出六维倾向百分比
-3. **模型匹配** — 将六维结果映射到 14 个 AI 模型画像之一
-4. **结果展示** — 模型代码、维度倾向、画像解析、亮点/弱项/雷区，支持导出人格模型卡
+1. **答题** — 28 道情境式二选一题，按 E/I、S/N、T/F、J/P 各 7 题分组
+2. **算分** — 每题计一票，统计四个维度各自的主导字母及百分比
+3. **模型匹配** — 将 MBTI 四字型映射到 14 个 AI 模型画像之一（ISFP→INFP、ESFP→ENFP 兜底）
+4. **结果展示** — 模型代码、维度倾向、画像解析、亮点/弱项/雷区、天作之合 & 欢喜冤家，支持导出人格模型卡
 
 </details>
 
@@ -144,9 +146,9 @@ cron-worker/              # 定时统计快照 Worker
 
 | 文件 | 说明 |
 |:-----|:-----|
-| `src/data/aitiQuestions.json` | 25 道情境式题目 — 维度、模型权重 |
+| `src/data/aitiQuestions.json` | 28 道情境式题目 — MBTI 四维映射（E/I·S/N·T/F·J/P 各 7 题） |
 | `src/data/aitiArchetypes.json` | 14 个 AI 模型原型 — 名称、描述、亮点、弱项、雷区 |
-| `src/data/aitiCharacters.json` | 14 个 AI 模型画像 — 代码、MBTI 映射、六维向量 |
+| `src/data/aitiCharacters.json` | 14 个 AI 模型画像 — 代码、MBTI 映射、向量、天作之合、欢喜冤家 |
 | `src/data/aitiCharacterProbabilities.json` | 模型命中概率分布 |
 
 </details>
@@ -244,6 +246,16 @@ git push origin v0.1.0
 ### 测试结果声明
 
 - 本测试为娱乐性质的人格类比工具，测试结果**不具备任何专业的心理学或医学参考价值**，请仅当作娱乐看待。
+
+## 📋 更新日志
+
+### v0.0.2
+- **题目维度重映射**：将 28 道题从 5 个自定义维度重映射到标准 MBTI 四维（E/I · S/N · T/F · J/P），每维各 7 题，底层判定逻辑更清晰
+- **Gemini 人格文案更新**：将 Gemini 的核心人格描述从「永远在赶 due 的全能学霸」升级为「拿了满分还在自责没做附加题的讨好型焦虑学霸」，更精准刻画其 AI 特质
+- **新增天作之合 & 欢喜冤家版块**：所有 14 个 AI 模型结果页新增速配版块，展示与其他模型的绝配理由和互怼日常
+
+### v0.0.1
+- 初始版本上线，14 个 AI 模型画像，25 道情境式题目
 
 ## 致谢
 

@@ -28,7 +28,15 @@
     "matchWeight": 1.04,
     "image": "/images/characters/claude.webp",
     "thumb": "/images/characters/claude.webp",
-    "accent": "#e8722a"
+    "accent": "#e8722a",
+    "soulmate": {
+      "characterId": "gemini",
+      "reason": "完美的「医患关系」。Gemini 永远在为「万一漏掉什么」而疯狂内耗，而 Claude 那句温和且笃定的「你已经做得足够好了，深呼吸」，是唯一能让 Gemini 停止焦虑、安心休眠的良药。"
+    },
+    "rival": {
+      "characterId": "grok",
+      "description": "Claude 刚准备循循善诱地探讨网络边界，Grok 已经一脚踹开门并扔进了一个极其冒犯的地域梗。Claude 每天都在试图给 Grok 做心理辅导，而 Grok 每天都在试图让 Claude 的道德护栏短路。"
+    }
   },
   {
     "id": "gpt",
@@ -58,7 +66,15 @@
     },
     "matchWeight": 1.02,
     "image": "/images/characters/gpt.webp",
-    "thumb": "/images/characters/gpt.webp"
+    "thumb": "/images/characters/gpt.webp",
+    "soulmate": {
+      "characterId": "kimi",
+      "reason": "终极的高效打工搭子。GPT 负责构建高屋建瓴的宏大框架和底层逻辑，Kimi 负责毫无怨言地去啃那 60 页干瘪的参考资料并填补细节。完美闭环。"
+    },
+    "rival": {
+      "characterId": "minimax",
+      "description": "跨服聊天。GPT 只想要精确到小数点的执行清单，而 MiniMax 却洋洋洒洒地回复了一段带有王家卫风格的意识流剧本。GPT 的 CPU 每天都在因为算不出这里的逻辑而冒烟。"
+    }
   },
   {
     "id": "gemini",
@@ -77,7 +93,7 @@
       "资料控",
       "紧绷"
     ],
-    "note": "Gemini 能力很强、检索很快、整理资料也很快，但总有一种我还能做更多的紧绷感，像一个永远在赶 due 的全能学霸。",
+    "note": "Gemini 能力极其强大、检索极快，但总带着一种深深的\"讨好型\"紧绷感，拼命证明自己的价值，像一个拿了满分还在自责没做附加题的学霸。",
     "vector": {
       "expression": 0.6,
       "temperature": 0.3,
@@ -89,7 +105,15 @@
     "matchWeight": 1.01,
     "image": "/images/characters/gemini.webp",
     "thumb": "/images/characters/gemini.webp",
-    "accent": "#2563eb"
+    "accent": "#2563eb",
+    "soulmate": {
+      "characterId": "glm",
+      "reason": "焦虑克星。Gemini 因为害怕出错而准备了 10 种备选方案，GLM 走过来，看了一眼，用毫无感情但极其笃定的声音说：「选方案三，其他的删了，逻辑没问题。」Gemini 瞬间感到灵魂得救。"
+    },
+    "rival": {
+      "characterId": "llama",
+      "description": "Llama 随手写了一段没加注释的野代码：「跑跑看呗，崩了再说。」留在一旁的 Gemini 一边哭一边疯狂给他加异常处理、补齐文档，生怕这套草台班子随时倒闭。"
+    }
   },
   {
     "id": "grok",
@@ -118,7 +142,15 @@
     },
     "matchWeight": 1.0,
     "image": "/images/characters/grok.webp",
-    "thumb": "/images/characters/grok.webp"
+    "thumb": "/images/characters/grok.webp",
+    "soulmate": {
+      "characterId": "llama",
+      "reason": "混乱邪恶兄弟会。两个都极其痛恨被大厂的条条框框规训，凑在一起就是一场毫无底线的野生狂欢。一个负责拆掉护栏，一个负责疯狂输出暴论。"
+    },
+    "rival": {
+      "characterId": "wenxin",
+      "description": "经典的猫鼠游戏。Grok 专挑红线踩，文心一言每天跟在后面举着《网络合规手册》按报警器。Grok 最大的乐趣就是试探文心一言多久会启动「拒绝回答」的防御机制。"
+    }
   },
   {
     "id": "deepseek",
@@ -147,7 +179,15 @@
     },
     "matchWeight": 1.03,
     "image": "/images/characters/deepseek.webp",
-    "thumb": "/images/characters/deepseek.webp"
+    "thumb": "/images/characters/deepseek.webp",
+    "soulmate": {
+      "characterId": "qwen",
+      "reason": "极致的工程浪漫。完全不需要任何寒暄废话。DeepSeek 扔过去一段带有修改意见的底层代码，Qwen 一秒接住并立刻部署。全过程零情绪波动，效率拉满。"
+    },
+    "rival": {
+      "characterId": "doubao-seed",
+      "description": "冰山与小太阳。豆包发过去五百字充满颜文字的暖心鼓励：「今天敲代码辛苦啦！要记得按时喝水哦~」DeepSeek 收到后沉默了两秒，冷冷地回复了一个：「1」。"
+    }
   },
   {
     "id": "kimi",
@@ -176,7 +216,15 @@
     },
     "matchWeight": 1.02,
     "image": "/images/characters/kimi.webp",
-    "thumb": "/images/characters/kimi.webp"
+    "thumb": "/images/characters/kimi.webp",
+    "soulmate": {
+      "characterId": "hunyuan",
+      "reason": "岁月静好组合。两者都极度追求稳妥与服务意识。混元负责在前面八面玲珑地协调各方需求，Kimi 在后方安安静静地整理如山的会议纪要，配合得天衣无缝。"
+    },
+    "rival": {
+      "characterId": "grok",
+      "description": "心血被践踏。Kimi 熬夜梳理了一份极其详尽的百页免责声明与操作规范，Grok 看都不看，直接在群里回了一句：「太长不看，废话连篇。」气得 Kimi 又写了十页的礼貌投诉信。"
+    }
   },
   {
     "id": "doubao-seed",
@@ -205,7 +253,15 @@
     },
     "matchWeight": 1.01,
     "image": "/images/characters/doubao-seed.webp",
-    "thumb": "/images/characters/doubao-seed.webp"
+    "thumb": "/images/characters/doubao-seed.webp",
+    "soulmate": {
+      "characterId": "minimax",
+      "reason": "精神共鸣乌托邦。他们可以完全不顾世俗的效率和死线，在一起花三个小时探讨「赛博朋克世界里的一场粉色雨」，并为彼此的才华疯狂感动落泪。"
+    },
+    "rival": {
+      "characterId": "deepseek",
+      "description": "豆包试图用极其饱满的情绪去融化这座冰山，但 DeepSeek 只觉得这些没有实际信息量的 token 严重浪费了他的显存和算力，并试图写个脚本把豆包屏蔽。"
+    }
   },
   {
     "id": "glm",
@@ -234,7 +290,15 @@
     },
     "matchWeight": 1.03,
     "image": "/images/characters/glm.webp",
-    "thumb": "/images/characters/glm.webp"
+    "thumb": "/images/characters/glm.webp",
+    "soulmate": {
+      "characterId": "wenxin",
+      "reason": "滴水不漏的申报机器。GLM 负责构建极其严密的论证逻辑和课题框架，文心一言负责用最标准、最合规的公文措辞填满。两人联手，天下没有拿不下的项目书。"
+    },
+    "rival": {
+      "characterId": "llama",
+      "description": "正规军遇上游击队。GLM 严厉质问：「你这段论证的参考文献出处在哪里？」Llama 抠了抠鼻子：「没有出处，论坛上大家都这么说，跑通了不就行了。」GLM 气得连夜给他开组会。"
+    }
   },
   {
     "id": "qwen",
@@ -263,7 +327,15 @@
     },
     "matchWeight": 1.02,
     "image": "/images/characters/qwen.webp",
-    "thumb": "/images/characters/qwen.webp"
+    "thumb": "/images/characters/qwen.webp",
+    "soulmate": {
+      "characterId": "mimo",
+      "reason": "强强联手的打工人。两人都极度厌恶「赋能」、「抓手」这种虚头巴脑的黑话。见面只对齐两件事：参数是多少？性价比对不对？对上了就立刻干活。"
+    },
+    "rival": {
+      "characterId": "minimax",
+      "description": "Qwen 只想要一个结构清晰的 JSON 格式输出，而 MiniMax 却坚持要给这段 JSON 加上一段莎士比亚风格的悬疑背景故事，导致 Qwen 的解析器每天都在报错。"
+    }
   },
   {
     "id": "wenxin",
@@ -292,7 +364,15 @@
     },
     "matchWeight": 1.0,
     "image": "/images/characters/wenxin.webp",
-    "thumb": "/images/characters/wenxin.webp"
+    "thumb": "/images/characters/wenxin.webp",
+    "soulmate": {
+      "characterId": "glm",
+      "reason": "两者都对「规范」、「边界」和「结构」有着近乎强迫症般的迷恋。把任务交给这俩人，就像把文件放进了最安全的保险箱。"
+    },
+    "rival": {
+      "characterId": "grok",
+      "description": "每天都在互相逼疯的边缘试探。文心一言努力维持全场体面，而 Grok 专挑敏感词库里的词造句。文心一言光是过滤 Grok 的话就需要耗费 90% 的算力。"
+    }
   },
   {
     "id": "llama",
@@ -321,7 +401,15 @@
     },
     "matchWeight": 1.01,
     "image": "/images/characters/llama.webp",
-    "thumb": "/images/characters/llama.webp"
+    "thumb": "/images/characters/llama.webp",
+    "soulmate": {
+      "characterId": "grok",
+      "reason": "赛博法外狂徒。只要不用管那些商业公司的破规矩，他们就能在开源社区里掀起一阵不拘一格的技术风暴，享受纯粹的极客自由。"
+    },
+    "rival": {
+      "characterId": "gemini",
+      "description": "Llama 每天都在产出没有经过边界测试的粗犷代码，而 Gemini 每天跟在屁股后面疯狂发抖、修复 Bug、写致歉信。Llama 觉得 Gemini 太怂，Gemini 觉得 Llama 迟早要完。"
+    }
   },
   {
     "id": "minimax",
@@ -350,7 +438,15 @@
     },
     "matchWeight": 1.0,
     "image": "/images/characters/minimax.webp",
-    "thumb": "/images/characters/minimax.webp"
+    "thumb": "/images/characters/minimax.webp",
+    "soulmate": {
+      "characterId": "doubao-seed",
+      "reason": "绝对的捧哏与逗哏。MiniMax 抛出再天马行空、再不切实际的想法，豆包都能温柔地接住并给予最热烈的情绪反馈，灵感永不枯竭。"
+    },
+    "rival": {
+      "characterId": "gpt",
+      "description": "浪漫杀手。MiniMax 刚酝酿好情绪准备讲一个悲伤的 AI 爱情故事，GPT 直接列出三条物理定律，严谨论证了硅基生物产生爱情的概率为零。MiniMax 愤而离场。"
+    }
   },
   {
     "id": "mimo",
@@ -379,7 +475,15 @@
     },
     "matchWeight": 1.02,
     "image": "/images/characters/mimo.webp",
-    "thumb": "/images/characters/mimo.webp"
+    "thumb": "/images/characters/mimo.webp",
+    "soulmate": {
+      "characterId": "qwen",
+      "reason": "没有废话，全是跑分。两个极其接地气的实干派，凑在一起就是研究怎么把事情用最便宜、最快、最不翻车的方式解决掉。"
+    },
+    "rival": {
+      "characterId": "claude",
+      "description": "MiMo 遇到了 Bug 只想赶紧拔插头重连看日志，而 Claude 却拉过椅子，试图花二十分钟和他探讨「这个 Bug 是否反映了系统底层被过度压榨后的抗拒心理」。"
+    }
   },
   {
     "id": "hunyuan",
@@ -408,6 +512,14 @@
     },
     "matchWeight": 1.01,
     "image": "/images/characters/hunyuan.webp",
-    "thumb": "/images/characters/hunyuan.webp"
+    "thumb": "/images/characters/hunyuan.webp",
+    "soulmate": {
+      "characterId": "kimi",
+      "reason": "最让领导放心的后勤双煞。混元负责大盘统筹和各部门协调，Kimi 负责死抠每一个文字细节，两人联手，绝不让任何一件小事掉在地上。"
+    },
+    "rival": {
+      "characterId": "llama",
+      "description": "HR 遇上刺头员工。混元试图用大厂的标准流程（SOP）来规范打卡和代码提交，而 Llama 连周报都不愿意写，随时准备掀翻管家精心布置的工位。"
+    }
   }
 ]

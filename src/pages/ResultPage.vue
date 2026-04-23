@@ -250,6 +250,14 @@ const primaryCharacterImage = computed(() => {
 
 const primaryCharacter = computed(() => result.value?.characterMatches?.[0] ?? null)
 const secondaryCharacterMatches = computed(() => result.value?.topCharacterMatches?.slice(1, 3) ?? [])
+const soulmateCharacter = computed(() => {
+  const id = primaryCharacter.value?.soulmate?.characterId
+  return id ? quiz.characters.value.find((c) => c.id === id) ?? null : null
+})
+const rivalCharacter = computed(() => {
+  const id = primaryCharacter.value?.rival?.characterId
+  return id ? quiz.characters.value.find((c) => c.id === id) ?? null : null
+})
 const displayTags = computed(() => {
   if (!primaryCharacter.value) {
     return []
@@ -474,13 +482,13 @@ watch(primaryCharacterImage, () => {
 type TraitDimension = 'E_I' | 'S_N' | 'T_F' | 'J_P'
 
 const traits = computed(() => {
-  const tDims = tm<Record<string, string[]>>('result.dimensions');
+  const tDims = tm<Record<string, string[]>>('result.dimensions')
   return [
-    { id: 'E_I' as const, leftCode: 'E', leftLabel: tDims.E_I[0], rightCode: 'I', rightLabel: tDims.E_I[1], color: '#4298B4' },
-    { id: 'S_N' as const, leftCode: 'S', leftLabel: tDims.S_N[0], rightCode: 'N', rightLabel: tDims.S_N[1], color: '#E4AE3A' },
-    { id: 'T_F' as const, leftCode: 'T', leftLabel: tDims.T_F[0], rightCode: 'F', rightLabel: tDims.T_F[1], color: '#33A474' },
-    { id: 'J_P' as const, leftCode: 'J', leftLabel: tDims.J_P[0], rightCode: 'P', rightLabel: tDims.J_P[1], color: '#88619A' },
-  ];
+    { id: 'E_I' as const, leftCode: 'E', leftLabel: tDims.E_I?.[0] ?? '外向', rightCode: 'I', rightLabel: tDims.E_I?.[1] ?? '内向', color: '#9b59b6' },
+    { id: 'S_N' as const, leftCode: 'S', leftLabel: tDims.S_N?.[0] ?? '实感', rightCode: 'N', rightLabel: tDims.S_N?.[1] ?? '直觉', color: '#3498db' },
+    { id: 'T_F' as const, leftCode: 'T', leftLabel: tDims.T_F?.[0] ?? '理性', rightCode: 'F', rightLabel: tDims.T_F?.[1] ?? '共情', color: '#e74c3c' },
+    { id: 'J_P' as const, leftCode: 'J', leftLabel: tDims.J_P?.[0] ?? '判断', rightCode: 'P', rightLabel: tDims.J_P?.[1] ?? '感知', color: '#f39c12' },
+  ]
 })
 
 function getHandlePosition(traitId: TraitDimension, leftCode: string) {
@@ -568,10 +576,10 @@ function buildSubmitPayload() {
     characterCode: r.code || r.mbtiCode || 'UNKN',
     predictedMbti: r.mbtiCode && /^[EI][SN][TF][JP]$/i.test(r.mbtiCode) ? r.mbtiCode : undefined,
     dimensionScores: {
-      ei: typeof scores.E_I?.percentage === 'number' ? Math.max(0, Math.min(100, scores.E_I.percentage)) : 50,
-      sn: typeof scores.S_N?.percentage === 'number' ? Math.max(0, Math.min(100, scores.S_N.percentage)) : 50,
-      tf: typeof scores.T_F?.percentage === 'number' ? Math.max(0, Math.min(100, scores.T_F.percentage)) : 50,
-      jp: typeof scores.J_P?.percentage === 'number' ? Math.max(0, Math.min(100, scores.J_P.percentage)) : 50,
+      ei: typeof scores['E_I']?.percentage === 'number' ? Math.max(0, Math.min(100, scores['E_I'].percentage)) : 50,
+      sn: typeof scores['S_N']?.percentage === 'number' ? Math.max(0, Math.min(100, scores['S_N'].percentage)) : 50,
+      tf: typeof scores['T_F']?.percentage === 'number' ? Math.max(0, Math.min(100, scores['T_F'].percentage)) : 50,
+      jp: typeof scores['J_P']?.percentage === 'number' ? Math.max(0, Math.min(100, scores['J_P'].percentage)) : 50,
     },
     durationMs,
     answers: answerList,
@@ -702,6 +710,7 @@ async function handleFeedbackSubmit() {
           </div>
           <div class="hero-badge-wrap">
             <span class="hero-code">{{ displayCode }}</span>
+            <span v-if="result.archetype.mbtiCode" class="hero-mbti-badge">{{ result.archetype.mbtiCode }}</span>
           </div>
           <div class="hero-metrics">
             <div class="hero-metric">
@@ -791,6 +800,43 @@ async function handleFeedbackSubmit() {
           <div v-if="primaryCharacter?.personaBasis?.type === 'fandom-impression'" class="persona-basis-notice">
             <span class="persona-basis-badge">{{ t('result.personaBasisBadge') }}</span>
             <p class="persona-basis-summary">{{ t('result.personaBasisTip') }}</p>
+          </div>
+        </section>
+
+        <section v-if="(primaryCharacter?.soulmate && soulmateCharacter) || (primaryCharacter?.rival && rivalCharacter)" class="chemistry-section" v-reveal>
+          <div class="section-title-wrap">
+            <div class="section-index">♡</div>
+            <h2 class="section-title">天作之合 &amp; 欢喜冤家</h2>
+          </div>
+          <div class="chemistry-grid">
+            <article v-if="primaryCharacter?.soulmate && soulmateCharacter" class="chemistry-card chemistry-card--soulmate">
+              <div class="chemistry-card-header">
+                <span class="chemistry-emoji">✨</span>
+                <span class="chemistry-label">天作之合</span>
+              </div>
+              <div class="chemistry-partner">
+                <img v-if="soulmateCharacter.thumb" :src="soulmateCharacter.thumb" class="chemistry-avatar" :alt="soulmateCharacter.name" />
+                <div class="chemistry-partner-info">
+                  <strong class="chemistry-partner-name">{{ soulmateCharacter.name }}</strong>
+                  <span v-if="soulmateCharacter.title" class="chemistry-partner-title">{{ soulmateCharacter.title }}</span>
+                </div>
+              </div>
+              <p class="chemistry-text">{{ primaryCharacter.soulmate.reason }}</p>
+            </article>
+            <article v-if="primaryCharacter?.rival && rivalCharacter" class="chemistry-card chemistry-card--rival">
+              <div class="chemistry-card-header">
+                <span class="chemistry-emoji">⚔️</span>
+                <span class="chemistry-label">欢喜冤家</span>
+              </div>
+              <div class="chemistry-partner">
+                <img v-if="rivalCharacter.thumb" :src="rivalCharacter.thumb" class="chemistry-avatar" :alt="rivalCharacter.name" />
+                <div class="chemistry-partner-info">
+                  <strong class="chemistry-partner-name">{{ rivalCharacter.name }}</strong>
+                  <span v-if="rivalCharacter.title" class="chemistry-partner-title">{{ rivalCharacter.title }}</span>
+                </div>
+              </div>
+              <p class="chemistry-text">{{ primaryCharacter.rival.description }}</p>
+            </article>
           </div>
         </section>
 
@@ -933,6 +979,14 @@ async function handleFeedbackSubmit() {
                 {{ t('result.minefield', undefined, '你的雷区') }}
               </h3>
             <p>{{ t('archetypes.' + result.archetype.id + '.minefield', undefined, result.archetype.minefield) }}</p>
+          </article>
+          <article v-if="result.archetype.mbtiCode && result.archetype.mbtiReason" class="analysis-card mbti-reason">
+            <h3>
+              <svg style="width:18px;height:18px;flex-shrink:0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+              {{ t('result.mbtiMapping', undefined, 'MBTI 映射理由') }}
+              <span class="mbti-code-inline">{{ result.archetype.mbtiCode }}</span>
+            </h3>
+            <p>{{ result.archetype.mbtiReason }}</p>
           </article>
         </section>
 
@@ -1294,6 +1348,18 @@ async function handleFeedbackSubmit() {
   font-size: clamp(24px, 4vw, 32px);
   font-weight: 800;
   letter-spacing: 2px;
+}
+
+.hero-mbti-badge {
+  margin-left: 12px;
+  padding: 4px 10px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
 }
 
 .hero-quote {
@@ -1745,6 +1811,22 @@ async function handleFeedbackSubmit() {
 
 .analysis-card.minefield h3 {
   color: #d97706;
+}
+
+.analysis-card.mbti-reason h3 {
+  color: #6366f1;
+}
+
+.mbti-code-inline {
+  margin-left: 6px;
+  padding: 2px 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 6px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
 }
 
 .analysis-card p {
@@ -2819,6 +2901,108 @@ async function handleFeedbackSubmit() {
     padding: 16px;
     border-radius: 14px;
   }
+}
+
+/* ── Chemistry ── */
+.chemistry-section {
+  margin-top: 32px;
+}
+
+.chemistry-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.chemistry-card {
+  background: linear-gradient(180deg, #ffffff, #fbfdfb);
+  border: 1px solid #e8ecef;
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.chemistry-card--soulmate {
+  border-color: #d1fae5;
+  background: linear-gradient(180deg, #ffffff, #f0fdf4);
+}
+
+.chemistry-card--rival {
+  border-color: #fee2e2;
+  background: linear-gradient(180deg, #ffffff, #fff5f5);
+}
+
+.chemistry-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.chemistry-emoji {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.chemistry-label {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.chemistry-card--soulmate .chemistry-label {
+  color: #059669;
+}
+
+.chemistry-card--rival .chemistry-label {
+  color: #dc2626;
+}
+
+.chemistry-partner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.chemistry-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #e8ecef;
+}
+
+.chemistry-card--soulmate .chemistry-avatar {
+  border-color: #6ee7b7;
+}
+
+.chemistry-card--rival .chemistry-avatar {
+  border-color: #fca5a5;
+}
+
+.chemistry-partner-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.chemistry-partner-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a2633;
+}
+
+.chemistry-partner-title {
+  font-size: 13px;
+  color: #7a8c9a;
+}
+
+.chemistry-text {
+  margin: 0;
+  line-height: 1.75;
+  color: #596671;
+  font-size: 15px;
 }
 
 /* ── Live Stats ── */

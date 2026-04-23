@@ -45,8 +45,8 @@ export type QuestionArchetypeWeightId =
 export interface QuestionOption {
   id: string
   label: string
-  tone: string
-  weights: Partial<Record<QuestionArchetypeWeightId, number>>
+  tone?: string
+  weights?: Partial<Record<QuestionArchetypeWeightId, number>>
 }
 
 export interface Question {
@@ -56,8 +56,8 @@ export interface Question {
   scene: string
   options?: QuestionOption[]
   weights?: Partial<Record<QuestionArchetypeWeightId, number>>
-  dimension: DimensionPair
-  sign: 1 | -1
+  dimension: string
+  sign?: 1 | -1
 }
 
 export interface Archetype {
@@ -74,6 +74,8 @@ export interface Archetype {
   keywords: string[]
   accent: string
   vector: Record<DimensionId, number>
+  mbtiCode?: string
+  mbtiReason?: string
 }
 
 export type PersonaBasisType = 'canon' | 'fandom-impression'
@@ -83,6 +85,12 @@ export interface PersonaBasis {
   label: string
   confidence: 'high' | 'medium' | 'low'
   summary: string
+}
+
+export interface ChemistryEntry {
+  characterId: string
+  reason?: string
+  description?: string
 }
 
 export interface CharacterMatch {
@@ -104,6 +112,8 @@ export interface CharacterMatch {
   note: string
   vector: Record<DimensionId, number>
   personaBasis?: PersonaBasis
+  soulmate?: ChemistryEntry
+  rival?: ChemistryEntry
   signature?: {
     uniqueAxes?: Partial<Record<DimensionId, number>>
     questionAffinity?: Array<{

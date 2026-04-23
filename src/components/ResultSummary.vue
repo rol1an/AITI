@@ -44,37 +44,37 @@ const traits = computed(() => {
   const result = props.result
   return [
     {
-      label: 'Energy',
-      leftLabel: 'Extraverted',
-      rightLabel: 'Introverted',
-      percentage: result.scores.E_I.percentage,
-      dominant: result.scores.E_I.dominant === 'E' ? 'left' : 'right',
-      color: TRAIT_CONFIG.E_I.color
+      label: TRAIT_CONFIG['E_I'].label,
+      leftLabel: TRAIT_CONFIG['E_I'].leftLabel,
+      rightLabel: TRAIT_CONFIG['E_I'].rightLabel,
+      percentage: result.scores['E_I'].percentage,
+      dominant: result.scores['E_I'].dominant === 'E' ? 'left' : 'right',
+      color: TRAIT_CONFIG['E_I'].color
     },
     {
-      label: 'Mind',
-      leftLabel: 'Intuitive',
-      rightLabel: 'Observant',
-      percentage: result.scores.S_N.percentage,
-      dominant: result.scores.S_N.dominant === 'N' ? 'left' : 'right',
-      color: TRAIT_CONFIG.S_N.color
+      label: TRAIT_CONFIG['S_N'].label,
+      leftLabel: TRAIT_CONFIG['S_N'].leftLabel,
+      rightLabel: TRAIT_CONFIG['S_N'].rightLabel,
+      percentage: result.scores['S_N'].percentage,
+      dominant: result.scores['S_N'].dominant === 'S' ? 'left' : 'right',
+      color: TRAIT_CONFIG['S_N'].color
     },
     {
-      label: 'Nature',
-      leftLabel: 'Thinking',
-      rightLabel: 'Feeling',
-      percentage: result.scores.T_F.percentage,
-      dominant: result.scores.T_F.dominant === 'T' ? 'left' : 'right',
-      color: TRAIT_CONFIG.T_F.color
+      label: TRAIT_CONFIG['T_F'].label,
+      leftLabel: TRAIT_CONFIG['T_F'].leftLabel,
+      rightLabel: TRAIT_CONFIG['T_F'].rightLabel,
+      percentage: result.scores['T_F'].percentage,
+      dominant: result.scores['T_F'].dominant === 'T' ? 'left' : 'right',
+      color: TRAIT_CONFIG['T_F'].color
     },
     {
-      label: 'Tactics',
-      leftLabel: 'Judging',
-      rightLabel: 'Prospecting',
-      percentage: result.scores.J_P.percentage,
-      dominant: result.scores.J_P.dominant === 'J' ? 'left' : 'right',
-      color: TRAIT_CONFIG.J_P.color
-    }
+      label: TRAIT_CONFIG['J_P'].label,
+      leftLabel: TRAIT_CONFIG['J_P'].leftLabel,
+      rightLabel: TRAIT_CONFIG['J_P'].rightLabel,
+      percentage: result.scores['J_P'].percentage,
+      dominant: result.scores['J_P'].dominant === 'J' ? 'left' : 'right',
+      color: TRAIT_CONFIG['J_P'].color
+    },
   ]
 })
 </script>

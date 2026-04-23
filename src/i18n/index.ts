@@ -23,21 +23,22 @@ function mergeDeep(target: unknown, source: unknown): unknown {
   return output
 }
 
-function getLocaleMessages(_locale: AppLocale) {
-  // 多语言暂时冻结，所有 locale 统一使用 zh-CN
-  const base = messages['zh-CN']
-  const overlay = aitiMessages['zh-CN' as keyof typeof aitiMessages]
-  return mergeDeep(base, overlay) as typeof base
+function getLocaleMessages(locale: AppLocale) {
+  const base = messages[locale] ?? messages['zh-CN']
+  const overlay = (aitiMessages as Record<string, unknown>)[locale] ?? aitiMessages['zh-CN']
+  return mergeDeep(base, overlay) as typeof messages['zh-CN']
 }
 
 function normalizeLocale(input?: string | null): AppLocale | null {
   if (!input) return null
   const lower = input.toLowerCase()
 
-  // 多语言暂时冻结，所有语言统一返回 zh-CN
+  if (lower.startsWith('zh-tw') || lower.startsWith('zh_tw')) return 'zh-TW'
   if (lower.startsWith('zh')) return 'zh-CN'
+  if (lower.startsWith('en')) return 'en'
+  if (lower.startsWith('ja')) return 'ja'
 
-  return 'zh-CN'
+  return null
 }
 
 function applyDocumentLanguage(locale: AppLocale) {
@@ -102,8 +103,10 @@ export function tm<T>(key: string): T {
 export function useI18n() {
   return {
     locale: readonly(currentLocale),
-    // 多语言暂时冻结，只暴露 zh-CN 选项
-    localeOptions: [{ code: 'zh-CN' as AppLocale, label: localeLabels['zh-CN'] }],
+    localeOptions: [
+      { code: 'zh-CN' as AppLocale, label: localeLabels['zh-CN'] },
+      { code: 'en' as AppLocale, label: localeLabels['en'] },
+    ],
     setLocale,
     t,
     tm,

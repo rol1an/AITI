@@ -227,12 +227,12 @@ const raritySummaryLabel = computed(() => {
 
           <div class="share-poster__body">
             <div class="share-poster__block share-poster__block--soulmate">
-              <p class="block-label block-label--soulmate">✨ 天作之合</p>
+              <p class="block-label block-label--soulmate">{{ t('result.soulmateLabel') }}</p>
               <p v-if="soulmateCharacter" class="block-partner">{{ soulmateCharacter.name }}</p>
               <p class="block-content">{{ primaryCharacter?.soulmate?.reason }}</p>
             </div>
             <div class="share-poster__block share-poster__block--rival">
-              <p class="block-label block-label--rival">⚔️ 欢喜冤家</p>
+              <p class="block-label block-label--rival">{{ t('result.rivalLabel') }}</p>
               <p v-if="rivalCharacter" class="block-partner">{{ rivalCharacter.name }}</p>
               <p class="block-content">{{ primaryCharacter?.rival?.description }}</p>
             </div>

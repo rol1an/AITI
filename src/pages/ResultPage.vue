@@ -806,13 +806,12 @@ async function handleFeedbackSubmit() {
         <section v-if="(primaryCharacter?.soulmate && soulmateCharacter) || (primaryCharacter?.rival && rivalCharacter)" class="chemistry-section" v-reveal>
           <div class="section-title-wrap">
             <div class="section-index">♡</div>
-            <h2 class="section-title">天作之合 &amp; 欢喜冤家</h2>
+            <h2 class="section-title">{{ t('result.chemistryTitle') }}</h2>
           </div>
           <div class="chemistry-grid">
             <article v-if="primaryCharacter?.soulmate && soulmateCharacter" class="chemistry-card chemistry-card--soulmate">
               <div class="chemistry-card-header">
-                <span class="chemistry-emoji">✨</span>
-                <span class="chemistry-label">天作之合</span>
+                <span class="chemistry-label">{{ t('result.soulmateLabel') }}</span>
               </div>
               <div class="chemistry-partner">
                 <img v-if="soulmateCharacter.thumb" :src="soulmateCharacter.thumb" class="chemistry-avatar" :alt="soulmateCharacter.name" />
@@ -825,8 +824,7 @@ async function handleFeedbackSubmit() {
             </article>
             <article v-if="primaryCharacter?.rival && rivalCharacter" class="chemistry-card chemistry-card--rival">
               <div class="chemistry-card-header">
-                <span class="chemistry-emoji">⚔️</span>
-                <span class="chemistry-label">欢喜冤家</span>
+                <span class="chemistry-label">{{ t('result.rivalLabel') }}</span>
               </div>
               <div class="chemistry-partner">
                 <img v-if="rivalCharacter.thumb" :src="rivalCharacter.thumb" class="chemistry-avatar" :alt="rivalCharacter.name" />

@@ -101,10 +101,11 @@ async function copyQuizLink() {
   max-width: 760px;
   margin: 1.5rem auto 2.5rem;
   font-size: clamp(1rem, 2.2vw, 1.25rem);
-  line-height: 1.7;
+  line-height: 1.85;
   color: #e3f2f3;
   font-weight: 500;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  white-space: pre-line;
 }
 
 .hero-actions {

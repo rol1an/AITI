@@ -5,6 +5,7 @@ import { useI18n } from '../i18n'
 import { getHiddenCharacterTags, getHiddenCharacterTitle, getLocalizedCharacterName, getLocalizedCharacterSeries, isHiddenCharacter } from '../i18n/characters'
 import type { QuizResult } from '../types/quiz'
 import { getCharacterRarityMeta } from '../utils/characterRarity'
+import charactersData from '../data/aitiCharacters.json'
 import AppIcon from './AppIcon.vue'
 
 const props = defineProps<{
@@ -47,9 +48,6 @@ const posterTags = computed(() => {
     .map((tag, index) => t(`archetypes.${props.result.archetype.id}.tags.${index}`, undefined, tag))
     .slice(0, 4)
 })
-const posterNarrativeRole = computed(() =>
-  t(`archetypes.${props.result.archetype.id}.narrativeRole`, undefined, props.result.archetype.narrativeRole),
-)
 const posterImage = computed(() => {
   if (!primaryCharacter.value) {
     return ''
@@ -93,6 +91,15 @@ function toRgbString(color: { r: number; g: number; b: number }, alpha?: number)
 
   return `rgba(${color.r}, ${color.g}, ${color.b}, ${alpha})`
 }
+
+const soulmateCharacter = computed(() => {
+  const id = primaryCharacter.value?.soulmate?.characterId
+  return id ? (charactersData as any[]).find((c) => c.id === id) ?? null : null
+})
+const rivalCharacter = computed(() => {
+  const id = primaryCharacter.value?.rival?.characterId
+  return id ? (charactersData as any[]).find((c) => c.id === id) ?? null : null
+})
 
 const rarityMeta = computed(() => getCharacterRarityMeta(primaryCharacter.value?.id))
 const rarityTierLabel = computed(() => {
@@ -219,13 +226,15 @@ const raritySummaryLabel = computed(() => {
           </div>
 
           <div class="share-poster__body">
-            <div class="share-poster__block">
-              <p class="block-label"><AppIcon name="star" /> {{ t('result.spotlight', undefined, '亮点表现') }}</p>
-              <p class="block-content">{{ t('archetypes.' + result.archetype.id + '.spotlight', undefined, result.archetype.spotlight) }}</p>
+            <div class="share-poster__block share-poster__block--soulmate">
+              <p class="block-label block-label--soulmate">✨ 天作之合</p>
+              <p v-if="soulmateCharacter" class="block-partner">{{ soulmateCharacter.name }}</p>
+              <p class="block-content">{{ primaryCharacter?.soulmate?.reason }}</p>
             </div>
-            <div class="share-poster__block">
-              <p class="block-label"><AppIcon name="book" /> {{ t('result.narrativeRole', undefined, '剧情位置') }}</p>
-              <p class="block-content">{{ posterNarrativeRole }}</p>
+            <div class="share-poster__block share-poster__block--rival">
+              <p class="block-label block-label--rival">⚔️ 欢喜冤家</p>
+              <p v-if="rivalCharacter" class="block-partner">{{ rivalCharacter.name }}</p>
+              <p class="block-content">{{ primaryCharacter?.rival?.description }}</p>
             </div>
           </div>
 
@@ -471,20 +480,49 @@ const raritySummaryLabel = computed(() => {
   font-size: 12px;
   color: #5f6b75;
   font-weight: 800;
-  margin: 0 0 6px;
+  margin: 0 0 4px;
   display: flex;
   align-items: center;
   gap: 6px;
-  text-transform: uppercase;
   letter-spacing: 0.5px;
   white-space: nowrap;
 }
 
 .block-content {
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.5;
   color: #333e49;
   margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.share-poster__block--soulmate {
+  border-color: rgba(16, 185, 129, 0.2);
+  background: linear-gradient(180deg, #ffffff, #f0fdf4);
+}
+
+.share-poster__block--rival {
+  border-color: rgba(239, 68, 68, 0.18);
+  background: linear-gradient(180deg, #ffffff, #fff5f5);
+}
+
+.block-label--soulmate {
+  color: #059669 !important;
+}
+
+.block-label--rival {
+  color: #dc2626 !important;
+}
+
+.block-partner {
+  font-size: 16px;
+  font-weight: 800;
+  color: #1a2633;
+  margin: 0 0 5px;
+  line-height: 1.2;
 }
 
 .share-poster__footer {

@@ -42,6 +42,8 @@ interface CharacterDef {
   name: string
   series: string
   hidden?: boolean
+  thumb?: string
+  image?: string
 }
 
 const characterCodeMap = computed(() => {
@@ -114,7 +116,7 @@ function getCharacterSeries(code: string): string {
 function getCharacterThumb(code: string): string | null {
   const character = getCharacterFromCode(code)
   if (!character) return null
-  const thumb = visualMap[character.id]?.thumb
+  const thumb = visualMap[character.id]?.thumb ?? character.thumb ?? character.image
   return thumb ? resolvePublicAsset(thumb) : null
 }
 
